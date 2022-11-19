@@ -10,6 +10,7 @@ import phone from '../public/assets/images/phone.png';
 import chat from '../public/assets/images/chat.png';
 import Pagination from '../components/pagination/Pagination';
 import Slider from '../components/slider/Slider';
+import BottomNav from '../components/bottomNav/BottomNav';
 
 const CreativeBlogs = () => {
 	const [hover, setHover] = useState(false);

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BottomNav from '../components/bottomNav/BottomNav';
 import Card9 from '../components/card9/Card9';
 import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';

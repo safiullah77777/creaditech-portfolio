@@ -8,6 +8,7 @@ import money from "../public/assets/images/money.png";
 import portfolio from "../public/assets/images/portfolio.png";
 import portfolio1 from "../public/assets/images/backgrounds/portfolio.png";
 import Image from "next/image";
+import BottomNav from "../components/bottomNav/BottomNav";
 
 const Portfolio = () => {
   const carouselRef = React.useRef(null);

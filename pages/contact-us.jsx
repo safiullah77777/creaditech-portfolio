@@ -10,6 +10,7 @@ import LinkedIn from "../public/assets/images/Linkedin.png";
 import Instagram from "../public/assets/images/Instagram.png";
 import Slider from "../components/slider/Slider";
 import Footer from "../components/footer/Footer";
+import BottomNav from "../components/bottomNav/BottomNav";
 
 const ContactUs = () => {
   return (

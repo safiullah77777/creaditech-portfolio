@@ -14,6 +14,7 @@ import Card3 from '../components/card3/Card3';
 import Pagination from '../components/pagination/Pagination';
 import Slider from '../components/slider/Slider';
 import Footer from '../components/footer/Footer';
+import BottomNav from '../components/bottomNav/BottomNav';
 // import client1 from '../public/assets/images/client1.png'
 
 const OurClients = () => {

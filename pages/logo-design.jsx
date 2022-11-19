@@ -22,6 +22,7 @@ import iconpark from "../public/assets/images/icons/iconpark.svg";
 import arcticon from "../public/assets/images/icons/arcti-con.svg";
 import AiIcon from "../public/assets/images/icons/Ai-icon.svg";
 import comTick from "../public/assets/images/icons/com-tick.svg";
+import BottomNav from "../components/bottomNav/BottomNav";
 
 const LogoService = () => {
   return (

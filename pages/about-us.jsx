@@ -11,6 +11,7 @@ import Header from "../components/header/Header";
 import Button2 from "../components/button2/Button2";
 import Slider from "../components/slider/Slider";
 import Footer from "../components/footer/Footer";
+import BottomNav from "../components/bottomNav/BottomNav";
 const AboutUs = () => {
   return (
     <>
