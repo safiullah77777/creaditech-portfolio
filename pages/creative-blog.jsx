@@ -35,6 +35,8 @@ const CreativeBlogs = () => {
 			</div>
 			<Pagination />
 			<Slider />
+			<BottomNav />
+
 			<Footer />
 		</>
 	);

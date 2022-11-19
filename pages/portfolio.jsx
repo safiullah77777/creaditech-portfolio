@@ -205,6 +205,7 @@ const Portfolio = () => {
         </div>
       </div>
       <Sliders />
+      <BottomNav />
 
       <Footer />
     </>

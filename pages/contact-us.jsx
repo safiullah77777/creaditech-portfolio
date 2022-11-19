@@ -98,6 +98,8 @@ const ContactUs = () => {
         </div>
         <Slider />
       </div>
+      <BottomNav />
+
       <Footer />
     </>
   );

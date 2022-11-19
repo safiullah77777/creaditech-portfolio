@@ -188,7 +188,7 @@ const BottomNav = () => {
           </span>
         </li>
       </ul>
-        <SideNav classes={`${openDrawer?"left-0":"-left-[100%]"}`} />
+        <SideNav classes={`${openDrawer?"left-0":"-left-[120%]"}`} />
       <div onClick={()=>setOpenDrawer(false)} className={`${openDrawer?"flex":"hidden"} bg-[#000000]/[0.8] w-[100vw] h-[100vh] fixed top-0 left-0`}>
       </div>
     </div>

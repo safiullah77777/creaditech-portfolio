@@ -499,6 +499,7 @@ const LogoService = () => {
         </div>
         <Slider />
       </div>
+      <BottomNav />
 
       <Footer />
     </>

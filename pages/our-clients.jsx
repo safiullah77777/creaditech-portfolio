@@ -200,6 +200,8 @@ const OurClients = () => {
 				<Pagination />
 			</div>
 			<Slider />
+			<BottomNav />
+
 			<Footer />
 		</>
 	);
