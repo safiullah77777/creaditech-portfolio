@@ -38,12 +38,15 @@ import robot1 from "../public/assets/images/robot1.png";
 import robot2 from "../public/assets/images/robot2.png";
 
 const Home = () => {
+  const carouselRef = React.useRef(null);
+  const carouselRef1 = React.useRef(null);
   const [isHover, setHover] = useState(false);
+  let resetTimeout;
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2, itemsToScroll: 2 },
     { width: 850, itemsToShow: 3 },
-    { width: 1150, itemsToShow: 3, itemsToScroll: 2 },
+    { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
     { width: 1450, itemsToShow: 5 },
     { width: 1850, itemsToShow: 6 },
   ];
@@ -125,7 +128,7 @@ const Home = () => {
           consts.PREV ? "rounded-r-[5px]" : "rounded-l-[5px]"
         } flex h-[14rem] w-[4.5rem] items-center justify-center self-center bg-black disabled:cursor-not-allowed`}
         onClick={onClick}
-        disabled={isEdge}
+        // disabled={isEdge}
       >
         {pointer}
       </button>
@@ -384,11 +387,48 @@ const Home = () => {
       </div>
       <div className="my-[4rem] ">
         <Carousel
+          ref={carouselRef}
           {...consts}
           showEmptySlots
-          enableAutoPlay
+          // enableAutoPlay
           focusOnSelect={true}
           renderArrow={myArrow}
+          onPrevStart={(currentItem, nextItem) => {
+            if (currentItem.index === nextItem.index) {
+              // we hit the last item, go to first item
+              carouselRef.current.goTo(10);
+            }
+          }}
+          onPrevEnd={({ index }) => {
+            clearTimeout(resetTimeout);
+            if (index + 1 === 0) {
+              if (carouselRef?.current?.goTo) {
+                resetTimeout = setTimeout(() => {
+                  if (carouselRef?.current?.goTo) {
+                    carouselRef?.current?.goTo(10);
+                  }
+                }, 3000);
+              }
+            }
+          }}
+          onNextStart={(currentItem, nextItem) => {
+            if (currentItem.index === nextItem.index) {
+              // we hit the last item, go to first item
+              carouselRef.current.goTo(0);
+            }
+          }}
+          onNextEnd={({ index }) => {
+            clearTimeout(resetTimeout);
+            if (index + 1 === 10) {
+              if (carouselRef?.current?.goTo) {
+                resetTimeout = setTimeout(() => {
+                  if (carouselRef?.current?.goTo) {
+                    carouselRef.current.goTo(0);
+                  }
+                }, 3000);
+              }
+            }
+          }}
           breakPoints={breakPoints}
           // outerSpacing={100}
           itemPadding={[0, 10]}
@@ -473,12 +513,49 @@ const Home = () => {
         Our Creative Blogs
       </h2>
       <div className="my-[4rem] ">
-        {/* <Carousel
+        <Carousel
+          ref={carouselRef1}
           showEmptySlots
-          enableAutoPlay
+          // enableAutoPlay
           focusOnSelect={true}
           renderArrow={myArrow}
           breakPoints={breakPoints}
+          onPrevStart={(currentItem, nextItem) => {
+            if (currentItem.index === nextItem.index) {
+              // we hit the last item, go to first item
+              carouselRef1.current.goTo(10);
+            }
+          }}
+          onPrevEnd={({ index }) => {
+            clearTimeout(resetTimeout);
+            if (index + 1 === 0) {
+              if (carouselRef1?.current?.goTo) {
+                resetTimeout = setTimeout(() => {
+                  if (carouselRef1?.current?.goTo) {
+                    carouselRef.current.goTo(10);
+                  }
+                }, 3000);
+              }
+            }
+          }}
+          onNextStart={(currentItem, nextItem) => {
+            if (currentItem.index === nextItem.index) {
+              // we hit the last item, go to first item
+              carouselRef1.current.goTo(0);
+            }
+          }}
+          onNextEnd={({ index }) => {
+            clearTimeout(resetTimeout);
+            if (index + 1 === 10) {
+              if (carouselRef1?.current?.goTo) {
+                resetTimeout = setTimeout(() => {
+                  if (carouselRef1?.current?.goTo) {
+                    carouselRef1.current.goTo(0);
+                  }
+                }, 3000);
+              }
+            }
+          }}
           // outerSpacing={100}
           itemPadding={[0, 10]}
           itemsToShow={3}
@@ -501,17 +578,16 @@ const Home = () => {
           }}
         >
           <Card7 image={robot} />
-          <Card7 image={robot1}  />
-          <Card7 image={robot2}  />
-          <Card7 image={robot}  />
-          <Card7 image={robot1}  />
-          <Card7 image={robot2}  />
-          <Card7 image={robot}  />
-          <Card7 image={robot1}  />
-          <Card7 image={robot2}  />
+          <Card7 image={robot1} />
+          <Card7 image={robot2} />
           <Card7 image={robot} />
+          <Card7 image={robot1} />
+          <Card7 image={robot2} />
+          <Card7 image={robot} />
+          <Card7 image={robot1} />
+          <Card7 image={robot2} />
           <Card6 />
-        </Carousel> */}
+        </Carousel>
       </div>
       <Footer />
       <BottomNav />

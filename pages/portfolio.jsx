@@ -10,6 +10,7 @@ import portfolio1 from "../public/assets/images/backgrounds/portfolio.png";
 import Image from "next/image";
 
 const Portfolio = () => {
+  const carouselRef = React.useRef(null);
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 1, itemsToScroll: 2 },
@@ -96,9 +97,9 @@ const Portfolio = () => {
       <div className="my-[4rem] ">
         <Carousel
           
-          itemPosition="CENTER"
+          // itemPosition="CENTER"
           showEmptySlots={true}
-          enableAutoPlay={true}
+          // enableAutoPlay={true}
           focusOnSelect={true}
           renderArrow={() => <></>}
           breakPoints={breakPoints}
