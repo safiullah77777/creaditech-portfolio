@@ -16,7 +16,7 @@ const ContactUs = () => {
     <>
       <Header />
       <div
-        className=" bg-banner-grey  banner7   flex  min-h-[80rem]   w-full  bg-cover bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem]  max-[950px]:pb-[5rem] 
+        className=" bg-banner-grey  banner7  bg-[url('/assets/images/backgrounds/banner7.png')]   flex  min-h-[80rem]   w-full  bg-cover bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem]  max-[950px]:pb-[5rem] 
     			max-[850px]:flex-col min-[500px]:px-28 "
       >
         <div className="flex h-full max-w-[700px] flex-col  gap-[2rem]  max-[850px]:mx-auto max-[850px]:max-w-full max-[400px]:items-center">

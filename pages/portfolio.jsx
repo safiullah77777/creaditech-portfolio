@@ -24,7 +24,7 @@ const Portfolio = () => {
     <>
       <Header />
       <div
-        className=" bg-[url('/assets/images/backgrounds/portfolio.png')] relative flex min-h-[80vh] w-full justify-center bg-cover  bg-center bg-no-repeat pl-28 bg-blend-overlay max-[850px]:h-[624px]  max-[850px]:flex-col max-[850px]:p-0 
+        className="banner4 bg-[url('/assets/images/backgrounds/banner4.png')] relative flex min-h-[80vh] w-full justify-center bg-cover  bg-center bg-no-repeat pl-28 bg-blend-overlay max-[850px]:h-[624px]  max-[850px]:flex-col max-[850px]:p-0 
     max-[850px]:pt-[12rem] max-[500px]:px-[3rem]"
       >
         <div className="my-auto flex flex-col items-center gap-[1rem]">

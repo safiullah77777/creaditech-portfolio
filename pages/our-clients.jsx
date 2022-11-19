@@ -23,7 +23,7 @@ const OurClients = () => {
 		<>
 			<Header />
 			<div
-				className="banner3 relative flex h-[100vh] w-full  bg-cover bg-center bg-no-repeat bg-blend-overlay max-[850px]:h-[90rem] max-[850px]:flex-col max-[850px]:p-0 
+				className="banner3  bg-[url('/assets/images/backgrounds/banner3.png')]  relative flex h-[100vh] w-full  bg-cover bg-center bg-no-repeat bg-blend-overlay max-[850px]:h-[90rem] max-[850px]:flex-col max-[850px]:p-0 
     max-[850px]:pt-80"
 			>
 				<div className="m-auto flex h-full flex-col items-center justify-center font-semibold max-[850px]:mx-auto max-[850px]:max-w-full  max-[850px]:px-8 max-[850px]:pl-12 ">
