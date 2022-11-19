@@ -39,7 +39,7 @@ const LogoService = () => {
           </h1>
           <div className="detail-heading">
             <p className=" Montserrat mt-4  max-w-[646px] text-[2.2rem] font-[300] leading-130 text-white max-[850px]:text-center">
-              Let’s Bring in the Power of Popularity It’s all about Your brand,
+              Let’s Bring in the Power of Popularity.It’s all about Your brand,
               your logo design & our services.Let’s Bring in the Power of
               Popularity It’s all about Your brand, your logo design & our
               services.

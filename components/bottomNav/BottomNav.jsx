@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import SideNav from "../sideNav/SideNav";
 
 const BottomNav = () => {
+  const [openDrawer, setOpenDrawer] = useState(false);
   return (
-    <div className="fixed   bottom-0 left-0 z-[10000000000] hidden h-[70px]  w-full  max-[850px]:flex  ">
+    <div className="fixed   bottom-0 left-0 z-[100] hidden h-[70px]  w-full  max-[678px]:flex  ">
       <ul className="flex bg-[#C6CED3] mt-auto h-[60px] w-full justify-evenly">
-        <li className=" relative z-[1000]  flex h-[105%] cursor-pointer  items-center justify-center gap-[1rem] bg-[grey]    p-[1rem] px-[3rem] after:absolute after:bottom-0 after:left-0 after:border-t-[white] after:bg-[red]  after:-z-[2] after:h-[120%] after:w-full after:rounded-t-[10px] after:border-solid rounded-full  after:border-t-[10px] ">
+        <li
+          onClick={() => {
+            setOpenDrawer(true);
+          }}
+          className=" relative z-[1000]  flex h-[105%] cursor-pointer  items-center justify-center gap-[1rem] bg-[grey]    p-[1rem] px-[3rem] after:absolute after:bottom-0 after:left-0 after:border-t-[white] after:bg-[red]  after:-z-[2] after:h-[120%] after:w-full after:rounded-t-[10px] after:border-solid rounded-full  after:border-t-[10px] "
+        >
           <div className="-z-[1] flex gap-[1rem] items-center flex-col">
             <span className="z-[100]">
               <svg
@@ -181,6 +188,9 @@ const BottomNav = () => {
           </span>
         </li>
       </ul>
+        <SideNav classes={`${openDrawer?"left-0":"-left-[100%]"}`} />
+      <div onClick={()=>setOpenDrawer(false)} className={`${openDrawer?"flex":"hidden"} bg-[#000000]/[0.8] w-[100vw] h-[100vh] fixed top-0 left-0`}>
+      </div>
     </div>
   );
 };

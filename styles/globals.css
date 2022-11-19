@@ -133,6 +133,9 @@ body {
 .rounded-icons {
 	@apply cursor-pointer rounded-full bg-black p-[2rem];
 }
+.rounded-icons1 {
+	@apply cursor-pointer rounded-full bg-black p-[1.5rem];
+}
 .inputs {
 	border-bottom: 0.8rem solid rgba(30, 30, 30, 0.3) !important;
 }

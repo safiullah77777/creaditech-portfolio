@@ -3,10 +3,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "../../public/assets/images/creaditech-Logo.png";
 import MegaMenu from "../megaMenu/MegaMenu";
+
+import SideNav from "../sideNav/SideNav";
 const Header = () => {
   const [isHover, setHover] = useState(false);
+  
   return (
-    <div className=" absolute top-0 left-0 z-50 w-full p-16 px-[8rem] ">
+    <div className=" absolute top-0 left-0 z-[54] w-full py-16 min-[720px]:px-[8rem] px-[2rem] ">
       <div className="hidden justify-center max-[677px]:flex">
         <Link href="/">
           <Image
@@ -68,7 +71,11 @@ const Header = () => {
       </ul>
       <MegaMenu
         setHover={setHover}
-        classes={isHover ? "!opacity-100 max-h-auto !visible" : "max-h-0 -z-[1000]"}
+        classes={
+          isHover
+            ? "!opacity-100 max-h-auto !visible"
+            : "max-h-0 -z-[1000]"
+        }
       />
     </div>
   );
