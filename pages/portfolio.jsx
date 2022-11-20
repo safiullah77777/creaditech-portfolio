@@ -112,6 +112,7 @@ const Portfolio = () => {
                 {pages.map((page, index) => {
                   return (
                     <div
+                      key={index}
                       onClick={() => onClick(String(page))}
                       // active={isActivePage}
                       className={`h-[14px]  cursor-pointer duration-200 ease-linear  ${

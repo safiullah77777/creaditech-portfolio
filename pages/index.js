@@ -154,7 +154,7 @@ const Home = () => {
           </p>
           {para.split(" ").map((item, index) => {
             return (
-              <p
+              <p key={item+index}
                 className={`Montserrat  index flex flex-wrap text-16 font-500  text-white/[0.7] max-[850px]:text-[16px] ${
                   item == "software" ||
                   item == "development" ||
@@ -205,6 +205,7 @@ const Home = () => {
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
             {serviceCards.map((item, index) => (
               <Card
+                
                 styles={item.styles}
                 key={index}
                 heading1={item.title}
@@ -440,6 +441,7 @@ const Home = () => {
                 {pages.map((page, index) => {
                   return (
                     <div
+                      key={index}
                       onClick={() => onClick(String(page))}
                       // active={isActivePage}
                       className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
@@ -565,6 +567,7 @@ const Home = () => {
                 {pages.map((page, index) => {
                   return (
                     <div
+                      key={index}
                       onClick={() => onClick(page)}
                       // active={isActivePage}
                       className={`h-[14px] w-[14px] cursor-pointer rounded-full ${

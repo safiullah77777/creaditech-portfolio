@@ -61,7 +61,8 @@ const Careers = () => {
 			</div>
 			<div className="flex flex-wrap items-center justify-center gap-[2rem] px-[4rem] py-[8rem]">
 				{jobs.map(({ title, job, salary, experience, keySkills }) => (
-					<Card9
+					<Card9 
+					key={title}
 						setShowModal={setShowModal}
 						title={title}
 						job={job}

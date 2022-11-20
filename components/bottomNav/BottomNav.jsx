@@ -10,7 +10,7 @@ const BottomNav = ({ index }) => {
       <ul className="grid grid-cols-6 bg-[#C6CED3] px-[1px] mt-auto h-[60px] w-full justify-between">
         {BottomList(index).map((item, i) => {
           return (
-            <Link href={item.link}>
+            <Link key={item.title} href={item.link}>
               <li
                 onClick={() => {
                   i == 3 && setOpenDrawer(true);
