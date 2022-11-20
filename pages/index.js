@@ -590,7 +590,7 @@ const Home = () => {
         </Carousel>
       </div>
       <Footer />
-      <BottomNav />
+      <BottomNav index={0} />
     </div>
   );
 };

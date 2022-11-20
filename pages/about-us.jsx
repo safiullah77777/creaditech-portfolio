@@ -369,7 +369,7 @@ const AboutUs = () => {
       </div>
 
       <Slider />
-      <BottomNav />
+      <BottomNav index={2} />
 
       <Footer />
     </>

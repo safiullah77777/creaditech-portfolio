@@ -206,7 +206,7 @@ const Portfolio = () => {
         </div>
       </div>
       <Sliders />
-      <BottomNav />
+      <BottomNav index={4} />
 
       <Footer />
     </>

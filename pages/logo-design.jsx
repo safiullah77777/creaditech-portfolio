@@ -500,7 +500,7 @@ const LogoService = () => {
         </div>
         <Slider />
       </div>
-      <BottomNav />
+      <BottomNav index={3} />
 
       <Footer />
     </>

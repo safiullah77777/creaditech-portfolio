@@ -109,7 +109,7 @@ const Careers = () => {
 			</div>
 			<Modal setShowModal={setShowModal} showModal={showModal} />
 			<Slider />
-			<BottomNav />
+			<BottomNav index={5} />
 
 			<Footer />
 		</>
