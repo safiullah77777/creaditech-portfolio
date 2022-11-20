@@ -10,7 +10,7 @@ const Modal= ({ showModal, setShowModal }) => {
 		<>
 			{showModal ? (
 				<>
-					<div className="fixed inset-0 z-10 overflow-y-auto">
+					<div className="fixed inset-0 z-[100940940] overflow-y-auto">
 						<div
 							className="fixed inset-0 h-full w-full bg-black/[0.7] "
 							onClick={() => setShowModal(false)}
