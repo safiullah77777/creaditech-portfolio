@@ -5,8 +5,7 @@ const Accordian= ({ index }) => {
   const ref1 = useRef(null);
  
   return (
-    <div>
-      <div className="main-accordian  duration-200 ease-linear">
+      <div className="main-accordian max-[1125px]:w-[90%] max-[600px]:w-[100%] duration-200 ease-linear">
         <div
           ref={ref}
           onClick={() => {
@@ -27,7 +26,7 @@ const Accordian= ({ index }) => {
             if (ref1.current !== null)
               ref1.current.classList.remove("rotate-180");
           }}
-          className={`accordian-main  duration-200 ease-linear`}
+          className={`accordian-main max-[1125px]:w-[100%]  duration-200 ease-linear`}
           tabIndex={0}
         >
           <div className="accordian-head">
@@ -60,7 +59,6 @@ const Accordian= ({ index }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

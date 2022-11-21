@@ -176,6 +176,7 @@ body {
 	z-index: 1;
 	overflow: hidden;
 }
+
 .auto-height {
 	/* animation: autohight 2s linear infinite; */
 	height: auto !important;
