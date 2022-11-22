@@ -1,28 +1,27 @@
 import React from "react";
-import Button from "../components/button/Button";
-import Button2 from "../components/button2/Button2";
-import Header from "../components/header/Header";
-import ImagesLine from "../components/ImagesLine/ImagesLine";
+import Button from "../../components/button/Button";
+import Button2 from "../../components/button2/Button2";
+import Header from "../../components/header/Header";
+import ImagesLine from "../../components/ImagesLine/ImagesLine";
 import Image from "next/image";
-import imageWriting from "../public/assets/images/image-2.png";
-import mono from "../public/assets/images/mogogram.png";
-import image3 from "../public/assets/images/image-3.jpg";
-import arrow from "../public/assets/images/icons/arrow-fa2.svg";
-import CardFull from "../public/assets/images/Card-Full.png";
-import PriceCard from "../components/priceCard/PriceCard";
-import DesignCard from "../components/designCard/DesignCard";
-import Slider from "../components/slider/Slider";
-import Input from "../components/input/Input";
-import Footer from "../components/footer/Footer";
-import Accordian from "../components/accordian/Accordian";
-import icon from "../public/assets/images/icons/design-icon.svg";
-import bxmessage from "../public/assets/images/icons/bxmessage.svg";
-import arcticons from "../public/assets/images/icons/arcticons_minds.svg";
-import iconpark from "../public/assets/images/icons/iconpark.svg";
-import arcticon from "../public/assets/images/icons/arcti-con.svg";
-import AiIcon from "../public/assets/images/icons/Ai-icon.svg";
-import comTick from "../public/assets/images/icons/com-tick.svg";
-import BottomNav from "../components/bottomNav/BottomNav";
+import imageWriting from "../../public/assets/images/image-2.png";
+import mono from "../../public/assets/images/mogogram.png";
+import image3 from "../../public/assets/images/image-3.jpg";
+import arrow from "../../public/assets/images/icons/arrow-fa2.svg";
+import CardFull from "../../public/assets/images/Card-Full.png";
+import PriceCard from "../../components/priceCard/PriceCard";
+import DesignCard from "../../components/designCard/DesignCard";
+import Slider from "../../components/slider/Slider";
+import Input from "../../components/input/Input";
+import Footer from "../../components/footer/Footer";
+import Accordian from "../../components/accordian/Accordian";
+import bxmessage from "../../public/assets/images/icons/bxmessage.svg";
+import arcticons from "../../public/assets/images/icons/arcticons_minds.svg";
+import iconpark from "../../public/assets/images/icons/iconpark.svg";
+import arcticon from "../../public/assets/images/icons/arcti-con.svg";
+import AiIcon from "../../public/assets/images/icons/Ai-icon.svg";
+import comTick from "../../public/assets/images/icons/com-tick.svg";
+import BottomNav from "../../components/bottomNav/BottomNav";
 
 const LogoService = () => {
   return (
@@ -51,16 +50,18 @@ const LogoService = () => {
             </div>
           </div>
         </div>
-        <div className="flex h-full flex-col justify-center gap-[2rem]">
+        <form action={(e)=>{
+          e.preventDefault();
+        }} className="flex h-full flex-col justify-center gap-[2rem]">
           <div className="flex gap-[2rem]">
             <div className="flex-1">
               <Input placeholder="Your Name" classes="w-full" type="text" />
             </div>
             <div className="flex-1">
-              <Input placeholder="Phone*" classes="w-full" type="text" />
+              <Input placeholder="Phone*" classes="w-full" type="number" />
             </div>
           </div>
-          <Input placeholder="Email Address*" classes="w-full" type="text" />
+          <Input placeholder="Email Address*" classes="w-full" type="email" />
           <Input placeholder="Website URL" classes="w-full" type="text" />
           <textarea
             placeholder="Write your Requirements here..."
@@ -68,20 +69,20 @@ const LogoService = () => {
             name=""
             id=""
           ></textarea>
-          <Button
+          <Button type="submit"
             title="Send Now"
             classes="!rounded-[10px] !text-[2.5rem] !font-500"
           />
-        </div>
+        </form>
       </div>
       <ImagesLine />
       <br />
       <div className="parent flex gap-[2rem] px-20 max-[850px]:flex-col">
         <div className="setion-right flex-1">
           <div className="h-90vh flex max-w-[120rem]  flex-col  flex-wrap content-center	items-center gap-4">
-            <h1 className="robot-condensed max-[500px]:text-[5rem] text-[4rem] 	font-[600] uppercase leading-[100%] text-[#5B5E71]">
+            <h2 className="robot-condensed max-[500px]:text-[5rem] text-[4rem] 	font-[600] uppercase leading-[100%] text-[#5B5E71]">
               Strengthen brand presence with our affordable logo designs
-            </h1>
+            </h2>
             <div className="max-[500px]:text-[14px] text-[16px] text-[#5B5E71]">
               <p>
                 At this point, you might be considering why shall I choose

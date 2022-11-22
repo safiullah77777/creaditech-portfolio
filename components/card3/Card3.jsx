@@ -8,7 +8,7 @@ const Card3 = ({ classes }) => {
       <span className="Montserrat  max-[500px]:flex hidden absolute left-[2rem] top-[2rem] justify-between rounded-[2rem] bg-[#3D404E] px-[1rem] py-[.4rem] text-[1rem] font-500 leading-[120%] text-white/[.7]">
         Logo Design
       </span>
-      <div className="flex h-[100%] max-h-[10rem] w-full flex-col overflow-hidden bg-card p-[1rem] duration-300 ease-linear min-[500px]:group-hover:max-h-[100%] min-[500px]:group-hover:pb-[3rem]">
+      <div className="flex h-[100%] max-h-[8rem] w-full flex-col overflow-hidden bg-card p-[1rem] duration-300 ease-linear min-[500px]:group-hover:max-h-[100%] min-[500px]:group-hover:pb-[3rem]">
         <h2 className=" clash mx-auto group-hover:mt-[4rem] text-[2rem] text-white">
           Solix Banking App
         </h2>
@@ -19,14 +19,15 @@ const Card3 = ({ classes }) => {
           voluptate, aut animi aperiam, doloribus possimus impedit vitae! Dolore
           dicta minima facilis itaque amet expedita.
         </p>
+        
         <div className="order-1 flex items-center justify-between py-6 max-[500px]:hidden min-[500px]:group-hover:order-2">
-          <span className="Montserrat justify-between rounded-[2rem] bg-[#3D404E] px-[1rem] py-[.4rem] text-[1rem] font-500 leading-[120%] text-white/[.7]">
+          <span className="Montserrat justify-between rounded-[2rem] bg-[#3D404E] px-[1rem] py-[.4rem] text-[.9rem] font-500 leading-[120%] text-white/[.7]">
             Logo Design
           </span>
-          <span className="Montserrat rounded-[2rem] bg-[#3D404E] px-[1rem] py-[.4rem] text-[1rem] font-500 leading-[120%] text-white/[.7]">
+          <span className="Montserrat rounded-[2rem] bg-[#3D404E] px-[1rem] py-[.4rem] text-[.9rem] font-500 leading-[120%] text-white/[.7]">
             Branding Design
           </span>
-          <span className="Montserrat rounded-[2rem] bg-[#3D404E] px-[1rem] py-[.4rem] text-[1rem] font-500 leading-[120%] text-white/[.7]">
+          <span className="Montserrat rounded-[2rem] bg-[#3D404E] px-[1rem] py-[.4rem] text-[.9rem] font-500 leading-[120%] text-white/[.7]">
             Web Development
           </span>
         </div>

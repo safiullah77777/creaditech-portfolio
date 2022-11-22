@@ -9,7 +9,8 @@ import logo from "../../public/assets/images/icons/@.svg";
 import logo2 from "../../public/assets/images/icons/call-icon.svg";
 import Tag from "../tag/Tag";
 import { List } from "../../utils/consts";
-const SideNav = ({ classes}) => {
+import Link from "next/link";
+const SideNav = ({ classes }) => {
   return (
     <div
       className={` fixed flex-col  overflow-y-scroll top-0 left-0 items-center pb-[8rem]  z-[102323] h-[100vh] w-[320px] bg-[#1E1E1E] px-[4rem]   shadow-megaMenu duration-500 ease-linear ${classes}`}
@@ -24,12 +25,11 @@ const SideNav = ({ classes}) => {
               <ul className="flex flex-col ">
                 {item.children.map((item) => {
                   return (
-                    <li
-                      key={item.title}
-                      className="cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]"
-                    >
-                      {item.title}
-                    </li>
+                    <Link href={item.link} key={item.title}>
+                      <li className="cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
+                        {item.title}
+                      </li>
+                    </Link>
                   );
                 })}
               </ul>
