@@ -88,9 +88,22 @@ const ContactUs = () => {
           />
         </div>
       </div>
-
+      <div className="flex flex-col p-[4rem] gap-[5rem] items-center">
+        <h1 className=" robot-condensed items-center  text-center text-[6.5rem] font-[600] uppercase leading-[81%] text-[#000000] ">
+          Find Us At
+        </h1>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3340.203122973941!2d-96.70347288449602!3d33.156293871856015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c1760fbb891db%3A0xaa52d244eb78af95!2sCreaditech!5e0!3m2!1sen!2s!4v1669139618632!5m2!1sen!2s"
+          width="1312"
+          height="409"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
       <div className=" mt-[5rem] ">
-        <h1 className=" robot-condensed items-center  text-center text-[6.5rem] font-[700] uppercase leading-[81%] text-[#000000] ">
+        <h1 className=" robot-condensed items-center  text-center text-[6.5rem] font-[600] uppercase leading-[81%] text-[#000000] ">
           Connect Us On Social Media{" "}
         </h1>
         <div className="  flex flex-wrap justify-center gap-[2rem] py-[10rem]">

@@ -28,12 +28,12 @@ const Header = () => {
           </Link>
         </li>
         <li className="flex    items-center justify-center">
-          <Link href="about-us">
+          <Link href="/about-us">
             <p className="text-18 text-white">About</p>
           </Link>
         </li>
         <li className="flex    items-center justify-center">
-          <Link href="services/logo-design">
+          <Link href="/services/logo-design">
             <p
               className="text-18 text-white"
               onMouseEnter={() => setHover(true)}
@@ -54,17 +54,17 @@ const Header = () => {
           </Link>
         </li>
         <li className="flex   items-center justify-center">
-          <Link href="our-clients">
+          <Link href="/our-clients">
             <p className="text-18 text-white">Our Works</p>
           </Link>
         </li>
         <li className="flex    items-center justify-center">
-          <Link href="careers">
+          <Link href="/careers">
             <p className="text-18 text-white">Careers</p>
           </Link>
         </li>
         <li className="flex    items-center justify-center">
-          <Link href="contact-us">
+          <Link href="/contact-us">
             <p className="text-18 text-white">Contact Us</p>
           </Link>
         </li>
