@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <ul className="flex w-full justify-center  gap-[4rem] max-[677px]:hidden min-[1000px]:gap-[8rem]">
         <li className="flex    items-center justify-center">
-          <Link href="creative-blog">
+          <Link href="/creative-blog">
             <p className="text-18 text-white">Blogs</p>
           </Link>
         </li>

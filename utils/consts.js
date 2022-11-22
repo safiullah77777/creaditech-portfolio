@@ -9,7 +9,7 @@ export const List = [
       { title: "Website Development", link: "/services/web-development" },
       {
         title: "Mobile App Development",
-        link: "/services/web-development",
+        link: "/services/mobile-app-development",
         children: [
           { title: "IOS App Development", link: "/services/ios-development" },
           {
@@ -21,6 +21,10 @@ export const List = [
       {
         title: "Tailered App Solution",
         link: "/services/tailered-app-solution",
+      },
+      {
+        title: "Database Solutions",
+        link: "/services/database-solutions",
       },
       {
         title: "Wordpress | Shopify Development",

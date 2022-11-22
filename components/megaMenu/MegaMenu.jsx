@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { Dispatch, FC, SetStateAction } from "react";
 import { List } from "../../utils/consts";
+import arrow from "../../public/assets/images/icons/arrow-fa2.svg";
 
 const MegaMenu = ({ classes, setHover }) => {
   return (
@@ -24,15 +25,31 @@ const MegaMenu = ({ classes, setHover }) => {
                   {item.heading}
                 </h2>
                 <ul className="flex flex-col items-center">
-                  {item.children.map((item) => {
+                  {item.children.map((items) => {
                     return (
-                      <Link key={item.title} href={item.link}>
+                      <Link key={items.title} href={items.link}>
                         <li className="group text-center hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
-                          {item.title}
-                          {item?.children && (
+                          <span className="flex items-center gap-[1rem]">
+                            {items.title}
+                            <svg
+                              width="12"
+                              height="12"
+                              viewBox="0 0 44 71"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              className={items.children?"flex group-hover:rotate-90 ease-linear duration-100":"hidden"}
+                            >
+                              <path
+                               
+                                d="M-0.000488281 8.3425L27.0978 35.5L-0.000488281 62.6575L8.34201 71L43.842 35.5L8.34201 0L-0.000488281 8.3425Z"
+                                fill={"white"}
+                              />
+                            </svg>
+                          </span>
+                          {items?.children && (
                             <>
                               <ul className="flex overflow-hidden flex-col max-h-0 group-hover:max-h-[10rem] duration-300 ease-linear">
-                                {item.children.map((item1) => (
+                                {items.children.map((item1) => (
                                   <li
                                     className="text-center hover:text-[#ffe100] cursor-pointer Montserrat text-[1rem] font-400 text-[#ffffff]"
                                     key={item1.title}

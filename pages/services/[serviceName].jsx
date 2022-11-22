@@ -26,6 +26,7 @@ import AiIcon from "../../public/assets/images/icons/Ai-icon.svg";
 import comTick from "../../public/assets/images/icons/com-tick.svg";
 import BottomNav from "../../components/bottomNav/BottomNav";
 import MetaHead from "../../components/metaHead/MetaHead";
+import { data } from "../../utils/data";
 const Services = () => {
   const router = useRouter();
   const { serviceName } = router.query;
@@ -33,12 +34,12 @@ const Services = () => {
     List.map((item) => item.children)
       .reduce((prev, next) => prev.concat(next))
       .map((item) => item.link.split("/")[2])
-      .includes(serviceName) || true;
+      .includes(serviceName) ;
   if (!check) return <ErrorPage statusCode={404} />;
-
-  const [data, setData] = useState({});
+  const content = data.filter((data) => data.page === serviceName)[0];
+  const [formData, setFormData] = useState({});
   const onChange = (e) => {
-    setData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
+    setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
   const onSubmit = (e) => {
     const emailregex = new RegExp(
@@ -48,22 +49,27 @@ const Services = () => {
       /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi
     );
     e.preventDefault();
-    if (!emailregex.test(data.email)) {
+    if (!emailregex.test(formData.email)) {
       alert("invalid email address");
-    } else if (!data.name) {
+    } else if (!formData.name) {
       alert("invalid name");
       return;
-    } else if (!data.description) {
+    } else if (!formData.description) {
       alert("invalid description");
       return;
-    } else if (!urlregex.test(data.url)) {
+    } else if (!urlregex.test(formData.url)) {
       alert("invalid url");
       return;
     }
   };
   return (
     <>
-      <MetaHead />
+      {console.log({ content })}
+
+      <MetaHead
+        title={content?.meta?.title}
+        description={content?.meta?.description}
+      />
 
       <div className=" bg-black ">
         <Header />
@@ -72,16 +78,21 @@ const Services = () => {
         className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.png')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
     			min-[500px]:px-28 "
       >
-        <div className="flex h-full max-w-[700px] flex-col justify-center gap-[2rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
-          <h1 className="robot-condensed flex flex-wrap text-[6.5rem] font-600 uppercase leading-85 text-white  max-[1440px]:text-[6.5rem] max-[1300px]:text-[5rem] max-[850px]:justify-center max-[850px]:text-center max-[400px]:text-[5rem] min-[1600px]:text-[5rem]">
-            LOGO <p className="mx-5 text-yellow"> DESIGN</p> SERVICES
+        <div className="flex h-full max-w-[720px] flex-col justify-center gap-[2rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
+          <h1 className="robot-condensed flex gap-x-[.8rem] flex-wrap text-[6.5rem] font-600 uppercase leading-85 text-white  max-[1440px]:text-[6.5rem] max-[1300px]:text-[5rem] max-[850px]:justify-center max-[850px]:text-center max-[400px]:text-[5rem] min-[1600px]:text-[5rem]">
+            {content?.h1?.pre.trim().split(" ").map((item) => (
+              <span>{item}</span>
+            ))}{" "}
+            {content?.h1?.main.trim().split(" ").map((item) => (
+              <span className=" text-yellow">{item}</span>
+            ))}{" "}
+            {content?.h1?.post.trim().split(" ").map((item) => (
+              <span>{item}</span>
+            ))}
           </h1>
           <div className="detail-heading">
             <p className=" Montserrat mt-4  max-w-[646px] text-[2.2rem] font-[300] leading-130 text-white max-[850px]:text-center">
-              Let’s Bring in the Power of Popularity.It’s all about Your brand,
-              your logo design & our services.Let’s Bring in the Power of
-              Popularity It’s all about Your brand, your logo design & our
-              services.
+              {content?.tagline}
             </p>
             <div className="mt-[4rem] flex flex-wrap gap-8 max-[850px]:justify-center">
               <Button classes="" title={"View Pricing & Plan"} />
