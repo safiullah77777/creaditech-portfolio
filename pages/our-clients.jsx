@@ -15,6 +15,7 @@ import Pagination from "../components/pagination/Pagination";
 import Slider from "../components/slider/Slider";
 import Footer from "../components/footer/Footer";
 import BottomNav from "../components/bottomNav/BottomNav";
+import MetaHead from "../components/metaHead/MetaHead";
 // import client1 from '../public/assets/images/client1.png'
 
 const OurClients = () => {
@@ -22,6 +23,8 @@ const OurClients = () => {
   const [hover1, setHover1] = useState(false);
   return (
     <>
+      <MetaHead />
+
       <Header />
       <div
         className="banner3  bg-[url('/assets/images/backgrounds/banner3.png')]  relative flex h-[100vh] w-full  bg-cover bg-center bg-no-repeat bg-blend-overlay max-[850px]:h-[90rem] max-[850px]:flex-col max-[850px]:p-0 

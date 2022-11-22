@@ -11,6 +11,7 @@ import chat from '../public/assets/images/chat.png';
 import Pagination from '../components/pagination/Pagination';
 import Slider from '../components/slider/Slider';
 import BottomNav from '../components/bottomNav/BottomNav';
+import MetaHead from '../components/metaHead/MetaHead';
 
 const CreativeBlogs = () => {
 	const [hover, setHover] = useState(false);
@@ -18,6 +19,8 @@ const CreativeBlogs = () => {
 
 	return (
 		<>
+      <MetaHead />
+
 			<Header />
 			<Banner2 />
 			<div className="flex flex-wrap justify-center gap-5 p-8">

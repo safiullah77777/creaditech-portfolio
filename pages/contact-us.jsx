@@ -11,10 +11,13 @@ import Instagram from "../public/assets/images/Instagram.png";
 import Slider from "../components/slider/Slider";
 import Footer from "../components/footer/Footer";
 import BottomNav from "../components/bottomNav/BottomNav";
+import MetaHead from "../components/metaHead/MetaHead";
 
 const ContactUs = () => {
   return (
     <>
+      <MetaHead />
+
       <Header />
       <div
         className=" bg-banner-grey  banner7  bg-[url('/assets/images/backgrounds/banner7.png')]   flex  min-h-[80rem]   w-full  bg-cover bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem]  max-[950px]:pb-[5rem] 

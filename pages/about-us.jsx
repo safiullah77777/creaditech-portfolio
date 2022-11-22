@@ -12,9 +12,12 @@ import Button2 from "../components/button2/Button2";
 import Slider from "../components/slider/Slider";
 import Footer from "../components/footer/Footer";
 import BottomNav from "../components/bottomNav/BottomNav";
+import MetaHead from "../components/metaHead/MetaHead";
 const AboutUs = () => {
   return (
     <>
+      <MetaHead />
+
       <div>
         <Header />
       </div>

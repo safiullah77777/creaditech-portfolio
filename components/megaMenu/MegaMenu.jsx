@@ -27,8 +27,22 @@ const MegaMenu = ({ classes, setHover }) => {
                   {item.children.map((item) => {
                     return (
                       <Link key={item.title} href={item.link}>
-                        <li className="text-center hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
+                        <li className="group text-center hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
                           {item.title}
+                          {item?.children && (
+                            <>
+                              <ul className="flex overflow-hidden flex-col max-h-0 group-hover:max-h-[10rem] duration-300 ease-linear">
+                                {item.children.map((item1) => (
+                                  <li
+                                    className="text-center hover:text-[#ffe100] cursor-pointer Montserrat text-[1rem] font-400 text-[#ffffff]"
+                                    key={item1.title}
+                                  >
+                                    {item1.title}
+                                  </li>
+                                ))}
+                              </ul>
+                            </>
+                          )}
                         </li>
                       </Link>
                     );

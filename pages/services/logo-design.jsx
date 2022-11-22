@@ -22,6 +22,7 @@ import arcticon from "../../public/assets/images/icons/arcti-con.svg";
 import AiIcon from "../../public/assets/images/icons/Ai-icon.svg";
 import comTick from "../../public/assets/images/icons/com-tick.svg";
 import BottomNav from "../../components/bottomNav/BottomNav";
+import MetaHead from "../../components/metaHead/MetaHead";
 
 const LogoService = () => {
   const [data, setData] = useState({});
@@ -44,6 +45,7 @@ const LogoService = () => {
   };
   return (
     <>
+      <MetaHead />
       <div className=" bg-black ">
         <Header />
       </div>
@@ -68,10 +70,7 @@ const LogoService = () => {
             </div>
           </div>
         </div>
-        <form
-          
-          className="flex h-full flex-col justify-center gap-[2rem]"
-        >
+        <form className="flex h-full flex-col justify-center gap-[2rem]">
           <div className="flex gap-[2rem]">
             <div className="flex-1">
               <Input

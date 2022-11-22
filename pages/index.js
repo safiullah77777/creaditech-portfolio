@@ -36,6 +36,7 @@ import BottomNav from "../components/bottomNav/BottomNav";
 import robot from "../public/assets/images/robot.png";
 import robot1 from "../public/assets/images/robot1.png";
 import robot2 from "../public/assets/images/robot2.png";
+import MetaHead from "../components/metaHead/MetaHead";
 
 const Home = () => {
   const carouselRef = React.useRef(null);
@@ -136,6 +137,7 @@ const Home = () => {
   }
   return (
     <div className="flex min-h-screen flex-col">
+      <MetaHead />
       <Header />
       <Banner />
       <ImagesLine />
@@ -154,7 +156,8 @@ const Home = () => {
           </p>
           {para.split(" ").map((item, index) => {
             return (
-              <p key={item+index}
+              <p
+                key={item + index}
                 className={`Montserrat  index flex flex-wrap text-16 font-500  text-white/[0.7] max-[850px]:text-[16px] ${
                   item == "software" ||
                   item == "development" ||
@@ -205,7 +208,6 @@ const Home = () => {
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
             {serviceCards.map((item, index) => (
               <Card
-                
                 styles={item.styles}
                 key={index}
                 heading1={item.title}

@@ -25,6 +25,7 @@ import arcticon from "../../public/assets/images/icons/arcti-con.svg";
 import AiIcon from "../../public/assets/images/icons/Ai-icon.svg";
 import comTick from "../../public/assets/images/icons/com-tick.svg";
 import BottomNav from "../../components/bottomNav/BottomNav";
+import MetaHead from "../../components/metaHead/MetaHead";
 const Services = () => {
   const router = useRouter();
   const { serviceName } = router.query;
@@ -62,6 +63,8 @@ const Services = () => {
   };
   return (
     <>
+      <MetaHead />
+
       <div className=" bg-black ">
         <Header />
       </div>

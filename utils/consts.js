@@ -7,7 +7,17 @@ export const List = [
     heading: "Development",
     children: [
       { title: "Website Development", link: "/services/web-development" },
-      { title: "Mobile App Development", link: "/services/web-development" },
+      {
+        title: "Mobile App Development",
+        link: "/services/web-development",
+        children: [
+          { title: "IOS App Development", link: "/services/ios-development" },
+          {
+            title: "Android App Development",
+            link: "/services/android-development",
+          },
+        ],
+      },
       {
         title: "Tailered App Solution",
         link: "/services/tailered-app-solution",

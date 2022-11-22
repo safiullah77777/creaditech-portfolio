@@ -9,6 +9,7 @@ import portfolio from "../public/assets/images/portfolio.png";
 import portfolio1 from "../public/assets/images/backgrounds/portfolio.png";
 import Image from "next/image";
 import BottomNav from "../components/bottomNav/BottomNav";
+import MetaHead from "../components/metaHead/MetaHead";
 
 const Portfolio = () => {
   const carouselRef = React.useRef(null);
@@ -23,6 +24,7 @@ const Portfolio = () => {
 
   return (
     <>
+      <MetaHead />
       <Header />
       <div
         className="banner4 bg-[url('/assets/images/backgrounds/banner4.png')] relative flex min-h-[80vh] w-full justify-center bg-cover  bg-center bg-no-repeat pl-28 bg-blend-overlay max-[850px]:h-[624px]  max-[850px]:flex-col max-[850px]:p-0 
@@ -97,7 +99,6 @@ const Portfolio = () => {
 
       <div className="my-[4rem] ">
         <Carousel
-          
           // itemPosition="CENTER"
           showEmptySlots={true}
           // enableAutoPlay={true}
@@ -137,7 +138,6 @@ const Portfolio = () => {
           <Image src={money} alt="" width={646} height={410} />
           <Image src={money} alt="" width={646} height={410} />
         </Carousel>
-        
       </div>
       <div className="flex gap-[5rem]  px-[6rem] py-[8rem] max-[850px]:flex-col max-[850px]:px-[3rem]">
         <div className="flex flex-col gap-[4rem] ">

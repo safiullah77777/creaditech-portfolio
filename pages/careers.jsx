@@ -3,6 +3,7 @@ import BottomNav from '../components/bottomNav/BottomNav';
 import Card9 from '../components/card9/Card9';
 import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
+import MetaHead from '../components/metaHead/MetaHead';
 import Modal from '../components/modal/Modal';
 import Slider from '../components/slider/Slider';
 
@@ -41,6 +42,7 @@ const Careers = () => {
 	];
 	return (
 		<>
+		<MetaHead />
 			<Header />
 			<div
 				className="banner5  bg-[url('/assets/images/backgrounds/banner5.png')]  max-[850px]: relative flex h-[483px]  w-full bg-cover bg-center  bg-no-repeat bg-blend-overlay max-[850px]:flex-col max-[850px]:p-0 
