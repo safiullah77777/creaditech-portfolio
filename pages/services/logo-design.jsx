@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../components/button/Button";
 import Button2 from "../../components/button2/Button2";
 import Header from "../../components/header/Header";
@@ -24,6 +24,24 @@ import comTick from "../../public/assets/images/icons/com-tick.svg";
 import BottomNav from "../../components/bottomNav/BottomNav";
 
 const LogoService = () => {
+  const [data, setData] = useState({});
+  const onChange = (e) => {
+    setData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
+  };
+  const onSubmit = (e) => {
+    const emailregex = new RegExp(
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    );
+    const urlregex = new RegExp(
+      /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi
+    );
+    e.preventDefault();
+    if (!emailregex.test(data.email)) {
+      alert("invalid email address");
+    } else if (!data.name) alert("invalid name");
+    else if (!data.description) alert("invalid description");
+    else if (!urlregex.test(data.url)) alert("invalid url");
+  };
   return (
     <>
       <div className=" bg-black ">
@@ -50,26 +68,54 @@ const LogoService = () => {
             </div>
           </div>
         </div>
-        <form action={(e)=>{
-          e.preventDefault();
-        }} className="flex h-full flex-col justify-center gap-[2rem]">
+        <form
+          
+          className="flex h-full flex-col justify-center gap-[2rem]"
+        >
           <div className="flex gap-[2rem]">
             <div className="flex-1">
-              <Input placeholder="Your Name" classes="w-full" type="text" />
+              <Input
+                onChange={onChange}
+                name="name"
+                placeholder="Your Name"
+                classes="w-full"
+                type="text"
+              />
             </div>
             <div className="flex-1">
-              <Input placeholder="Phone*" classes="w-full" type="number" />
+              <Input
+                onChange={onChange}
+                name="phone-no"
+                placeholder="Phone*"
+                classes="w-full"
+                type="number"
+              />
             </div>
           </div>
-          <Input placeholder="Email Address*" classes="w-full" type="email" />
-          <Input placeholder="Website URL" classes="w-full" type="text" />
+          <Input
+            onChange={onChange}
+            placeholder="Email Address*"
+            name={"email"}
+            classes="w-full"
+            type="email"
+          />
+          <Input
+            onChange={onChange}
+            placeholder="Website URL"
+            name="url"
+            classes="w-full"
+            type="text"
+          />
           <textarea
+            onChange={onChange}
+            name="description"
             placeholder="Write your Requirements here..."
             className="w-full h-[106px] rounded-[5px] border-none bg-[#515151] p-[2rem] text-[1.6rem] font-300 text-[#FFFFFF]/[0.5] outline-none"
-            name=""
             id=""
           ></textarea>
-          <Button type="submit"
+          <Button
+            onClick={onSubmit}
+            type="submit"
             title="Send Now"
             classes="!rounded-[10px] !text-[2.5rem] !font-500"
           />
@@ -117,7 +163,10 @@ const LogoService = () => {
                 to any development or marketing challenge.
               </p>
               <br />
-              <Button title={"Lets Get Started"} classes="bg-[#FEE236] text-[#111111]" />
+              <Button
+                title={"Lets Get Started"}
+                classes="bg-[#FEE236] text-[#111111]"
+              />
             </div>
           </div>
         </div>
@@ -138,7 +187,9 @@ const LogoService = () => {
               </h2>
             </div>
             <div className=" clash max-[550px]:flex  flex-col min-[550px]:grid min-[550px]:grid-cols-2 flex-wrap justify-between gap-y-5 p-5 text-3xl font-normal tracking-wide text-[#0377BC]">
-              <p className=" max-[500px]:text-[text-[4rem] ">Web Developement</p>
+              <p className=" max-[500px]:text-[text-[4rem] ">
+                Web Developement
+              </p>
               <p className="text-[2rem]">Mobile App Developement</p>
               <p className="text-[2rem]">Graphics Designing</p>
               <p className="text-[2rem]">Search Engine Optimization</p>
@@ -421,7 +472,6 @@ const LogoService = () => {
         {/* Payless logo design page  */}
         <div className="mt-10 flex w-full gap-[2rem] bg-[#1E1E1E] p-4 pr-20 pl-[3rem] max-[850px]:flex-col">
           <div className="relative  order-1 mx-auto mb-2 min-[850px]:mt-12 max-[850px]:w-full w-[50rem] text-center max-[850px]:order-2  ">
-            
             <Image
               className="relative !max-[850px]:top-[21rem]  top-[12rem] w-full"
               src={CardFull}

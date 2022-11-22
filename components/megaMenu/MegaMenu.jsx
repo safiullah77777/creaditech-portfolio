@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { Dispatch, FC, SetStateAction } from "react";
 import { List } from "../../utils/consts";
 
 const MegaMenu = ({ classes, setHover }) => {
- 
   return (
     <div
       onMouseLeave={() => setHover(false)}
@@ -18,7 +18,7 @@ const MegaMenu = ({ classes, setHover }) => {
                 className="flex flex-col gap-[1rem] items-center w-[25%]"
               >
                 <div className="">
-                  <Image src={item.logo} />
+                  <Image src={item.logo} alt="" />
                 </div>
                 <h2 className="clash w-full text-center text-[2.5rem] border-solid pb-[1rem] border-b-[2px] border-[#ffffff] font-500 text-[#ffffff]">
                   {item.heading}
@@ -26,12 +26,11 @@ const MegaMenu = ({ classes, setHover }) => {
                 <ul className="flex flex-col items-center">
                   {item.children.map((item) => {
                     return (
-                      <li
-                        key={item.title}
-                        className="cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]"
-                      >
-                        {item.title}
-                      </li>
+                      <Link key={item.title} href={item.link}>
+                        <li className="text-center hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
+                          {item.title}
+                        </li>
+                      </Link>
                     );
                   })}
                 </ul>
