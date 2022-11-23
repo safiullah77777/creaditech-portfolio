@@ -83,7 +83,7 @@ const Home = () => {
       styles: "h-[98px] w-[107px]",
     },
     {
-      title: "Databse",
+      title: "Database",
       title1: "Solution",
       icon: Image5,
       styles: "h-[85px] w-[85px]",
