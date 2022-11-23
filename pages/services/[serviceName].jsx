@@ -35,7 +35,7 @@ const Services = () => {
       .reduce((prev, next) => prev.concat(next))
       .map((item) => item.link.split("/")[2])
       .includes(serviceName) ;
-  if (!check) return <ErrorPage statusCode={404} />;
+  // if (!check) return <ErrorPage statusCode={404} />;
   const content = data.filter((data) => data.page === serviceName)[0];
   const [formData, setFormData] = useState({});
   const onChange = (e) => {
@@ -78,8 +78,8 @@ const Services = () => {
         className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.png')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
     			min-[500px]:px-28 "
       >
-        <div className="flex h-full max-w-[720px] flex-col justify-center gap-[2rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
-          <h1 className="robot-condensed flex gap-x-[.8rem] flex-wrap text-[6.5rem] font-600 uppercase leading-85 text-white  max-[1440px]:text-[6.5rem] max-[1300px]:text-[5rem] max-[850px]:justify-center max-[850px]:text-center max-[400px]:text-[5rem] min-[1600px]:text-[5rem]">
+        <div className="flex h-full max-w-[660px]  flex-col justify-center gap-[1rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
+          <h1 className="robot-condensed text-justify flex gap-x-[1rem] flex-wrap text-[4rem] font-600 uppercase leading-[110%] text-white  max-[1440px]:text-[6.5rem] max-[1300px]:text-[5rem] max-[850px]:justify-center max-[850px]:text-center max-[400px]:text-[5rem] min-[1600px]:text-[3.8rem]">
             {content?.h1?.pre.trim().split(" ").map((item) => (
               <span>{item}</span>
             ))}{" "}
