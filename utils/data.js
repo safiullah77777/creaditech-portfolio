@@ -15,6 +15,21 @@ export const data = [
     best custom web development company in the USA that has a pool of expert web developers.`,
   },
   {
+    page: "branding",
+    meta: {
+      title: "Branding",
+      description: `Low on budget but want to launch your business online? Don't worry as Creaditech
+      offers affordable WordPress development and Shopify development services.`,
+    },
+    h1: {
+      pre: "Wordpress & ",
+      main: "Shopify Development",
+      post: " Services At Affordable Rates",
+    },
+    tagline: `Low on budget but want to launch your business online? Don't worry as Creaditech offers
+    affordable WordPress development and Shopify development services.`,
+  },
+  {
     page: "wordpress-wix-shopify-development",
     meta: {
       title: "WordPress Development | Shopify Development Services",

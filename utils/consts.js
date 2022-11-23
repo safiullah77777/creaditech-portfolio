@@ -36,7 +36,7 @@ export const List = [
     logo: designing,
     heading: "Designing",
     children: [
-      { title: "Branding Kit", link: "/services/branding-kit" },
+      { title: "Branding", link: "/services/branding" },
       { title: "Logo Design", link: "/services/logo-design" },
       { title: "Infographics Design", link: "/services/infographics-design" },
       { title: "Social Media Design", link: "/services/social-media-design" },

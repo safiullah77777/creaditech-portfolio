@@ -27,16 +27,15 @@ import comTick from "../../public/assets/images/icons/com-tick.svg";
 import BottomNav from "../../components/bottomNav/BottomNav";
 import MetaHead from "../../components/metaHead/MetaHead";
 import { data } from "../../utils/data";
-const Services = () => {
+const Services = ({ datas }) => {
   const router = useRouter();
   const { serviceName } = router.query;
-  const check =
-    List.map((item) => item.children)
-      .reduce((prev, next) => prev.concat(next))
-      .map((item) => item.link.split("/")[2])
-      .includes(serviceName) ;
-  // if (!check) return <ErrorPage statusCode={404} />;
-  const content = data.filter((data) => data.page === serviceName)[0];
+  const check = List.map((item) => item.children)
+    .reduce((prev, next) => prev.concat(next))
+    .map((item) => item.link.split("/")[2])
+    .includes(serviceName);
+  if (!datas[0].page) return <ErrorPage statusCode={404} />;
+  const content = data.filter((data) => data?.page === serviceName)[0];
   const [formData, setFormData] = useState({});
   const onChange = (e) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
@@ -64,11 +63,11 @@ const Services = () => {
   };
   return (
     <>
-      {console.log({ content })}
+      {console.log({ content, datas, data, serviceName })}
 
       <MetaHead
-        title={content?.meta?.title}
-        description={content?.meta?.description}
+        title={datas[0]?.meta?.title}
+        description={datas[0]?.meta?.description}
       />
 
       <div className=" bg-black ">
@@ -80,15 +79,24 @@ const Services = () => {
       >
         <div className="flex h-full max-w-[660px]  flex-col justify-center gap-[1rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
           <h1 className="robot-condensed text-justify flex gap-x-[1rem] flex-wrap text-[4rem] font-600 uppercase leading-[110%] text-white  max-[1440px]:text-[6.5rem] max-[1300px]:text-[5rem] max-[850px]:justify-center max-[850px]:text-center max-[400px]:text-[5rem] min-[1600px]:text-[3.8rem]">
-            {content?.h1?.pre.trim().split(" ").map((item) => (
-              <span>{item}</span>
-            ))}{" "}
-            {content?.h1?.main.trim().split(" ").map((item) => (
-              <span className=" text-yellow">{item}</span>
-            ))}{" "}
-            {content?.h1?.post.trim().split(" ").map((item) => (
-              <span>{item}</span>
-            ))}
+            {content?.h1?.pre
+              .trim()
+              .split(" ")
+              .map((item) => (
+                <span>{item}</span>
+              ))}{" "}
+            {content?.h1?.main
+              .trim()
+              .split(" ")
+              .map((item) => (
+                <span className=" text-yellow">{item}</span>
+              ))}{" "}
+            {content?.h1?.post
+              .trim()
+              .split(" ")
+              .map((item) => (
+                <span>{item}</span>
+              ))}
           </h1>
           <div className="detail-heading">
             <p className=" Montserrat mt-4  max-w-[646px] text-[2.2rem] font-[300] leading-130 text-white max-[850px]:text-center">
@@ -506,5 +514,27 @@ const Services = () => {
     </>
   );
 };
-
+export async function getStaticProps({ params = {} }) {
+  console.log("getStaticPaths", params);
+  return {
+    props: {
+      datas: data.filter((item) => {
+        return params.serviceName == item.page;
+      }),
+    }, // will be passed to the page component as props
+  };
+}
+export async function getStaticPaths() {
+  const paths = data.map((item) => {
+    return {
+      params: {
+        serviceName: item.page,
+      },
+    };
+  });
+  return {
+    paths,
+    fallback: false,
+  };
+}
 export default Services;
