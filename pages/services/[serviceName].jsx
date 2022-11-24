@@ -190,12 +190,7 @@ const Services = ({ datas }) => {
           />
         </form>
       </div>
-      <Image
-        loader={({ src }) => {
-          return src;
-        }}
-        sLine
-      />
+      <ImagesLine />
       <br />
       <div className="parent flex gap-[2rem] px-20 max-[850px]:flex-col">
         <div className="setion-right flex-1">
@@ -488,9 +483,9 @@ const Services = ({ datas }) => {
         <div className="mt-[10rem] flex px-[6rem] pb-[10rem] max-[850px]:flex-col max-[850px]:gap-[4rem] max-[500px]:px-[2rem] ">
           <div className="max-w-[77rem] flex-1 max-[850px]:max-w-full">
             <h2 className="robot-condensed mt-[10rem] text-[4.2rem] font-600 uppercase leading-[100%] text-[#5B5E71]  ">
-              {pageContent.section2.heading}
+              {pageContent.section3.heading}
             </h2>
-            {pageContent.section2.paras}
+            {pageContent.section3.paras}
 
             {/* <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
               At this point, you might be considering why shall I choose

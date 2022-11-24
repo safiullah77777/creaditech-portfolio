@@ -83,7 +83,7 @@ export const Content = [
         web development, we are Get in touch with us now and get your customized website built according
         to your requirements.`,
     },
-    section2: {
+    section3: {
       heading: "Why You Shall Take Our Web Development Services?",
       paras: (
         <>
