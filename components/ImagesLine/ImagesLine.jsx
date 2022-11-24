@@ -9,16 +9,24 @@ const ImagesLine = () => {
   return (
     <div className="flex flex-wrap items-center justify-center gap-28  min-[400px]:px-20 py-8 px-[2rem]">
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]  ">
-        <Image src={Image1} className="" alt="" width={146} height={62} />
+        <Image  loader={({ src }) => {
+                return src;
+              }} src={Image1} className="" alt="" width={146} height={62} />
       </div>
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]">
-        <Image src={Image2} className="" alt="" width={146} height={62} />
+        <Image  loader={({ src }) => {
+                return src;
+              }} src={Image2} className="" alt="" width={146} height={62} />
       </div>
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]">
-        <Image src={Image3} className="" alt="" width={146} height={62} />
+        <Image  loader={({ src }) => {
+                return src;
+              }} src={Image3} className="" alt="" width={146} height={62} />
       </div>
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]">
-        <Image src={Image4} className="" alt="" width={146} height={62} />
+        <Image  loader={({ src }) => {
+                return src;
+              }} src={Image4} className="" alt="" width={146} height={62} />
       </div>
     </div>
   );

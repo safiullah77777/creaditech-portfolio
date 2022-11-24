@@ -142,7 +142,9 @@ const Home = () => {
       <MetaHead />
       <Header />
       <Banner />
-      <ImagesLine />
+      <Image  loader={({ src }) => {
+                return src;
+              }}sLine />
       <div className="max-[850px]:bg-none flex h-450 flex-col bg-[#2B2B2B] bg-[url('/assets/images/backgrounds/service-bg.png')] bg-cover bg-center bg-no-repeat p-20  max-[850px]:h-auto  max-[850px]:p-0">
         <h2 className="robot-condensed  text-30  font-700 text-yellow  max-[850px]:p-12 max-[850px]:text-[30px] max-[850px]:text-[4rem] max-[850px]:leading-[100%] max-[850px]:text-white">
           We Design Custom Softwares & Provide Marketing Services
@@ -194,7 +196,9 @@ const Home = () => {
             business recognized among your customers.
           </p> */}
         </div>
-        <Image
+        <Image  loader={({ src }) => {
+                return src;
+              }}
           width={1000}
           height={1000}
           className="hidden w-full max-[850px]:flex"
@@ -227,7 +231,9 @@ const Home = () => {
               className="border-[rgba(198, 206, 211, 1)] group flex h-[30rem] w-[30rem] flex-col items-center justify-center gap-4  overflow-hidden rounded-25 border-2 border-solid bg-black p-12 shadow-xl duration-300 ease-linear hover:border-0 hover:bg-yellow max-[500px]:w-[40rem] max-[500px]:h-[40rem]"
             >
               <div className=" group-hover:after:wi relative flex h-160 w-160  items-center justify-center ease-linear after:absolute after:bottom-0 after:left-0 after:h-full after:w-full after:rounded-full after:bg-[#E4E4E4] after:duration-700 group-hover:after:bg-black   ">
-                {/* <Image alt="" src={Image2} className="z-10" />
+                {/* <Image  loader={({ src }) => {
+                return src;
+              }} alt="" src={Image2} className="z-10" />
                 {Image2} */}
                 <svg
                   width="4.4rem"
@@ -282,21 +288,21 @@ const Home = () => {
             satisfied customers.
           </div>
           <div className="hidden w-1/2 max-[850px]:flex max-[850px]:w-full">
-            <Image className="h-full w-full" src={imageChoose} alt="" />
+            <Image  loader={({ src }) => {
+                return src;
+              }} className="h-full w-full" src={imageChoose} alt="" />
           </div>
           <div className="flex flex-wrap items-center gap-8 py-8 max-[850px]:justify-center">
-            
-             
-                <Card2 show={show} numbers={500} text="Projects delivered" />
-                <Card2 numbers={10} text="Years of experience" />
-                <Card2 numbers={150} text="Team Members" />
-                <Card2 numbers={20} text="Countries" />
-              
-            
+            <Card2 show={show} numbers={500} text="Projects delivered" />
+            <Card2 numbers={10} text="Years of experience" />
+            <Card2 numbers={150} text="Team Members" />
+            <Card2 numbers={20} text="Countries" />
           </div>
         </div>
         <div className="w-1/2 max-[850px]:hidden max-[850px]:w-full">
-          <Image className="h-full w-full" src={imageChoose} alt="" />
+          <Image  loader={({ src }) => {
+                return src;
+              }} className="h-full w-full" src={imageChoose} alt="" />
         </div>
       </section>
       <div className="flex bg-[#2B2B2B] py-32 max-[850px]:px-8">
@@ -324,7 +330,9 @@ const Home = () => {
               className="group flex  h-[39.3rem] w-[31.3rem] flex-col items-center justify-center gap-4 overflow-hidden  bg-[#5B5E71] p-12   shadow-xl duration-300 ease-linear hover:border-0 hover:bg-yellow max-[400px]:h-[50rem] max-[400px]:w-[40rem]"
             >
               <div className=" group-hover:after:wi relative flex h-160 w-160  items-center justify-center ease-linear after:absolute after:bottom-0 after:left-0 after:h-full after:w-full after:rounded-full after:bg-[#E4E4E4] after:duration-700 group-hover:after:bg-black   ">
-                {/* <Image alt="" src={Image2} className="z-10" />
+                {/* <Image  loader={({ src }) => {
+                return src;
+              }} alt="" src={Image2} className="z-10" />
                 {Image2} */}
                 <svg
                   width="4.4rem"
@@ -490,31 +498,49 @@ const Home = () => {
           </h2>
           <div className="relative z-[1000] flex flex-1 overflow-hidden">
             <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-              <Image src={arrow} alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
             </div>
             <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-              <Image src={arrow} alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-              <Image src={arrow} alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-              <Image src={arrow} alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
             </div>
             <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-              <Image src={arrow} alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-              <Image src={arrow} alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-              <Image src={arrow} alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-              <Image src={arrow} alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-              <Image src={arrow} alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
             </div>
           </div>
         </div>

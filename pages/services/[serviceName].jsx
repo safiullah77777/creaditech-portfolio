@@ -29,6 +29,8 @@ import MetaHead from "../../components/metaHead/MetaHead";
 import { data } from "../../utils/data";
 import Error404 from "../404";
 import Link from "next/link";
+import { Content } from "../../utils/content";
+
 const Services = ({ datas }) => {
   const [hydrated, setHydrated] = React.useState(false);
   React.useEffect(() => {
@@ -55,8 +57,11 @@ const Services = ({ datas }) => {
   const check = List.map((item) => item.children.map((item1) => item1)).reduce(
     (prev, next) => prev.concat(next)
   );
-  let randomItems = shuffle(shuffle(shuffle(shuffle(check)))).slice(4, 8);
+  let randomItems = shuffle(
+    shuffle(shuffle(shuffle(check.filter((item) => item.link !== serviceName))))
+  ).slice(4, 8);
   const content = data.filter((data) => data?.page === serviceName)[0];
+  const pageContent = Content.filter((data) => data?.page === serviceName)[0];
   const [formData, setFormData] = useState({});
   const onChange = (e) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
@@ -84,10 +89,9 @@ const Services = ({ datas }) => {
   };
   if (!datas[0].page) return <Error404 />;
 
+  console.log({ pageContent });
   return (
     <>
-      {console.log({ check, randomItems })}
-
       <MetaHead
         title={datas[0]?.meta?.title}
         description={datas[0]?.meta?.description}
@@ -186,47 +190,25 @@ const Services = ({ datas }) => {
           />
         </form>
       </div>
-      <ImagesLine />
+      <Image
+        loader={({ src }) => {
+          return src;
+        }}
+        sLine
+      />
       <br />
       <div className="parent flex gap-[2rem] px-20 max-[850px]:flex-col">
         <div className="setion-right flex-1">
           <div className="h-90vh flex max-w-[120rem]  flex-col  flex-wrap content-center	items-center gap-4">
             <h2 className="robot-condensed max-[500px]:text-[5rem] text-[4rem] 	font-[600] uppercase leading-[100%] text-[#5B5E71]">
-              Bring Your Business Idea On The Internet By Taking Our Web
-              Development Services
+              {pageContent.section1.heading}
             </h2>
-            <div className="max-[500px]:text-[14px] flex flex-col gap-[1rem] text-[16px] text-[#5B5E71]">
-              <p>
-                “If you have a website, it makes your small business look big” (
-                <span className="text-sky-500	">Natalie Sequera</span> ). This
-                quote signifies the importance of a website for any business.
-                Therefore, if you are business and want to generate more leads
-                then you must get your website developed. However, creating a
-                high-quality website is not a piece of cake for everyone,
-                therefore you must take web development services from expert
-                companies like Creaditech.
-              </p>
-             
-              <p>
-                At Creaditech, we don’t just create websites, instead we create
-                websites that help you generate more sales. We have a team of
-                expert web developers who work day and night to satisfy our
-                client’s needs. Our web developers and web designers work
-                together to create an appealing website because studies show
-                that 89% of website visitors are less likely to return after a
-                bad website experience. Therefore, we create websites that have
-                a fast-loading speed, easy to use, and easy navigation.
-              </p>
-             
-              <p>
-                So, without any second thoughts choose Creaditech to be your web
-                development agency and make your business go live on the
-                Internet.
-              </p>
-              
+            <div className="max-[850px]:text-[19px] flex flex-col gap-[1rem] text-[1.7rem] text-[#5B5E71]">
+              {pageContent.section1.paras}
+
               <Button
                 title={"Lets Get Started"}
-                classes="bg-[#FEE236] text-[#111111] mr-auto"
+                classes="bg-[#FEE236] text-[#111111] mt-[2rem] mx-auto"
               />
             </div>
           </div>
@@ -234,6 +216,9 @@ const Services = ({ datas }) => {
         <div className="section-left flex  w-[64.6rem] flex-col gap-[3rem]  max-[850px]:w-full">
           <div className="w-full  max-[850px]:hidden">
             <Image
+              loader={({ src }) => {
+                return src;
+              }}
               className="w-full"
               src={imageWriting}
               alt=""
@@ -258,9 +243,13 @@ const Services = ({ datas }) => {
       <br />
 
       <div className=" mt-20 w-full px-20">
+        {console.log(pageContent)}
         <Image
+          loader={({ src }) => {
+            return src;
+          }}
           className="w-full rounded-[20px] shadow-shadowImage "
-          src={image3}
+          src={datas[0].inforaphic}
           alt=""
           width={2000}
           height={200}
@@ -276,7 +265,7 @@ const Services = ({ datas }) => {
           </span>
           <span className="text-[#5B5E71]">exaggerated.</span>
         </h1>
-        <div className="Montserrat max-w[1440px]:leading-[130%] mt-10 flex max-w-[1091px] flex-col gap-3 px-[3rem] text-center text-[16px] font-light	">
+        <div className="Montserrat max-w[1440px]:leading-[130%] mt-10 flex max-w-[1091px] flex-col gap-3 px-[3rem] text-center max-[850px]:text-[19px] text-[1.7rem] font-light	">
           <p>
             “If your business is not on the Internet, then your business will be
             out of business”. This quote from Bill Gates proves the value of
@@ -360,31 +349,85 @@ const Services = ({ datas }) => {
             </h2>
             <div className="relative z-[1000] flex flex-1 overflow-hidden">
               <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-                <Image src={arrow} alt="" />
+                <Image
+                  loader={({ src }) => {
+                    return src;
+                  }}
+                  src={arrow}
+                  alt=""
+                />
               </div>
               <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-                <Image src={arrow} alt="" />
+                <Image
+                  loader={({ src }) => {
+                    return src;
+                  }}
+                  src={arrow}
+                  alt=""
+                />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-                <Image src={arrow} alt="" />
+                <Image
+                  loader={({ src }) => {
+                    return src;
+                  }}
+                  src={arrow}
+                  alt=""
+                />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-                <Image src={arrow} alt="" />
+                <Image
+                  loader={({ src }) => {
+                    return src;
+                  }}
+                  src={arrow}
+                  alt=""
+                />
               </div>
               <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-                <Image src={arrow} alt="" />
+                <Image
+                  loader={({ src }) => {
+                    return src;
+                  }}
+                  src={arrow}
+                  alt=""
+                />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-                <Image src={arrow} alt="" />
+                <Image
+                  loader={({ src }) => {
+                    return src;
+                  }}
+                  src={arrow}
+                  alt=""
+                />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-                <Image src={arrow} alt="" />
+                <Image
+                  loader={({ src }) => {
+                    return src;
+                  }}
+                  src={arrow}
+                  alt=""
+                />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-                <Image src={arrow} alt="" />
+                <Image
+                  loader={({ src }) => {
+                    return src;
+                  }}
+                  src={arrow}
+                  alt=""
+                />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-                <Image src={arrow} alt="" />
+                <Image
+                  loader={({ src }) => {
+                    return src;
+                  }}
+                  src={arrow}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -446,6 +489,9 @@ const Services = ({ datas }) => {
         <div className="mt-10 flex w-full gap-[2rem] bg-[#1E1E1E] p-4 pr-20 pl-[3rem] max-[850px]:flex-col">
           <div className="relative  order-1 mx-auto mb-2 min-[850px]:mt-12 max-[850px]:w-full w-[50rem] text-center max-[850px]:order-2  ">
             <Image
+              loader={({ src }) => {
+                return src;
+              }}
               className="relative !max-[850px]:top-[21rem]  top-[12rem] w-full"
               src={CardFull}
               alt=""
@@ -501,6 +547,9 @@ const Services = ({ datas }) => {
           </div>
           <div className="flex items-center justify-center max-[850px]:pt-[5rem] min-[500px]:px-[5rem] ">
             <Image
+              loader={({ src }) => {
+                return src;
+              }}
               src={mono}
               className="w-full min-[500px]:h-[42rem] min-[500px]:w-[42rem]"
               alt=""
@@ -531,7 +580,6 @@ const Services = ({ datas }) => {
   );
 };
 export async function getStaticProps({ params = {} }) {
-  console.log("getStaticPaths", params);
   return {
     props: {
       datas: data.filter((item) => {

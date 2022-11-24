@@ -107,11 +107,21 @@ const ContactUs = () => {
           Connect Us On Social Media{" "}
         </h1>
         <div className="  flex flex-wrap justify-center gap-[2rem] py-[10rem]">
-          <Image src={Facbook} alt="Facbook" width={144} height={144} />
-          <Image src={Instagram} alt="Instagram" width={144} height={144} />
-          <Image src={Pintrest} alt="Pintrest" width={144} height={144} />
-          <Image src={LinkedIn} alt="LinkedIn" width={144} height={144} />
-          <Image src={Youtube} alt="Youtube" width={144} height={144} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={Facbook} alt="Facbook" width={144} height={144} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={Instagram} alt="Instagram" width={144} height={144} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={Pintrest} alt="Pintrest" width={144} height={144} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={LinkedIn} alt="LinkedIn" width={144} height={144} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={Youtube} alt="Youtube" width={144} height={144} />
         </div>
         <Slider />
       </div>

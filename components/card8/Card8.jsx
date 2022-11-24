@@ -10,7 +10,9 @@ const Card8 = () => {
           <h2 className="clash absolute max-[500px]:rounded-[10px] left-[50%] top-[50%] z-[10000] hidden -translate-x-1/2 text-[24px] font-600 text-white group-hover:flex">
             Read More
           </h2>
-          <Image
+          <Image  loader={({ src }) => {
+                return src;
+              }}
             src={robot}
             alt=""
             className="z-50 h-full w-full grayscale-0 group-hover:grayscale max-[500px]:h-full max-[500px]:w-full"

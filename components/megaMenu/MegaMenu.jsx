@@ -19,7 +19,9 @@ const MegaMenu = ({ classes, setHover }) => {
                 className="flex flex-col gap-[1rem] items-center w-[25%]"
               >
                 <div className="">
-                  <Image src={item.logo} alt="" />
+                  <Image  loader={({ src }) => {
+                return src;
+              }} src={item.logo} alt="" />
                 </div>
                 <h2 className="clash w-full text-center text-[2.5rem] border-solid pb-[1rem] border-b-[2px] border-[#ffffff] font-500 text-[#ffffff]">
                   {item.heading}

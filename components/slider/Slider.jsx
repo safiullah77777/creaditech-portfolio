@@ -12,7 +12,9 @@ const Slider = () => {
         </h2>
         <div className="flex items-center gap-4 max-[850px]:flex-col ">
           <div className="box-border  flex h-[77px] w-[77px] items-center justify-center rounded-full border-[5px] border-solid border-black bg-yellow duration-200 ease-linear group-hover:h-[80px] group-hover:w-[80px]">
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               alt=""
               className="h-[42px] w-[34px]  "
               src={phone}
@@ -31,7 +33,9 @@ const Slider = () => {
         </div>
         <div className="flex items-center gap-4 max-[850px]:flex-col ">
           <div className="box-border flex h-[77px] w-[77px] items-center justify-center rounded-full border-[5px] border-solid border-black bg-yellow duration-200 ease-linear group-hover:h-[80px] group-hover:w-[80px]">
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               alt=""
               className="h-[34px] w-[34px]  "
               src={chat}

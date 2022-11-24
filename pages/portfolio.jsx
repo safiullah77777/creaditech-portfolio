@@ -128,15 +128,33 @@ const Portfolio = () => {
             );
           }}
         >
-          <Image src={money} alt="" width={646} height={410} />
-          <Image src={money} alt="" width={646} height={410} />
-          <Image src={money} alt="" width={646} height={410} />
-          <Image src={money} alt="" width={646} height={410} />
-          <Image src={money} alt="" width={646} height={410} />
-          <Image src={money} alt="" width={646} height={410} />
-          <Image src={money} alt="" width={646} height={410} />
-          <Image src={money} alt="" width={646} height={410} />
-          <Image src={money} alt="" width={646} height={410} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={money} alt="" width={646} height={410} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={money} alt="" width={646} height={410} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={money} alt="" width={646} height={410} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={money} alt="" width={646} height={410} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={money} alt="" width={646} height={410} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={money} alt="" width={646} height={410} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={money} alt="" width={646} height={410} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={money} alt="" width={646} height={410} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={money} alt="" width={646} height={410} />
         </Carousel>
       </div>
       <div className="flex gap-[5rem]  px-[6rem] py-[8rem] max-[850px]:flex-col max-[850px]:px-[3rem]">
@@ -176,7 +194,9 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="w-[53.5rem] max-[850px]:w-full ">
-          <Image
+          <Image  loader={({ src }) => {
+                return src;
+              }}
             src={portfolio}
             alt=""
             className="w-full "

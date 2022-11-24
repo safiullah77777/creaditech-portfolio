@@ -36,7 +36,7 @@ const PriceCard = () => {
 						Files supplied in all format
 					</li>
 				</ul>
-				<Button title="Order Now" classes="" />
+				<Button title="Contact Us" classes="" />
 			</div>
 		</div>
 	);

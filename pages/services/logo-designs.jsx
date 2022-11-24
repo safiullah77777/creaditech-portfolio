@@ -120,7 +120,9 @@ const LogoService = () => {
           />
         </form>
       </div>
-      <ImagesLine />
+      <Image  loader={({ src }) => {
+                return src;
+              }}sLine />
       <br />
       <div className="parent flex gap-[2rem] px-20 max-[850px]:flex-col">
         <div className="setion-right flex-1">
@@ -171,7 +173,9 @@ const LogoService = () => {
         </div>
         <div className="section-left flex  w-[64.6rem] flex-col gap-[3rem]  max-[850px]:w-full">
           <div className="w-full  max-[850px]:hidden">
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="w-full"
               src={imageWriting}
               alt=""
@@ -199,7 +203,9 @@ const LogoService = () => {
       <br />
 
       <div className=" mt-20 w-full px-20">
-        <Image
+        <Image  loader={({ src }) => {
+                return src;
+              }}
           className="w-full rounded-[20px] shadow-shadowImage "
           src={image3}
           alt=""
@@ -386,31 +392,49 @@ const LogoService = () => {
             </h2>
             <div className="relative z-[1000] flex flex-1 overflow-hidden">
               <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-                <Image src={arrow} alt="" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
               </div>
               <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-                <Image src={arrow} alt="" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-                <Image src={arrow} alt="" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-                <Image src={arrow} alt="" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
               </div>
               <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-                <Image src={arrow} alt="" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-                <Image src={arrow} alt="" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-                <Image src={arrow} alt="" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-                <Image src={arrow} alt="" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-                <Image src={arrow} alt="" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} src={arrow} alt="" />
               </div>
             </div>
           </div>
@@ -471,7 +495,9 @@ const LogoService = () => {
         {/* Payless logo design page  */}
         <div className="mt-10 flex w-full gap-[2rem] bg-[#1E1E1E] p-4 pr-20 pl-[3rem] max-[850px]:flex-col">
           <div className="relative  order-1 mx-auto mb-2 min-[850px]:mt-12 max-[850px]:w-full w-[50rem] text-center max-[850px]:order-2  ">
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="relative !max-[850px]:top-[21rem]  top-[12rem] w-full"
               src={CardFull}
               alt=""
@@ -526,7 +552,9 @@ const LogoService = () => {
             </p>
           </div>
           <div className="flex items-center justify-center max-[850px]:pt-[5rem] min-[500px]:px-[5rem] ">
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               src={mono}
               className="w-full min-[500px]:h-[42rem] min-[500px]:w-[42rem]"
               alt=""

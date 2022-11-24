@@ -57,49 +57,63 @@ const OurClients = () => {
         {/* <div className="marquee">
 					<div className="marquee--inner">
 						<div className="flex h-full">
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client1}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client2}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client3}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client4}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client5}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client6}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client7}
 								alt=""
@@ -109,49 +123,63 @@ const OurClients = () => {
 							
 						</div>
 						<div className="flex h-full">
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client1}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client2}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client3}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client4}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client5}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client6}
 								alt=""
 								width={204}
 								height={204}
 							/>
-							<Image
+							<Image  loader={({ src }) => {
+                return src;
+              }}
 								className="h-full"
 								src={client7}
 								alt=""
@@ -165,98 +193,126 @@ const OurClients = () => {
 
         <marquee direction="left">
           <div className="flex">
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client1}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client2}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client3}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client4}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client5}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client6}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client7}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client1}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client2}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client3}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client4}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client5}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client6}
               alt=""
               width={204}
               height={204}
             />
-            <Image
+            <Image  loader={({ src }) => {
+                return src;
+              }}
               className="h-full"
               src={client7}
               alt=""
@@ -266,13 +322,27 @@ const OurClients = () => {
           </div>
         </marquee>
         {/* <div className="flex">
-          <Image src={client1} alt="" width={204} height={204} />
-          <Image src={client2} alt="" width={204} height={204} />
-          <Image src={client3} alt="" width={204} height={204} />
-          <Image src={client4} alt="" width={204} height={204} />
-          <Image src={client5} alt="" width={204} height={204} />
-          <Image src={client6} alt="" width={204} height={204} />
-          <Image src={client7} alt="" width={204} height={204} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={client1} alt="" width={204} height={204} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={client2} alt="" width={204} height={204} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={client3} alt="" width={204} height={204} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={client4} alt="" width={204} height={204} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={client5} alt="" width={204} height={204} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={client6} alt="" width={204} height={204} />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={client7} alt="" width={204} height={204} />
         </div> */}
         <div className="mt-[6rem] mb-[4rem] flex flex-wrap justify-center gap-4">
           <button className="clash rounded-[10px]  bg-[#000]  px-[2rem] py-[1.5rem] text-[20px] font-500 text-white">

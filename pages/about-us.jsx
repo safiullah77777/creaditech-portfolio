@@ -115,7 +115,9 @@ const AboutUs = () => {
           <div className=" flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px]">
             <div className="">
               <div>
-                <Image
+                <Image  loader={({ src }) => {
+                return src;
+              }}
                   width={0}
                   height={0}
                   className="h-[450px] w-[300px]  rounded-[10px] "
@@ -137,16 +139,24 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image width={0} height={0} src={Logo1} alt="logo" />
-                <Image width={0} height={0} src={Logo2} alt="logo" />
-                <Image width={0} height={0} src={Logo3} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo1} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo2} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
             </div>
           </div>
           <div className=" flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px]">
             <div className="gap-1  ">
               <div>
-                <Image
+                <Image  loader={({ src }) => {
+                return src;
+              }}
                   width={0}
                   height={0}
                   className="h-[450px]  rounded-[10px] "
@@ -168,16 +178,24 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image width={0} height={0} src={Logo1} alt="logo" />
-                <Image width={0} height={0} src={Logo2} alt="logo" />
-                <Image width={0} height={0} src={Logo3} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo1} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo2} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
             </div>
           </div>
           <div className="flex  justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px]">
             <div className="gap-1">
               <div>
-                <Image
+                <Image  loader={({ src }) => {
+                return src;
+              }}
                   width={0}
                   height={0}
                   className="h-[450px] w-[300px]  rounded-[10px] "
@@ -199,16 +217,24 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image width={0} height={0} src={Logo1} alt="logo" />
-                <Image width={0} height={0} src={Logo2} alt="logo" />
-                <Image width={0} height={0} src={Logo3} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo1} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo2} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
             </div>
           </div>
           <div className="flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px] max-[850px]:hidden">
             <div className="gap-1">
               <div>
-                <Image
+                <Image  loader={({ src }) => {
+                return src;
+              }}
                   width={0}
                   height={0}
                   className="h-[450px] w-[300px]  rounded-[10px] "
@@ -230,16 +256,24 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image width={0} height={0} src={Logo1} alt="logo" />
-                <Image width={0} height={0} src={Logo2} alt="logo" />
-                <Image width={0} height={0} src={Logo3} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo1} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo2} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
             </div>
           </div>
           <div className="flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px] max-[850px]:hidden">
             <div className="gap-1">
               <div>
-                <Image
+                <Image  loader={({ src }) => {
+                return src;
+              }}
                   width={0}
                   height={0}
                   className="h-[450px] w-[300px]  rounded-[10px] "
@@ -261,16 +295,24 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image width={0} height={0} src={Logo1} alt="logo" />
-                <Image width={0} height={0} src={Logo2} alt="logo" />
-                <Image width={0} height={0} src={Logo3} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo1} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo2} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
             </div>
           </div>
           <div className="flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px] max-[850px]:hidden">
             <div className="gap-1">
               <div>
-                <Image
+                <Image  loader={({ src }) => {
+                return src;
+              }}
                   width={0}
                   height={0}
                   className="h-[450px] w-[300px]  rounded-[10px] "
@@ -292,9 +334,15 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image width={0} height={0} src={Logo1} alt="logo" />
-                <Image width={0} height={0} src={Logo2} alt="logo" />
-                <Image width={0} height={0} src={Logo3} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo1} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo2} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
             </div>
           </div>
@@ -302,7 +350,9 @@ const AboutUs = () => {
           <div className="flex justify-center  gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px] max-[850px]:hidden">
             <div className="gap-1">
               <div>
-                <Image
+                <Image  loader={({ src }) => {
+                return src;
+              }}
                   width={0}
                   height={0}
                   className="h-[450px] w-[300px]  rounded-[10px] "
@@ -324,9 +374,15 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image width={0} height={0} src={Logo1} alt="logo" />
-                <Image width={0} height={0} src={Logo2} alt="logo" />
-                <Image width={0} height={0} src={Logo3} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo1} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo2} alt="logo" />
+                <Image  loader={({ src }) => {
+                return src;
+              }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
             </div>
           </div>

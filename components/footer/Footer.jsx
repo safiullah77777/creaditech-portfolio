@@ -26,24 +26,36 @@ const Footer = () => {
           </h4>
           <div className="item-center flex gap-4">
             <div className="rounded-icons">
-              <Image src={facebook} className="" alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={facebook} className="" alt="" />
             </div>
             <div className="rounded-icons">
-              <Image src={insta} className="" alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={insta} className="" alt="" />
             </div>
             <div className="rounded-icons">
-              <Image src={linkedin} className="" alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={linkedin} className="" alt="" />
             </div>
             <div className="rounded-icons">
-              <Image src={twitter} className="" alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={twitter} className="" alt="" />
             </div>
             <div className="rounded-icons">
-              <Image src={pinterest} className="" alt="" />
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={pinterest} className="" alt="" />
             </div>
           </div>
         </div>
         <div className="flex w-1/2 flex-col items-center py-16 max-[850px]:order-1 max-[850px]:w-full min-[600px]:px-8">
-          <Image src={Logo} className="logo max-[500px]:w-[59px]" alt="" />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={Logo} className="logo max-[500px]:w-[59px]" alt="" />
           <h4 className="heading-grey robot-condensed my-10 text-45 font-600 leading-[80%] max-[400px]:text-[30px]">
             Join our Newsletter
           </h4>
@@ -90,7 +102,7 @@ const Footer = () => {
       <div className="Montserrat flex  w-full flex-col items-center justify-center border-solid py-8 text-center text-16 font-300 leading-[130%] text-white max-[600px]:text-[16px] max-[500px]:border-t-0 min-[500px]:border-gray-500 min-[850px]:border-t-2">
         © Copyright 2022 by Creaditech. All Rights Reserved.
       </div>
-      <div className="Montserrat flex flex-wrap justify-center">
+      <div className="Montserrat flex flex-wrap justify-center max-[678px]:mb-[7rem]">
         <span className="cursor-pointer border-r-2 border-solid border-white px-8 text-16 font-500 text-white">
           Privacy Policy
         </span>
