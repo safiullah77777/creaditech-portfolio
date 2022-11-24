@@ -253,57 +253,21 @@ const Services = ({ datas }) => {
           alt=""
           width={2000}
           height={200}
-
         />
       </div>
       <br />
       <div className="flex flex-col items-center justify-center pt-10 ">
         <h1 className="robot-condensed mx-auto  flex max-w-[109.1rem] flex-wrap justify-center gap-x-[1.4rem] text-center text-[7rem]  font-[600] uppercase leading-[5.9rem] ">
-          <span>
+          {/* <span>
             {" "}
             We Design Custom Logos for your brand to look{" "}
             <span className="mr-[1rem] text-[#5B5E71]">exited</span>and
           </span>
-          <span className="text-[#5B5E71]">exaggerated.</span>
+          <span className="text-[#5B5E71]">exaggerated.</span> */}
+          {pageContent.section2.heading}
         </h1>
         <div className="Montserrat max-w[1440px]:leading-[130%] mt-10 flex max-w-[1091px] flex-col gap-3 px-[3rem] text-center max-[850px]:text-[19px] text-[1.7rem] font-light	">
-          <p>
-            “If your business is not on the Internet, then your business will be
-            out of business”. This quote from Bill Gates proves the value of
-            getting your business online. However, getting your business
-            software or website getting developed and then doing it’s marketing
-            is not a piece of cake. You need to take help from an expert
-            software development and marketing agency like Creaditech.
-          </p>
-          <p>
-            Creaditech is one of the most reputable and trusted{" "}
-            <span className="font-600">software development company </span> and{" "}
-            <span className="font-600">marketing agency</span> in the USA. Since
-            2015, we have worked with several B2B and B2C companies and have
-            developed custom softwares and websites for them. Apart from that,
-            we have a team of expert, certified and highly educated digital
-            marketers who work day and night to make your business recognized
-            among your customers.
-          </p>
-
-          <p>
-            “If your business is not on the Internet, then your business will be
-            out of business”. This quote from Bill Gates proves the value of
-            getting your business online. However, getting your business
-            software or website getting developed and then doing it’s marketing
-            is not a piece of cake. You need to take help from an expert
-            software development and marketing agency like Creaditech.
-          </p>
-          <p>
-            Creaditech is one of the most reputable and trusted{" "}
-            <span className="font-600">software development company </span> and{" "}
-            <span className="font-600">marketing agency</span>
-            in the USA. Since 2015, we have worked with several B2B and B2C
-            companies and have developed custom softwares and websites for them.
-            Apart from that, we have a team of expert, certified and highly
-            educated digital marketers who work day and night to make your
-            business recognized among your customers.
-          </p>
+          {pageContent.section2.paras}
         </div>
         {/* pricing section */}
         <div className="mt-10 flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
@@ -502,17 +466,18 @@ const Services = ({ datas }) => {
           </div>
           <div className="order-2 ml-auto mt-[6rem] flex min-h-[40rem] max-w-[50%] flex-col justify-center max-[850px]:order-1 max-[850px]:max-w-full max-[850px]:items-center ">
             <h2 className="clash text-[6.5rem] font-600 leading-[90%] text-[#FFFFFF] max-[850px]:text-center">
-              Pay less for a better Logo Design
+             {pageContent.blackSection.heading}
             </h2>
             <p className="mt-[3rem] text-[18px] font-300 text-[#FFFFFF] max-[850px]:text-center">
-              At this point, you might be considering why shall I choose
+              {/* At this point, you might be considering why shall I choose
               Creaditech to get my software/ app developed or ask them to
               promote my business. Well, Creaditech has a proven track record of
               developing custom softwares and doing digital marketing for
               different brands. We have a team of expert{" "}
               <span className="text-blue-500">web developers</span>, app
               developers, and digital marketers who are always ready to cater to
-              any development or marketing challenge.
+              any development or marketing challenge. */}
+             {pageContent.blackSection.paras}
             </p>
             <div className="my-[3rem] mr-auto max-[850px]:mx-auto">
               <Button title="Get Started Now" classes="" />
