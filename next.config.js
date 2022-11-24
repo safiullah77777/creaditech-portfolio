@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images:{
-    domains:["creaditech.com"]
+    domains:["localhost","creaditech.com"],
+    formats: ["image/webp"],
   }
 }
 

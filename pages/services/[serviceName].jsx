@@ -253,6 +253,7 @@ const Services = ({ datas }) => {
           alt=""
           width={2000}
           height={200}
+
         />
       </div>
       <br />
