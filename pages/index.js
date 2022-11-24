@@ -37,6 +37,7 @@ import robot from "../public/assets/images/robot.png";
 import robot1 from "../public/assets/images/robot1.png";
 import robot2 from "../public/assets/images/robot2.png";
 import MetaHead from "../components/metaHead/MetaHead";
+import { serviceCards } from "../utils/card";
 
 const Home = () => {
   const carouselRef = React.useRef(null);
@@ -62,33 +63,33 @@ const Home = () => {
     { title: "Fashion", icon: icon8 },
     { title: "Video", icon: icon9 },
   ];
-  const serviceCards = [
-    { title: "website", title1: "Development", icon: Image1, styles: "" },
-    {
-      title: "Mobile App ",
-      title1: "Development",
-      icon: Image2,
-      styles: "h-[120px] w-[120px]",
-    },
-    {
-      title: "Graphic",
-      title1: "Deigning",
-      icon: Image3,
-      styles: "h-[96px] w-[96px]",
-    },
-    {
-      title: "Search Engine",
-      title1: "Optimization",
-      icon: Image4,
-      styles: "h-[98px] w-[107px]",
-    },
-    {
-      title: "Database",
-      title1: "Solution",
-      icon: Image5,
-      styles: "h-[85px] w-[85px]",
-    },
-  ];
+//  const serviceCards = [
+//     { title: "website", title1: "Development", icon: Image1, styles: "" },
+//     {
+//       title: "Mobile App ",
+//       title1: "Development",
+//       icon: Image2,
+//       styles: "h-[120px] w-[120px]",
+//     },
+//     {
+//       title: "Graphic",
+//       title1: "Deigning",
+//       icon: Image3,
+//       styles: "h-[96px] w-[96px]",
+//     },
+//     {
+//       title: "Search Engine",
+//       title1: "Optimization",
+//       icon: Image4,
+//       styles: "h-[98px] w-[107px]",
+//     },
+//     {
+//       title: "Database",
+//       title1: "Solution",
+//       icon: Image5,
+//       styles: "h-[85px] w-[85px]",
+//     },
+//   ];
   const para = `Creaditech is one of the most reputable and trusted software development company and marketing agency in the USA. Since 2015, we have worked with several B2B and B2C
   companies and have developed custom softwares and websites for them.
   Apart from that, we have a team of expert, certified and highly

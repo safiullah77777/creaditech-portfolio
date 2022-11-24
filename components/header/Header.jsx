@@ -33,7 +33,7 @@ const Header = () => {
           </Link>
         </li>
         <li className="flex    items-center justify-center">
-          <Link href="/services/logo-design">
+          <Link href="/services">
             <p
               className="text-18 text-white"
               onMouseEnter={() => setHover(true)}

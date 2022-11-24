@@ -27,14 +27,33 @@ import comTick from "../../public/assets/images/icons/com-tick.svg";
 import BottomNav from "../../components/bottomNav/BottomNav";
 import MetaHead from "../../components/metaHead/MetaHead";
 import { data } from "../../utils/data";
+import Error404 from "../404";
 const Services = ({ datas }) => {
+  function shuffle(array) {
+    let counter = array.length;
+
+    // While there are elements in the array
+    while (counter > 0) {
+      // Pick a random index
+      let index = Math.floor(Math.random() * counter);
+
+      // Decrease counter by 1
+      counter--;
+
+      // And swap the last element with it
+      let temp = array[counter];
+      array[counter] = array[index];
+      array[index] = temp;
+    }
+
+    return array;
+  }
   const router = useRouter();
   const { serviceName } = router.query;
-  const check = List.map((item) => item.children)
-    .reduce((prev, next) => prev.concat(next))
-    .map((item) => item.link.split("/")[2])
-    .includes(serviceName);
-  if (!datas[0].page) return <ErrorPage statusCode={404} />;
+  const check = List.map((item) => item.children.map((item1) => item1)).reduce(
+    (prev, next) => prev.concat(next)
+  );
+  let randomItems = shuffle(check);
   const content = data.filter((data) => data?.page === serviceName)[0];
   const [formData, setFormData] = useState({});
   const onChange = (e) => {
@@ -61,9 +80,10 @@ const Services = ({ datas }) => {
       return;
     }
   };
+  if (!datas[0].page) return <Error404 />;
   return (
     <>
-      {console.log({ content, datas, data, serviceName })}
+      {console.log({ check, randomItems })}
 
       <MetaHead
         title={datas[0]?.meta?.title}
@@ -229,9 +249,7 @@ const Services = ({ datas }) => {
               </h2>
             </div>
             <div className=" clash max-[550px]:flex  flex-col min-[550px]:grid min-[550px]:grid-cols-2 flex-wrap justify-between gap-y-5 p-5 text-3xl font-normal tracking-wide text-[#0377BC]">
-              <p className=" max-[500px]:text-[text-[4rem] ">
-                Web Developement
-              </p>
+              <p className=" ">Web Developement</p>
               <p className="text-[2rem]">Mobile App Developement</p>
               <p className="text-[2rem]">Graphics Designing</p>
               <p className="text-[2rem]">Search Engine Optimization</p>
