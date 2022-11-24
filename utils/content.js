@@ -44,7 +44,7 @@ export const Content = [
     },
     section2: {
       heading:
-        "Custom Web Development Services In The USA At Affordable Rates:",
+        "Custom Web Development Services In The USA At Affordable Rates",
       paras: (
         <>
           <p>
@@ -76,7 +76,7 @@ export const Content = [
       link: "",
     },
     blackSection: {
-      heading: "Your Responsive and Web-Friendly Website Is Just a Click Away:",
+      heading: "Your Responsive and Web-Friendly Website Is Just a Click Away",
       paras: `Creaditech is a web development agency that you have been looking for. We are a team of experts
         who are available 24/7 to provide the best possible solution to our clients. We execute well-planned
         strategies, and deliver results that meets the client’s expectation. Be it mobile app development or
@@ -94,7 +94,7 @@ export const Content = [
             developed? Well, below are a few reasons on why you shall take our
             website development service:
           </p>
-          <ul className="mt-[2rem]">
+          <ul className="mt-[2rem] flex flex-col ">
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
               <span className="mr-[1rem]">1)</span>Highly secure websites.
             </li>

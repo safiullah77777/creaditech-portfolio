@@ -142,9 +142,7 @@ const Home = () => {
       <MetaHead />
       <Header />
       <Banner />
-      <Image  loader={({ src }) => {
-                return src;
-              }}sLine />
+      <ImagesLine />
       <div className="max-[850px]:bg-none flex h-450 flex-col bg-[#2B2B2B] bg-[url('/assets/images/backgrounds/service-bg.png')] bg-cover bg-center bg-no-repeat p-20  max-[850px]:h-auto  max-[850px]:p-0">
         <h2 className="robot-condensed  text-30  font-700 text-yellow  max-[850px]:p-12 max-[850px]:text-[30px] max-[850px]:text-[4rem] max-[850px]:leading-[100%] max-[850px]:text-white">
           We Design Custom Softwares & Provide Marketing Services

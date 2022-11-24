@@ -252,7 +252,7 @@ const Services = ({ datas }) => {
       </div>
       <br />
       <div className="flex flex-col items-center justify-center pt-10 ">
-        <h1 className="robot-condensed mx-auto  flex max-w-[109.1rem] flex-wrap justify-center gap-x-[1.4rem] text-center text-[7rem]  font-[600] uppercase leading-[5.9rem] ">
+        <h1 className="robot-condensed mx-auto  flex max-w-[109.1rem] flex-wrap justify-center gap-x-[1.4rem] text-center text-[5rem]  font-[600] uppercase leading-[5rem] ">
           {/* <span>
             {" "}
             We Design Custom Logos for your brand to look{" "}
@@ -392,7 +392,7 @@ const Services = ({ datas }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center gap-[4rem] py-[5rem]">
+        <div className="flex flex-wrap flex-col justify-center gap-[4rem] py-[5rem]">
           <span className="font-clash max-w-[1092px] text-center text-[4rem] font-300 leading-[100%] tracking-[0.02em]">
             How we involve
           </span>
@@ -460,7 +460,7 @@ const Services = ({ datas }) => {
             />
           </div>
           <div className="order-2 ml-auto mt-[6rem] flex min-h-[40rem] max-w-[50%] flex-col justify-center max-[850px]:order-1 max-[850px]:max-w-full max-[850px]:items-center ">
-            <h2 className="clash text-[6.5rem] font-600 leading-[90%] text-[#FFFFFF] max-[850px]:text-center">
+            <h2 className="clash text-[5rem] font-600 leading-[90%] text-[#FFFFFF] max-[850px]:text-center">
               {pageContent.blackSection.heading}
             </h2>
             <p className="mt-[3rem] text-[18px] font-300 text-[#FFFFFF] max-[850px]:text-center">
@@ -480,9 +480,9 @@ const Services = ({ datas }) => {
           </div>
         </div>
 
-        <div className="mt-[10rem] flex px-[6rem] pb-[10rem] max-[850px]:flex-col max-[850px]:gap-[4rem] max-[500px]:px-[2rem] ">
+        <div className="mt-[10rem] flex px-[6rem] pb-[7rem] max-[850px]:flex-col max-[850px]:gap-[4rem] max-[500px]:px-[2rem] ">
           <div className="max-w-[77rem] flex-1 max-[850px]:max-w-full">
-            <h2 className="robot-condensed mt-[10rem] text-[4.2rem] font-600 uppercase leading-[100%] text-[#5B5E71]  ">
+            <h2 className="robot-condensed mt-[5rem] text-[4.2rem] font-600 uppercase leading-[100%] text-[#5B5E71]  ">
               {pageContent.section3.heading}
             </h2>
             {pageContent.section3.paras}
