@@ -42,6 +42,11 @@ export const Content = [
   },
   {
     page: "branding",
+    section1: {
+        headding: "",
+        paras: <></>,
+        link: "",
+      },
   },
   {
     page: "wordpress-wix-shopify-development",
@@ -51,6 +56,7 @@ export const Content = [
       paras: <></>,
       link: "",
     },
+    
   },
   {
     page: "tailered-app-solution",
