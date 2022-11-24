@@ -195,7 +195,7 @@ const Services = ({ datas }) => {
               Bring Your Business Idea On The Internet By Taking Our Web
               Development Services
             </h2>
-            <div className="max-[500px]:text-[14px] text-[16px] text-[#5B5E71]">
+            <div className="max-[500px]:text-[14px] flex flex-col gap-[1rem] text-[16px] text-[#5B5E71]">
               <p>
                 “If you have a website, it makes your small business look big” (
                 <span className="text-sky-500	">Natalie Sequera</span> ). This
@@ -206,7 +206,7 @@ const Services = ({ datas }) => {
                 therefore you must take web development services from expert
                 companies like Creaditech.
               </p>
-              <br />
+             
               <p>
                 At Creaditech, we don’t just create websites, instead we create
                 websites that help you generate more sales. We have a team of
@@ -217,16 +217,16 @@ const Services = ({ datas }) => {
                 bad website experience. Therefore, we create websites that have
                 a fast-loading speed, easy to use, and easy navigation.
               </p>
-              <br />
+             
               <p>
                 So, without any second thoughts choose Creaditech to be your web
                 development agency and make your business go live on the
                 Internet.
               </p>
-              <br />
+              
               <Button
                 title={"Lets Get Started"}
-                classes="bg-[#FEE236] text-[#111111]"
+                classes="bg-[#FEE236] text-[#111111] mr-auto"
               />
             </div>
           </div>
