@@ -466,7 +466,7 @@ const Services = ({ datas }) => {
           </div>
           <div className="order-2 ml-auto mt-[6rem] flex min-h-[40rem] max-w-[50%] flex-col justify-center max-[850px]:order-1 max-[850px]:max-w-full max-[850px]:items-center ">
             <h2 className="clash text-[6.5rem] font-600 leading-[90%] text-[#FFFFFF] max-[850px]:text-center">
-             {pageContent.blackSection.heading}
+              {pageContent.blackSection.heading}
             </h2>
             <p className="mt-[3rem] text-[18px] font-300 text-[#FFFFFF] max-[850px]:text-center">
               {/* At this point, you might be considering why shall I choose
@@ -477,7 +477,7 @@ const Services = ({ datas }) => {
               <span className="text-blue-500">web developers</span>, app
               developers, and digital marketers who are always ready to cater to
               any development or marketing challenge. */}
-             {pageContent.blackSection.paras}
+              {pageContent.blackSection.paras}
             </p>
             <div className="my-[3rem] mr-auto max-[850px]:mx-auto">
               <Button title="Get Started Now" classes="" />
@@ -488,9 +488,11 @@ const Services = ({ datas }) => {
         <div className="mt-[10rem] flex px-[6rem] pb-[10rem] max-[850px]:flex-col max-[850px]:gap-[4rem] max-[500px]:px-[2rem] ">
           <div className="max-w-[77rem] flex-1 max-[850px]:max-w-full">
             <h2 className="robot-condensed mt-[10rem] text-[4.2rem] font-600 uppercase leading-[100%] text-[#5B5E71]  ">
-              top logo designing firm in us providing complete branding
+              {pageContent.section2.heading}
             </h2>
-            <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
+            {pageContent.section2.paras}
+
+            {/* <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
               At this point, you might be considering why shall I choose
               Creaditech to get my software/ app developed or ask them to
               promote my business. Well, Creaditech has a proven track record of
@@ -509,7 +511,7 @@ const Services = ({ datas }) => {
               <span className="text-blue-600">web developers</span>, app
               developers, and digital marketers who are always ready to cater to
               any development or marketing challenge.
-            </p>
+            </p> */}
           </div>
           <div className="flex items-center justify-center max-[850px]:pt-[5rem] min-[500px]:px-[5rem] ">
             <Image

@@ -83,6 +83,43 @@ export const Content = [
         web development, we are Get in touch with us now and get your customized website built according
         to your requirements.`,
     },
+    section2: {
+      heading: "Why You Shall Take Our Web Development Services?",
+      paras: (
+        <>
+          <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
+            As you have reached this section, it is evident that you might be
+            inspired by our portfolio and website design, however you might be
+            thinking that why shall I choose Creaditech to get my website
+            developed? Well, below are a few reasons on why you shall take our
+            website development service:
+          </p>
+          <ul className="mt-[2rem]">
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">1)</span>Highly secure websites.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">2)</span>SEO friendly websites.
+            </li>
+            <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">3)</span>We have expert web developers
+              for all technologies.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">4)</span>User-friendly and responsive
+              web design.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">5)</span>Support and maintenance.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">6)</span> Cost-effective web
+              development services.
+            </li>
+          </ul>
+        </>
+      ),
+    },
   },
   {
     page: "branding",
