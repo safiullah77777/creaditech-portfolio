@@ -28,32 +28,34 @@ import BottomNav from "../../components/bottomNav/BottomNav";
 import MetaHead from "../../components/metaHead/MetaHead";
 import { data } from "../../utils/data";
 import Error404 from "../404";
+import Link from "next/link";
 const Services = ({ datas }) => {
+  const [hydrated, setHydrated] = React.useState(false);
+  React.useEffect(() => {
+      setHydrated(true);
+  }, []);
+  
   function shuffle(array) {
-    let counter = array.length;
+    const newArray = [...array];
+    const length = newArray.length;
 
-    // While there are elements in the array
-    while (counter > 0) {
-      // Pick a random index
-      let index = Math.floor(Math.random() * counter);
+    for (let start = 0; start < length; start++) {
+      const randomPosition = Math.floor(
+        (newArray.length - start) * Math.random()
+      );
+      const randomItem = newArray.splice(randomPosition, 1);
 
-      // Decrease counter by 1
-      counter--;
-
-      // And swap the last element with it
-      let temp = array[counter];
-      array[counter] = array[index];
-      array[index] = temp;
+      newArray.push(...randomItem);
     }
 
-    return array;
+    return newArray;
   }
   const router = useRouter();
   const { serviceName } = router.query;
   const check = List.map((item) => item.children.map((item1) => item1)).reduce(
     (prev, next) => prev.concat(next)
   );
-  let randomItems = shuffle(check);
+  let randomItems = shuffle(shuffle(shuffle(shuffle(check)))).slice(4, 8);
   const content = data.filter((data) => data?.page === serviceName)[0];
   const [formData, setFormData] = useState({});
   const onChange = (e) => {
@@ -81,6 +83,7 @@ const Services = ({ datas }) => {
     }
   };
   if (!datas[0].page) return <Error404 />;
+  
   return (
     <>
       {console.log({ check, randomItems })}
@@ -249,10 +252,13 @@ const Services = ({ datas }) => {
               </h2>
             </div>
             <div className=" clash max-[550px]:flex  flex-col min-[550px]:grid min-[550px]:grid-cols-2 flex-wrap justify-between gap-y-5 p-5 text-3xl font-normal tracking-wide text-[#0377BC]">
-              <p className=" ">Web Developement</p>
-              <p className="text-[2rem]">Mobile App Developement</p>
-              <p className="text-[2rem]">Graphics Designing</p>
-              <p className="text-[2rem]">Search Engine Optimization</p>
+              {randomItems.map((item) => (
+               
+                  <Link href={item.link}>
+                    {hydrated && item.title}
+                  </Link>
+                
+              ))}
             </div>
           </div>
         </div>
