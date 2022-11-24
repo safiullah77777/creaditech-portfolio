@@ -32,9 +32,9 @@ import Link from "next/link";
 const Services = ({ datas }) => {
   const [hydrated, setHydrated] = React.useState(false);
   React.useEffect(() => {
-      setHydrated(true);
+    setHydrated(true);
   }, []);
-  
+
   function shuffle(array) {
     const newArray = [...array];
     const length = newArray.length;
@@ -83,7 +83,7 @@ const Services = ({ datas }) => {
     }
   };
   if (!datas[0].page) return <Error404 />;
-  
+
   return (
     <>
       {console.log({ check, randomItems })}
@@ -192,40 +192,36 @@ const Services = ({ datas }) => {
         <div className="setion-right flex-1">
           <div className="h-90vh flex max-w-[120rem]  flex-col  flex-wrap content-center	items-center gap-4">
             <h2 className="robot-condensed max-[500px]:text-[5rem] text-[4rem] 	font-[600] uppercase leading-[100%] text-[#5B5E71]">
-              Strengthen brand presence with our affordable logo designs
+              Bring Your Business Idea On The Internet By Taking Our Web
+              Development Services
             </h2>
             <div className="max-[500px]:text-[14px] text-[16px] text-[#5B5E71]">
               <p>
-                At this point, you might be considering why shall I choose
-                Creaditech to get my software/ app developed or ask them to
-                promote my business. Well, Creaditech has a proven track record
-                of developing custom softwares and doing digital marketing for
-                different brands. We have a team of expert{" "}
-                <span className="text-sky-500	">web developers,</span> web
-                developers, app developers, and digital marketers who are always
-                ready to cater to any development or marketing challenge.
+                “If you have a website, it makes your small business look big” (
+                <span className="text-sky-500	">Natalie Sequera</span> ). This
+                quote signifies the importance of a website for any business.
+                Therefore, if you are business and want to generate more leads
+                then you must get your website developed. However, creating a
+                high-quality website is not a piece of cake for everyone,
+                therefore you must take web development services from expert
+                companies like Creaditech.
               </p>
               <br />
               <p>
-                At this point, you might be considering why shall I choose
-                Creaditech to get my software/ app developed or ask them to
-                promote my business. Well, Creaditech has a proven track record
-                of developing custom softwares and doing digital marketing for
-                different brands. We have a team of expert{" "}
-                <span className="text-sky-500	">web developers,</span> app
-                developers, and digital marketers who are always ready to cater
-                to any development or marketing challenge.
+                At Creaditech, we don’t just create websites, instead we create
+                websites that help you generate more sales. We have a team of
+                expert web developers who work day and night to satisfy our
+                client’s needs. Our web developers and web designers work
+                together to create an appealing website because studies show
+                that 89% of website visitors are less likely to return after a
+                bad website experience. Therefore, we create websites that have
+                a fast-loading speed, easy to use, and easy navigation.
               </p>
               <br />
               <p>
-                At this point, you might be considering why shall I choose
-                Creaditech to get my software/ app developed or ask them to
-                promote my business. Well, Creaditech has a proven track record
-                of developing custom softwares and doing digital marketing for
-                different brands. We have a team of expert
-                <span className="text-sky-500	">web developers,</span> app
-                developers, and digital marketers who are always ready to cater
-                to any development or marketing challenge.
+                So, without any second thoughts choose Creaditech to be your web
+                development agency and make your business go live on the
+                Internet.
               </p>
               <br />
               <Button
@@ -253,11 +249,7 @@ const Services = ({ datas }) => {
             </div>
             <div className=" clash max-[550px]:flex  flex-col min-[550px]:grid min-[550px]:grid-cols-2 flex-wrap justify-between gap-y-5 p-5 text-3xl font-normal tracking-wide text-[#0377BC]">
               {randomItems.map((item) => (
-               
-                  <Link href={item.link}>
-                    {hydrated && item.title}
-                  </Link>
-                
+                <Link href={item.link}>{hydrated && item.title}</Link>
               ))}
             </div>
           </div>

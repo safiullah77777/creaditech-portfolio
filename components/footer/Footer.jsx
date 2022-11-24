@@ -92,7 +92,7 @@ const Footer = () => {
       </div>
       <div className="Montserrat flex flex-wrap justify-center">
         <span className="cursor-pointer border-r-2 border-solid border-white px-8 text-16 font-500 text-white">
-          Terms & Conditions
+          Privacy Policy
         </span>
         <span className="cursor-pointer border-r-2 border-solid border-white px-8 text-16 font-500 text-white">
           Refund Policy

@@ -38,11 +38,12 @@ import robot1 from "../public/assets/images/robot1.png";
 import robot2 from "../public/assets/images/robot2.png";
 import MetaHead from "../components/metaHead/MetaHead";
 import { serviceCards } from "../utils/card";
-
+import VisibilitySensor from "react-visibility-sensor";
 const Home = () => {
   const carouselRef = React.useRef(null);
   const carouselRef1 = React.useRef(null);
   const [isHover, setHover] = useState(false);
+  const [show, setShow] = useState(false);
   let resetTimeout;
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -63,33 +64,33 @@ const Home = () => {
     { title: "Fashion", icon: icon8 },
     { title: "Video", icon: icon9 },
   ];
-//  const serviceCards = [
-//     { title: "website", title1: "Development", icon: Image1, styles: "" },
-//     {
-//       title: "Mobile App ",
-//       title1: "Development",
-//       icon: Image2,
-//       styles: "h-[120px] w-[120px]",
-//     },
-//     {
-//       title: "Graphic",
-//       title1: "Deigning",
-//       icon: Image3,
-//       styles: "h-[96px] w-[96px]",
-//     },
-//     {
-//       title: "Search Engine",
-//       title1: "Optimization",
-//       icon: Image4,
-//       styles: "h-[98px] w-[107px]",
-//     },
-//     {
-//       title: "Database",
-//       title1: "Solution",
-//       icon: Image5,
-//       styles: "h-[85px] w-[85px]",
-//     },
-//   ];
+  //  const serviceCards = [
+  //     { title: "website", title1: "Development", icon: Image1, styles: "" },
+  //     {
+  //       title: "Mobile App ",
+  //       title1: "Development",
+  //       icon: Image2,
+  //       styles: "h-[120px] w-[120px]",
+  //     },
+  //     {
+  //       title: "Graphic",
+  //       title1: "Deigning",
+  //       icon: Image3,
+  //       styles: "h-[96px] w-[96px]",
+  //     },
+  //     {
+  //       title: "Search Engine",
+  //       title1: "Optimization",
+  //       icon: Image4,
+  //       styles: "h-[98px] w-[107px]",
+  //     },
+  //     {
+  //       title: "Database",
+  //       title1: "Solution",
+  //       icon: Image5,
+  //       styles: "h-[85px] w-[85px]",
+  //     },
+  //   ];
   const para = `Creaditech is one of the most reputable and trusted software development company and marketing agency in the USA. Since 2015, we have worked with several B2B and B2C
   companies and have developed custom softwares and websites for them.
   Apart from that, we have a team of expert, certified and highly
@@ -207,7 +208,7 @@ const Home = () => {
             Our <br /> Service
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
-            {serviceCards.map((item, index) => (
+            {serviceCards.slice(0, 5).map((item, index) => (
               <Card
                 styles={item.styles}
                 key={index}
@@ -284,10 +285,14 @@ const Home = () => {
             <Image className="h-full w-full" src={imageChoose} alt="" />
           </div>
           <div className="flex flex-wrap items-center gap-8 py-8 max-[850px]:justify-center">
-            <Card2 numbers={500} text="Projects delivered" />
-            <Card2 numbers={10} text="Years of experience" />
-            <Card2 numbers={150} text="Team Members" />
-            <Card2 numbers={20} text="Countries" />
+            
+             
+                <Card2 show={show} numbers={500} text="Projects delivered" />
+                <Card2 numbers={10} text="Years of experience" />
+                <Card2 numbers={150} text="Team Members" />
+                <Card2 numbers={20} text="Countries" />
+              
+            
           </div>
         </div>
         <div className="w-1/2 max-[850px]:hidden max-[850px]:w-full">
