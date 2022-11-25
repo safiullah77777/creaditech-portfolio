@@ -206,7 +206,7 @@ const Home = () => {
       </div>
       <section className="flex justify-center px-8 py-32  ">
         <div className="flex items-center max-[850px]:flex-col">
-          <h2 className="leading-1 robot-condensed m-auto flex h-[30rem] max-w-[310px] items-center justify-center text-150 font-600 uppercase leading-[80%] text-black max-[640px]:text-[70px]  max-[640px]:font-900 min-[850px]:-rotate-90">
+          <h2 className="leading-1 robot-condensed m-auto flex h-[30rem] max-w-[28rem] items-center justify-center text-150 font-600 uppercase leading-[80%] text-black max-[640px]:text-[70px]  max-[640px]:font-900 min-[850px]:-rotate-90">
             Our <br /> Service
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
@@ -389,7 +389,7 @@ const Home = () => {
             different brands. We have a team.
           </p>
         </div>
-        <div className=" flex max-w-[700px] flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
+        <div className=" flex max-w-[90rem] flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
           {industriesCards.map((item, index) => (
             <Card4 key={index} title={item.title} icon={item.icon} />
           ))}
@@ -490,7 +490,7 @@ const Home = () => {
           </button>
           {/* <Button title="Let’s Work Together" classes="" /> */}
         </div>
-        <div className="relative flex w-1/2  items-center gap-9 overflow-hidden duration-300 ease-linear after:absolute after:top-0 after:-left-[200%] after:h-full after:w-[90rem] after:bg-[yellow] after:duration-500 after:ease-linear group-hover:after:left-0 max-[850px]:hidden">
+        <div className="relative flex w-1/2  items-center gap-9 overflow-hidden duration-300 ease-linear after:absolute after:top-0 after:-left-[200%] after:h-full after:w-[90rem] after:bg-[#ffe100] after:duration-500 after:ease-linear group-hover:after:left-0 max-[850px]:hidden">
           <h2 className="clash z-20 my-[2rem] ml-[6rem] max-w-[24rem] bg-[trasnparent] text-[5.5rem] font-400 leading-[90%] text-[#1E1E1E] max-[640px]:text-center max-[640px]:text-[4rem]">
             Estimate Project
           </h2>
