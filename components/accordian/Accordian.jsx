@@ -1,18 +1,21 @@
 import React, { useEffect, useRef } from "react";
 // import './style.css'
-const Accordian= ({ index }) => {
+const Accordian= ({item, index }) => {
   const ref = useRef(null);
   const ref1 = useRef(null);
+  const ref3 = useRef(null);
  
   return (
-      <div className="main-accordian max-[1125px]:w-[90%] max-[600px]:w-[100%] duration-200 ease-linear">
+      <div className="main-accordian w-[100%] duration-200 ease-linear">
         <div
           ref={ref}
           onClick={() => {
             if (ref.current != null) {
               ref.current.classList.toggle("auto-height");
-              ref.current.style.backgroundColor = "#515151";
+              ref.current.style.backgroundColor = "#000";
+              ref3.current.classList.toggle("opacity-100");
               ref.current.style.zIndex = "11";
+
             }
             if (ref1.current !== null)
               ref1.current.classList.toggle("rotate-180");
@@ -22,15 +25,17 @@ const Accordian= ({ index }) => {
               ref.current.classList.remove("auto-height");
               ref.current.style.backgroundColor = "#1e1e1e";
               ref.current.style.zIndex = "1";
+              ref3.current.classList.toggle("opacity-100");
+
             }
             if (ref1.current !== null)
               ref1.current.classList.remove("rotate-180");
           }}
-          className={`accordian-main max-[1125px]:w-[100%]  duration-200 ease-linear`}
+          className={`accordian-main w-[100%]  duration-200 ease-linear`}
           tabIndex={0}
         >
-          <div className="accordian-head">
-            <span className="accordian-title text-[20px] ">What is Solix</span>
+          <div className="accordian-head  flex justify-center">
+            <span className="accordian-title text-[20px] mx-auto">{item.q}</span>
             <div
               className="accordian-arrow-down duration-200 ease-linear"
               ref={ref1}
@@ -49,13 +54,8 @@ const Accordian= ({ index }) => {
               </svg>
             </div>
           </div>
-          <div className="accordian-text text-[15px] leading-[120%] text-[white]/[0.7]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-            omnis assumenda? Reiciendis corrupti atque at ipsum consequatur
-            quaerat iste pariatur maxime assumenda nemo id, ab odit cum
-            voluptate a laudantium perspiciatis dignissimos magnam! Fuga
-            dolorum, quisquam sequi, optio nobis corrupti cupiditate rerum
-            eligendi eaque ipsum quaerat quod omnis eum labore!
+          <div ref={ref3} className="accordian-text pt-[2rem] border-t-[1px] border-solid border-[#fff]  text-[2rem] leading-[120%] text-[white]/[0.7]">
+            {item.a}
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ import insta from "../../public/assets/images/icons/insta-rounded.svg";
 import twitter from "../../public/assets/images/icons/twitter-rounded.svg";
 import linkedin from "../../public/assets/images/icons/linkedin-rounded.svg";
 import pinterest from "../../public/assets/images/icons/pinterest-rounded.svg";
-import Logo from "../../public/assets/images/creaditech-logo1.png";
+import Logo from "../../public/assets/images/Logo1.svg";
 const Footer = () => {
   return (
     <footer className="flex flex-col bg-primary px-24 pt-44 pb-24 max-[850px]:px-8  max-[600px]:pt-[4rem]">

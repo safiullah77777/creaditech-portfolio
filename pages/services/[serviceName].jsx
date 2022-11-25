@@ -281,7 +281,7 @@ const Services = ({ datas }) => {
             </div>
           </div>
 
-          <div className="relative mt-[3rem] flex flex-col  before:absolute before:top-0 before:left-0 before:z-40 before:h-[50%] before:w-full after:absolute after:bottom-0 after:left-0 after:z-40 after:h-[50%] after:w-full max-[1055px]:after:bg-[transparent] after:bg-[#FFFFFF]">
+          <div className="relative mt-[3rem] flex flex-col  before:absolute before:top-0 before:left-0 before:z-40 before:h-[50%] before:w-full after:absolute after:bottom-0 after:left-0 after:z-40 after:h-[50%] after:w-full max-[1055px]:pb-[5rem] max-[1055px]:after:bg-[transparent] after:bg-[#FFFFFF]">
             <div className="z-50  flex flex-wrap justify-center gap-[2rem] ">
               <PriceCard />
               <PriceCard />
@@ -303,7 +303,7 @@ const Services = ({ datas }) => {
               title="Estimate Project"
             />
           </div>
-          <div className="relative flex w-1/2  items-center gap-9 overflow-hidden duration-300 ease-linear after:absolute after:top-0 after:-left-[200%] after:h-full after:w-[90rem] after:bg-[yellow] after:duration-500 after:ease-linear group-hover:after:left-0 max-[850px]:hidden">
+          <div className="relative flex w-1/2  items-center gap-9 overflow-hidden duration-300 ease-linear after:absolute after:top-0 after:-left-[200%] after:h-full after:w-[90rem] after:bg-[#ffe100] after:duration-500 after:ease-linear group-hover:after:left-0 max-[850px]:hidden">
             <h2 className="clash z-20 my-[2rem] ml-[6rem] max-w-[24rem] bg-[trasnparent] text-[5.5rem] font-400 leading-[90%] text-[#1E1E1E] max-[640px]:text-center max-[640px]:text-[4rem]">
               Estimate Project
             </h2>
@@ -519,19 +519,15 @@ const Services = ({ datas }) => {
             />
           </div>
         </div>
-        <div className="bg-faq w-full py-[5rem] px-[3rem]">
-          <h2 className="clash mb-[3rem] text-center text-[8rem] font-600 text-[#1E1E1E]">
+        <div className="bg-faq w-full py-[3rem] pt-[2rem] px-[2rem]">
+          <h2 className="clash mb-[1rem] text-center text-[8rem] font-600 text-[#1E1E1E]">
             FAQs
           </h2>
-          <div className="flex flex-wrap justify-center gap-[2rem] p-[3rem]">
-            <Accordian index={1} />
-            <Accordian index={2} />
-            <Accordian index={3} />
-            <Accordian index={4} />
-            <Accordian index={5} />
-            <Accordian index={6} />
-            <Accordian index={7} />
-            <Accordian index={8} />
+          <div className="grid grid-cols-2 max-[500px]:grid-cols-1  flex-wrap justify-center gap-[2rem] ">
+            {pageContent.faqs.map((item,index)=>{
+            return <Accordian item={item} index={index+1} />
+
+            })}
           </div>
         </div>
         <Slider />
