@@ -30,6 +30,7 @@ import { data } from "../../utils/data";
 import Error404 from "../404";
 import Link from "next/link";
 import { Content } from "../../utils/content";
+import contactForm from "../../services/fromService";
 
 const Services = ({ datas }) => {
   const [hydrated, setHydrated] = React.useState(false);
@@ -76,6 +77,7 @@ const Services = ({ datas }) => {
     e.preventDefault();
     if (!emailregex.test(formData.email)) {
       alert("invalid email address");
+      return;
     } else if (!formData.name) {
       alert("invalid name");
       return;
@@ -86,6 +88,7 @@ const Services = ({ datas }) => {
       alert("invalid url");
       return;
     }
+    contactForm({ ...formData });
   };
   if (!datas[0].page) return <Error404 />;
 
@@ -524,9 +527,8 @@ const Services = ({ datas }) => {
             FAQs
           </h2>
           <div className="grid grid-cols-2 max-[500px]:grid-cols-1  flex-wrap justify-center gap-[2rem] ">
-            {pageContent.faqs.map((item,index)=>{
-            return <Accordian item={item} index={index+1} />
-
+            {pageContent.faqs.map((item, index) => {
+              return <Accordian item={item} index={index + 1} />;
             })}
           </div>
         </div>
