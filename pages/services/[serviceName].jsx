@@ -89,6 +89,7 @@ const Services = ({ datas }) => {
       return;
     }
     contactForm({ ...formData });
+    setFormData({});
   };
   if (!datas[0].page) return <Error404 />;
 
@@ -152,7 +153,8 @@ const Services = ({ datas }) => {
                 placeholder="Your Name"
                 classes="w-full"
                 type="text"
-              />
+            value={formData.name}
+            />
             </div>
             <div className="flex-1">
               <Input
@@ -170,6 +172,7 @@ const Services = ({ datas }) => {
             name={"email"}
             classes="w-full"
             type="email"
+            value={formData.email}
           />
           <Input
             onChange={onChange}
@@ -177,6 +180,8 @@ const Services = ({ datas }) => {
             name="url"
             classes="w-full"
             type="text"
+            value={formData.url}
+
           />
           <textarea
             onChange={onChange}

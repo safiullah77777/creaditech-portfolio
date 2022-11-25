@@ -566,14 +566,14 @@ const LogoService = () => {
             FAQs
           </h2>
           <div className="flex flex-wrap justify-center gap-[2rem] p-[3rem]">
-            <Accordian index={1} />
+            {/* <Accordian index={1} />
             <Accordian index={2} />
             <Accordian index={3} />
             <Accordian index={4} />
             <Accordian index={5} />
             <Accordian index={6} />
             <Accordian index={7} />
-            <Accordian index={8} />
+            <Accordian index={8} /> */}
           </div>
         </div>
         <Slider />
