@@ -1,4 +1,6 @@
-const contactForm = async (params) => {
+import { toast } from "react-toastify";
+
+const contactForm = async (params, setLoading) => {
   await fetch("http://localhost:5000/api/forms/sendEmail", {
     method: "post",
     headers: {
@@ -12,6 +14,9 @@ const contactForm = async (params) => {
       //do something awesome that makes the world a better place
       const data = await response.json();
       alert(data);
+      console.log(data, response);
+      setLoading(false);
+      if (response.status == 200) toast.success("email sent successfully");
     })
     .then((err) => console.log(err));
 };

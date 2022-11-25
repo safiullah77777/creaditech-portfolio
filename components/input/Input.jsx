@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 
-const Input = ({ type, classes, placeholder, name, onChange }) => {
+const Input = ({ type, classes, placeholder, name, onChange, value }) => {
   return (
     <div>
-      <input required
+      <input
+        required
         name={name}
         onChange={onChange}
         placeholder={placeholder}
@@ -12,6 +13,7 @@ const Input = ({ type, classes, placeholder, name, onChange }) => {
           classes ? classes : ""
         }`}
         alt=""
+        value={value || ""}
       />
     </div>
   );

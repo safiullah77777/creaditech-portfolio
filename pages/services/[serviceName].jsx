@@ -31,9 +31,11 @@ import Error404 from "../404";
 import Link from "next/link";
 import { Content } from "../../utils/content";
 import contactForm from "../../services/fromService";
+import { toast } from "react-toastify";
 
 const Services = ({ datas }) => {
-  const [hydrated, setHydrated] = React.useState(false);
+  const [hydrated, setHydrated] = useState(false);
+  const [loading, setLoading] = useState(false);
   React.useEffect(() => {
     setHydrated(true);
   }, []);
@@ -63,32 +65,49 @@ const Services = ({ datas }) => {
   ).slice(4, 8);
   const content = data.filter((data) => data?.page === serviceName)[0];
   const pageContent = Content.filter((data) => data?.page === serviceName)[0];
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNo: "",
+    url: "",
+    description: "",
+  });
   const onChange = (e) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
   const onSubmit = (e) => {
+    e.preventDefault();
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
     const urlregex = new RegExp(
       /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi
     );
-    e.preventDefault();
-    if (!emailregex.test(formData.email)) {
-      alert("invalid email address");
-      return;
-    } else if (!formData.name) {
-      alert("invalid name");
-      return;
-    } else if (!formData.description) {
-      alert("invalid description");
-      return;
-    } else if (!urlregex.test(formData.url)) {
-      alert("invalid url");
+    if (loading) return;
+    else if (
+      formData?.name?.length <= 0 ||
+      formData?.phoneNo?.length <= 0 ||
+      formData.description.length <= 0
+    ) {
+      toast.error("kripa kr k form poora bhariye");
       return;
     }
-    contactForm({ ...formData });
+    // else if (!formData.phoneNo) {
+    //   toast.error("invalid phone no");
+    //   return;
+    // } else if (!formData.description) {
+    //   toast.error("invalid description");
+    //   return;
+    // }
+    if (!emailregex.test(formData.email)) {
+      toast.error("invalid email address");
+      return;
+    } else if (!urlregex.test(formData.url)) {
+      toast.error("invalid url");
+      return;
+    }
+    setLoading(true);
+    contactForm({ ...formData }, setLoading);
     setFormData({});
   };
   if (!datas[0].page) return <Error404 />;
@@ -153,16 +172,17 @@ const Services = ({ datas }) => {
                 placeholder="Your Name"
                 classes="w-full"
                 type="text"
-            value={formData.name}
-            />
+                value={formData.name}
+              />
             </div>
             <div className="flex-1">
               <Input
                 onChange={onChange}
-                name="phone-no"
+                name="phoneNo"
                 placeholder="Phone*"
                 classes="w-full"
                 type="number"
+                value={formData.phoneNo}
               />
             </div>
           </div>
@@ -181,21 +201,26 @@ const Services = ({ datas }) => {
             classes="w-full"
             type="text"
             value={formData.url}
-
           />
           <textarea
             onChange={onChange}
+            value={formData.description}
             name="description"
             placeholder="Write your Requirements here..."
             className="w-full h-[106px] rounded-[5px] border-none bg-[#515151] p-[2rem] text-[1.6rem] font-300 text-[#FFFFFF]/[0.5] outline-none"
             id=""
           ></textarea>
-          <Button
-            onClick={onSubmit}
-            type="submit"
-            title="Send Now"
-            classes="!rounded-[10px] !text-[2.5rem] !font-500"
-          />
+          {loading ? (
+            <div class="loader"></div>
+          ) : (
+            <Button
+              onClick={onSubmit}
+              type="submit"
+              title="Send Now"
+              classes="!rounded-[10px] !text-[2.5rem] !font-500"
+              loading
+            />
+          )}
         </form>
       </div>
       <ImagesLine />

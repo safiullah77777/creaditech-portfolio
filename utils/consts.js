@@ -168,7 +168,7 @@ export const BottomList = (active) => [
         />
       </svg>
     ),
-    link: "/services",
+    link: "",
   },
   {
     title: "Work",
