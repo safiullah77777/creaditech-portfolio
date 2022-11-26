@@ -243,13 +243,13 @@ const Services = ({ datas }) => {
           </div>
         </div>
         <div className="section-left flex  w-[64.6rem] flex-col gap-[3rem]  max-[850px]:w-full">
-          <div className="w-full  max-[850px]:hidden">
+          <div className="w-full  ">
             <Image
               loader={({ src }) => {
                 return src;
               }}
               className="w-full"
-              src={imageWriting}
+              src={pageContent?.section1?.image}
               alt=""
               width={650}
               height={500}
@@ -547,7 +547,7 @@ const Services = ({ datas }) => {
               loader={({ src }) => {
                 return src;
               }}
-              src={mono}
+              src={pageContent?.section3?.image}
               className="w-full min-[500px]:h-[42rem] min-[500px]:w-[42rem]"
               alt=""
             />

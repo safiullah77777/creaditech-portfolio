@@ -13,7 +13,6 @@ const Accordian= ({item, index }) => {
             if (ref.current != null) {
               ref.current.classList.toggle("auto-height");
               ref.current.style.backgroundColor = "#000";
-              ref3.current.classList.toggle("opacity-100");
               ref.current.style.zIndex = "11";
 
             }
@@ -25,7 +24,6 @@ const Accordian= ({item, index }) => {
               ref.current.classList.remove("auto-height");
               ref.current.style.backgroundColor = "#1e1e1e";
               ref.current.style.zIndex = "1";
-              ref3.current.classList.toggle("opacity-100");
 
             }
             if (ref1.current !== null)
