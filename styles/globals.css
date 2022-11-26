@@ -252,7 +252,7 @@ input[type="number"] {
   /* margin-top: 2.7rem; */
   max-height: 0rem;
   overflow: hidden;
-  transition: all .5s;
+  transition: all .3s;
   /* opacity: 0; */
 }
 

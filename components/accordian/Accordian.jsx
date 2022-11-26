@@ -11,7 +11,8 @@ const Accordian = ({ item, index }) => {
         ref={ref}
         onClick={() => {
           if (ref.current != null) {
-            ref.current.classList.toggle("auto-height");
+            // ref.current.classList.toggle("auto-height");
+        
             ref.current.style.backgroundColor = "#000";
             ref.current.style.zIndex = "11";
             ref3.current.classList.toggle("max-h-[40rem]");
@@ -35,6 +36,10 @@ const Accordian = ({ item, index }) => {
             ref.current.classList.remove("auto-height");
             ref.current.style.backgroundColor = "#1e1e1e";
             ref.current.style.zIndex = "1";
+            ref3.current.classList.remove("max-h-[40rem]");
+            ref3.current.style.borderTopWidth = "0px"
+            ref3.current.style.paddingTop = "0rem"
+            ref3.current.style.marginTop = "0rem"
           }
           if (ref1.current !== null)
             ref1.current.classList.remove("rotate-180");
