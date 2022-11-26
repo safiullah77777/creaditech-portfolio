@@ -61,7 +61,7 @@ const Services = ({ datas }) => {
     (prev, next) => prev.concat(next)
   );
   let randomItems = shuffle(
-    shuffle(shuffle(shuffle(check.filter((item) => item.link !== serviceName))))
+    shuffle(shuffle(shuffle(check.filter((item) => !item.link.includes(serviceName)))))
   ).slice(4, 8);
   const content = data.filter((data) => data?.page === serviceName)[0];
   const pageContent = Content.filter((data) => data?.page === serviceName)[0];
@@ -113,7 +113,7 @@ const Services = ({ datas }) => {
   };
   if (!datas[0].page) return <Error404 />;
 
-  console.log({ pageContent });
+  console.log(check.filter((item) => !item.link.includes(serviceName)),check);
   return (
     <>
       <MetaHead
