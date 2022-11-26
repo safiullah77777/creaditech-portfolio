@@ -557,7 +557,7 @@ const Services = ({ datas }) => {
           <h2 className="clash mb-[1rem] text-center text-[8rem] font-600 text-[#1E1E1E]">
             FAQs
           </h2>
-          <div className="grid grid-cols-2 max-[500px]:grid-cols-1  flex-wrap justify-center gap-[2rem] ">
+          <div className="grid grid-cols-2 max-[500px]:grid-cols-1  items-center flex-wrap justify-center gap-[2rem] ">
             {pageContent.faqs.map((item, index) => {
               return <Accordian item={item} index={index + 1} />;
             })}
