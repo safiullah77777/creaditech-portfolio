@@ -286,7 +286,7 @@ const Services = ({ datas }) => {
       </div>
       <br />
       <div className="flex flex-col items-center justify-center pt-10 ">
-        <h1 className="robot-condensed mx-auto  flex max-w-[109.1rem] flex-wrap justify-center gap-x-[1.4rem] text-center text-[5rem]  font-[600] uppercase leading-[5rem] ">
+        <h2 className="robot-condensed mx-auto  flex max-w-[109.1rem] flex-wrap justify-center gap-x-[1.4rem] text-center text-[5rem]  font-[600] uppercase leading-[5rem] ">
           {/* <span>
             {" "}
             We Design Custom Logos for your brand to look{" "}
@@ -294,16 +294,16 @@ const Services = ({ datas }) => {
           </span>
           <span className="text-[#5B5E71]">exaggerated.</span> */}
           {pageContent.section2.heading}
-        </h1>
+        </h2>
         <div className="Montserrat max-w[1440px]:leading-[130%] mt-10 flex max-w-[1091px] flex-col gap-3 px-[3rem] text-center max-[850px]:text-[19px] text-[1.7rem] font-light	">
           {pageContent.section2.paras}
         </div>
         {/* pricing section */}
         <div className="mt-10 flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
           <div className="mb-2 mt-12 text-center">
-            <h1 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
+            <h2 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
               Pricing & Packages.
-            </h1>
+            </h2>
             <div className=" flex w-full  flex-col justify-center ">
               <p className="Montserrat mx-auto max-w-[98rem] pt-[1.5rem] text-center text-[16px]	font-light	leading-[130%]	text-black	">
                 Our branding and logo design packages are very suitable for both
@@ -430,9 +430,9 @@ const Services = ({ datas }) => {
           <span className="font-clash max-w-[1092px] text-center text-[4rem] font-300 leading-[100%] tracking-[0.02em]">
             How we involve
           </span>
-          <h1 className="font-clash mb-10 flex max-w-[1092px]  flex-wrap gap-[1rem] text-center text-[8rem] font-600  leading-[80%] tracking-[0.02em] max-[850px]:text-[6rem] max-[500px]:justify-center">
+          <h2 className="font-clash mb-10 flex max-w-[1092px]  flex-wrap gap-[1rem] text-center text-[8rem] font-600  leading-[80%] tracking-[0.02em] max-[850px]:text-[6rem] max-[500px]:justify-center">
             Our <span className="text-yellow">Logo</span> Designer?
-          </h1>
+          </h2>
         </div>
         <div className="max- flex w-full flex-wrap items-center justify-center gap-[3rem] px-[2rem]">
           <DesignCard
