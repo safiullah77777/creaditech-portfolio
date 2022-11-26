@@ -48,7 +48,7 @@ const Accordian = ({ item, index }) => {
         tabIndex={0}
       >
         <div className="accordian-head  flex gap-[1rem] justify-center">
-          <span className="accordian-title text-[2rem] leading-[100%] mx-auto">
+          <span className="accordian-title  text-[2rem] leading-[100%] mx-auto">
             {item.q}
           </span>
           <div

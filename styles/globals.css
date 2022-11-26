@@ -268,6 +268,7 @@ input[type="number"] {
   display: flex;
   flex: 1;
   font-weight: 700;
+  word-spacing: .4rem;
 }
 .accordian-arrow-down {
   color: #fff;
