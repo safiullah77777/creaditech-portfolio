@@ -76,6 +76,7 @@ const Services = ({ datas }) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
   const onSubmit = (e) => {
+    console.log(formData);
     e.preventDefault();
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -87,9 +88,9 @@ const Services = ({ datas }) => {
     else if (
       formData?.name?.length <= 0 ||
       formData?.phoneNo?.length <= 0 ||
-      formData.description.length <= 0
+      formData?.description?.length <= 0
     ) {
-      toast.error("kripa kr k form poora bhariye");
+      toast.error("please fill hte form.");
       return;
     }
     // else if (!formData.phoneNo) {
@@ -108,7 +109,7 @@ const Services = ({ datas }) => {
     }
     setLoading(true);
     contactForm({ ...formData }, setLoading);
-    setFormData({});
+    setFormData({ name: "", email: "", phoneNo: "", url: "", description: "" });
   };
   if (!datas[0].page) return <Error404 />;
 
