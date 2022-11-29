@@ -11,16 +11,17 @@ const Banner = () => {
     >
       <div className="my-auto mt-auto max-[850px]:items-center flex h-full max-w-[57rem] flex-col justify-center font-semibold max-[1400px]:mt-[16rem] max-[850px]:mx-auto max-[850px]:max-w-full max-[850px]:px-8  max-[850px]:pl-12  ">
         <div className="flex flex-wrap  gap-x-[15px] robot-condensed text-65 uppercase leading-85 text-white max-[850px]:justify-center max-[850px]:text-center max-[850px]:text-[5rem]">
-          <p> Best</p> <p className="flex flex-wrap text-yellow">Software</p>{" "}
+          {/* <p> Best</p> <p className="flex flex-wrap text-yellow">Software</p>{" "}
           <p className="flex flex-wrap text-yellow">development</p>
           <p> and</p>
           <p>marketing</p>
-          <p> agency</p>
+          <p> agency</p> */}
+          <p>Best Web Development Company In The USA</p>
         </div>
         <p className="mt-4 max-w-[484px] text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
-          We help companies grow by providing them the best software development
-          and marketing services in the USA. Get in touch with our experts now
-          and make your business reach your targeted audience.
+          Creaditech is one of the best web development company in the USA. We
+          design and develop websites and web applications that will bring value
+          to your customers.
         </p>
         <div className="my-8 flex gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
           <Button classes="" title={"Get a Quote"} />

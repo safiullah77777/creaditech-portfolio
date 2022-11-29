@@ -61,7 +61,9 @@ const Services = ({ datas }) => {
     (prev, next) => prev.concat(next)
   );
   let randomItems = shuffle(
-    shuffle(shuffle(shuffle(check.filter((item) => !item.link.includes(serviceName)))))
+    shuffle(
+      shuffle(shuffle(check.filter((item) => !item.link.includes(serviceName))))
+    )
   ).slice(4, 8);
   const content = data.filter((data) => data?.page === serviceName)[0];
   const pageContent = Content.filter((data) => data?.page === serviceName)[0];
@@ -81,6 +83,7 @@ const Services = ({ datas }) => {
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
+    const nameregex = new RegExp(/^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*$/g);
     const urlregex = new RegExp(
       /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi
     );
@@ -90,7 +93,7 @@ const Services = ({ datas }) => {
       formData?.phoneNo?.length <= 0 ||
       formData?.description?.length <= 0
     ) {
-      toast.error("please fill hte form.");
+      toast.error("please fill the form.");
       return;
     }
     // else if (!formData.phoneNo) {
@@ -100,7 +103,12 @@ const Services = ({ datas }) => {
     //   toast.error("invalid description");
     //   return;
     // }
-    if (!emailregex.test(formData.email)) {
+    if (!nameregex.test(formData.name)) {
+      toast.error(
+        "invalid name.you can not use special characters in your name."
+      );
+      return;
+    } else if (!emailregex.test(formData.email)) {
       toast.error("invalid email address");
       return;
     } else if (!urlregex.test(formData.url)) {
@@ -108,17 +116,21 @@ const Services = ({ datas }) => {
       return;
     }
     setLoading(true);
-    contactForm({ ...formData }, setLoading);
+    contactForm({ ...formData, type: "service" }, setLoading);
     setFormData({ name: "", email: "", phoneNo: "", url: "", description: "" });
   };
   if (!datas[0].page) return <Error404 />;
 
-  console.log(check.filter((item) => !item.link.includes(serviceName)),check);
+  console.log(
+    check.filter((item) => !item.link.includes(serviceName)),
+    check
+  );
   return (
     <>
       <MetaHead
         title={datas[0]?.meta?.title}
         description={datas[0]?.meta?.description}
+        link={datas[0]?.meta?.link}
       />
 
       <div className=" bg-black ">

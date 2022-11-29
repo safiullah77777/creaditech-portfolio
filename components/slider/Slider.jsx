@@ -3,9 +3,10 @@ import React from "react";
 import phone from "../../public/assets/images/phone.png";
 import chat from "../../public/assets/images/chat.png";
 import Button from "../button/Button";
+import Link from "next/link";
 const Slider = () => {
   return (
-    <div className="group flex border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] w-full  max-[850px]:border-[#3D404E]">
+    <Link href={"/contact-us"} className="group flex border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] w-full  max-[850px]:border-[#3D404E]">
       <div className="relative  flex flex-1 items-center gap-[1rem] bg-white py-[2rem] px-[2rem] max-[850px]:w-full  max-[850px]:flex-col max-[850px]:gap-[5rem] max-[850px]:py-[6rem]  min-[850px]:pl-[6rem]">
         <h2 className="clash relative max-w-[30rem]  text-[5.5rem] font-600 leading-[90%] text-[#3D404E] max-[850px]:text-center  max-[850px]:text-[#3D404E] max-[640px]:text-[4rem]">
           Have a Question?
@@ -65,7 +66,7 @@ const Slider = () => {
           Start your Project
         </h2>
       </div>
-    </div>
+    </Link>
   );
 };
 

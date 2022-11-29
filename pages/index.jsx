@@ -39,6 +39,7 @@ import robot2 from "../public/assets/images/robot2.png";
 import MetaHead from "../components/metaHead/MetaHead";
 import { serviceCards } from "../utils/card";
 import VisibilitySensor from "react-visibility-sensor";
+import Link from "next/link";
 const Home = () => {
   const carouselRef = React.useRef(null);
   const carouselRef1 = React.useRef(null);
@@ -143,12 +144,13 @@ const Home = () => {
       <Header />
       <Banner />
       <ImagesLine />
-      <div className="max-[850px]:bg-none flex h-450 flex-col bg-[#2B2B2B] min-[850px]:bg-[url('/assets/images/backgrounds/service-bg.png')] bg-cover bg-center bg-no-repeat p-20  max-[850px]:h-auto  max-[850px]:p-0">
-        <h2 className="robot-condensed  text-30  font-700 text-yellow  max-[850px]:p-12  max-[850px]:text-[4rem] max-[850px]:leading-[100%] max-[850px]:text-white">
-          We Design Custom Softwares & Provide Marketing Services
+      <div className="max-[850px]:bg-none flex h-[75rem] flex-col bg-[#2B2B2B] gap-[2rem] min-[850px]:bg-[url('/assets/images/backgrounds/service-bg.png')] bg-cover bg-center bg-no-repeat p-20  max-[850px]:h-auto  max-[850px]:p-0">
+        <h2 className="robot-condensed  max-w-[100rem]  text-[4rem]  font-700 text-yellow  max-[850px]:p-12  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
+          Achieve Your Business Goals By Taking Web Development Services From
+          The Best Web Development Company
         </h2>
-        <div className="flex max-w-[761px] flex-wrap gap-x-[.4rem] max-[850px]:p-12">
-          <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
+        <div className="flex max-w-[100rem] flex-wrap gap-x-[.4rem] gap-y-[1rem] max-[850px]:p-12">
+          {/* <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
             “If your business is not on the Internet, then your business will be
             out of business”. This quote from Bill Gates proves the value of
             getting your business online. However, getting your business
@@ -173,30 +175,44 @@ const Home = () => {
                 {item}
               </p>
             );
-          })}
-          {/* <p className="Montserrat flex flex-wrap text-16 font-500 text-white max-[850px]:text-[16px] ">
-            Creaditech is one of the most reputable and trusted
+          })} */}
+          <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
+            “If your business is not on the Internet, then your business will be
+            out of business.” This quote from Bill Gates proves the value of
+            getting your business online. In this technology era, it is not
+            difficult to develop websites, thanks to the multiple tutorials on
+            YouTube and Udemy. However, developing a website or web application
+            that is attractive and meets your business goals is not a piece of
+            cake for everyone.
           </p>
-          <p className="Montserrat flex  flex-wrap  text-16 font-600 text-white max-[850px]:text-[16px]">
-            software development company
+          <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
+            If you don’t have an attractive and mobile-friendly website, then
+            there’s no reason to have a website. A study shows that 75% of users
+            admit to make judgments on a company’s credibility based on its
+            website, so if your website is not friendly and attractive, you
+            won’t be able to generate leads.
           </p>
-          <p className="Montserrat flex  flex-wrap  text-16 font-300 text-white max-[850px]:text-[16px]">
-            and
+          <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
+            Creaditech is one of the most reputable and trusted web development
+            company and focuses on building websites and web applications that
+            are user-friendly and SEO-optimized so that you can achieve your
+            business goals. We have a team of expert web developers for every
+            web technology that ensures your website meets your business goals.
           </p>
-          <p className="Montserrat flex  flex-wrap text-16 font-600 text-white max-[850px]:text-[16px]">
-            marketing agency
+          <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
+            Since 2015, we have worked with several B2B and B2C companies and
+            have developed custom web applications for them; what makes us
+            different from other web development companies is our research and
+            development department and software engineers. Whether you are
+            looking for CMS development services, or custom web development
+            services, contact us and we will deliver a website or application
+            with clear results that will help you achieve your business goals.
           </p>
-          <p className="Montserrat flex  flex-wrap text-16 font-500 text-white max-[850px]:text-[16px]">
-            in the USA. Since 2015, we have worked with several B2B and B2C
-            companies and have developed custom softwares and websites for them.
-            Apart from that, we have a team of expert, certified and highly
-            educated digital marketers who work day and night to make your
-            business recognized among your customers.
-          </p> */}
         </div>
-        <Image  loader={({ src }) => {
-                return src;
-              }}
+        <Image
+          loader={({ src }) => {
+            return src;
+          }}
           width={1000}
           height={1000}
           className="hidden w-full max-[850px]:flex"
@@ -268,27 +284,36 @@ const Home = () => {
         </div>
       </section>
       <section className="flex p-20 max-[850px]:flex-col max-[850px]:gap-[6rem] ">
-        <div className="flex w-1/2 flex-col  max-[850px]:order-3 max-[850px]:w-full max-[640px]:gap-[2rem]">
+        <div className="flex w-1/2 flex-col   max-[850px]:order-3 max-[850px]:w-full gap-[2rem]">
           <h2 className="robot-condensed text-[4rem] font-600 uppercase leading-[90%] text-[#5B5E71] max-[640px]:text-[40px]">
             why choose creaditech?
           </h2>
-          <div className="max-w-[58rem] text-16 font-300 text-[#000000] max-[640px]:text-[16px]">
-            At this point, you might be considering why shall I choose
-            Creaditech to get my software/ app developed or ask them to promote
-            my business. Well, Creaditech has a proven track record of
-            developing custom softwares and doing digital marketing for
-            different brands. We have a team of expert{" "}
-            <p className="text-blue-800">web developers</p>, app developers, and
-            digital marketers who are always ready to cater to any development
-            or marketing challenge.
-            <br />
-            We have been in the industry for years and have a long list of
-            satisfied customers.
+          <div className="flex flex-col gap-[1rem]">
+            <p className="max-w-[58rem] text-16 font-300 text-[#000000] max-[640px]:text-[16px]">
+              At this point, you might be considering why I shall I choose
+              Creaditech to develop my website or web application? Well,
+              Creaditech has a proven track record of developing custom websites
+              and web applications for many years. We have an expert web
+              development team that includes highly qualified and experienced
+              UI/ UX designers, front-end developers, back-end developers,
+              DevOps Engineers, QA experts, and a project manager.
+            </p>
+            <p className="max-w-[58rem] text-16 font-300 text-[#000000] max-[640px]:text-[16px]">
+              We have been in the industry for years and have a long list of
+              satisfied customers; we claim to be the best web development
+              company just because of our expert team members and satisfied
+              clients.
+            </p>
           </div>
           <div className="hidden w-1/2 max-[850px]:flex max-[850px]:w-full">
-            <Image  loader={({ src }) => {
+            <Image
+              loader={({ src }) => {
                 return src;
-              }} className="h-full w-full" src={imageChoose} alt="" />
+              }}
+              className="h-full w-full"
+              src={imageChoose}
+              alt=""
+            />
           </div>
           <div className="flex flex-wrap items-center gap-8 py-8 max-[850px]:justify-center">
             <Card2 show={show} numbers={500} text="Projects delivered" />
@@ -298,9 +323,14 @@ const Home = () => {
           </div>
         </div>
         <div className="w-1/2 max-[850px]:hidden max-[850px]:w-full">
-          <Image  loader={({ src }) => {
-                return src;
-              }} className="h-full w-full" src={imageChoose} alt="" />
+          <Image
+            loader={({ src }) => {
+              return src;
+            }}
+            className="h-full w-full"
+            src={imageChoose}
+            alt=""
+          />
         </div>
       </section>
       <div className="flex bg-[#2B2B2B] py-32 max-[850px]:px-8">
@@ -366,6 +396,32 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <div className="flex bg-[#FFE100] px-[6rem] py-[4rem] gap-[4rem] max-[850px]:flex-col max-[850px]:items-center">
+        <div className="flex mt-[4rem] flex-col gap-[1rem] max-[850px]:max-w-full max-w-[75rem]">
+          <h2 className="robot-condensed text-[5rem] text-[#2B2B2B] uppercase  font-600  leading-[100%]">
+            Web Development Technologies And Frameworks We Work On
+          </h2>
+          <p className="Montserrat text-[2rem] leading-[130%] font-300 text-[#000000]">
+            Ranging from front-end development technologies like React JS, Next
+            JS, Angular JS, Vue JS, Bootstrap, etc to back-end development like
+            Node JS, PHP, Python, MySQL, MongoDB, etc. Our software engineers
+            are experts in all web development technologies and frameworks
+            needed to deliver custom websites and web applications.
+          </p>
+        </div>
+        <div className="yellow-gradient min-[851px]:ml-auto max-w-[65rem] max-[850px]:max-w-full rounded-[5rem] px-[4rem] py-[6rem]">
+          <Image
+            src={require("../public/assets/images/services.png")}
+            loader={({ src }) => {
+              return src;
+            }}
+            alt=""
+            className="w-full h-full"
+          />
+        </div>
+      </div>
+
       <div className="flex flex-col gap-[2rem] px-8 py-32">
         <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[640px]:text-[4rem]">
           Let’s build your next Product
@@ -381,7 +437,7 @@ const Home = () => {
             Industries we've{" "}
             <p className="text-yellow  max-[850px]:text-white"> Worked</p> with
           </div>
-          <p className="mt-4 max-w-[460px] text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
+          <p className="Montserrat mt-4 max-w-[460px] text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
             At this point, you might be considering why shall I choose
             Creaditech to get my software/ app developed or ask them to promote
             my business. Well, Creaditech has a proven track record of
@@ -389,7 +445,7 @@ const Home = () => {
             different brands. We have a team.
           </p>
         </div>
-        <div className=" flex max-w-[90rem] flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
+        <div className=" flex max-w-[90rem] mx-auto flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
           {industriesCards.map((item, index) => (
             <Card4 key={index} title={item.title} icon={item.icon} />
           ))}
@@ -480,7 +536,10 @@ const Home = () => {
           <Card5 />
         </Carousel>
       </div>
-      <div className="group  flex border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] max-[850px]:border-[#3D404E]">
+      <Link
+        href={"/contact-us"}
+        className="group  flex border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] max-[850px]:border-[#3D404E]"
+      >
         <div className="relative flex w-1/2 bg-white py-[2rem] pl-[6rem] pr-[2rem] max-[850px]:w-full max-[850px]:flex-col max-[850px]:gap-[5rem] max-[850px]:bg-[#5B5E71] max-[850px]:py-[6rem]">
           <h2 className="clash relative  mx-auto text-[5.5rem] font-600 leading-[90%] text-[#3D404E] max-[850px]:text-center max-[850px]:text-white max-[640px]:text-[4rem]">
             We love to listen your requirements
@@ -496,53 +555,89 @@ const Home = () => {
           </h2>
           <div className="relative z-[1000] flex flex-1 overflow-hidden">
             <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={arrow} alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt=""
+              />
             </div>
             <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={arrow} alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt=""
+              />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={arrow} alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt=""
+              />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={arrow} alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt=""
+              />
             </div>
             <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={arrow} alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt=""
+              />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={arrow} alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt=""
+              />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={arrow} alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt=""
+              />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={arrow} alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt=""
+              />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={arrow} alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt=""
+              />
             </div>
           </div>
         </div>
-      </div>
+      </Link>
       <h2 className="clash mx-auto mb-[3rem] mt-[6rem] text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
         Our Creative Blogs
       </h2>

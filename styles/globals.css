@@ -54,6 +54,9 @@ input[type="number"] {
   );
   background-blend-mode: overlay;
 }
+.yellow-gradient{
+	background: linear-gradient(180deg, yellow 6%, #ffe100 100%);
+}
 .banner2 {
   background-image: url(../public/assets/images/backgrounds/banner2.png),
     linear-gradient(180.94deg, #1e1e1e 7.76%, rgba(30, 30, 30, 0) 52.42%);
