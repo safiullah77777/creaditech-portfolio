@@ -39,7 +39,7 @@ const MegaMenu = ({ classes, setHover }) => {
                     {item.children.map((items) => {
                       return (
                         <Link key={items.title} href={items.link}>
-                          <li className="group text-center hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
+                          <li className="group  hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
                             <span className="flex items-center gap-[1rem]">
                               {items.title}
                               <svg
