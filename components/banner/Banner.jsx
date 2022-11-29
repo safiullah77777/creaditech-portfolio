@@ -19,7 +19,7 @@ const Banner = () => {
           <p>Best Web Development Company In The USA</p>
         </div>
         <p className="mt-4 max-w-[484px] text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
-          Creaditech is one of the best web development company in the USA. We
+          Creaditech is one of the best web development companies in the USA. We
           design and develop websites and web applications that will bring value
           to your customers.
         </p>
