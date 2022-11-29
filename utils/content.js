@@ -81,6 +81,7 @@ export const Content = [
         strategies, and deliver results that meets the client’s expectation. Be it mobile app development or
         web development, we are Get in touch with us now and get your customized website built according
         to your requirements.`,
+      
     },
     section3: {
       heading: "Why You Shall Take Our Web Development Services?",
