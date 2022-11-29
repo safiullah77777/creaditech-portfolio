@@ -76,7 +76,8 @@ const Header = () => {
       <MegaMenu
         setHover={setHover}
         classes={
-          isHover
+          isHover 
+
             ? "!opacity-100 max-h-auto !visible"
             : "max-h-0 -z-[1000]"
         }

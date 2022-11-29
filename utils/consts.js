@@ -1,57 +1,66 @@
 import development from "../public/assets/images/mega-development.png";
 import designing from "../public/assets/images/mega-designing.png";
 import marketing from "../public/assets/images/mega-marketing.png";
+import lottiDevelopment from "../public/assets/images/mega-web-development.json";
+import lottiMarketing from "../public/assets/images/mega-digital-marketing.json";
+
 export const List = [
   {
     logo: development,
+    lotti: lottiDevelopment,
     heading: "Development",
     children: [
       { title: "Website Development", link: "/services/web-development" },
       {
-        title: "Mobile App Development",
+        title: "Ecommerce  Development",
         link: "/services/mobile-app-development",
-        children: [
-          { title: "IOS App Development", link: "/services/ios-development" },
-          {
-            title: "Android App Development",
-            link: "/services/android-development",
-          },
-        ],
+        // children: [
+        //   { title: "IOS App Development", link: "/services/ios-development" },
+        //   {
+        //     title: "Android App Development",
+        //     link: "/services/android-development",
+        //   },
+        // ],
       },
       {
-        title: "Tailered App Solution",
+        title: "CMS Development",
         link: "/services/tailered-app-solution",
       },
       {
-        title: "Database Solutions",
+        title: "Wordpress Development",
         link: "/services/database-solutions",
       },
       {
-        title: "Wordpress | Shopify Development",
+        title: "Custom Web App Development",
+        link: "/services/wordpress-wix-shopify-development",
+      },
+      {
+        title: "PHP Web Development",
         link: "/services/wordpress-wix-shopify-development",
       },
     ],
   },
-  {
-    logo: designing,
-    heading: "Designing",
-    children: [
-      { title: "Branding", link: "/services/branding" },
-      { title: "Logo Design", link: "/services/logo-design" },
-      { title: "Infographics Design", link: "/services/infographics-design" },
-      { title: "Social Media Design", link: "/services/social-media-design" },
-    ],
-  },
+  // {
+  //   logo: designing,
+  //   heading: "Designing",
+  //   children: [
+  //     { title: "Branding", link: "/services/branding" },
+  //     { title: "Logo Design", link: "/services/logo-design" },
+  //     { title: "Infographics Design", link: "/services/infographics-design" },
+  //     { title: "Social Media Design", link: "/services/social-media-design" },
+  //   ],
+  // },
   {
     logo: marketing,
+    lotti: lottiMarketing,
     heading: "Marketing",
     children: [
       { title: "Search Engine Optimization", link: "/services/seo" },
       { title: "Search Engine Marketing", link: "/services/sem" },
-      {
-        title: "Social Media Marketing",
-        link: "/services/social-media-marketing",
-      },
+      // {
+      //   title: "Social Media Marketing",
+      //   link: "/services/social-media-marketing",
+      // },
       { title: "Content Creation", link: "/services/content-creation" },
     ],
   },
