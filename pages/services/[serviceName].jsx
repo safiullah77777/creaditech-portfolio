@@ -61,7 +61,7 @@ const Services = ({ datas }) => {
     (prev, next) => prev.concat(next)
   );
   let randomItems = shuffle(
-    shuffle(shuffle(shuffle(check.filter((item) => item.link !== serviceName))))
+    shuffle(shuffle(shuffle(check.filter((item) => !item.link.includes(serviceName)))))
   ).slice(4, 8);
   const content = data.filter((data) => data?.page === serviceName)[0];
   const pageContent = Content.filter((data) => data?.page === serviceName)[0];
@@ -76,6 +76,7 @@ const Services = ({ datas }) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
   const onSubmit = (e) => {
+    console.log(formData);
     e.preventDefault();
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -87,9 +88,9 @@ const Services = ({ datas }) => {
     else if (
       formData?.name?.length <= 0 ||
       formData?.phoneNo?.length <= 0 ||
-      formData.description.length <= 0
+      formData?.description?.length <= 0
     ) {
-      toast.error("kripa kr k form poora bhariye");
+      toast.error("please fill hte form.");
       return;
     }
     // else if (!formData.phoneNo) {
@@ -108,11 +109,11 @@ const Services = ({ datas }) => {
     }
     setLoading(true);
     contactForm({ ...formData }, setLoading);
-    setFormData({});
+    setFormData({ name: "", email: "", phoneNo: "", url: "", description: "" });
   };
   if (!datas[0].page) return <Error404 />;
 
-  console.log({ pageContent });
+  console.log(check.filter((item) => !item.link.includes(serviceName)),check);
   return (
     <>
       <MetaHead
@@ -242,13 +243,13 @@ const Services = ({ datas }) => {
           </div>
         </div>
         <div className="section-left flex  w-[64.6rem] flex-col gap-[3rem]  max-[850px]:w-full">
-          <div className="w-full  max-[850px]:hidden">
+          <div className="w-full  ">
             <Image
               loader={({ src }) => {
                 return src;
               }}
               className="w-full"
-              src={imageWriting}
+              src={pageContent?.section1?.image}
               alt=""
               width={650}
               height={500}
@@ -285,7 +286,7 @@ const Services = ({ datas }) => {
       </div>
       <br />
       <div className="flex flex-col items-center justify-center pt-10 ">
-        <h1 className="robot-condensed mx-auto  flex max-w-[109.1rem] flex-wrap justify-center gap-x-[1.4rem] text-center text-[5rem]  font-[600] uppercase leading-[5rem] ">
+        <h2 className="robot-condensed mx-auto  flex max-w-[109.1rem] flex-wrap justify-center gap-x-[1.4rem] text-center text-[5rem]  font-[600] uppercase leading-[5rem] ">
           {/* <span>
             {" "}
             We Design Custom Logos for your brand to look{" "}
@@ -293,16 +294,16 @@ const Services = ({ datas }) => {
           </span>
           <span className="text-[#5B5E71]">exaggerated.</span> */}
           {pageContent.section2.heading}
-        </h1>
+        </h2>
         <div className="Montserrat max-w[1440px]:leading-[130%] mt-10 flex max-w-[1091px] flex-col gap-3 px-[3rem] text-center max-[850px]:text-[19px] text-[1.7rem] font-light	">
           {pageContent.section2.paras}
         </div>
         {/* pricing section */}
         <div className="mt-10 flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
           <div className="mb-2 mt-12 text-center">
-            <h1 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
+            <h2 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
               Pricing & Packages.
-            </h1>
+            </h2>
             <div className=" flex w-full  flex-col justify-center ">
               <p className="Montserrat mx-auto max-w-[98rem] pt-[1.5rem] text-center text-[16px]	font-light	leading-[130%]	text-black	">
                 Our branding and logo design packages are very suitable for both
@@ -429,9 +430,9 @@ const Services = ({ datas }) => {
           <span className="font-clash max-w-[1092px] text-center text-[4rem] font-300 leading-[100%] tracking-[0.02em]">
             How we involve
           </span>
-          <h1 className="font-clash mb-10 flex max-w-[1092px]  flex-wrap gap-[1rem] text-center text-[8rem] font-600  leading-[80%] tracking-[0.02em] max-[850px]:text-[6rem] max-[500px]:justify-center">
+          <h2 className="font-clash mb-10 flex max-w-[1092px]  flex-wrap gap-[1rem] text-center text-[8rem] font-600  leading-[80%] tracking-[0.02em] max-[850px]:text-[6rem] max-[500px]:justify-center">
             Our <span className="text-yellow">Logo</span> Designer?
-          </h1>
+          </h2>
         </div>
         <div className="max- flex w-full flex-wrap items-center justify-center gap-[3rem] px-[2rem]">
           <DesignCard
@@ -546,7 +547,7 @@ const Services = ({ datas }) => {
               loader={({ src }) => {
                 return src;
               }}
-              src={mono}
+              src={pageContent?.section3?.image}
               className="w-full min-[500px]:h-[42rem] min-[500px]:w-[42rem]"
               alt=""
             />
@@ -556,7 +557,7 @@ const Services = ({ datas }) => {
           <h2 className="clash mb-[1rem] text-center text-[8rem] font-600 text-[#1E1E1E]">
             FAQs
           </h2>
-          <div className="grid grid-cols-2 max-[500px]:grid-cols-1  flex-wrap justify-center gap-[2rem] ">
+          <div className="grid grid-cols-2 max-[500px]:grid-cols-1  items-center flex-wrap justify-center gap-[2rem] ">
             {pageContent.faqs.map((item, index) => {
               return <Accordian item={item} index={index + 1} />;
             })}

@@ -234,14 +234,14 @@ input[type="number"] {
   flex-direction: column;
   cursor: pointer;
   transition: all 0.6s;
-  height: 100%;
+  max-height: 30rem;
   z-index: 1;
   overflow: hidden;
 }
 .main-accordian {
   position: relative;
   /* width: 62.5rem; */
-  max-height: 10rem;
+  height: 6rem;
   transition: all 0.5s;
 }
 .fixed-height {
@@ -249,8 +249,11 @@ input[type="number"] {
 }
 .accordian-text {
   color: #fff;
-  margin-top: 1rem;
-  opacity: 0;
+  /* margin-top: 2.7rem; */
+  max-height: 0rem;
+  overflow: hidden;
+  transition: all .3s;
+  /* opacity: 0; */
 }
 
 .accordian-head {
@@ -265,6 +268,7 @@ input[type="number"] {
   display: flex;
   flex: 1;
   font-weight: 700;
+  word-spacing: .4rem;
 }
 .accordian-arrow-down {
   color: #fff;

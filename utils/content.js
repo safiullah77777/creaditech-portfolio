@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Header from "../components/header/Header";
 import webInfoGraphic from "../public/assets/images/website-development-agency.webp";
+import hireExpert from "../public/assets/images/hire-an-expert.svg";
+import webDev from "../public/assets/images/web-dev.webp";
 export const Content = [
   {
     page: "web-development",
@@ -40,6 +42,7 @@ export const Content = [
           </p>
         </>
       ),
+      image:webDev,
       link: "",
     },
     section2: {
@@ -119,6 +122,7 @@ export const Content = [
           </ul>
         </>
       ),
+      image: hireExpert,
     },
     faqs: [
       {
