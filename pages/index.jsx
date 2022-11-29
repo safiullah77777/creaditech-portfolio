@@ -144,8 +144,8 @@ const Home = () => {
       <Header />
       <Banner />
       <ImagesLine />
-      <div className="max-[850px]:bg-none flex h-[75rem] flex-col bg-[#2B2B2B] gap-[2rem] min-[850px]:bg-[url('/assets/images/backgrounds/service-bg.png')] bg-cover bg-center bg-no-repeat p-20  max-[850px]:h-auto  max-[850px]:p-0">
-        <h2 className="robot-condensed  max-w-[100rem]  text-[4rem]  font-700 text-yellow  max-[850px]:p-12  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
+      <div className="max-[850px]:bg-none flex h-[75rem] flex-col bg-[#2B2B2B] gap-[0rem] min-[850px]:bg-[url('/assets/images/backgrounds/service-bg.png')] bg-cover bg-center bg-no-repeat p-20  max-[850px]:h-auto  max-[850px]:p-0">
+        <h2 className="robot-condensed  max-w-[100rem]  text-[4rem]  font-700 text-yellow  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
           Achieve Your Business Goals By Taking Web Development Services From
           The Best Web Development Company
         </h2>
@@ -335,7 +335,7 @@ const Home = () => {
       </section>
       <div className="flex bg-[#2B2B2B] py-32 max-[850px]:px-8">
         <div className="mx-auto flex max-[850px]:flex-col max-[850px]:gap-[2rem]">
-          <h2 className="leading-1 robot-condensed mr-auto flex justify-center text-[14rem] font-600 uppercase leading-[80%] text-white max-[850px]:text-[10rem] max-[640px]:h-auto max-[640px]:w-auto max-[640px]:text-[7rem] max-[640px]:font-700 max-[350px]:text-[6rem] min-[850px]:m-auto min-[850px]:h-[30rem] min-[850px]:w-[25rem] min-[850px]:max-w-[310px] min-[850px]:-rotate-90  min-[850px]:items-center">
+          <h2 className="leading-1 robot-condensed min-[850px]:mr-auto max-[850px]:text-center flex justify-center text-[14rem] max-[850px]:items-center font-600 uppercase leading-[80%] text-white max-[850px]:text-[10rem] max-[640px]:h-auto max-[640px]:w-auto max-[640px]:text-[7rem] max-[640px]:font-700 max-[350px]:text-[6rem] min-[850px]:m-auto min-[850px]:h-[30rem] min-[850px]:w-[25rem] min-[850px]:max-w-[310px] min-[850px]:-rotate-90  min-[850px]:items-center">
             Our <br /> Portfolio
           </h2>
           {/* <h2 className="leading-1 m-auto flex h-[30rem] max-w-[310px] items-center justify-center robot-condensed text-150 font-600 uppercase leading-[80%] text-black max-[640px]:text-[70px]  max-[640px]:font-900 min-[850px]:-rotate-90">
