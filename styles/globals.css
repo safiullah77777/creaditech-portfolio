@@ -26,6 +26,9 @@ html {
 html,
 body {
   overflow-x: hidden;
+  /* contain: paint; */
+  /* box-sizing: border-box;
+  position: relative; */
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -54,8 +57,8 @@ input[type="number"] {
   );
   background-blend-mode: overlay;
 }
-.yellow-gradient{
-	background: linear-gradient(180deg, yellow 6%, #ffe100 100%);
+.yellow-gradient {
+  background: linear-gradient(180deg, yellow 6%, #ffe100 100%);
 }
 .banner2 {
   background-image: url(../public/assets/images/backgrounds/banner2.png),
@@ -255,7 +258,7 @@ input[type="number"] {
   /* margin-top: 2.7rem; */
   max-height: 0rem;
   overflow: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
   /* opacity: 0; */
 }
 
@@ -271,7 +274,7 @@ input[type="number"] {
   display: flex;
   flex: 1;
   font-weight: 700;
-  word-spacing: .4rem;
+  word-spacing: 0.4rem;
 }
 .accordian-arrow-down {
   color: #fff;
@@ -281,9 +284,9 @@ input[type="number"] {
   background-position: 1rem 1rem;
 }
 .loader {
-  border: .5rem solid #f3f3f3;
+  border: 0.5rem solid #f3f3f3;
   border-radius: 50%;
-  border-top: .5rem solid #ffe100;
+  border-top: 0.5rem solid #ffe100;
   width: 5rem;
   height: 5rem;
   -webkit-animation: spin 2s linear infinite; /* Safari */

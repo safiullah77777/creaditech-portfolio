@@ -9,7 +9,7 @@ const Header = () => {
   const [isHover, setHover] = useState(false);
   
   return (
-    <div className=" absolute top-0 left-0 z-[54] w-full py-16 min-[720px]:px-[8rem] px-[2rem] ">
+    <div className=" absolute top-0 left-0 z-[54] w-[100vw] py-16 min-[720px]:px-[8rem] px-[2rem] ">
       <div className="hidden justify-center max-[677px]:flex">
         <Link href="/">
           <Image  loader={({ src }) => {

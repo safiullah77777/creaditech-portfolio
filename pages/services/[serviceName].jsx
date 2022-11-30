@@ -133,9 +133,9 @@ const Services = ({ datas }) => {
         link={datas[0]?.meta?.link}
       />
 
-      <div className=" bg-black ">
+      
         <Header />
-      </div>
+      
       <div
         className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.png')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
     			min-[500px]:px-28 "
