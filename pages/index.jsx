@@ -40,6 +40,7 @@ import MetaHead from "../components/metaHead/MetaHead";
 import { serviceCards } from "../utils/card";
 import VisibilitySensor from "react-visibility-sensor";
 import Link from "next/link";
+import { expertiseIcons } from "../utils/expertiseIcons";
 const Home = () => {
   const carouselRef = React.useRef(null);
   const carouselRef1 = React.useRef(null);
@@ -185,21 +186,24 @@ const Home = () => {
             that is attractive and meets your business goals is not a piece of
             cake for everyone.
           </p>
-          <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
+          <p className="Montserrat  text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
             If you don’t have an attractive and mobile-friendly website, then
-            there’s no reason to have a website. A study shows that 75% of users
-            admit to make judgments on a company’s credibility based on its
-            website, so if your website is not friendly and attractive, you
-            won’t be able to generate leads.
+            there’s no reason to have a website. A study shows that{" "}
+            <Link href="" className="anchor" target={"_blank"}>
+               75% of users admit to make judgments on a company’s credibility
+              based on its website
+            </Link>
+            , so if your website is not friendly and attractive, you won’t be
+            able to generate leads.
           </p>
-          <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
+          <p className="Montserrat  text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
             Creaditech is one of the most reputable and trusted web development
             company and focuses on building websites and web applications that
             are user-friendly and SEO-optimized so that you can achieve your
             business goals. We have a team of expert web developers for every
             web technology that ensures your website meets your business goals.
           </p>
-          <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
+          <p className="Montserrat  text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
             Since 2015, we have worked with several B2B and B2C companies and
             have developed custom web applications for them; what makes us
             different from other web development companies is our research and
@@ -226,7 +230,7 @@ const Home = () => {
             Our <br /> Service
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
-            {serviceCards.slice(0, 5).map((item, index) => (
+            {serviceCards.slice(0, 6).map((item, index) => (
               <Card
                 styles={item.styles}
                 key={index}
@@ -235,7 +239,7 @@ const Home = () => {
                 image={item.icon}
               />
             ))}
-            <div
+            {/* <div
               onMouseEnter={() => {
                 setHover(true);
               }}
@@ -245,10 +249,7 @@ const Home = () => {
               className="border-[rgba(198, 206, 211, 1)] group flex h-[30rem] w-[30rem] flex-col items-center justify-center gap-4  overflow-hidden rounded-25 border-2 border-solid bg-black p-12 shadow-xl duration-300 ease-linear hover:border-0 hover:bg-yellow max-[500px]:w-[40rem] max-[500px]:h-[40rem]"
             >
               <div className=" group-hover:after:wi relative flex h-160 w-160  items-center justify-center ease-linear after:absolute after:bottom-0 after:left-0 after:h-full after:w-full after:rounded-full after:bg-[#E4E4E4] after:duration-700 group-hover:after:bg-black   ">
-                {/* <Image  loader={({ src }) => {
-                return src;
-              }} alt="" src={Image2} className="z-10" />
-                {Image2} */}
+               
                 <svg
                   width="4.4rem"
                   height="7.1rem"
@@ -279,7 +280,7 @@ const Home = () => {
               <h2 className=" Montserrat upp text-center text-[4rem] font-600 leading-[80%] text-white group-hover:text-[#1E1E1E]">
                 More <br /> Services
               </h2>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -397,8 +398,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex bg-[#FFE100] px-[6rem] py-[4rem] gap-[4rem] max-[850px]:flex-col max-[850px]:items-center">
-        <div className="flex mt-[4rem] flex-col gap-[1rem] max-[850px]:max-w-full max-w-[75rem]">
+      <div className="flex bg-[#FFE100] px-[6rem] py-[4rem] gap-[4rem] max-[850px]:flex-col justify-center max-[850px]:items-center">
+        <div className="flex ml-auto mt-[4rem] flex-col gap-[1rem] max-[850px]:max-w-full max-w-[75rem]">
           <h2 className="robot-condensed text-[5rem] text-[#2B2B2B] uppercase  font-600  leading-[100%]">
             Web Development Technologies And Frameworks We Work On
           </h2>
@@ -410,15 +411,19 @@ const Home = () => {
             needed to deliver custom websites and web applications.
           </p>
         </div>
-        <div className="yellow-gradient min-[851px]:ml-auto max-w-[65rem] max-[850px]:max-w-full rounded-[5rem] px-[4rem] py-[6rem]">
-          <Image
-            src={require("../public/assets/images/services.png")}
-            loader={({ src }) => {
-              return src;
-            }}
-            alt=""
-            className="w-full h-full"
-          />
+        <div className="mr-auto justify-center grid gap-[2rem] grid-cols-5 min-[851px]:ml-auto max-w-[65rem] max-[850px]:max-w-full rounded-[5rem] px-[4rem] pt-[3rem]">
+          {expertiseIcons.map((item) => (
+            <div className=" flex items-center">
+              <Image
+                src={item}
+                loader={({ src }) => {
+                  return src;
+                }}
+                alt=""
+                className="w-6rem "
+              />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -426,9 +431,14 @@ const Home = () => {
         <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[640px]:text-[4rem]">
           Let’s build your next Product
         </h2>
-        <button className="clash mx-auto h-[70px] w-[43rem] rounded-[1rem] border-b-[6px] border-solid border-black/[0.4] bg-[#ED435C] px-12 text-[2.5rem]   font-500  text-white  active:scale-[1.01] max-[850px]:text-[20px] max-[400px]:w-[80%] ">
-          Let’s Work Together
-        </button>
+        <>
+          <Link
+            href={"/contact-us"}
+            className="clash flex text-center justify-center items-center mx-auto h-[70px] w-[43rem] rounded-[1rem] border-b-[6px] border-solid border-black/[0.4] bg-[#ED435C] px-12 text-[2.5rem]   font-500  text-white  active:scale-[1.01] max-[850px]:text-[20px] max-[400px]:w-[80%] "
+          >
+            Let’s Work Together
+          </Link>
+        </>
         {/* <Button title="Let’s Work Together" classes="" /> */}
       </div>
       <div className="flex bg-[#2B2B2B] py-24 pr-[4rem]  pl-[6rem] max-[850px]:flex-col max-[640px]:gap-[4rem]">

@@ -3,6 +3,7 @@ import Button from "../button/Button";
 import Button2 from "../button2/Button2";
 import loti from "../../public/assets/videos/new.json";
 import { Player } from "@lottiefiles/react-lottie-player";
+import Link from "next/link";
 const Banner = () => {
   return (
     <div
@@ -24,8 +25,12 @@ const Banner = () => {
           to your customers.
         </p>
         <div className="my-8 flex gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
-          <Button classes="" title={"Get a Quote"} />
-          <Button2 title={"View Our Work"} />
+          <Link href={"/contact-us"}>
+            <Button classes="" title={"Get a Quote"} />
+          </Link>
+          <Link href={"/portfolio"}>
+            <Button2 title={"View Our Work"} />
+          </Link>{" "}
         </div>
       </div>
       <div className="relative top-[6rem] right-0 flex h-full flex-1">

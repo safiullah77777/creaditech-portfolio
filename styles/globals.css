@@ -30,6 +30,10 @@ body {
   /* box-sizing: border-box;
   position: relative; */
 }
+.anchor{
+  color: blue;
+  text-decoration: underline;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -313,9 +317,9 @@ input[type="number"] {
   }
 }
 @media screen and (max-width: 640px) {
-  .card4 {
+  /* .card4 {
     background: linear-gradient(to right, #b5bdc1 0%, #2b2b2b 100%);
-  }
+  } */
 }
 @tailwind components;
 @tailwind utilities;

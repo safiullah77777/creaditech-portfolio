@@ -1,10 +1,11 @@
 import React from "react";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-import { TermsAndConditions } from "../utils/terms";
+import { privacyPolicy, TermsAndConditions } from "../utils/terms";
 
 const DetailsPage = ({ data }) => {
-  const pageContent = data.page !== "privacy-policy" ? TermsAndConditions : {};
+  const pageContent =
+    data.page !== "privacy-policy" ? privacyPolicy : TermsAndConditions;
   return (
     <>
       <Header />
@@ -27,11 +28,20 @@ const DetailsPage = ({ data }) => {
                 </h2>
               );
             if (item.includes("jsx")) return pageContent[item];
+            if (item.includes("listTitle"))
+            return (
+              <p className="clash font-300 text-[#000000] text-[1.8rem] my-[.5rem]">
+                {pageContent[item]}
+              </p>
+            );
             if (item.includes("paras"))
               return (
                 <div>
                   {pageContent[item].map((item1) => (
-                    <p key={item1} className="text-[15px] clash font-300 text-[#000000]">
+                    <p 
+                      key={item1}
+                      className="text-[1.8rem] clash leading-[100%] font-300 text-[#000000]"
+                    >
                       {item1}
                     </p>
                   ))}
@@ -42,7 +52,10 @@ const DetailsPage = ({ data }) => {
                 <ul className="flex flex-col gap-[1rem] pl-[4rem]">
                   {pageContent[item].map((item1) => (
                     <li className="text-[15px] flex   clash font-300 text-[#000000]">
-                      <span className="relative -top-[.4rem] mr-[1rem] text-[2rem] ">&#x2022;</span>{item1}
+                      <span className="relative -top-[.4rem] mr-[1rem] text-[2rem] ">
+                        &#x2022;
+                      </span>
+                      {item1}
                     </li>
                   ))}
                 </ul>

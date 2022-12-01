@@ -93,6 +93,11 @@ module.exports = {
     },
     backgroundImage: {
       "bg-image2": "url('/assets/images/backgrounds/service-bg.png')",
+      "gradient-bg": `background-image: linear-gradient(
+        180.94deg,
+        #1e1e1e 7.76%,
+        rgba(30, 30, 30, 0) 52.42%
+      );`,
     },
   },
   plugins: [],

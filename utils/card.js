@@ -3,6 +3,7 @@ import Image2 from "../public/assets/images/creaditech-mobile.png";
 import Image3 from "../public/assets/images/creaditech-designing.png";
 import Image4 from "../public/assets/images/creaditech-seo.png";
 import Image5 from "../public/assets/images/creaditech-database.png";
+import Image6 from "../public/assets/images/creaditech-cms.png";
 export const serviceCards = [
   {
     title: "website",
@@ -41,9 +42,9 @@ export const serviceCards = [
   },
 
   {
-    title: "Tailered ",
-    title1: "App Solutions",
-    icon: Image1,
+    title: "CMS Web ",
+    title1: "Development",
+    icon: Image6,
     styles: "",
     link: "/tailered-app-solution",
   },

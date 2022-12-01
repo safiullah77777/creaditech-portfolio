@@ -15,15 +15,15 @@ const Footer = () => {
     <footer className="flex flex-col bg-primary px-24 pt-44 pb-24 max-[850px]:px-8  max-[600px]:pt-[4rem]">
       <div className="flex max-[850px]:flex-col">
         <div className="mb-28  flex w-1/2 flex-col items-center justify-center border-solid border-yellow py-16 max-[850px]:order-2 max-[850px]:w-full max-[850px]:border-none min-[850px]:border-r-2">
-          <h4 className="heading-grey max-[400px]:text-[35px]">Contact</h4>
+          <p className="heading-grey max-[400px]:text-[35px]">Contact</p>
           <Tag logo={logo} text="info@creaditech.com" />
           <div className="mt-8 flex flex-wrap items-center justify-center gap-8">
             <Tag logo={logo2} text="+1 2144734887" />
             <Tag logo={logo1} text="WhatsApp" />
           </div>
-          <h4 className="heading-grey my-8 border-solid border-[gray] max-[850px]:w-full max-[850px]:justify-center max-[850px]:border-t-2 max-[850px]:pt-[4rem] max-[850px]:text-center max-[400px]:text-[35px]">
+          <p className="heading-grey my-8 border-solid border-[gray] max-[850px]:w-full max-[850px]:justify-center max-[850px]:border-t-2 max-[850px]:pt-[4rem] max-[850px]:text-center max-[400px]:text-[35px]">
             Connect
-          </h4>
+          </p>
           <div className="item-center flex gap-4">
             <div className="rounded-icons">
               <Image  loader={({ src }) => {
