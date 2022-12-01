@@ -19,7 +19,7 @@ const BlogPost = () => {
           src={require("../public/assets/images/robot-1.png")}
           alt=""
         />
-        <div className="absolute w-[107.8rem] rounded-[3.5rem] bg-[#1E1E1E] p-[3rem] -bottom-[20rem] left-[50%] -translate-x-[50%]  -translate-y-[50%]">
+        <div className="absolute flex flex-col gap-[1rem] w-[107.8rem] rounded-[3.5rem] bg-[#1E1E1E] p-[3rem] -bottom-[23rem] left-[50%] -translate-x-[50%]  -translate-y-[50%]">
           <h1 className="robot-condensed text-center leading-[100%] font-600 text-[6.5rem] text-[#ffffff] uppercase">
             At this point, you might be considering why shall
           </h1>

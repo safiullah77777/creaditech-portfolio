@@ -56,9 +56,9 @@ const Footer = () => {
           <Image  loader={({ src }) => {
                 return src;
               }} src={Logo} className="logo max-[500px]:w-[59px]" alt="" />
-          <h4 className="heading-grey robot-condensed my-10 text-45 font-600 leading-[80%] max-[400px]:text-[30px]">
+          <p className="heading-grey robot-condensed my-10 text-45 font-600 leading-[80%] max-[400px]:text-[30px]">
             Join our Newsletter
-          </h4>
+          </p>
           <div className="flex  items-center justify-center max-[850px]:w-full">
             <div className="flex w-380 max-[850px]:w-[70rem] max-[850px]:max-w-[60rem]">
               <input
