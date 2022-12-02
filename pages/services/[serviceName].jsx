@@ -83,7 +83,7 @@ const Services = ({ datas }) => {
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
-    const nameregex = new RegExp(/^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*$/g);
+    const nameregex = new RegExp(/^[a-zA-Z][a-zA-Z ]*$/);
     const urlregex = new RegExp(
       /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi
     );
@@ -311,8 +311,21 @@ const Services = ({ datas }) => {
         </div>
         {pageContent.ecommerceExtra !== false ? (
           <>
-            <div className="flex">
-              <h2>{pageContent.ecommerceExtra.heading}</h2>
+            <div className="flex py-[8rem] px-[3rem] flex-col gap-[3rem]">
+              <h2 className="mx-auto font-600 text-[#000000] text-[4rem] leading-[100%]">
+                {pageContent.ecommerceExtra.heading}
+              </h2>
+              <div className="flex gap-[4rem] flex-wrap justify-center">
+                {pageContent.ecommerceExtra.icons.map((item) => (
+                  <Image
+                    loader={({ src }) => {
+                      return src;
+                    }}
+                    src={item}
+                    alt=""
+                  />
+                ))}
+              </div>
             </div>
           </>
         ) : (
@@ -541,15 +554,22 @@ const Services = ({ datas }) => {
         {pageContent.cmsExtra !== false ? (
           <>
             <div className="flex flex-col w-full p-[5rem] pb-0 ">
-              <h2 className="mx-auto font-600 text-[#000000] text-[4rem] leading-[100%]">{pageContent.cmsExtra.heading}</h2>
+              <h2 className="mx-auto font-600 text-[#000000] text-[4rem] leading-[100%]">
+                {pageContent.cmsExtra.heading}
+              </h2>
               <div className="grid grid-cols-3 max-[550px]:grid-cols-2 max-[380px]:grid-cols-1 justify-center gap-[5rem] mx-auto mt-[5rem]">
-                  {pageContent.cmsExtra.cards.map(item =><>
+                {pageContent.cmsExtra.cards.map((item) => (
+                  <>
                     <div className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
-                      <h2 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">{item.title}</h2>
-                      <p className="font-300 text-[#000000] text-[1.6rem]">{item.para}</p>
-
+                      <h2 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">
+                        {item.title}
+                      </h2>
+                      <p className="font-300 text-[#000000] text-[1.6rem]">
+                        {item.para}
+                      </p>
                     </div>
-                  </>)}
+                  </>
+                ))}
               </div>
             </div>
           </>

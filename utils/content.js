@@ -3,6 +3,12 @@ import Header from "../components/header/Header";
 import webInfoGraphic from "../public/assets/images/website-development-agency.webp";
 import hireExpert from "../public/assets/images/hire-an-expert.svg";
 import webDev from "../public/assets/images/web-dev.webp";
+import logos_woocommerce from "../public/assets/images/icons/logos-woocommerce.svg";
+import open_cart from "../public/assets/images/icons/open-cart.svg";
+import square_space from "../public/assets/images/icons/sqaure-space.svg";
+import magento from "../public/assets/images/icons/magento.svg";
+import big_commerce from "../public/assets/images/icons/big-commerce.svg";
+import shopify from "../public/assets/images/icons/shopify.svg";
 export const Content = [
   {
     page: "web-development",
@@ -214,7 +220,14 @@ export const Content = [
     },
     ecommerceExtra: {
       heading: "Leading Ecommerce Platforms.",
-      icons: [],
+      icons: [
+        logos_woocommerce,
+        open_cart,
+        square_space,
+        magento,
+        big_commerce,
+        shopify,
+      ],
     },
     section2: {
       heading: "Our Ecommerce Solutions Will Turn Your Visitors Into Customers",
@@ -391,10 +404,7 @@ export const Content = [
       image: webDev,
       link: "",
     },
-    ecommerceExtra: {
-      heading: "Leading Ecommerce Platforms.",
-      icons: [],
-    },
+    ecommerceExtra: false,
     section2: {
       heading:
         "Take Control Of Your Website By Taking Our CMS Development Services",

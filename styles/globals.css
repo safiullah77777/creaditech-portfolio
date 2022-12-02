@@ -31,7 +31,7 @@ body {
   position: relative; */
 }
 .anchor{
-  color: blue;
+  color: rgb(3, 119, 188, 1);
   text-decoration: underline;
 }
 input::-webkit-outer-spin-button,

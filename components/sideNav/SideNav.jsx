@@ -13,7 +13,7 @@ import Link from "next/link";
 const SideNav = ({ classes }) => {
   return (
     <div
-      className={` fixed flex-col  overflow-y-scroll top-0 left-0 items-center pb-[8rem]  z-[102323] h-[100vh] w-[320px] bg-[#1E1E1E] px-[4rem]   shadow-megaMenu duration-500 ease-linear ${classes}`}
+      className={` fixed flex-col  overflow-y-scroll top-0 left-0 items-center pb-[8rem]  z-[102323] h-[100vh] w-[300px] bg-[#1E1E1E] px-[4rem]   shadow-megaMenu duration-500 ease-linear ${classes}`}
     >
       <div className="flex w-full flex-col justify-around gap-[5rem] pt-[5rem] pb-[4rem] z-[102323] border-solid border-b-[2px] border-[#363636]">
         {List.map((item, index) => {

@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 const contactForm = async (params, setLoading) => {
-  await fetch("https://creaditech.herokuapp.com/api/forms/contactus", {
+  await fetch("http://localhost:5000/api/forms/contactus", {
     method: "post",
     headers: {
       Accept: "application/json",

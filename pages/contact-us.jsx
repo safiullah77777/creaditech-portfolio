@@ -33,10 +33,9 @@ const ContactUs = () => {
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
-    const nameregex = new RegExp(/^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*$/g);
-    const urlregex = new RegExp(
-      /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi
-    );
+    const nameregex = new RegExp(/^[a-zA-Z][a-zA-Z ]*$/);
+    const companynameregex = new RegExp(/^[a-zA-Z][a-zA-Z ]*$/);
+    console.log(formData.companyName.length > 0, nameregex.test(formData.name));
     if (loading) return;
     else if (
       formData?.name?.length <= 0 ||
@@ -45,17 +44,18 @@ const ContactUs = () => {
     ) {
       toast.error("please fill the form.");
       return;
-    }
-    if (!nameregex.test(formData.name)) {
+    } else if (!nameregex.test(formData.name)) {
       toast.error(
-        "invalid name.you can not use special characters in your name."
+        `invalid name you can not use special characters in your name.`
       );
       return;
     } else if (!emailregex.test(formData.email)) {
       toast.error("invalid email address");
       return;
-    } 
-    else if (formData.companyName.length>0 && !nameregex.test(formData.companyName)) {
+    } else if (
+      formData.companyName.length > 0 &&
+      companynameregex.test(formData.companyName) == false
+    ) {
       toast.error("invalid compnay Name");
       return;
     }
@@ -170,7 +170,7 @@ const ContactUs = () => {
             name="description"
           ></textarea>
           {loading ? (
-            <div class="loader"></div>
+            <div className="loader"></div>
           ) : (
             <Button
               onClick={onSubmit}
