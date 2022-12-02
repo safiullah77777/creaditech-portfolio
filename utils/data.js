@@ -1,16 +1,16 @@
 import Header from "../components/header/Header";
-import webInfoGraphic from '../public/assets/images/website-development-agency.webp'
+import webInfoGraphic from "../public/assets/images/website-development-agency.webp";
 
 export const data = [
   {
     page: "web-development",
-    inforaphic:webInfoGraphic,
+    inforaphic: webInfoGraphic,
 
     meta: {
       title: "Custom Web Development In USA - Creaditech",
       description:
         "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
-        link:"services/web-development"
+      link: "services/web-development",
     },
     h1: {
       pre: "Custom ",
@@ -20,9 +20,43 @@ export const data = [
     tagline: `Take our custom web development services and bring your business on the web. We are the
     best custom web development company in the USA that has a pool of expert web developers.`,
   },
+  {
+    page: "ecommerce-website-development",
+    inforaphic: webInfoGraphic,
+    meta: {
+      title: "Custom Web Development In USA - Creaditech",
+      description:
+        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+      link: "services/web-development",
+    },
+    h1: {
+      pre: "Ecommerce ",
+      main: "Website Development",
+      post: " Services",
+    },
+    tagline: `Boost your online sales and grow your customer reach by taking our ecommerce website
+    development services.`,
+  },
+  {
+    page: "cms-development",
+    inforaphic: webInfoGraphic,
+    meta: {
+      title: "Custom Web Development In USA - Creaditech",
+      description:
+        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+      link: "services/web-development",
+    },
+    h1: {
+      pre: "",
+      main: "CMS Development Services",
+      post: " By  Expert CMS Developers",
+    },
+    tagline: `Manage your content easily now by taking our cms website development services. Creaditech is
+    one of the best cms development company in USA that has a team of expert CMS developers.`,
+  },
   // {
   //   page: "branding",
-   
+
   //   meta: {
   //     title: "Branding",
   //     description: `Low on budget but want to launch your business online? Don't worry as Creaditech
@@ -38,7 +72,7 @@ export const data = [
   // },
   // {
   //   page: "wordpress-wix-shopify-development",
-    
+
   //   meta: {
   //     title: "WordPress Development | Shopify Development Services",
   //     description: `Low on budget but want to launch your business online? Don't worry as Creaditech
@@ -69,7 +103,7 @@ export const data = [
   // },
   // {
   //   page: "mobile-app-development",
-    
+
   //   meta: {
   //     title: "Hybrid App Development Company In USA",
   //     description: `Creaditech offers hybrid app development services in USA. We have a team of expert
@@ -86,7 +120,7 @@ export const data = [
   // },
   // {
   //   page: "database-solutions",
-    
+
   //   meta: {
   //     title: "Custom Database Solutions In USA",
   //     description: `Creaditech is one of the best database solutions providers in USA. Our database
@@ -117,7 +151,7 @@ export const data = [
   // },
   // {
   //   page: "infographics-design",
-    
+
   //   meta: {
   //     title: "Top Infographic Design Agency In USA",
   //     description: `Get high-quality infographics made by pro infographic designers. We are the top
@@ -133,7 +167,7 @@ export const data = [
   // },
   // {
   //   page: "social-media-design",
-   
+
   //   meta: {
   //     title: "Social Media Design Agency USA",
   //     description: `Attract more people on your social media by getting your posts designed by the
@@ -149,7 +183,7 @@ export const data = [
   // },
   // {
   //   page: "seo",
-  
+
   //   meta: {
   //     title: "Seo Services By Seo Professionals USA",
   //     description: `Bring your website on top of the SERP results by taking SEO services from Creaditech.
@@ -165,7 +199,7 @@ export const data = [
   // },
   // {
   //   page: "sem",
-    
+
   //   meta: {
   //     title: "SEM Services | Search Engine Marketing At Affordable Rates",
   //     description: `Increase your brand visibility through paid marketing. At Creaditech, we provide the
@@ -181,7 +215,7 @@ export const data = [
   // },
   // {
   //   page: "social-media-marketing",
-    
+
   //   meta: {
   //     title: "Social Media Marketing Agency USA",
   //     description: `Looking for a reliable social media marketing agency near me? Creaditech is here to
@@ -197,7 +231,7 @@ export const data = [
   // },
   // {
   //   page: "content-creation",
-    
+
   //   meta: {
   //     title: "Content Creation Services At Your Doorstep",
   //     description: `Use our content creation services to grow your brand. We provide content creation

@@ -133,9 +133,8 @@ const Services = ({ datas }) => {
         link={datas[0]?.meta?.link}
       />
 
-      
-        <Header />
-      
+      <Header />
+
       <div
         className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.png')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
     			min-[500px]:px-28 "
@@ -310,6 +309,15 @@ const Services = ({ datas }) => {
         <div className="Montserrat max-w[1440px]:leading-[130%] mt-10 flex max-w-[1091px] flex-col gap-3 px-[3rem] text-center max-[850px]:text-[19px] text-[1.7rem] font-light	">
           {pageContent.section2.paras}
         </div>
+        {pageContent.ecommerceExtra !== false ? (
+          <>
+            <div className="flex">
+              <h2>{pageContent.ecommerceExtra.heading}</h2>
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
         {/* pricing section */}
         <div className="mt-10 flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
           <div className="mb-2 mt-12 text-center">
@@ -446,7 +454,7 @@ const Services = ({ datas }) => {
             Our <span className="text-yellow">Logo</span> Designer?
           </h2>
         </div>
-        <div className="max- flex w-full flex-wrap items-center justify-center gap-[3rem] px-[2rem]">
+        <div className=" grid grid-cols-3 mx-auto max-[850px]:grid-cols-2 max-[500px]:grid-cols-1 flex-wrap items-center justify-center gap-[3rem] px-[2rem]">
           <DesignCard
             bg="bg-[url('/assets/images/icons/one.svg')]"
             image={bxmessage}
@@ -492,25 +500,27 @@ const Services = ({ datas }) => {
         </div>
         {/* <div className="bg-[#1E1E1E] p-[3rem] w-full"></div> */}
         {/* Payless logo design page  */}
-        <div className="mt-10 flex w-full gap-[2rem] bg-[#1E1E1E] p-4 pr-20 pl-[3rem] max-[850px]:flex-col">
-          <div className="relative  order-1 mx-auto mb-2 min-[850px]:mt-12 max-[850px]:w-full w-[50rem] text-center max-[850px]:order-2  ">
-            <Image
-              loader={({ src }) => {
-                return src;
-              }}
-              className="relative !max-[850px]:top-[21rem]  top-[12rem] w-full"
-              src={CardFull}
-              alt=""
-              //   width={2000}
-              //   height={200}
-            />
-          </div>
-          <div className="order-2 ml-auto mt-[6rem] flex min-h-[40rem] max-w-[50%] flex-col justify-center max-[850px]:order-1 max-[850px]:max-w-full max-[850px]:items-center ">
-            <h2 className="clash text-[5rem] font-600 leading-[90%] text-[#FFFFFF] max-[850px]:text-center">
-              {pageContent.blackSection.heading}
-            </h2>
-            <p className="mt-[3rem] text-[18px] font-300 text-[#FFFFFF] max-[850px]:text-center">
-              {/* At this point, you might be considering why shall I choose
+        {pageContent.blackSection !== false ? (
+          <div className="mt-10 flex w-full gap-[2rem] bg-[#1E1E1E] p-4 pr-20 pl-[3rem] max-[850px]:flex-col">
+            <div className="relative  order-1 mx-auto mb-2 min-[850px]:mt-12 max-[850px]:w-full w-[50rem] text-center max-[850px]:order-2  ">
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                className="relative !max-[850px]:top-[21rem]  top-[12rem] w-full"
+                src={CardFull}
+                alt=""
+                //   width={2000}
+                //   height={200}
+              />
+            </div>
+
+            <div className="order-2 ml-auto mt-[6rem] flex min-h-[40rem] max-w-[50%] flex-col justify-center max-[850px]:order-1 max-[850px]:max-w-full max-[850px]:items-center ">
+              <h2 className="clash text-[5rem] font-600 leading-[90%] text-[#FFFFFF] max-[850px]:text-center">
+                {pageContent.blackSection.heading}
+              </h2>
+              <p className="mt-[3rem] text-[18px] font-300 text-[#FFFFFF] max-[850px]:text-center">
+                {/* At this point, you might be considering why shall I choose
               Creaditech to get my software/ app developed or ask them to
               promote my business. Well, Creaditech has a proven track record of
               developing custom softwares and doing digital marketing for
@@ -518,14 +528,34 @@ const Services = ({ datas }) => {
               <span className="text-blue-500">web developers</span>, app
               developers, and digital marketers who are always ready to cater to
               any development or marketing challenge. */}
-              {pageContent.blackSection.paras}
-            </p>
-            <div className="my-[3rem] mr-auto max-[850px]:mx-auto">
-              <Button title="Get Started Now" classes="" />
+                {pageContent.blackSection.paras}
+              </p>
+              <div className="my-[3rem] mr-auto max-[850px]:mx-auto">
+                <Button title="Get Started Now" classes="" />
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <></>
+        )}
+        {pageContent.cmsExtra !== false ? (
+          <>
+            <div className="flex flex-col w-full p-[5rem] pb-0 ">
+              <h2 className="mx-auto font-600 text-[#000000] text-[4rem] leading-[100%]">{pageContent.cmsExtra.heading}</h2>
+              <div className="grid grid-cols-3 max-[550px]:grid-cols-2 max-[380px]:grid-cols-1 justify-center gap-[5rem] mx-auto mt-[5rem]">
+                  {pageContent.cmsExtra.cards.map(item =><>
+                    <div className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
+                      <h2 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">{item.title}</h2>
+                      <p className="font-300 text-[#000000] text-[1.6rem]">{item.para}</p>
 
+                    </div>
+                  </>)}
+              </div>
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
         <div className="mt-[10rem] flex px-[6rem] pb-[7rem] max-[850px]:flex-col max-[850px]:gap-[4rem] max-[500px]:px-[2rem] ">
           <div className="max-w-[77rem] flex-1 max-[850px]:max-w-full">
             <h2 className="robot-condensed mt-[5rem] text-[4.2rem] font-600 uppercase leading-[100%] text-[#5B5E71]  ">
