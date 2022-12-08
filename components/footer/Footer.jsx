@@ -67,6 +67,7 @@ const Footer = () => {
                 className="inputs h-60 w-full rounded-5  border-b-8 border-solid bg-[#fff]/[0.2]  px-8 text-16 font-300 text-white  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
                 name=""
                 id=""
+
               />
             </div>
             <button className="clash yellow-button relative flex h-60  min-w-[72px] items-center justify-center rounded-05 border-b-8 bg-yellow text-20 text-black max-[850px]:-left-[2rem] max-[850px]:h-[60px] max-[850px]:rounded-[.5rem]  min-[500px]:w-120   min-[850px]:w-170 ">

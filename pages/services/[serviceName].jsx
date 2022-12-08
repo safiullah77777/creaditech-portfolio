@@ -32,6 +32,7 @@ import Link from "next/link";
 import { Content } from "../../utils/content";
 import contactForm from "../../services/fromService";
 import { toast } from "react-toastify";
+import Card10 from "../../components/card10/card10";
 
 const Services = ({ datas }) => {
   const [hydrated, setHydrated] = useState(false);
@@ -331,8 +332,45 @@ const Services = ({ datas }) => {
         ) : (
           <></>
         )}
+        <div className="flex flex-col w-full items-center bg-[#eeeeee] pt-[4rem] pb-[6rem] gap-[5rem] ">
+          <h2 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
+            Look into our Projects
+          </h2>
+          <div className="grid grid-cols-3 w-full max-[850px]:grid-cols-2 px-[0rem] pt-[0rem] max-[850px]:px-0">
+            <Card10
+              para={"Subheading description here for more details"}
+              heading={"Fulfil Supermart Branding Kit Design"}
+              src={require("../../public/assets/images/service-image.png")}
+            />
+            <Card10
+              para={"Subheading description here for more details"}
+              heading={"Mr. pillar Branding Kit Design"}
+              src={require("../../public/assets/images/service-image1.png")}
+            />
+            <Card10
+              para={"Subheading description here for more details"}
+              heading={"fushius home decor Branding Kit Design"}
+              src={require("../../public/assets/images/service-image2.png")}
+            />
+            <Card10
+              para={"Subheading description here for more details"}
+              heading={"Fulfil Supermart Branding Kit Design"}
+              src={require("../../public/assets/images/service-image.png")}
+            />
+            <Card10
+              para={"Subheading description here for more details"}
+              heading={"Mr. pillar Branding Kit Design"}
+              src={require("../../public/assets/images/service-image1.png")}
+            />
+            <Card10
+              para={"Subheading description here for more details"}
+              heading={"fushius home decor Branding Kit Design"}
+              src={require("../../public/assets/images/service-image2.png")}
+            />
+          </div>
+        </div>
         {/* pricing section */}
-        <div className="mt-10 flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
+        <div className=" flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
           <div className="mb-2 mt-12 text-center">
             <h2 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
               Pricing & Packages.

@@ -115,7 +115,7 @@ input[type="number"] {
   background-position: center;
 }
 .border-button {
-  border-bottom: 8px solid #eeb010;
+  /* border-bottom: 8px solid #eeb010; */
 }
 .border-top {
   border-top: 8px solid #eeb010;
