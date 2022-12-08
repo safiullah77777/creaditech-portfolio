@@ -145,7 +145,7 @@ const Home = () => {
       <MetaHead />
       <Header />
       <Banner />
-      <div className="grid grid-cols-3 max-[850px]:grid-cols-2 px-[0rem] pt-[0rem] max-[850px]:px-0">
+      {/* <div className="grid grid-cols-3 max-[850px]:grid-cols-2 px-[0rem] pt-[0rem] max-[850px]:px-0">
         <Card10
           para={"Subheading description here for more details"}
           heading={"Fulfil Supermart Branding Kit Design"}
@@ -176,8 +176,8 @@ const Home = () => {
           heading={"fushius home decor Branding Kit Design"}
           src={require("../public/assets/images/service-image2.png")}
         />
-      </div>
-      
+      </div> */}
+
       <section className="flex justify-center px-8 pt-32   ">
         <div className="flex items-center max-[850px]:flex-col">
           <h2 className="leading-1 robot-condensed m-auto flex h-[30rem] max-w-[28rem] items-center justify-center text-150 font-600 uppercase leading-[80%] text-black max-[640px]:text-[70px]  max-[640px]:font-900 min-[850px]:-rotate-90">
@@ -239,85 +239,7 @@ const Home = () => {
         </div>
       </section>
       {/* min-[850px]:bg-[url('/assets/images/backgrounds/service-bg.png')] bg-[#2B2B2B]*/}
-      <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[5rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
-        <h2 className="robot-condensed text-center  text-[4rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
-          Achieve Your Business Goals By Taking Web Development Services From
-          The Best Web Development Company
-        </h2>
-        <div className="flex  flex-wrap gap-x-[.4rem] gap-y-[1rem] max-[850px]:p-12">
-          {/* <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
-            “If your business is not on the Internet, then your business will be
-            out of business”. This quote from Bill Gates proves the value of
-            getting your business online. However, getting your business
-            software or website getting developed and then doing it’s marketing
-            is not a piece of cake. You need to take help from an expert
-            software development and marketing agency like Creaditech.
-          </p>
-          {para.split(" ").map((item, index) => {
-            return (
-              <p
-                key={item + index}
-                className={`Montserrat  index flex flex-wrap text-16 font-500  text-white/[0.7] max-[850px]:text-[16px] ${
-                  item == "software" ||
-                  item == "development" ||
-                  item == "company" ||
-                  item == "marketing" ||
-                  item == "agency"
-                    ? "font-700 !text-white"
-                    : ""
-                }`}
-              >
-                {item}
-              </p>
-            );
-          })} */}
-          <p className="Montserrat text-center flex flex-wrap text-[1.6rem] font-500 text-[#111111] max-[850px]:text-[16px]">
-            “If your business is not on the Internet, then your business will be
-            out of business.” This quote from Bill Gates proves the value of
-            getting your business online. In this technology era, it is not
-            difficult to develop websites, thanks to the multiple tutorials on
-            YouTube and Udemy. However, developing a website or web application
-            that is attractive and meets your business goals is not a piece of
-            cake for everyone.
-          </p>
-          <p className="Montserrat text-center text-[1.6rem] font-500 text-[#111111] max-[850px]:text-[16px]">
-            If you don’t have an attractive and mobile-friendly website, then
-            there’s no reason to have a website. A study shows that{" "}
-            <Link href="" className="anchor" target={"_blank"}>
-               75% of users admit to make judgments on a company’s credibility
-              based on its website
-            </Link>
-            , so if your website is not friendly and attractive, you won’t be
-            able to generate leads.
-          </p>
-          <p className="Montserrat text-center text-[1.6rem] font-500 text-[#111111] max-[850px]:text-[16px]">
-            Creaditech is one of the most reputable and trusted web development
-            company and focuses on building websites and web applications that
-            are user-friendly and SEO-optimized so that you can achieve your
-            business goals. We have a team of expert web developers for every
-            web technology that ensures your website meets your business goals.
-          </p>
-          <p className="Montserrat text-center text-[1.6rem] font-500 text-[#111111] max-[850px]:text-[16px]">
-            Since 2015, we have worked with several B2B and B2C companies and
-            have developed custom web applications for them; what makes us
-            different from other web development companies is our research and
-            development department and software engineers. Whether you are
-            looking for CMS development services, or custom web development
-            services, contact us and we will deliver a website or application
-            with clear results that will help you achieve your business goals.
-          </p>
-        </div>
-        <Image
-          loader={({ src }) => {
-            return src;
-          }}
-          width={1000}
-          height={1000}
-          className="hidden w-full max-[850px]:flex"
-          src={"/assets/images/backgrounds/service-bg-mob.png"}
-          alt=""
-        />
-      </div>
+      
       <section className="flex p-20 max-[850px]:flex-col max-[850px]:gap-[6rem] ">
         <div className="flex w-1/2 flex-col   max-[850px]:order-3 max-[850px]:w-full gap-[2rem]">
           <h2 className="robot-condensed text-[4rem] font-600 uppercase leading-[90%] text-[#5B5E71] max-[640px]:text-[40px]">
@@ -390,7 +312,7 @@ const Home = () => {
               onMouseLeave={() => {
                 setHover(false);
               }}
-              className="group flex  h-[39.3rem] w-[31.3rem] flex-col items-center justify-center gap-4 overflow-hidden  bg-[#5B5E71] p-12   shadow-xl duration-300 ease-linear hover:border-0 hover:bg-yellow max-[400px]:h-[50rem] max-[400px]:w-[40rem]"
+              className="group flex  h-[40rem] w-[31.3rem] flex-col items-center justify-center gap-4 overflow-hidden  bg-[#5B5E71] p-12   shadow-xl duration-300 ease-linear hover:border-0 hover:bg-yellow max-[400px]:h-[50rem] max-[400px]:w-[40rem]"
             >
               <div className=" group-hover:after:wi relative flex h-160 w-160  items-center justify-center ease-linear after:absolute after:bottom-0 after:left-0 after:h-full after:w-full after:rounded-full after:bg-[#E4E4E4] after:duration-700 group-hover:after:bg-black   ">
                 {/* <Image  loader={({ src }) => {
@@ -489,7 +411,7 @@ const Home = () => {
             different brands. We have a team.
           </p>
         </div>
-        <div className=" flex max-w-[90rem] mx-auto flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
+        <div className="max-[850px]:flex grid grid-cols-3 max-[1000px]:grid-cols-2 max-w-[90rem] mx-auto flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
           {industriesCards.map((item, index) => (
             <Card4 key={index} title={item.title} icon={item.icon} />
           ))}
@@ -762,6 +684,85 @@ const Home = () => {
           <Card7 image={robot2} />
           <Card6 />
         </Carousel>
+      </div>
+      <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[5rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
+        <h2 className="robot-condensed text-center  text-[4rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
+          Achieve Your Business Goals By Taking Web Development Services From
+          The Best Web Development Company
+        </h2>
+        <div className="flex  flex-wrap gap-x-[.4rem] gap-y-[1rem] max-[850px]:p-12">
+          {/* <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
+            “If your business is not on the Internet, then your business will be
+            out of business”. This quote from Bill Gates proves the value of
+            getting your business online. However, getting your business
+            software or website getting developed and then doing it’s marketing
+            is not a piece of cake. You need to take help from an expert
+            software development and marketing agency like Creaditech.
+          </p>
+          {para.split(" ").map((item, index) => {
+            return (
+              <p
+                key={item + index}
+                className={`Montserrat  index flex flex-wrap text-16 font-500  text-white/[0.7] max-[850px]:text-[16px] ${
+                  item == "software" ||
+                  item == "development" ||
+                  item == "company" ||
+                  item == "marketing" ||
+                  item == "agency"
+                    ? "font-700 !text-white"
+                    : ""
+                }`}
+              >
+                {item}
+              </p>
+            );
+          })} */}
+          <p className="Montserrat text-center flex flex-wrap text-[1.6rem] font-500 text-[#111111] max-[850px]:text-[16px]">
+            “If your business is not on the Internet, then your business will be
+            out of business.” This quote from Bill Gates proves the value of
+            getting your business online. In this technology era, it is not
+            difficult to develop websites, thanks to the multiple tutorials on
+            YouTube and Udemy. However, developing a website or web application
+            that is attractive and meets your business goals is not a piece of
+            cake for everyone.
+          </p>
+          <p className="Montserrat text-center text-[1.6rem] font-500 text-[#111111] max-[850px]:text-[16px]">
+            If you don’t have an attractive and mobile-friendly website, then
+            there’s no reason to have a website. A study shows that{" "}
+            <Link href="" className="anchor" target={"_blank"}>
+               75% of users admit to make judgments on a company’s credibility
+              based on its website
+            </Link>
+            , so if your website is not friendly and attractive, you won’t be
+            able to generate leads.
+          </p>
+          <p className="Montserrat text-center text-[1.6rem] font-500 text-[#111111] max-[850px]:text-[16px]">
+            Creaditech is one of the most reputable and trusted web development
+            company and focuses on building websites and web applications that
+            are user-friendly and SEO-optimized so that you can achieve your
+            business goals. We have a team of expert web developers for every
+            web technology that ensures your website meets your business goals.
+          </p>
+          <p className="Montserrat text-center text-[1.6rem] font-500 text-[#111111] max-[850px]:text-[16px]">
+            Since 2015, we have worked with several B2B and B2C companies and
+            have developed custom web applications for them; what makes us
+            different from other web development companies is our research and
+            development department and software engineers. Whether you are
+            looking for CMS development services, or custom web development
+            services, contact us and we will deliver a website or application
+            with clear results that will help you achieve your business goals.
+          </p>
+        </div>
+        <Image
+          loader={({ src }) => {
+            return src;
+          }}
+          width={1000}
+          height={1000}
+          className="hidden w-full max-[850px]:flex"
+          src={"/assets/images/backgrounds/service-bg-mob.png"}
+          alt=""
+        />
       </div>
       <ImagesLine />
       <Footer />

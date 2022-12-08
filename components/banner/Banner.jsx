@@ -7,7 +7,7 @@ import Link from "next/link";
 const Banner = () => {
   return (
     <div
-      className=" bg-banner-grey relative flex w-full bg-[#2B2B2B] bg-cover bg-center bg-no-repeat  pl-28 bg-blend-overlay max-[850px]:h-auto max-[850px]:flex-col max-[850px]:p-0 
+      className=" bg-banner-grey h-[100vh] relative flex w-full bg-[#2B2B2B] bg-cover bg-center bg-no-repeat  pl-28 bg-blend-overlay max-[850px]:h-auto max-[850px]:flex-col max-[850px]:p-0 
     max-[850px]:pt-[8rem] "
     >
       <div className="my-auto mt-auto max-[850px]:items-center flex h-full max-w-[57rem] flex-col justify-center font-semibold max-[1400px]:mt-[16rem] max-[850px]:mx-auto max-[850px]:max-w-full max-[850px]:px-8  max-[850px]:pl-12  ">
