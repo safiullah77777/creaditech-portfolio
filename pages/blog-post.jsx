@@ -29,7 +29,6 @@ const BlogPost = () => {
               Uploaded on
             </span>
             <span className="text-[2rem] text-[#ffe100] font-300 clash">
-              {" "}
               25-November-2022
             </span>
           </p>

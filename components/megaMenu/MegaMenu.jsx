@@ -25,6 +25,7 @@ const MegaMenu = ({ classes, setHover }) => {
               }} src={item.logo} alt="" />
                 </div> */}
                 <Player
+
                   src={item.lotti}
                   className="h-[20rem] w-[20rem] relative "
                   loop
