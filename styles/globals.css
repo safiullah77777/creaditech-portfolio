@@ -23,12 +23,24 @@ html {
     font-size: 45%;
   }
 }
+@media screen and (max-width: 850px) {
+  html,
+body {
+  /* overflow-x: hidden; */
+  /* contain: strict; */
+  /* box-sizing: border-box;
+  position: relative; */
+}
+}
 html,
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* contain: paint; */
   /* box-sizing: border-box;
   position: relative; */
+}
+a[rel~="nofollow"], a[rel~="ugc"], a[rel~="sponsored"] {
+  text-decoration: none !important;
 }
 .anchor{
   color: rgb(3, 119, 188, 1);

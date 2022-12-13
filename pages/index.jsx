@@ -765,8 +765,8 @@ const Home = () => {
         />
       </div>
       <ImagesLine />
-      <Footer />
       <BottomNav index={0} />
+      <Footer />
     </div>
   );
 };

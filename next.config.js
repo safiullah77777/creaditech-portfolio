@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images:{
-    domains:["localhost","creaditech.com"],
-    formats: ["image/webp"],
-  }
-}
+// const nextConfig = ;
 
-module.exports = nextConfig
+module.exports = {
+  reactStrictMode: true,
+  images: {
+    domains: ["localhost", "creaditech.com"],
+    formats: ["image/webp"],
+  },
+  // i18n: {
+  //   locales: ["en"],
+  //   defaultLocale: "en",
+  // },
+};

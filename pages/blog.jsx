@@ -1,15 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef, useState } from "react";
+import BottomNav from "../components/bottomNav/BottomNav";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
+import { blogs } from "../utils/blogs";
 
 const BlogPost = () => {
+  const ref = useRef(null);
+  const blogContent = blogs[0];
+  const [dropdown, setDropdown] = useState(-1);
+  let headings = Object.keys(blogContent)
+    .map((item) => {
+      return {
+        ...blogContent[item],
+      };
+    })
+    .filter((item) => {
+      return Object.keys(item).includes("h2");
+    });
+  headings.map((item) => {
+    return Object.keys(item).map((item1) => {
+      if (item1.includes("h2") || item1.includes("h3")) {
+        return item[item1];
+      } else {
+        return delete item[item1];
+      }
+    });
+  });
+  console.log(headings);
   return (
     <>
       {/* after:w-full after:h-full after:absolute after:top-0 after:z-[1000] after:bg-gradient-bg */}
       <Header />
-      <div className="flex relative min-h-[65rem]  ">
+      <div className="flex flex-col relative min-h-[65rem]  ">
         <Image
           loader={({ src }) => {
             return src;
@@ -20,13 +44,13 @@ const BlogPost = () => {
           src={require("../public/assets/images/robot-1.png")}
           alt=""
         />
-        <div className="absolute flex flex-col gap-[1rem] w-[107.8rem] rounded-[3.5rem] bg-[#1E1E1E] p-[3rem] -bottom-[23rem] left-[50%] -translate-x-[50%]  -translate-y-[50%]">
-          <h1 className="robot-condensed text-center leading-[100%] font-600 text-[6.5rem] text-[#ffffff] uppercase">
+        <div className=" flex flex-col gap-[1rem] w-full items-center bg-[#1E1E1E] p-[3rem] ">
+          <h1 className="robot-condensed max-w-[104rem] text-center leading-[100%] font-600 text-[6.5rem] text-[#ffffff] uppercase">
             At this point, you might be considering why shall
           </h1>
-          <p className="bg-[#2B2B2B] rounded-[2rem] px-[1rem] py-[.1rem] mx-auto">
+          <p className="bg-[#2B2B2B] rounded-[2rem] flex gap-[.5rem] px-[1rem] py-[.1rem] mx-auto">
             <span className="text-[2rem] text-[#ffffff] font-700 clash">
-              Uploaded on
+              Uploaded on :
             </span>
             <span className="text-[2rem] text-[#ffe100] font-300 clash">
               25-November-2022
@@ -34,23 +58,83 @@ const BlogPost = () => {
           </p>
         </div>
       </div>
-      <div className="flex pt-[14rem] pb-[3rem] gap-[1rem] items-start px-[8rem]">
-        <div className="flex mr-auto flex-col rounded-t-[2rem] bg-[#EEEEEE] max-w-[33rem] overflow-hidden">
+      <div className="flex pt-[7rem] pb-[3rem] gap-[2rem] max-[750px]:flex-col  items-start max-[600px]:px-[3rem] px-[8rem] ">
+        <div className="flex max-[850px]:static sticky top-[5rem] mr-auto flex-col rounded-t-[2rem] bg-[#EEEEEE] max-[850px]:w-full max-[850px]:max-w-full max-w-[33rem] overflow-hidden">
           <div className="bg-[#1E1E1E] w-full py-[1rem] ">
             <h2 className="text-[#ffffff] clash font-500 text-[2.5rem] w-full text-center">
               Contents
             </h2>
           </div>
 
-          <div className="flex flex-col py-[1rem] gap-[.3rem]">
-            <Link
-              href={"#"}
-              className="flex px-[2rem] py-[1rem]  gap-[0.5rem] Montserrat text-[1.6rem] font-600 bg-[#ffe100] leading-[130%] text-[#000000]"
-            >
-              <span>1.</span>
-              <span>Understand what keywords people are searching for</span>
-            </Link>
-            <Link
+          <ul className="flex flex-col py-[1rem] gap-[.3rem]">
+            {headings.map((item, index) => {
+              return (
+                <li
+                  onClick={() =>
+                    setDropdown((prev) => (prev == index ? -1 : index))
+                  }
+                  className="flex flex-col px-[2rem] py-[1rem]  gap-[0.5rem] Montserrat text-[1.6rem] font-600 bg-[#ffe100] leading-[130%] text-[#000000]"
+                >
+                  <div className="flex gap-[1rem]">
+                    <a
+                      className=" mr-auto list-disc items-center"
+                      href={`#${item.h2.split(" ").join("")}`}
+                      rel="nofollow"
+                    >
+                      <span>{index + 1}.</span>
+                      <span>{item.h2}</span>
+                    </a>
+                    {Object.keys(item).length > 1 && (
+                      <svg
+                        width="26"
+                        height="17"
+                        viewBox="0 0 44 71"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className={`ease-linear duration-150 relative top-[.5rem] ${
+                          dropdown === index
+                            ? "rotate-[90deg]"
+                            : "rotate-[0deg]"
+                        }`}
+                      >
+                        <path
+                          d="M-0.000488281 8.3425L27.0978 35.5L-0.000488281 62.6575L8.34201 71L43.842 35.5L8.34201 0L-0.000488281 8.3425Z"
+                          fill="#1E1E1E"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                  {Object.keys(item).length > 1 && (
+                    <ul
+                      ref={ref}
+                      className={`list-disc pl-[3rem] ease-linear transition-[height] duration-200 ${
+                        dropdown === index
+                          ? "max-h-auto opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      {Object.keys(item)
+                        .slice(1)
+                        .map((item1) => {
+                          return (
+                            <li className="flex  py-[.2rem]  gap-[0.5rem] Montserrat text-[1.4rem] leading-[130%] text-[#000000]">
+                              <a
+                                className="flex "
+                                href={`#${item[item1].split(" ").join("")}`}
+                                rel="nofollow"
+                              >
+                                {/* <span>{index }+ 1.</span> */}
+                                <span>{item[item1]}</span>
+                              </a>
+                            </li>
+                          );
+                        })}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
+            {/* <Link
               href={"#"}
               className="px-[2rem] py-[1rem] flex gap-[0.5rem] Montserrat text-[1.6rem] font-400 leading-[130%] text-[#5B5E71]"
             >
@@ -77,11 +161,119 @@ const BlogPost = () => {
             >
               <span>1.</span>
               <span>Understand what keywords people are searching for</span>
-            </Link>
-          </div>
+            </Link> */}
+          </ul>
         </div>
+
         <div className="flex flex-1 flex-col gap-[1rem] ">
-          <h3 className="clash font-500 text-[#303030] text-[2.5rem] leading-[100%]">
+          {Object.keys(blogContent).map((item, index) => {
+            if (item.includes("parasonly")) {
+              return blogContent[item].map((para) => {
+                return (
+                  <p className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                    {para}
+                  </p>
+                );
+              });
+            }
+            if (item.includes("headingWithParas")) {
+              const temp = blogContent[item];
+              return (
+                <>
+                  <h2
+                    id={`${temp.h2.split(" ").join("")}`}
+                    className="clash text-[#000000] leading-[100%] clash font-600 text-[3.5rem]"
+                  >
+                    {temp.h2}
+                  </h2>
+                  {temp.paras.map((para) => {
+                    return (
+                      <p className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                        {para}
+                      </p>
+                    );
+                  })}
+                  {Object.keys(temp).includes("ols") && (
+                    <ol
+                      className="pl-[2rem] flex flex-col gap-[.5rem] list-decimal"
+                      start={1}
+                    >
+                      {temp.ols.map((li) => {
+                        return (
+                          <li className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                            {li}
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  )}
+                </>
+              );
+            }
+            if (item.includes("headingParasAndSubHeadings")) {
+              const temp = Object.keys(blogContent[item]);
+              return temp.map((item1) => {
+                if (item1.includes("h2")) {
+                  return (
+                    <h2
+                      id={`${blogContent[item][item1].split(" ").join("")}`}
+                      className="clash text-[#000000] leading-[100%] clash font-600 text-[3.5rem]"
+                    >
+                      {blogContent[item][item1]}
+                    </h2>
+                  );
+                }
+                if (item1.includes("h3")) {
+                  return (
+                    <h3
+                      id={`${blogContent[item][item1].split(" ").join("")}`}
+                      className="clash text-[#000000] leading-[100%] clash font-600 text-[2.5rem]"
+                    >
+                      {blogContent[item][item1]}
+                    </h3>
+                  );
+                }
+                if (item1.includes("paras")) {
+                  return blogContent[item][item1].map((para) => {
+                    return (
+                      <p className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                        {para}
+                      </p>
+                    );
+                  });
+                }
+                if (item1.includes("uls")) {
+                  return (
+                    <ul className="flex flex-col list-disc pl-[5rem]">
+                      {blogContent[item][item1].map((li) => {
+                        return (
+                          <li className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                            {li}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  );
+                }
+                if (item1.includes("ulWithHeadings")) {
+                  return (
+                    <ul className="flex flex-col list-disc pl-[5rem]">
+                      {blogContent[item][item1].map((li) => {
+                        return (
+                          <li className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                            <span className="font-700">{li?.heading}</span>{" "}
+                            {li?.des}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  );
+                }
+              });
+            }
+          })}
+
+          {/* <h3 className="clash font-500 text-[#303030] text-[2.5rem] leading-[100%]">
             Starting with SEO can be overwhelming—many technical terms,
             checklists of tens of tasks to do, learning resources contradicting
             each other, and the list goes on. I remember when I got into the
@@ -93,9 +285,11 @@ const BlogPost = () => {
             and ensure you have the right foundation to advance your SEO skills
             further.
           </p>
-          <h2 className="clash text-[#000000] leading-[100%] clash font-600 text-[3.5rem]">1. Understand what keywords people are searching for</h2>
+          <h2 className="clash text-[#000000] leading-[100%] clash font-600 text-[3.5rem]">
+            1. Understand what keywords people are searching for
+          </h2>*/}
         </div>
-        <div className="flex items-center justify-center ml-auto flex-col gap-[2rem] max-w-[33rem] ">
+        <div className="flex max-[850px]:static sticky top-[5rem] max-[850px]:w-full max-[850px]:max-w-full items-center justify-center min-[851px]:ml-auto mx-auto flex-col gap-[2rem] max-w-[33rem] ">
           <h2 className="text-[#000000] leading-[110%] clash font-500 text-[2rem] w-full text-center">
             Share this Blog
           </h2>
@@ -137,7 +331,7 @@ const BlogPost = () => {
               />
             </svg>
           </div>
-          <div className="flex flex-col gap-[1rem] items-center bg-[#F9F9F9] rounded-[2rem] w-[33rem] py-[3rem] px-[2rem] ">
+          <div className="flex flex-col max-[850px]:w-full gap-[1rem] items-center bg-[#F9F9F9] rounded-[2rem] w-[33rem] py-[3rem] px-[2rem] ">
             <div className="w-[21rem] h-[21rem]">
               <Image
                 loader={({ src }) => {
@@ -189,20 +383,21 @@ const BlogPost = () => {
           <h3 className="text-[2rem] text-center mx-auto max-w-[25rem] leading-[100%] mt-[1rem] font-500 text-[#000000] clash">
             Subscribe for weekly updates
           </h3>
-          <div className="flex flex-col mx-auto">
+          <div className="flex flex-col mx-auto max-[600px]:w-full">
             <input
               placeholder="Email Address"
               type="text"
-              className=" h-60  w-[25rem] rounded-t-[0.5rem]   bg-[#515151]   px-8 text-16 font-300 text-[#FFFFFF]/[0.5]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
+              className=" h-60 max-[600px]:w-full  w-[25rem] rounded-t-[0.5rem]   bg-[#515151]   px-8 text-16 font-300 text-[#FFFFFF]/[0.5]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
               name=""
               id=""
             />
-            <button className="clash h-60  w-[25rem] rounded-b-[0.5rem] active:scale-y-[1.02]   bg-[#ffe100] border-solid border-b-[5px] border-[#000000]/[0.3]  px-8 text-16 font-500 text-[#000000]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  ">
+            <button className="clash h-60 max-[600px]:w-full  w-[25rem] rounded-b-[0.5rem] active:scale-y-[1.02]   bg-[#ffe100] border-solid border-b-[5px] border-[#000000]/[0.3]  px-8 text-16 font-500 text-[#000000]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  ">
               Subscribe
             </button>
           </div>
         </div>
       </div>
+      <BottomNav index={-1} />
       <Footer />
     </>
   );
