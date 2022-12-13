@@ -13,7 +13,7 @@ export const List = [
       { title: "Website Development", link: "/services/web-development" },
       {
         title: "Ecommerce  Development",
-        link: "/services/mobile-app-development",
+        link: "/services/ecommerce-website-development",
         // children: [
         //   { title: "IOS App Development", link: "/services/ios-development" },
         //   {
@@ -24,7 +24,7 @@ export const List = [
       },
       {
         title: "CMS Development",
-        link: "/services/tailered-app-solution",
+        link: "/services/cms-development",
       },
       {
         title: "Wordpress Development",
