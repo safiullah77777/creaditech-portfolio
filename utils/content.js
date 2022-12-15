@@ -23,6 +23,10 @@ import phpInfoGraphic from "../public/assets/images/advantages-of-PHP.webp";
 import phpDev from "../public/assets/images/PHP-web-development-services.webp";
 import phpExpert from "../public/assets/images/PHP-web-developers.svg";
 
+import seoInfoGraphic from "../public/assets/images/why-your-business-needs-SEO.webp";
+import seoDev from "../public/assets/images/SEO-services.webp";
+import seoExpert from "../public/assets/images/SEO-specialists.svg";
+
 import logos_woocommerce from "../public/assets/images/icons/logos-woocommerce.svg";
 import open_cart from "../public/assets/images/icons/open-cart.svg";
 import square_space from "../public/assets/images/icons/sqaure-space.svg";
@@ -1379,68 +1383,64 @@ export const Content = [
     ],
   },
 
-
-
-
-
   {
     page: "seo",
     inforaphic: {
-      img: wordpressInfoGraphic,
-      alt: "why you should use wordpress",
+      img: seoInfoGraphic,
+      alt: "why your business needs seo",
     },
     steps: {
       mainHeading: {
-        one: "Our ",
-        two: " WordPress",
-        three: " Development Process",
+        one: "Our  ",
+        two: " SEO",
+        three: " Approach:",
       },
       // subHeading: "",
       steps: [
         {
-          title1: "Requirement",
+          title1: "Analyze",
+          title2: " and audit",
+          para: "In this phase, we listen to your business requirements and begin analyzing and auditing your website and your business.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Competitor",
           title2: "Analysis",
-          para: "In this phase, we gather your requirements and identify your business goals.",
+          para: "In the 2nd phase, our SEO specialists identify your competitors and research their strategy to create one that sets you apart from them.",
           imgage: {
             img: null,
           },
         },
         {
-          title1: "",
-          title2: "Designing",
-          para: "In this phase, our expert designers create an appealing design for your website.",
+          title1: "Keyword",
+          title2: "research",
+          para: "This is the most critical phase and involves finding relevant keywords for your business. Our SEO specialists analyze keyword search volume and difficulty and then prepare keywords that will be the most valuable for your business growth.",
           imgage: {
             img: null,
           },
         },
         {
-          title1: "",
-          title2: "Development",
-          para: "After approval of the design from your side, our developers begin developing your project.",
+          title1: "Strategize",
+          title2: "and Execute",
+          para: "Once our SEO specialists create an SEO strategy for your business, they execute it by performing technical, on-page, and off-page SEO.",
           imgage: {
             img: null,
           },
         },
         {
-          title1: "",
-          title2: "SEO-friendly",
-          para: "During the development phase, our marketing team works directly with the development team to ensure that your website is mobile-friendly and SEO-optimized.",
+          title1: "Monitor Rankings ",
+          title2: "and Reporting",
+          para: "After successfully executing the SEO strategy, we begin monitoring your rankings through different tools, including google search console, SEMrush, google analytics, etc. and provide your weekly reports. ",
           imgage: {
             img: null,
           },
         },
         {
-          title1: "Quality ",
-          title2: "assurance",
-          para: "In this phase, our QA analysts perform split testing to ensure that your website is free from any technical errors.",
-          imgage: {
-            img: null,
-          },
-        },
-        {
-          title1: "Launching",
-          title2: "the site",
-          para: "Our engineers will deploy and launch your website in the final phase.",
+          title1: "Refine",
+          title2: "",
+          para: "Using your site’s performance data, we modify and refine the SEO strategy to keep up with the latest search engine algorithm updates and market trends.",
           imgage: {
             img: null,
           },
@@ -1449,35 +1449,39 @@ export const Content = [
     },
     section1: {
       heading:
-        "Expand Your Business By Taking Our WordPress Development Services",
+        "Generate More Traffic And Conversions By Taking Our SEO Services:",
       paras: (
         <>
           <p>
-            In this competitive world, having a website is a must if you want to
-            remain in the market. However, developing your website and then
-            making your online presence is not a piece of cake; this is where
-            WordPress comes to help. WordPress is a CMS platform where you can
-            easily set up your blog or a fully functional business website.
-            Creaditech is one of the best WordPress development agencies in USA
-            that provides the best WordPress development services.
-          </p>
-
-          <p>
-            WordPress has some unique features and functions that cannot be
-            ignored; this is the reason that{" "}
+            Search Engine Optimization, or SEO, is a process of bringing your
+            website to the top of the search results. Getting on top of the
+            search results is important in today’s era because, according to a
+            study,
             <Link
-              href={"https://blog.hubspot.com/website/wordpress-stats"}
+              href={"https://techjury.net/blog/seo-statistics/"}
               className="anchor"
               rel="nofollow"
               target="_blank"
             >
-              WordPress is used by 43.2% of all websites on the Internet.
+              93% of online experiences begin with a search engine
             </Link>{" "}
-            Apart from that, it is one of the leading CMS platforms having a
-            share of almost 65.2% of all websites using a CMS. However, if not
-            developed by expert WordPress developers, a WordPress website won't
-            benefit you; therefore, you shall always take WordPress website
-            development services from expert companies like Creaditech.
+            , so whether you are a service-based business or product-based
+            business, getting on top of the search results should be your
+            priority to generate more traffic and conversions. However, doing
+            proper SEO and getting on top of the SERPs is not everyone’s cup of
+            tea. So, to dominate the search engine results, you shall look to
+            take SEO services from a reliable SEO company like Creaditech.
+          </p>
+          <p>
+            Creaditech provides the best organic SEO services that will help you
+            reach the top of Search engine results. Getting on top of the search
+            elements depends on several factors, including voice search
+            optimization, proper keyword research, and placement, site
+            authority, trustworthiness, etc. Our SEO experts are fully aware of
+            all the search engine ranking updates and implement SEO strategies
+            that will help your business reach the top of the search engine
+            results. So, without any 2nd thoughts, take our SEO services and
+            generate more traffic and conversions for your business.
           </p>
           <p>
             By taking our WordPress web development services, you can expand
@@ -1487,151 +1491,136 @@ export const Content = [
           </p>
         </>
       ),
-      image: { img: wordpressDev, alt: "wordpress development services" },
+      image: { img: seoDev, alt: "seo services" },
       link: "",
     },
     ecommerceExtra: false,
     section2: {
-      heading: "Achieve Your Goals Using WordPress Technology",
+      heading:
+        "Edge Out Your Competitors With Our Search Engine Optimization Service:",
       paras: (
         <>
           <p>
-            What makes WordPress so popular is the ease of use that it offers.
-            Someone with zero coding knowledge can easily add or update content
-            within a few minutes on WordPress. Because of its extensive themes
-            and plugins, WordPress is an all-one solution for commercial
-            websites and personal blogs. Being the top-rated{" "}
-            <Link href={"https://creaditech.com"} className="anchor">
-              web development company
-            </Link>
-            in the USA, Creaditech realizes the importance of WordPress and
-            therefore offers robust WordPress development services to its
-            clients.
+            Emerge as the industry leader and beat out your competitors by
+            getting a well-planned SEO strategy created by our SEO experts. We
+            are a client-centric SEO agency that provides SEO services tailored
+            to your business needs. From startups to organizations and from
+            E-commerce SEO to service-based SEO, we have worked with all types
+            of companies and business industries.
           </p>
           <p>
-            At Creaditech, we are always ready to cater to any sort of web
-            development challenge. Our expert web developers can create any
-            WordPress website according to your requirements. Our WordPress
-            website development services include theme and plugin development,
-            WordPress migration, 3rd party API integration, and much more.
-          </p>
-          <p>
-            We have more than 8 years of developing WordPress websites. Our
-            experience over the years has helped us further improve our custom
-            WordPress development services. Therefore, we assure you that you
-            will get a fully functional and responsive WordPress website that
-            will help you achieve your goals.
+            From keyword research to building backlinks, we provide all types of
+            SEO services. Our SEO strategy starts by identifying your business
+            goals and your competitors. We not only provide SEO services to our
+            clients but also guide them about the major ranking factors that
+            include quality content, SSL-secured website, friendly UI/UX,
+            mobile-friendly site, quick page speed, business information, and
+            backlinks. Get in touch with us now and get a perfect SEO strategy
+            for your business.
           </p>
         </>
       ),
       link: "",
     },
     cmsExtra: {
-      heading: "Our Wide Range Of WordPress Development Services:",
+      heading: "What Our SEO Services Include:",
       cards: [
         {
-          title: "PSD To WordPress Conversion",
-          para: "Our designers and developers understand your requirements and convert your PSD files into fully responsive and W3C-validated WordPress themes.",
+          title: "Keyword Research",
+          para: "Keyword research is the main step of any SEO strategy; if you cannot identify proper keywords for your business, then contact us, and our SEO specialists will provide the best keywords for your business.",
         },
         {
-          title: "WordPress theme customization",
-          para: "We provide WordPress theme customization so that if you have an already purchased theme and want to modify it, we can do that for you.",
+          title: "Technical SEO",
+          para: "If your website is not mobile-friendly or contains broken links or any other technical error, then you won’t be able to rank high; therefore, we provide technical SEO services in which our Specialists audit your website and guide your accordingly.",
         },
         {
-          title: "WordPress Plugin Development",
-          para: "We provide custom plugin development services so that you can get a WordPress plugin developed according to your requirements.",
+          title: "Local SEO",
+          para: "Customers love to take services or purchase from those that are near them. We provide local SEO services in which we will optimize or publish your business on google maps (Google my business) so that you can attract more customers locally.",
         },
         {
-          title: "Custom WordPress development",
-          para: "From custom theme development to customizing the WordPress dashboard, we provide custom WordPress development services at affordable rates..",
+          title: "On-page SEO",
+          para: "In on-page SEO, we optimize the pages of your website, including meta tags, images alt texts, headings, content, keyword placement, keyword density, URL structure, and internal links.",
         },
         {
-          title: "Maintenance and support",
-          para: "We provide maintenance and support services so that your WordPress site remains updated and free from any technical errors.",
+          title: "Off-page SEO",
+          para: " In off-page SEO, we build backlinks for your website through multiple channels; this includes guest posting, profile backlinks, social sharing, business listings, press release distribution, etc.",
         },
         {
-          title: "E-commerce Development",
-          para: `With the help of WooCommerce, we  provide ecommerce website development services on WordPress.`,
+          title: "Content Writing",
+          para: `We have a team of expert content writers that offers content creation services and can create any type of content, including blog posts, articles, email templates, Press releases, product descriptions, etc, within tight deadlines.`,
         },
       ],
     },
     blackSection: false,
     section3: {
-      heading: "Why Choose Creaditech To Get Your WordPress Website Developed?",
+      heading: "Why Take Our SEO Services?",
       paras: (
         <>
           <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
-            Creaditech is one of the best WordPress development agencies in the
-            USA; we have successfully delivered 300+ WordPress projects as of
-            yet. Below are a few reasons on why you shall take our WordPress
-            development services:
+            Creaditech is a reliable SEO agency because we provide SEO solutions
+            that work. Below are a few reasons that make us better than the
+            rest:
           </p>
           <ul className="mt-[2rem] flex flex-col ">
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">1)</span>We have a team of expert
-              WordPress developers and designers.
+              <span className="mr-[1rem]">1)</span>We have a team of expert and
+              dedicated SEO specialists who create the best SEO strategy for our
+              clients.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">2)</span>We deliver websites that are
-              fully responsive and highly optimized for SEO..
+              <span className="mr-[1rem]">2)</span>We play fair and provide you
+              with weekly reports.
             </li>
             <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">3)</span>Your website will be highly
-              secure and scalable.
+              <span className="mr-[1rem]">3)</span>We offer customized SEO
+              packages based on your requirements.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">4)</span>
-              You can reach us anytime, 24/7, through calls and emails.
+              <span className="mr-[1rem]">4)</span>We don’t work on old-school
+              SEO strategies; instead, we implement new SEO strategies and
+              always work on improving ourselves.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">5)</span> We provide support and
-              maintenance after delivering and deploying the project.
+              <span className="mr-[1rem]">5)</span>You can reach us anytime
+              through calls or email.
             </li>
           </ul>
         </>
       ),
-      image: { img: wordpressExpert, alt: "wordpress developers" },
+      image: { img: seoExpert, alt: "seo experts" },
     },
     faqs: [
       {
-        q: "How much will it cost me to get a WordPress website developed?",
-        a: `It depends on several factors. For example, if you want to go with paid themes and plugins, it will
-        cost from $300 to $2500; if you want to go with a free theme, the price can go from $150 to $1000.`,
+        q: "What is SEO, and why does my website need SEO services?",
+        a: `Search Engine Optimization (SEO) is to optimize your website across the web and bring your business to the top of the Search engine results. SEO services are important for your website because it increases your website's visibility in search engine results.`,
       },
       {
-        q: "Is WordPress good for website development?",
-        a: `WordPress is one of the most used CMS platforms and is preferred by many developers for website
-        development.`,
+        q: "How much do your SEO services cost?",
+        a: `SEO is a long-term strategy and requires a high cost. Our packages range from $1000 per month to $5000, depending on your business industry and goals.`,
       },
       {
-        q: "How long will it take to get my WordPress website developed?",
-        a: `It depends on your requirements. If your requirements are limited and clearly defined, it will take 10 to
-        15 days to develop your WordPress website.`,
+        q: "Does your SEO work for all search engines?",
+        a: `Our SEO specialists focus on optimizing your website on all major search engines, including google, yahoo, Bing, and Yandex.`,
       },
       {
-        q: "Can I get an Ecommerce store developed on WordPress?",
-        a: `Yes, you can get a fully responsive and user-friendly ecommerce store with the help of the
-        WooCommerce plugin.`,
+        q: "Is SEO better than SEM?",
+        a: `In terms of results, SEO is better, but it takes time to get your website on top of the search results. Therefore, SEM is better if you want early results. `,
       },
       {
-        q: "Do you provide support after the completion of the project?",
-        a: `Being a reputable and trusted web development company in the USA, we provide full support after the
-        completion of your projects.`,
+        q: "How long does SEO take?",
+        a: `We don't make false claims; SEO is a long-term process and takes 4-6 months to deliver results.`,
       },
       {
-        q: "Will I be kept in the loop throughout the development process?",
-        a: `Yes, the project manager will be in direct touch with you and will provide you with regular updates on
-        your project.`,
+        q: "How will you create my SEO strategy?",
+        a: `We will first work on the technical and on-page SEO and will optimize your website page speed, alt tags, meta tags, etc.`,
       },
       {
-        q: "Will my website be SEO-optimized?",
-        a: `Yes, our marketing team works directly with the developers to ensure that your website is fully
-        responsive and SEO-optimized.`,
+        q: "Can you perform an SEO audit on my website?",
+        a: `Yes, we will provide with an audit report free of cost. Just send us your URL.`,
       },
       {
-        q: "Do you provide other CMS development services too?",
-        a: `Yes, we also provide other CMS development services, including Magento, Drupal, Shopify, and custom
-        CMS development.`,
+        q: "Do you offer search engine marketing services too?",
+        a: `Yes, we do offer search engine marketing (SEM) services too.`,
       },
     ],
   },

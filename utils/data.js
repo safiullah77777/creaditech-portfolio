@@ -114,11 +114,11 @@ export const data = [
       link: "services/web-development",
     },
     h1: {
-      pre: "Custom",
-      main: " PHP Web Development",
-      post: " Services",
+      pre: "SEO Services  ",
+      main: " To Boost Your",
+      post: " Search Engine Rankings:",
     },
-    tagline: `We suggest and develop powerful PHP solutions that will help your business grow.`,
+    tagline: `Get on top of the search results and grab more traffic by taking our SEO services. We are an SEO company that will help your brand be discovered and grow.`,
   },
   // {
   //   page: "branding",

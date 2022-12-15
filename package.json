@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/lottie-player": "^1.6.2",
     "@lottiefiles/react-lottie-player": "^3.4.9",
     "cssnano": "^5.1.14",
     "next": "13.0.4",
