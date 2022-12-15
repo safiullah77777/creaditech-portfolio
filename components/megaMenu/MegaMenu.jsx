@@ -4,6 +4,7 @@ import React, { Dispatch, FC, SetStateAction } from "react";
 import { List } from "../../utils/consts";
 import arrow from "../../public/assets/images/icons/arrow-fa2.svg";
 import { Player } from "@lottiefiles/react-lottie-player";
+import loti from "../../public/assets/videos/new.json";
 
 const MegaMenu = ({ classes, setHover }) => {
   return (
@@ -29,14 +30,14 @@ const MegaMenu = ({ classes, setHover }) => {
                   className="h-[20rem] w-[20rem] relative "
                   loop
                   autoplay
-                  background="transparent"
+                  // background="transparent"
                 />
                 <Player
-                  src={item.lotti}
-                  className="h-[90%] w-full relative "
+                  src={loti}
+                  className="h-[20rem] w-[20rem] relative "
                   loop
                   autoplay
-                  background="transparent"
+                  // background="transparent"
                 />
                 <div className="flex flex-col gap-[1rem] items-center">
                   <h2 className="clash w-full  after:z-[100] -z-[0] text-[2.5rem] after:border-solid after:w-[19rem] mr-auto after:left-0 pb-[1rem] after:absolute relative after:bottom-0  after:border-b-[2px] after:border-[#FFFFFF]/[0.5] font-500 text-[#ffffff]">
