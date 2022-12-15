@@ -302,6 +302,34 @@ const Services = ({ datas }) => {
         />
       </div>
       <br />
+      {pageContent?.phpExtra?.is === true ? (
+        <>
+          <div className="flex flex-col w-full p-[5rem] pb-0 ">
+            <h2 className="mx-auto font-600 text-[#000000] text-[4rem] leading-[100%]">
+              {pageContent.phpExtra.heading}
+            </h2>
+            <p className="font-300 text-[#000000] text-[1.8rem] max-w-[100rem] mx-auto text-center py-[2rem]">
+              {pageContent.phpExtra.p}
+            </p>
+            <div className="grid grid-cols-3 max-[550px]:grid-cols-2 max-[380px]:grid-cols-1 justify-center gap-[5rem] mx-auto mt-[5rem]">
+              {pageContent.phpExtra.cards.map((item) => (
+                <>
+                  <div className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
+                    <h2 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">
+                      {item.title}
+                    </h2>
+                    <p className="font-300 text-[#000000] text-[1.6rem]">
+                      {item.para}
+                    </p>
+                  </div>
+                </>
+              ))}
+            </div>
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
       <div className="flex flex-col items-center justify-center pt-10 ">
         <h2 className="robot-condensed mx-auto  flex max-w-[109.1rem] flex-wrap justify-center gap-x-[1.4rem] text-center text-[5rem]  font-[600] uppercase leading-[5rem] ">
           {/* <span>
@@ -375,30 +403,32 @@ const Services = ({ datas }) => {
           </div>
         </div>
         {/* pricing section */}
-        {pageContent.pricing!==false &&<div className=" flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
-          <div className="mb-2 mt-12 text-center">
-            <h2 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
-              Pricing & Packages.
-            </h2>
-            <div className=" flex w-full  flex-col justify-center ">
-              <p className="Montserrat mx-auto max-w-[98rem] pt-[1.5rem] text-center text-[16px]	font-light	leading-[130%]	text-black	">
-                Our branding and logo design packages are very suitable for both
-                market newbies and popular brands. You can select any package as
-                per your requirements and also make changes to these packages.
-                No matter whether it is about a single logo or a bulk of them we
-                are equally productive in both cases.
-              </p>
+        {pageContent.pricing !== false && (
+          <div className=" flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
+            <div className="mb-2 mt-12 text-center">
+              <h2 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
+                Pricing & Packages.
+              </h2>
+              <div className=" flex w-full  flex-col justify-center ">
+                <p className="Montserrat mx-auto max-w-[98rem] pt-[1.5rem] text-center text-[16px]	font-light	leading-[130%]	text-black	">
+                  Our branding and logo design packages are very suitable for
+                  both market newbies and popular brands. You can select any
+                  package as per your requirements and also make changes to
+                  these packages. No matter whether it is about a single logo or
+                  a bulk of them we are equally productive in both cases.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="relative mt-[3rem] flex flex-col  before:absolute before:top-0 before:left-0 before:z-40 before:h-[50%] before:w-full after:absolute after:bottom-0 after:left-0 after:z-40 after:h-[50%] after:w-full max-[1055px]:pb-[5rem] max-[1055px]:after:bg-[transparent] after:bg-[#FFFFFF]">
-            <div className="z-50  flex flex-wrap justify-center gap-[2rem] ">
-              <PriceCard />
-              <PriceCard />
-              <PriceCard />
+            <div className="relative mt-[3rem] flex flex-col  before:absolute before:top-0 before:left-0 before:z-40 before:h-[50%] before:w-full after:absolute after:bottom-0 after:left-0 after:z-40 after:h-[50%] after:w-full max-[1055px]:pb-[5rem] max-[1055px]:after:bg-[transparent] after:bg-[#FFFFFF]">
+              <div className="z-50  flex flex-wrap justify-center gap-[2rem] ">
+                <PriceCard />
+                <PriceCard />
+                <PriceCard />
+              </div>
             </div>
           </div>
-        </div>}
+        )}
         {/* //we love to listen your requirements */}
         <div className="group mt-[7rem] flex w-full border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] max-[850px]:border-[#3D404E]">
           <div className="relative flex w-1/2 bg-white py-[2rem] pl-[6rem] pr-[2rem] max-[850px]:w-full max-[850px]:flex-col max-[850px]:gap-[5rem] max-[850px]:bg-[#5B5E71] max-[850px]:py-[6rem]">
@@ -524,48 +554,6 @@ const Services = ({ datas }) => {
               title2={data?.title2}
             />
           ))}
-          {/* <DesignCard
-            bg="bg-[url('/assets/images/icons/one.svg')]"
-            image={bxmessage}
-            para="If your business is not on the Internet, then your business will be out of business”. This quote from Bill Gates proves the value of getting your."
-            title1="Gather"
-            title2="Brand Details"
-          />
-          <DesignCard
-            bg="bg-[url('/assets/images/icons/two.svg')]"
-            image={arcticons}
-            para="If your business is not on the Internet, then your business will be out of business”. This quote from Bill Gates proves the value of getting your."
-            title1="Turned Into"
-            title2="Mindmap"
-          />
-          <DesignCard
-            bg="bg-[url('/assets/images/icons/three.svg')]"
-            image={iconpark}
-            para="If your business is not on the Internet, then your business will be out of business”. This quote from Bill Gates proves the value of getting your."
-            title1="Moodboard &"
-            title2="Competitor Analysis"
-          />
-          <DesignCard
-            bg="bg-[url('/assets/images/icons/four.svg')]"
-            image={arcticon}
-            para="If your business is not on the Internet, then your business will be out of business”. This quote from Bill Gates proves the value of getting your."
-            title1="Creative Sketches Of"
-            title2="Brandface"
-          />
-          <DesignCard
-            bg="bg-[url('/assets/images/icons/five.svg')]"
-            image={AiIcon}
-            para="If your business is not on the Internet, then your business will be out of business”. This quote from Bill Gates proves the value of getting your."
-            title1="Finalization On "
-            title2="Software"
-          />
-          <DesignCard
-            bg="bg-[url('/assets/images/icons/six.svg')]"
-            image={comTick}
-            para="If your business is not on the Internet, then your business will be out of business”. This quote from Bill Gates proves the value of getting your."
-            title1="Making Branding"
-            title2="System"
-          /> */}
         </div>
         {/* <div className="bg-[#1E1E1E] p-[3rem] w-full"></div> */}
         {/* Payless logo design page  */}
@@ -638,27 +626,6 @@ const Services = ({ datas }) => {
               {pageContent.section3.heading}
             </h2>
             {pageContent.section3.paras}
-
-            {/* <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
-              At this point, you might be considering why shall I choose
-              Creaditech to get my software/ app developed or ask them to
-              promote my business. Well, Creaditech has a proven track record of
-              developing custom softwares and doing digital marketing for
-              different brands. We have a team of expert{" "}
-              <span className="text-blue-600">web developers</span>, app
-              developers, and digital marketers who are always ready to cater to
-              any development or marketing challenge.
-            </p>
-            <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
-              At this point, you might be considering why shall I choose
-              Creaditech to get my software/ app developed or ask them to
-              promote my business. Well, Creaditech has a proven track record of
-              developing custom softwares and doing digital marketing for
-              different brands. We have a team of expert
-              <span className="text-blue-600">web developers</span>, app
-              developers, and digital marketers who are always ready to cater to
-              any development or marketing challenge.
-            </p> */}
           </div>
           <div className="flex items-center justify-center max-[850px]:pt-[5rem] min-[500px]:px-[5rem] ">
             <Image

@@ -19,6 +19,10 @@ import customInfoGraphic from "../public/assets/images/why-your-business-needs-a
 import customDev from "../public/assets/images/custom-web-app-development-services.webp";
 import customExpert from "../public/assets/images/custom-web-app-developers.svg";
 
+import phpInfoGraphic from "../public/assets/images/advantages-of-PHP.webp";
+import phpDev from "../public/assets/images/PHP-web-development-services.webp";
+import phpExpert from "../public/assets/images/PHP-web-developers.svg";
+
 import logos_woocommerce from "../public/assets/images/icons/logos-woocommerce.svg";
 import open_cart from "../public/assets/images/icons/open-cart.svg";
 import square_space from "../public/assets/images/icons/sqaure-space.svg";
@@ -1106,7 +1110,7 @@ export const Content = [
       ),
       image: { img: customExpert, alt: "custom web app developers" },
     },
-    pricing:false,
+    pricing: false,
     faqs: [
       {
         q: "How much will it cost to develop my custom web application?",
@@ -1142,6 +1146,239 @@ export const Content = [
       },
     ],
   },
+
+  {
+    page: "php-web-development",
+    inforaphic: {
+      img: phpInfoGraphic,
+      alt: "advantages of php",
+    },
+    steps: {
+      mainHeading: {
+        one: "How we ",
+        two: "work on your",
+        three: " PHP projects",
+      },
+      // subHeading: "",
+      steps: [
+        {
+          title1: "Requirements Analysis ",
+          title2: "And Development",
+          para: "We start by understanding your requirements and finding your business goals; based on your requirements, we propose you an estimated solution.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Preparation And",
+          title2: "Designing",
+          para: "We prepare the contract and start designing the application's architecture.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Development",
+          para: "Our expert PHP developers then begin developing your application.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Testing",
+          para: "Our QA analysts perform split testing both on software and manually to ensure that your application is error-free.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Deployment",
+          para: "Our deployment team then deploys the application to your site.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Support And ",
+          title2: "Maintenance",
+          para: "We provide maintenance and support that includes new features implementation, new versions, data backups, etc.",
+          imgage: {
+            img: null,
+          },
+        },
+      ],
+    },
+    section1: {
+      heading:
+        "Create A Powerful Web Solution With Our PHP Development Services",
+      paras: (
+        <>
+          <p>
+            Came in 1994, PHP is still one of the most used server-side
+            scripting languages. According to{" "}
+            <Link
+              className="anchor"
+              rel="nofollow"
+              target={"_blank"}
+              href="https://w3techs.com/technologies/details/pl-php"
+            >
+              {" "}
+              W3Tech's data
+            </Link>
+            , PHP is used by 78.9 of all websites, including Facebook, Slack,
+            Etsy, etc. The most used CMS platform, WordPress, also uses PHP.
+            Powered by a team of expert PHP developers, Creaditech has been
+            providing custom PHP web development services to its clients for
+            over 8 years.
+          </p>
+
+          <p>
+            PHP has several features that make it a powerful language to use for
+            businesses. Some features of PHP are its super compatibility with
+            other technologies, integration with popular databases, open-source,
+            and universal browser support. Since our inception, we've developed
+            ourselves as the leading PHP development company in the USA.
+          </p>
+          <p>
+            Our experienced team of PHP web developers has developed and
+            delivered more than 100+ PHP projects, including custom PHP
+            websites, E-commerce stores, and portals that have helped our
+            clients grow their businesses. Get in touch with us now and get a
+            customized PHP solution according to your business needs.
+          </p>
+        </>
+      ),
+      image: { img: phpDev, alt: "php web development services" },
+      link: "",
+    },
+    ecommerceExtra: false,
+    section2: false,
+    cmsExtra: false,
+    phpExtra: {
+      is: true,
+      heading: "PHP Web Development Services We Offer",
+      p: "Creaditech offers PHP web development services at extremely affordable rates. Being the leading PHP web development company, we have a strong case history in domains like E-commerce, education, healthcare, entertainment, and finance. Our PHP application development services include:",
+      cards: [
+        {
+          title: "Web Application Development",
+          para: "This includes LMS, tickets reservation, online communities, online marketplaces, custom CRM/ ERP, etc.",
+        },
+        {
+          title: "API Development",
+          para: "APIs are a crucial part of web applications; therefore, our experienced engineers provide custom API development and 3 rd party API integration.",
+        },
+        {
+          title: "E-commerce Solutions",
+          para: "Our PHP developers can build custom E-commerce solutions",
+        },
+        {
+          title: "Upgrade PHP applications",
+          para: "Our PHP web development services provide you the facility to upgrade your existing PHP applications.",
+        },
+        {
+          title: "Migration to PHP",
+          para: "As a leading PHP web development company, we provide reliable migration from your existing web technology to PHP..",
+        },
+
+        {
+          title: "Support And Maintenance",
+          para: "To ensure a seamless user experience, we keep your PHP application fast and secure and upgrade it from time to time.",
+        },
+      ],
+    },
+    blackSection: false,
+    section3: {
+      heading: "Why Choose Our PHP Web Development Services?",
+      paras: (
+        <>
+          <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
+            Creaditech is one of the most recommended PHP web development
+            companies in the USA. Ranging from{" "}
+            <Link
+              className="anchor"
+              href={"https://creaditech.com/services/cms-development"}
+            >
+              CMS development services
+            </Link>{" "}
+            to custom web app development services, we provide robust web
+            solutions that help our clients reach their business goals. Below
+            are a few reasons on why you shall take our PHP website development
+            services:
+          </p>
+          <ul className="mt-[2rem] flex flex-col ">
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">1)</span>We have a team of expert PHP
+              consultants and developers who provide the best web solution
+              according to your business needs.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">2)</span>We have a proven track record
+              of delivering more than 100+ PHP projects.
+            </li>
+            <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">3)</span>We will keep you in the loop
+              throughout the whole development process..
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">4)</span>
+              Your web application will be highly secure and scalable.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">5)</span> Our PHP website development
+              services are quite affordable.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">6)</span> We provide maintenance and
+              support after deployment.
+            </li>
+          </ul>
+        </>
+      ),
+      image: { img: phpExpert, alt: "php web developers" },
+    },
+    pricing: false,
+    faqs: [
+      {
+        q: "What is the average cost of your PHP web development services?",
+        a: `The average cost depends on your requirements. We provide an estimated cost based on your
+        requirements that can vary from $500 up to $1000.`,
+      },
+      {
+        q: " How much time you take to develop a PHP project?",
+        a: `It depends upon the complexity of your requirements and your project type.`,
+      },
+      {
+        q: "Is PHP suitable for large-scale projects?",
+        a: `Yes, PHP is suitable for large-scale projects, including LMS, CRM, ERP, etc.`,
+      },
+      {
+        q: "Can I get my website redesigned in the future?",
+        a: `Yes, you can get your website design updated later on.`,
+      },
+      {
+        q: "What are the benefits of using PHP?",
+        a: `PHP is fast, can integrate with a range of databases, has a large support community, pre-written codes,
+        and universal browser support.`,
+      },
+      {
+        q: "Do you provide maintenance after deployment?",
+        a: `Yes, we provide complete support and maintenance after completing and deploying your PHP project.`,
+      },
+      {
+        q: "Why Shall I choose Creaditech over any other agency?",
+        a: `We have been in the tech industry long enough to understand that our clients need perfection. We
+        ensure that we understand your perspective and deliver on it fully.`,
+      },
+      {
+        q: "During the development of my web application, what kind of assistance will you offer?",
+        a: `We will assist you 24/7 and respond to your messages within an hour. Our goal is to listen to and resolve your concerns and queries.`,
+      },
+    ],
+  },
+
   //   {
   //     page: "branding",
   //     section1: {

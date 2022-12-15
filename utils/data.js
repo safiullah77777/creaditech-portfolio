@@ -88,6 +88,22 @@ export const data = [
     tagline: `We develop custom web applications according to your business needs. Our custom web
     application development services can help your business grow exponentially.`,
   },
+  {
+    page: "php-web-development",
+    inforaphic: webInfoGraphic,
+    meta: {
+      title: "Custom Web Development In USA - Creaditech",
+      description:
+        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+      link: "services/web-development",
+    },
+    h1: {
+      pre: "Custom",
+      main: " PHP Web Development",
+      post: " Services",
+    },
+    tagline: `We suggest and develop powerful PHP solutions that will help your business grow.`,
+  },
   // {
   //   page: "branding",
 

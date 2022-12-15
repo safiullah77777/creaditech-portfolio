@@ -36,7 +36,7 @@ export const List = [
       },
       {
         title: "PHP Web Development",
-        link: "/services/wordpress-wix-shopify-development",
+        link: "/services/php-web-development",
       },
     ],
   },
