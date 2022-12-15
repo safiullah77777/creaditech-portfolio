@@ -35,6 +35,7 @@ import { toast } from "react-toastify";
 import Card10 from "../../components/card10/card10";
 
 const Services = ({ datas }) => {
+  const countings = ["one", "two", "three", "four", "five", "six"];
   const [hydrated, setHydrated] = useState(false);
   const [loading, setLoading] = useState(false);
   React.useEffect(() => {
@@ -141,8 +142,8 @@ const Services = ({ datas }) => {
     			min-[500px]:px-28 "
       >
         <div className="flex h-full max-w-[660px]  flex-col justify-center gap-[1rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
-          <h1 className="robot-condensed text-justify flex gap-x-[1rem] flex-wrap text-[4rem] font-600 uppercase leading-[110%] text-white  max-[1440px]:text-[6.5rem] max-[1300px]:text-[5rem] max-[850px]:justify-center max-[850px]:text-center max-[400px]:text-[5rem] min-[1600px]:text-[3.8rem]">
-            {content?.h1?.pre
+          <h1 className="robot-condensed  gap-x-[1rem] flex-wrap text-[4rem] font-600 uppercase leading-[110%] text-white  max-[1440px]:text-[6.5rem] max-[1300px]:text-[5rem] max-[850px]:justify-center max-[850px]:text-center max-[400px]:text-[5rem] min-[1600px]:text-[3.8rem]">
+            {/* {content?.h1?.pre
               .trim()
               .split(" ")
               .map((item) => (
@@ -159,7 +160,10 @@ const Services = ({ datas }) => {
               .split(" ")
               .map((item) => (
                 <span>{item}</span>
-              ))}
+              ))} */}
+            {content?.h1?.pre.trim()}{" "}
+            <span className=" text-yellow">{content?.h1?.main.trim()}</span>{" "}
+            {content?.h1?.post.trim()}
           </h1>
           <div className="detail-heading">
             <p className=" Montserrat mt-4  max-w-[646px] text-[2.2rem] font-[300] leading-130 text-white max-[850px]:text-center">
@@ -246,11 +250,12 @@ const Services = ({ datas }) => {
             </h2>
             <div className="max-[850px]:text-[19px] flex flex-col gap-[1rem] text-[1.7rem] text-[#5B5E71]">
               {pageContent.section1.paras}
-
-              <Button
-                title={"Lets Get Started"}
-                classes="bg-[#FEE236] text-[#111111] mt-[2rem] mx-auto"
-              />
+              <Link href={"/contact-us"} className=" mx-auto">
+                <Button
+                  title={"Lets Get Started"}
+                  classes="bg-[#FEE236] text-[#111111] mt-[2rem] mx-auto"
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -261,8 +266,8 @@ const Services = ({ datas }) => {
                 return src;
               }}
               className="w-full"
-              src={pageContent?.section1?.image}
-              alt=""
+              src={pageContent?.section1?.image?.img}
+              alt={pageContent?.section1?.image?.alt}
               width={650}
               height={500}
             />
@@ -290,8 +295,8 @@ const Services = ({ datas }) => {
             return src;
           }}
           className="w-full rounded-[20px] shadow-shadowImage "
-          src={datas[0].inforaphic}
-          alt=""
+          src={pageContent?.inforaphic?.img}
+          alt={pageContent?.inforaphic?.alt}
           width={2000}
           height={200}
         />
@@ -370,7 +375,7 @@ const Services = ({ datas }) => {
           </div>
         </div>
         {/* pricing section */}
-        <div className=" flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
+        {pageContent.pricing!==false &&<div className=" flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
           <div className="mb-2 mt-12 text-center">
             <h2 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
               Pricing & Packages.
@@ -393,7 +398,7 @@ const Services = ({ datas }) => {
               <PriceCard />
             </div>
           </div>
-        </div>
+        </div>}
         {/* //we love to listen your requirements */}
         <div className="group mt-[7rem] flex w-full border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] max-[850px]:border-[#3D404E]">
           <div className="relative flex w-1/2 bg-white py-[2rem] pl-[6rem] pr-[2rem] max-[850px]:w-full max-[850px]:flex-col max-[850px]:gap-[5rem] max-[850px]:bg-[#5B5E71] max-[850px]:py-[6rem]">
@@ -498,15 +503,28 @@ const Services = ({ datas }) => {
           </div>
         </div>
         <div className="flex flex-wrap flex-col justify-center gap-[4rem] py-[5rem]">
-          <span className="font-clash max-w-[1092px] text-center text-[4rem] font-300 leading-[100%] tracking-[0.02em]">
+          {/* <span className="font-clash max-w-[1092px] text-center text-[4rem] font-300 leading-[100%] tracking-[0.02em]">
             How we involve
-          </span>
-          <h2 className="font-clash mb-10 flex max-w-[1092px]  flex-wrap gap-[1rem] text-center text-[8rem] font-600  leading-[80%] tracking-[0.02em] max-[850px]:text-[6rem] max-[500px]:justify-center">
-            Our <span className="text-yellow">Logo</span> Designer?
+          </span> */}
+          <h2 className="robot-condensed mb-10  max-w-[110rem] text-center   gap-[1rem]  text-[9rem] font-600  leading-[80%] tracking-[0.02em] max-[850px]:text-[6rem] max-[500px]:justify-center">
+            {pageContent?.steps?.mainHeading.one}{" "}
+            <span className="text-yellow">
+              {pageContent?.steps?.mainHeading.two}
+            </span>{" "}
+            {pageContent?.steps?.mainHeading.three}
           </h2>
         </div>
-        <div className=" grid grid-cols-3 mx-auto max-[850px]:grid-cols-2 max-[500px]:grid-cols-1 flex-wrap items-center justify-center gap-[3rem] px-[2rem]">
-          <DesignCard
+        <div className=" grid grid-cols-3 mx-auto max-[850px]:grid-cols-2 items-stretch max-[500px]:grid-cols-1 flex-wrap items-center justify-center gap-[3rem] px-[2rem]">
+          {pageContent?.steps?.steps.map((data, index) => (
+            <DesignCard
+              bg={`bg-[url('/assets/images/icons/${countings[index]}.svg')]`}
+              image={bxmessage}
+              para={data.para}
+              title1={data?.title1}
+              title2={data?.title2}
+            />
+          ))}
+          {/* <DesignCard
             bg="bg-[url('/assets/images/icons/one.svg')]"
             image={bxmessage}
             para="If your business is not on the Internet, then your business will be out of business”. This quote from Bill Gates proves the value of getting your."
@@ -547,7 +565,7 @@ const Services = ({ datas }) => {
             para="If your business is not on the Internet, then your business will be out of business”. This quote from Bill Gates proves the value of getting your."
             title1="Making Branding"
             title2="System"
-          />
+          /> */}
         </div>
         {/* <div className="bg-[#1E1E1E] p-[3rem] w-full"></div> */}
         {/* Payless logo design page  */}
@@ -647,9 +665,9 @@ const Services = ({ datas }) => {
               loader={({ src }) => {
                 return src;
               }}
-              src={pageContent?.section3?.image}
+              src={pageContent?.section3?.image.img}
               className="w-full min-[500px]:h-[42rem] min-[500px]:w-[42rem]"
-              alt=""
+              alt={pageContent?.section3?.image.alt}
             />
           </div>
         </div>

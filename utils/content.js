@@ -1,8 +1,24 @@
 import Link from "next/link";
 import Header from "../components/header/Header";
 import webInfoGraphic from "../public/assets/images/website-development-agency.webp";
+import cmsInfoGraphic from "../public/assets/images/why-your-business-needs-a-CMS.webp";
+import ecommerceInfoGraphic from "../public/assets/images/why-you-should-have-an-ecommerce-website.webp";
 import hireExpert from "../public/assets/images/hire-an-expert.svg";
+import cmsExpert from "../public/assets/images/CMS-developers.svg";
+import ecommercehireExpert from "../public/assets/images/ecommerce-website-developers.svg";
+import ecommerce from "../public/assets/images/ecommerce-website-development-services.webp";
+
 import webDev from "../public/assets/images/web-dev.webp";
+import cmsDev from "../public/assets/images/cms-development-services.webp";
+
+import wordpressInfoGraphic from "../public/assets/images/why-you-should-use-wordpress.webp";
+import wordpressDev from "../public/assets/images/wordpress-development-services.webp";
+import wordpressExpert from "../public/assets/images/wordpress-developers.svg";
+
+import customInfoGraphic from "../public/assets/images/why-your-business-needs-a-custom-web-app.webp";
+import customDev from "../public/assets/images/custom-web-app-development-services.webp";
+import customExpert from "../public/assets/images/custom-web-app-developers.svg";
+
 import logos_woocommerce from "../public/assets/images/icons/logos-woocommerce.svg";
 import open_cart from "../public/assets/images/icons/open-cart.svg";
 import square_space from "../public/assets/images/icons/sqaure-space.svg";
@@ -12,7 +28,7 @@ import shopify from "../public/assets/images/icons/shopify.svg";
 export const Content = [
   {
     page: "web-development",
-    inforaphic: webInfoGraphic,
+    inforaphic: { img: webInfoGraphic, alt: "" },
     section1: {
       heading:
         "Bring Your Business Idea On The Internet By Taking Our Web Development Services",
@@ -48,7 +64,7 @@ export const Content = [
           </p>
         </>
       ),
-      image: webDev,
+      image: { img: webDev, alt: "" },
       link: "",
     },
     section2: {
@@ -127,7 +143,7 @@ export const Content = [
           </ul>
         </>
       ),
-      image: hireExpert,
+      image: { img: hireExpert, alt: "" },
     },
     ecommerceExtra: false,
     faqs: [
@@ -180,7 +196,65 @@ export const Content = [
   {
     cmsExtra: false,
     page: "ecommerce-website-development",
-    inforaphic: webInfoGraphic,
+    inforaphic: { img: ecommerceInfoGraphic, alt: "" },
+    steps: {
+      mainHeading: {
+        one: "Our ",
+        two: " E-commerce",
+        three: "Development Process:",
+      },
+      // subHeading: "",
+      steps: [
+        {
+          title1: "Requirement",
+          title2: "Analysis",
+          para: "We start by understanding your requirements and finding your business goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "E-commerce",
+          title2: "Platform",
+          para: "After gathering your requirements, we suggest an e-commerce platform according to your business needs.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Design",
+          title2: "and Development",
+          para: "Our designers create the layout of your store, and our developers start developing it (after your approval)",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "SEO-friendly:",
+          para: "After development, our marketing team performs multiple audits and ensures that your e-commerce store is SEO-friendly.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Testing",
+          para: "Our QA analysts perform split testing to ensure that your website is error-free.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Deployment",
+          title2: "and Launching",
+          para: "After successful testing, our engineers deploy your store to the hosting and launch it.",
+          imgage: {
+            img: null,
+          },
+        },
+      ],
+    },
     section1: {
       heading:
         "Grow Your Revenue By Taking Our Custom Ecommerce Website Development Services",
@@ -190,15 +264,20 @@ export const Content = [
             Ecommerce has become an important part of global businesses. Today,
             if you don’t have an online store, you’re losing more than 50% of
             your revenue. According to a study, it is estimated that  (
-            <Link href={"www.facebook.com"} className="anchor	">
+            <Link
+              href={"https://www.oberlo.com/blog/ecommerce-statistics"}
+              target="_blank"
+              rel="nofollow"
+              className="anchor"
+            >
                218.8 million US consumers will shop online in 2023
             </Link>{" "}
             ). The stat clearly shows how important it is to have an online
             ecommerce store today. However, to get an attractive, SEO-friendly,
             and user-friendly ecommerce store developed, you must take ecommerce
             website development services from a reliable and expert{" "}
-            <Link href={"www.facebook.com"} className="anchor	">
-               web development
+            <Link href={"https://creaditech.com"} className="anchor">
+               web development company
             </Link>{" "}
             like Creaditech.
           </p>
@@ -215,7 +294,7 @@ export const Content = [
           </p>
         </>
       ),
-      image: webDev,
+      image: { img: ecommerce, alt: "" },
       link: "",
     },
     ecommerceExtra: {
@@ -314,57 +393,110 @@ export const Content = [
           </ul>
         </>
       ),
-      image: hireExpert,
+      image: { img: ecommercehireExpert, alt: "" },
     },
     faqs: [
       {
-        q: "How much does a new website cost?",
-        a: `It is only possible to calculate the exact cost of a website by knowing the requirements, as every
-        website requires unique and different components. Get in touch with us now so that we can offer
-        you a customized web solution.`,
+        q: "How much will it cost to get my Ecommerce store developed?",
+        a: `The development of your ecommerce store will depend on your requirements like you want a custom
+        ecommerce store or an ecommerce platform on a CMS like Shopify, WooCommerce, etc.`,
       },
       {
-        q: "Will you maintain my website for me?",
-        a: `Yes, we love to do that, as regular maintenance is necessary for any website. However, there are
-        separate charges for maintenance.`,
+        q: "What type of Ecommerce websites have you developed in the past?",
+        a: `We have built ecommerce stores on all technologies and platforms, including WooCommerce, Shopify,
+        Magento, and custom ecommerce stores using React JS, Next JS, PHP, and MySQL.`,
       },
       {
-        q: "Will my website be mobile-friendly?",
-        a: `Yes, we ensure to deliver a fully responsive and mobile-friendly website that will look appealing to
-        your visitors and boost your search engine rankings.`,
+        q: "Will my online store be mobile-friendly?",
+        a: `Yes, we understand that most of the users now come from mobile devices; therefore, our developers
+        ensure that your store is fully optimized and mobile-friendly.`,
       },
       {
-        q: "Do you provide web designing services too?",
-        a: `Yes, we do provide web designing services separately. Contact us to get a quote.`,
+        q: "How much time will it take to develop my Ecommerce store?",
+        a: `It depends upon your requirements. The average time ranges from 6 weeks to 8 weeks.`,
       },
       {
-        q: "How long will it take to get my website developed?",
-        a: `It all depends on the complexity of the website. However, on average, we take around six to 8 weeks
-        of turnaround time.`,
+        q: "Do your offer custom packages?",
+        a: `Yes, we do offer custom packages based on your requirements and budget.`,
       },
       {
-        q: "Can you create any type of website?",
-        a: `Yes, we surely can. We have a team of expert web developers for all web technologies. Either you
-        want to get your website developed on a CMS, or you want a customized website on React, Laravel,
-        Angular, etc., contact us &amp; our developers will do the job for you.`,
+        q: "Will I be kept in the loop throughout the development process?",
+        a: `Yes, the project manager will be in direct touch with you and will provide you with regular updates on
+        your project.`,
       },
       {
-        q: "Why Shall I choose Creaditech over any other agency?",
-        a: `Creaditech is one of the best web design agencies. Our team has over 7+ years of experience in
-        web development. We ensure that we understand your business objectives and deliver on them
-        fully.`,
+        q: "Will my ecommerce store be SEO optimized?",
+        a: `Yes, our marketing team works directly with our development team to ensure that your store is SEO
+        optimized.`,
       },
       {
-        q: "During the development of my website, what kind of assistance will you offer?",
-        a: `We will assist you 24/7 and respond to your messages within an hour. Our goal is to listen to and
-        resolve your concerns and queries.`,
+        q: "Do you provide support after deployment?",
+        a: `Yes, we provide full support and maintenance even after the deployment of your project.`,
       },
     ],
   },
 
   {
     page: "cms-development",
-    inforaphic: webInfoGraphic,
+    inforaphic: { img: cmsInfoGraphic, alt: "why your business needs a cms" },
+    steps: {
+      mainHeading: {
+        one: "Our ",
+        two: " Cms",
+        three: " Development Process",
+      },
+      // subHeading: "",
+      steps: [
+        {
+          title1: "Requirement",
+          title2: "Analysis",
+          para: "We start by understanding your requirements and finding your business goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Design",
+          para: "Our CMS designers create an appealing design for your CMS.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Development",
+          para: "Our CMS developers develop a CMS based on the design and functionalities.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "SEO-friendly:",
+          para: "After development, our marketing team performs multiple audits and ensures that your e-commerce store is SEO-friendly.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Testing",
+          para: "Our QA analysts perform split testing to ensure that your website is error-free.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Deployment",
+          title2: "",
+          para: " Our engineers then deploy your CMS to your hosting.",
+          imgage: {
+            img: null,
+          },
+        },
+      ],
+    },
     section1: {
       heading:
         "Edge Out Your Competitors By Taking Our CMS Development Services",
@@ -373,7 +505,14 @@ export const Content = [
           <p>
             Not everyone is a coder and cannot add new content easily on the
             website; this is why around  (
-            <Link href={"www.facebook.com"} className="anchor	">
+            <Link
+              href={
+                "https://www.appmysite.com/blog/cms-market-share-top-trends-and-usage-statistics/"
+              }
+              rel="nofollow"
+              target={"_blank"}
+              className="anchor	"
+            >
               67% of websites around the world are using a CMS
             </Link>{" "}
             ). CMS or content management system is a software that helps users
@@ -384,9 +523,9 @@ export const Content = [
           </p>
 
           <p>
-            Our experienced <span>CMS developers</span> and consultants use the
-            latest technologies and deploy the best practices to develop a CMS
-            solution that best fits your business needs. From development to
+            Our experienced <strong>CMS developers</strong> and consultants use
+            the latest technologies and deploy the best practices to develop a
+            CMS solution that best fits your business needs. From development to
             testing and maintenance, we provide cms website development services
             that will help you perform speedy content creation and optimization.
           </p>
@@ -395,13 +534,20 @@ export const Content = [
             developed several CMS for multiple businesses. We are one of the
             best CMS development company in USA whose experts can provide custom
             CMS solutions for any industry. Whether you are looking for
-            WordPress development services, Drupal development services, or any
-            other custom cms development services, just contact Creaditech, and
-            our consultants will find the best solution for you.
+            <Link
+              href={"https://creaditech.com/services/cms-development"}
+              className="anchor"
+            >
+              {" "}
+              WordPress development services
+            </Link>
+            , Drupal development services, or any other custom cms development
+            services, just contact Creaditech, and our consultants will find the
+            best solution for you.
           </p>
         </>
       ),
-      image: webDev,
+      image: { img: cmsDev, alt: "cms development services" },
       link: "",
     },
     ecommerceExtra: false,
@@ -503,50 +649,496 @@ export const Content = [
           </ul>
         </>
       ),
-      image: hireExpert,
+      image: { img: cmsExpert, alt: "cms developers" },
     },
     faqs: [
       {
-        q: "How much does a new website cost?",
-        a: `It is only possible to calculate the exact cost of a website by knowing the requirements, as every
-        website requires unique and different components. Get in touch with us now so that we can offer
-        you a customized web solution.`,
+        q: "What Is a CMS?",
+        a: `A CMS is a platform that can be used to create or modify a website's content without having coding
+        knowledge.`,
       },
       {
-        q: "Will you maintain my website for me?",
-        a: `Yes, we love to do that, as regular maintenance is necessary for any website. However, there are
-        separate charges for maintenance.`,
+        q: "What is the best CMS?",
+        a: `All CMS are best since they allow you to edit your website easily. However, the most popular platform is
+        WordPress, having a share of 65% among the CMS platforms.`,
       },
       {
-        q: "Will my website be mobile-friendly?",
-        a: `Yes, we ensure to deliver a fully responsive and mobile-friendly website that will look appealing to
-        your visitors and boost your search engine rankings.`,
+        q: "What technologies do you use for custom CMS development?",
+        a: `We have expert web developers for almost every web development technology, including Next JS, React
+        JS, Laravel, Vue JS, etc.`,
+      },
+      {
+        q: "Do you provide custom packages?",
+        a: `Yes, we do offer custom packages based on your requirements and budget.`,
+      },
+      {
+        q: "How many years of experience do you have in CMS development?",
+        a: `We have experience of more than 8 years in CMS development`,
+      },
+      {
+        q: "Will I be kept in the loop throughout the development process?",
+        a: `Yes, the project manager will be in direct touch with you and will provide you with regular updates on
+        your project.`,
+      },
+      {
+        q: "Can you build any type of CMS?",
+        a: `Yes, we can develop or modify any type of CMS for you based on your requirements.`,
+      },
+      {
+        q: "Will you provide support after the completion of my project?",
+        a: `Yes, we provide full support even after the delivery and deployment of your project.`,
+      },
+    ],
+  },
+  {
+    page: "wordpress-development",
+    inforaphic: {
+      img: wordpressInfoGraphic,
+      alt: "why you should use wordpress",
+    },
+    steps: {
+      mainHeading: {
+        one: "Our ",
+        two: " WordPress",
+        three: " Development Process",
+      },
+      // subHeading: "",
+      steps: [
+        {
+          title1: "Requirement",
+          title2: "Analysis",
+          para: "In this phase, we gather your requirements and identify your business goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Designing",
+          para: "In this phase, our expert designers create an appealing design for your website.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Development",
+          para: "After approval of the design from your side, our developers begin developing your project.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "SEO-friendly",
+          para: "During the development phase, our marketing team works directly with the development team to ensure that your website is mobile-friendly and SEO-optimized.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Quality ",
+          title2: "assurance",
+          para: "In this phase, our QA analysts perform split testing to ensure that your website is free from any technical errors.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Launching",
+          title2: "the site",
+          para: "Our engineers will deploy and launch your website in the final phase.",
+          imgage: {
+            img: null,
+          },
+        },
+      ],
+    },
+    section1: {
+      heading:
+        "Expand Your Business By Taking Our WordPress Development Services",
+      paras: (
+        <>
+          <p>
+            In this competitive world, having a website is a must if you want to
+            remain in the market. However, developing your website and then
+            making your online presence is not a piece of cake; this is where
+            WordPress comes to help. WordPress is a CMS platform where you can
+            easily set up your blog or a fully functional business website.
+            Creaditech is one of the best WordPress development agencies in USA
+            that provides the best WordPress development services.
+          </p>
+
+          <p>
+            WordPress has some unique features and functions that cannot be
+            ignored; this is the reason that{" "}
+            <Link
+              href={"https://blog.hubspot.com/website/wordpress-stats"}
+              className="anchor"
+              rel="nofollow"
+              target="_blank"
+            >
+              WordPress is used by 43.2% of all websites on the Internet.
+            </Link>{" "}
+            Apart from that, it is one of the leading CMS platforms having a
+            share of almost 65.2% of all websites using a CMS. However, if not
+            developed by expert WordPress developers, a WordPress website won't
+            benefit you; therefore, you shall always take WordPress website
+            development services from expert companies like Creaditech.
+          </p>
+          <p>
+            By taking our WordPress web development services, you can expand
+            your business by increasing your site’s functionality. Contact us if
+            you are a blogger, freelancer, or company, and get a fully
+            functional and scalable WordPress website within a few days.
+          </p>
+        </>
+      ),
+      image: { img: wordpressDev, alt: "wordpress development services" },
+      link: "",
+    },
+    ecommerceExtra: false,
+    section2: {
+      heading: "Achieve Your Goals Using WordPress Technology",
+      paras: (
+        <>
+          <p>
+            What makes WordPress so popular is the ease of use that it offers.
+            Someone with zero coding knowledge can easily add or update content
+            within a few minutes on WordPress. Because of its extensive themes
+            and plugins, WordPress is an all-one solution for commercial
+            websites and personal blogs. Being the top-rated{" "}
+            <Link href={"https://creaditech.com"} className="anchor">
+              web development company
+            </Link>
+            in the USA, Creaditech realizes the importance of WordPress and
+            therefore offers robust WordPress development services to its
+            clients.
+          </p>
+          <p>
+            At Creaditech, we are always ready to cater to any sort of web
+            development challenge. Our expert web developers can create any
+            WordPress website according to your requirements. Our WordPress
+            website development services include theme and plugin development,
+            WordPress migration, 3rd party API integration, and much more.
+          </p>
+          <p>
+            We have more than 8 years of developing WordPress websites. Our
+            experience over the years has helped us further improve our custom
+            WordPress development services. Therefore, we assure you that you
+            will get a fully functional and responsive WordPress website that
+            will help you achieve your goals.
+          </p>
+        </>
+      ),
+      link: "",
+    },
+    cmsExtra: {
+      heading: "Our Wide Range Of WordPress Development Services:",
+      cards: [
+        {
+          title: "PSD To WordPress Conversion",
+          para: "Our designers and developers understand your requirements and convert your PSD files into fully responsive and W3C-validated WordPress themes.",
+        },
+        {
+          title: "WordPress theme customization",
+          para: "We provide WordPress theme customization so that if you have an already purchased theme and want to modify it, we can do that for you.",
+        },
+        {
+          title: "WordPress Plugin Development",
+          para: "We provide custom plugin development services so that you can get a WordPress plugin developed according to your requirements.",
+        },
+        {
+          title: "Custom WordPress development",
+          para: "From custom theme development to customizing the WordPress dashboard, we provide custom WordPress development services at affordable rates..",
+        },
+        {
+          title: "Maintenance and support",
+          para: "We provide maintenance and support services so that your WordPress site remains updated and free from any technical errors.",
+        },
+        {
+          title: "E-commerce Development",
+          para: `With the help of WooCommerce, we  provide ecommerce website development services on WordPress.`,
+        },
+      ],
+    },
+    blackSection: false,
+    section3: {
+      heading: "Why Choose Creaditech To Get Your WordPress Website Developed?",
+      paras: (
+        <>
+          <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
+            Creaditech is one of the best WordPress development agencies in the
+            USA; we have successfully delivered 300+ WordPress projects as of
+            yet. Below are a few reasons on why you shall take our WordPress
+            development services:
+          </p>
+          <ul className="mt-[2rem] flex flex-col ">
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">1)</span>We have a team of expert
+              WordPress developers and designers.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">2)</span>We deliver websites that are
+              fully responsive and highly optimized for SEO..
+            </li>
+            <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">3)</span>Your website will be highly
+              secure and scalable.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">4)</span>
+              You can reach us anytime, 24/7, through calls and emails.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">5)</span> We provide support and
+              maintenance after delivering and deploying the project.
+            </li>
+          </ul>
+        </>
+      ),
+      image: { img: wordpressExpert, alt: "wordpress developers" },
+    },
+    faqs: [
+      {
+        q: "How much will it cost me to get a WordPress website developed?",
+        a: `It depends on several factors. For example, if you want to go with paid themes and plugins, it will
+        cost from $300 to $2500; if you want to go with a free theme, the price can go from $150 to $1000.`,
+      },
+      {
+        q: "Is WordPress good for website development?",
+        a: `WordPress is one of the most used CMS platforms and is preferred by many developers for website
+        development.`,
+      },
+      {
+        q: "How long will it take to get my WordPress website developed?",
+        a: `It depends on your requirements. If your requirements are limited and clearly defined, it will take 10 to
+        15 days to develop your WordPress website.`,
+      },
+      {
+        q: "Can I get an Ecommerce store developed on WordPress?",
+        a: `Yes, you can get a fully responsive and user-friendly ecommerce store with the help of the
+        WooCommerce plugin.`,
+      },
+      {
+        q: "Do you provide support after the completion of the project?",
+        a: `Being a reputable and trusted web development company in the USA, we provide full support after the
+        completion of your projects.`,
+      },
+      {
+        q: "Will I be kept in the loop throughout the development process?",
+        a: `Yes, the project manager will be in direct touch with you and will provide you with regular updates on
+        your project.`,
+      },
+      {
+        q: "Will my website be SEO-optimized?",
+        a: `Yes, our marketing team works directly with the developers to ensure that your website is fully
+        responsive and SEO-optimized.`,
+      },
+      {
+        q: "Do you provide other CMS development services too?",
+        a: `Yes, we also provide other CMS development services, including Magento, Drupal, Shopify, and custom
+        CMS development.`,
+      },
+    ],
+  },
+
+  {
+    page: "custom-web-app-development",
+    inforaphic: {
+      img: customInfoGraphic,
+      alt: "why your business needs a custom web app",
+    },
+    steps: {
+      mainHeading: {
+        one: "Our Custom ",
+        two: "Web App",
+        three: " Development Process",
+      },
+      // subHeading: "",
+      steps: [
+        {
+          title1: "Meeting ",
+          title2: "and research",
+          para: "In this phase, we will hold multiple meetings with you to clearly understand your business requirements and goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Prototype",
+          title2: "",
+          para: "In the second phase, our designers design your web application and present you with a prototype.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Development",
+          para: "After getting approval for the protype from your side, our developers start developing the project.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "SEO-friendly",
+          para: "During the development of your project, our marketing team ensures that your website or web application is SEO-optimized and mobile-friendly.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Testing",
+          para: "In this phase, our QA analysts perform split testing to ensure that your web application is free from errors.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Launch",
+          title2: "",
+          para: "In the final phase, our engineers launch your web application and make it go live on the internet.",
+          imgage: {
+            img: null,
+          },
+        },
+      ],
+    },
+    section1: {
+      heading: "Custom Web App Development Tailored To Your Business Needs",
+      paras: (
+        <>
+          <p>
+            Creaditech is a custom web app development company that uses
+            advanced methodologies and the latest web development technologies
+            to create a custom web app tailored to your business needs. We have
+            been in the web development industry for more than 8 years and have
+            implemented more than 150 web solutions for several B2B and B2C
+            companies.
+          </p>
+
+          <p>
+            Our custom web app development services are focused on meeting your
+            business-specific requirements. Our team of engineers and
+            consultants is always motivated to scale and grow your business. We
+            provide a wide range of web application development services,
+            including
+            <Link
+              href={"https://creaditech.com/services/cms-development"}
+              className="anchor"
+            >
+              CMS development Services
+            </Link>{" "}
+            ,WordPress development services, E-commerce development services,
+            etc. Contact us now to get a reliable, cost- effective, and secure
+            web app tailored to your business needs.
+          </p>
+        </>
+      ),
+      image: { img: customDev, alt: "custom web app development services" },
+      link: "",
+    },
+    ecommerceExtra: false,
+    section2: {
+      heading: "Custom Web App Development Services At Affordable Rates",
+      paras: (
+        <>
+          <p>
+            Not all web applications or websites are created equally. Visitors
+            on the web today now want fast loading time and easy navigation;
+            therefore, settling for a low-end website or web application is not
+            an option in this era. Several companies may build you custom web
+            apps, but only a few, like Creaditech, can create custom web apps
+            that will deliver astonishing results. We aim to design and develop
+            web solutions to help our clients achieve their business goals.
+          </p>
+          <p>
+            Since our customers come from all over the world, we understand that
+            they will have different requirements and budgets. To provide the
+            best possible assistance, we have kept the prices of our custom web
+            app development services extremely affordable. We build web
+            applications and websites that are fast, mobile-friendly, secure,
+            and easy to navigate. No matter which industry you are from or how
+            complex your requirements are, just contact us, and our consultants
+            will provide the best affordable solution that meets your business
+            requirements.
+          </p>
+        </>
+      ),
+      link: "",
+    },
+    cmsExtra: false,
+    blackSection: false,
+    section3: {
+      heading: "Why Choose Creaditech To Get Your Custom Web App Developed?",
+      paras: (
+        <>
+          <ul className="mt-[2rem] flex flex-col ">
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">1)</span>We have a proven track record
+              of delivering successful web development projects.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">2)</span>We have hired the best IT
+              talent.
+            </li>
+            <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">3)</span>Your web application will be
+              highly secure and scalable.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">4)</span>
+              We have worked with almost all major industries.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">5)</span> You can reach us anytime,
+              24/7, through calls and emails.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">6)</span> We provide support and
+              maintenance even after the deployment of the project.
+            </li>
+          </ul>
+        </>
+      ),
+      image: { img: customExpert, alt: "custom web app developers" },
+    },
+    pricing:false,
+    faqs: [
+      {
+        q: "How much will it cost to develop my custom web application?",
+        a: `The estimated cost may vary depending on your requirements.`,
+      },
+      {
+        q: " Will you maintain my web application for me?",
+        a: `Yes, we love to do that, as regular maintenance is necessary for any web application. However, there are separate charges for maintenance.`,
+      },
+      {
+        q: " Will my web application or website be mobile-friendly?",
+        a: `Yes, we ensure to deliver a fully responsive and mobile-friendly website that will look appealing to your visitors and boost your search engine rankings.`,
       },
       {
         q: "Do you provide web designing services too?",
         a: `Yes, we do provide web designing services separately. Contact us to get a quote.`,
       },
       {
-        q: "How long will it take to get my website developed?",
-        a: `It all depends on the complexity of the website. However, on average, we take around six to 8 weeks
-        of turnaround time.`,
+        q: " How long will it take to get my web application developed?",
+        a: `It all depends on the complexity of the website. However, on average, we take around six to 8 weeks of turnaround time.`,
       },
       {
-        q: "Can you create any type of website?",
-        a: `Yes, we surely can. We have a team of expert web developers for all web technologies. Either you
-        want to get your website developed on a CMS, or you want a customized website on React, Laravel,
-        Angular, etc., contact us &amp; our developers will do the job for you.`,
+        q: "Can you create any type of web application?",
+        a: `Yes, we surely can. We have a team of expert developers for all web technologies.`,
       },
       {
         q: "Why Shall I choose Creaditech over any other agency?",
-        a: `Creaditech is one of the best web design agencies. Our team has over 7+ years of experience in
-        web development. We ensure that we understand your business objectives and deliver on them
-        fully.`,
+        a: `Creaditech is one of the best web development companies. Our team has over 7+ years of experience in web development. We ensure that we understand your business objectives and deliver on them fully.`,
       },
       {
-        q: "During the development of my website, what kind of assistance will you offer?",
-        a: `We will assist you 24/7 and respond to your messages within an hour. Our goal is to listen to and
-        resolve your concerns and queries.`,
+        q: "During the development of my web application, what kind of assistance will you offer?",
+        a: `We will assist you 24/7 and respond to your messages within an hour. Our goal is to listen to and resolve your concerns and queries.`,
       },
     ],
   },

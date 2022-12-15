@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
-import BottomNav from "../components/bottomNav/BottomNav";
-import Footer from "../components/footer/Footer";
-import Header from "../components/header/Header";
-import { blogs } from "../utils/blogs";
 
-const BlogPost = () => {
+import { blogs } from "../../utils/blogs";
+import BottomNav from "../../components/bottomNav/BottomNav";
+import Footer from "../../components/footer/Footer";
+import Header from "../../components/header/Header";
+import MetaHead from "../../components/metaHead/MetaHead";
+
+const BlogPost = ({blogInfo}) => {
   const ref = useRef(null);
   const blogContent = blogs[0];
   const [dropdown, setDropdown] = useState(-1);
@@ -32,28 +34,32 @@ const BlogPost = () => {
   return (
     <>
       {/* after:w-full after:h-full after:absolute after:top-0 after:z-[1000] after:bg-gradient-bg */}
+      <MetaHead title={blogContent?.meta?.title} description={blogContent?.meta?.description} link={`/blog/${blogContent.title}`}  />
+      {console.log("===>>>",blogInfo)}
       <Header />
-      <div className="flex flex-col relative min-h-[65rem]  ">
-        <Image
-          loader={({ src }) => {
-            return src;
-          }}
-          width={2000}
-          height={1000}
-          className="w-full h-full"
-          src={require("../public/assets/images/robot-1.png")}
-          alt=""
-        />
+      <div className="flex flex-col relative min-h-[60rem]  ">
+        <div className="flex ">
+          <Image
+            loader={({ src }) => {
+              return src;
+            }}
+            width={2000}
+            height={1000}
+            className="w-full h-full"
+            src={blogContent?.featuredImage?.img}
+            alt={blogContent?.featuredImage?.alt}
+          />
+        </div>
         <div className=" flex flex-col gap-[1rem] w-full items-center bg-[#1E1E1E] p-[3rem] ">
           <h1 className="robot-condensed max-w-[104rem] text-center leading-[100%] font-600 text-[6.5rem] text-[#ffffff] uppercase">
-            At this point, you might be considering why shall
+            {blogContent?.h1}
           </h1>
           <p className="bg-[#2B2B2B] rounded-[2rem] flex gap-[.5rem] px-[1rem] py-[.1rem] mx-auto">
             <span className="text-[2rem] text-[#ffffff] font-700 clash">
               Uploaded on :
             </span>
             <span className="text-[2rem] text-[#ffe100] font-300 clash">
-              25-November-2022
+              {blogContent?.uploadDate}
             </span>
           </p>
         </div>
@@ -339,15 +345,17 @@ const BlogPost = () => {
                 }}
                 width={2000}
                 height={1000}
-                className="w-full h-full"
-                src={require("../public/assets/images/profile.png")}
+                className="w-full h-full rounded-full"
+                src={
+                  "https://img.freepik.com/premium-vector/female-character-working-from-home_14588-430.jpg"
+                }
                 alt=""
               />
             </div>
             <h3 className="text-[2rem]  font-500 text-[#000000] clash">
-              Tipu Sultan Khan Niazi
+              Author: Katherine
             </h3>
-            <p className="robot-condensed text-[#838383] text-[1.6rem] font-400 text-center">
+            {/* <p className="robot-condensed text-[#838383] text-[1.6rem] font-400 text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis. Class
               aptent taciti sociosqu ad litora torquent per conubia nostra, per
@@ -378,7 +386,7 @@ const BlogPost = () => {
                   fill="#5B5E71"
                 />
               </svg>
-            </div>
+            </div> */}
           </div>
           <h3 className="text-[2rem] text-center mx-auto max-w-[25rem] leading-[100%] mt-[1rem] font-500 text-[#000000] clash">
             Subscribe for weekly updates
@@ -402,5 +410,26 @@ const BlogPost = () => {
     </>
   );
 };
-
+export async function getStaticProps({ params = {} }) {
+  return {
+    props: {
+      blogInfo: blogs.filter((item) => {
+        return params.blogName == item.title;
+      }),
+    }, // will be passed to the page component as props
+  };
+}
+export async function getStaticPaths() {
+  const paths = blogs.map((item) => {
+    return {
+      params: {
+        blogName: item?.title,
+      },
+    };
+  });
+  return {
+    paths,
+    fallback: false,
+  };
+}
 export default BlogPost;

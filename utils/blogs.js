@@ -1,5 +1,16 @@
+import blogImage from "../public/assets/images/next-js-vs-react.webp"
 export const blogs = [
   {
+    meta:{
+      title:"Next JS Vs React - Creaditech",
+      description:"Next JS and React are two of the most popular Javascript libraries. Find the key differences between Next JS vs React."
+    },
+    featuredImage:{
+      img:blogImage,
+      alt:"next js vs react"
+    },
+    title:"next-js-vs-react",
+    uploadDate:"16-Dec-2022",
     h1: "Next JS vs React: What are the Key Differences?",
     parasonly1: [
       "With ground-breaking development in technology, consumers expect websites and applications to load quickly and may not spend their energy on a platform that takes too long to load. As new JavaScript (JS) frameworks and libraries enter the market every year, the changing ecosystem demands substance and optimized performance.",

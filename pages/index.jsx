@@ -42,6 +42,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import Link from "next/link";
 import { expertiseIcons } from "../utils/expertiseIcons";
 import Card10 from "../components/card10/card10";
+import { blogs } from "../utils/blogs";
 const Home = () => {
   const carouselRef = React.useRef(null);
   const carouselRef1 = React.useRef(null);
@@ -185,13 +186,13 @@ const Home = () => {
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
             {serviceCards.slice(0, 6).map((item, index) => (
-              <Card
+             <Link href={"/services"+item?.link}> <Card
                 styles={item.styles}
                 key={index}
                 heading1={item.title}
                 heading2={item.title1}
                 image={item.icon}
-              />
+              /></Link>
             ))}
             {/* <div
               onMouseEnter={() => {
@@ -239,7 +240,7 @@ const Home = () => {
         </div>
       </section>
       {/* min-[850px]:bg-[url('/assets/images/backgrounds/service-bg.png')] bg-[#2B2B2B]*/}
-      
+
       <section className="flex p-20 max-[850px]:flex-col max-[850px]:gap-[6rem] ">
         <div className="flex w-1/2 flex-col   max-[850px]:order-3 max-[850px]:w-full gap-[2rem]">
           <h2 className="robot-condensed text-[4rem] font-600 uppercase leading-[90%] text-[#5B5E71] max-[640px]:text-[40px]">
@@ -269,7 +270,7 @@ const Home = () => {
               }}
               className="h-full w-full"
               src={imageChoose}
-              alt=""
+              alt="why choose creaditech"
             />
           </div>
           <div className="flex flex-wrap items-center gap-8 py-8 max-[850px]:justify-center">
@@ -673,19 +674,27 @@ const Home = () => {
             );
           }}
         >
-          <Card7 image={robot} />
-          <Card7 image={robot1} />
+          {blogs.map((item) => {
+            return (
+              <Link href={`/blog/${item?.title}`}>
+                <Card7 title={item?.h1} image={item.featuredImage.img} />
+              </Link>
+            );
+          })}
+          {/* <Card7 image={robot1} />
           <Card7 image={robot2} />
           <Card7 image={robot} />
           <Card7 image={robot1} />
           <Card7 image={robot2} />
           <Card7 image={robot} />
           <Card7 image={robot1} />
-          <Card7 image={robot2} />
+          <Card7 image={robot2} /> */}
+          <Link href={'/blog'}>
           <Card6 />
+          </Link>
         </Carousel>
       </div>
-      <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[5rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
+      <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[1rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
         <h2 className="robot-condensed text-center  text-[4rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
           Achieve Your Business Goals By Taking Web Development Services From
           The Best Web Development Company
@@ -729,7 +738,12 @@ const Home = () => {
           <p className="Montserrat text-center text-[1.6rem] font-500 text-[#111111] max-[850px]:text-[16px]">
             If you don’t have an attractive and mobile-friendly website, then
             there’s no reason to have a website. A study shows that{" "}
-            <Link href="" className="anchor" target={"_blank"}>
+            <Link
+              href="https://www.sweor.com/firstimpressions"
+              rel="nofollow"
+              className="anchor"
+              target={"_blank"}
+            >
                75% of users admit to make judgments on a company’s credibility
               based on its website
             </Link>
@@ -748,9 +762,16 @@ const Home = () => {
             have developed custom web applications for them; what makes us
             different from other web development companies is our research and
             development department and software engineers. Whether you are
-            looking for CMS development services, or custom web development
-            services, contact us and we will deliver a website or application
-            with clear results that will help you achieve your business goals.
+            looking for{" "}
+            <Link
+              href="https://creaditech.com/services/cms-development"
+              className="anchor"
+            >
+              CMS development services
+            </Link>{" "}
+            , or custom web development services, contact us and we will deliver
+            a website or application with clear results that will help you
+            achieve your business goals.
           </p>
         </div>
         <Image

@@ -44,7 +44,7 @@ a[rel~="nofollow"], a[rel~="ugc"], a[rel~="sponsored"] {
 }
 .anchor{
   color: rgb(3, 119, 188, 1);
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -289,8 +289,9 @@ input[type="number"] {
   color: #fff;
   display: flex;
   flex: 1;
-  font-weight: 700;
+  font-weight: 600;
   word-spacing: 0.4rem;
+  /* font-family:'Times New Roman', Times, serif !important; */
 }
 .accordian-arrow-down {
   color: #fff;

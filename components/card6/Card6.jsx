@@ -10,7 +10,7 @@ const Card6 = () => {
       onMouseLeave={() => {
         setHover(false);
       }}
-      className="group relative z-50 flex  h-[420px] w-[314px]  rounded-[10px] after:absolute after:top-0  after:left-0 after:z-0 after:h-[96%] after:w-full  after:rounded-[10px] after:border-2 after:border-b-[6px] after:border-solid after:border-black after:hover:border-[rgba(209,231,50,0.43)]  after:bg-[#2A2A2A] after:hover:bg-[#ffe100]  after:duration-300 after:ease-linear  after:hover:h-[100%]"
+      className="group relative z-50 flex  h-[300px] w-[314px]  rounded-[10px] after:absolute after:top-0  after:left-0 after:z-0 after:h-[96%] after:w-full  after:rounded-[10px] after:border-2 after:border-b-[6px] after:border-solid after:border-black after:hover:border-[rgba(209,231,50,0.43)]  after:bg-[#2A2A2A] after:hover:bg-[#ffe100]  after:duration-300 after:ease-linear  after:hover:h-[100%]"
     >
       <div className="z-[10] flex h-[96%] w-full flex-col items-center justify-center gap-[1rem] p-[20px] ">
         {/* <div className="group flex  h-[39.3rem] w-[31.3rem] flex-col items-center justify-center  gap-4 overflow-hidden   bg-[transparent] p-12 shadow-xl duration-300 ease-linear hover:border-0 hover:bg-yellow"> */}
@@ -29,7 +29,7 @@ const Card6 = () => {
             />
           </svg>
         </div>
-        <h2 className=" robot-condensed uppercase text-center text-[6rem] font-600 leading-[80%] text-white  group-hover:text-black">
+        <h2 className=" robot-condensed uppercase text-center text-[3rem] font-600 leading-[80%] text-white  group-hover:text-black">
           More <br /> Blogs
         </h2>
         {/* </div> */}

@@ -28,11 +28,11 @@ export const List = [
       },
       {
         title: "Wordpress Development",
-        link: "/services/database-solutions",
+        link: "/services/wordpress-development",
       },
       {
         title: "Custom Web App Development",
-        link: "/services/wordpress-wix-shopify-development",
+        link: "/services/custom-web-app-development",
       },
       {
         title: "PHP Web Development",

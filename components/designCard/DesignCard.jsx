@@ -10,8 +10,8 @@ const DesignCard= ({ title1, title2, para, image, bg }) => {
                 return src;
               }} src={image} alt="" className=" mt-[2rem] h-[9rem] w-[8.4rem]" />
       </div>
-      <h2 className=" robot-condensed text-center text-[30px] font-700 leading-[100%] text-[#5B5E71]">
-        {title1} <br />
+      <h2 className=" robot-condensed max-w-[18rem] mt-[1rem] text-center text-[3rem] font-700 leading-[100%] text-[#5B5E71]">
+        {title1} {" "}
         {title2}
       </h2>
       <p className="Montserrat text-center text-[1.6rem] font-300 leading-[100%] text-[#000000]/[0.8]">

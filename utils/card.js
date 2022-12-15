@@ -1,9 +1,9 @@
-import Image1 from "../public/assets/images/creaditech-development.png";
-import Image2 from "../public/assets/images/creaditech-mobile.png";
-import Image3 from "../public/assets/images/creaditech-designing.png";
-import Image4 from "../public/assets/images/creaditech-seo.png";
-import Image5 from "../public/assets/images/creaditech-database.png";
-import Image6 from "../public/assets/images/creaditech-cms.png";
+import Image1 from "../public/assets/images/web-development-services.svg";
+import Image2 from "../public/assets/images/cms-development-services.svg";
+import Image3 from "../public/assets/images/ecommerce-development-services.svg";
+import Image4 from "../public/assets/images/custom-web-development-services.svg";
+import Image5 from "../public/assets/images/wordpress.-development-services.svg";
+import Image6 from "../public/assets/images/php-development-services.svg";
 export const serviceCards = [
   {
     title: "website",
@@ -13,41 +13,44 @@ export const serviceCards = [
     link: "/web-development",
   },
   {
-    title: "Mobile App ",
+    title: "CMS Web ",
     title1: "Development",
     icon: Image2,
     styles: "h-[120px] w-[120px]",
-    link: "/mobile-app-development",
+    link: "/cms-development",
   },
   {
-    title: "Graphic",
-    title1: "Designing",
+    title: "Ecommerce Web",
+    title1: "Development",
     icon: Image3,
     styles: "h-[96px] w-[96px]",
-    link: "/logo-design",
+    link: "/ecommerce-website-development",
   },
   {
-    title: "Search Engine",
-    title1: "Optimization",
+    title: "Custom Web App",
+    title1: "Development",
     icon: Image4,
     styles: "h-[98px] w-[107px]",
-    link: "/seo",
+    link: "/custom-web-app-development",
   },
   {
-    title: "Database",
-    title1: "Solution",
+    title: "Wordpress",
+    title1: "Development",
     icon: Image5,
     styles: "h-[85px] w-[85px]",
-    link: "/database-solutions",
+    link: "/wordpress-development",
   },
 
   {
-    title: "CMS Web ",
+    title: "Php Web ",
     title1: "Development",
     icon: Image6,
     styles: "",
-    link: "/tailered-app-solution",
+    link: "/php-web-development",
   },
+
+
+  // below all are not included 
   {
     title: "Wordpress | Shopify",
     title1: "Development",

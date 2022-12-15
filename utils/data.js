@@ -54,6 +54,40 @@ export const data = [
     tagline: `Manage your content easily now by taking our cms website development services. Creaditech is
     one of the best cms development company in USA that has a team of expert CMS developers.`,
   },
+  {
+    page: "wordpress-development",
+    inforaphic: webInfoGraphic,
+    meta: {
+      title: "Custom Web Development In USA - Creaditech",
+      description:
+        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+      link: "services/web-development",
+    },
+    h1: {
+      pre: "",
+      main: "WordPress Development Services",
+      post: " By Expert WordPress Developers",
+    },
+    tagline: `Set up your blogging site or a fully functional and interactive business website on WordPress by
+    using our WordPress development services.`,
+  },
+  {
+    page: "custom-web-app-development",
+    inforaphic: webInfoGraphic,
+    meta: {
+      title: "Custom Web Development In USA - Creaditech",
+      description:
+        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+      link: "services/web-development",
+    },
+    h1: {
+      pre: "Custom Web",
+      main: "App Development",
+      post: " Services",
+    },
+    tagline: `We develop custom web applications according to your business needs. Our custom web
+    application development services can help your business grow exponentially.`,
+  },
   // {
   //   page: "branding",
 
