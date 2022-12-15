@@ -25,9 +25,15 @@ const MegaMenu = ({ classes, setHover }) => {
               }} src={item.logo} alt="" />
                 </div> */}
                 <Player
-
                   src={item.lotti}
                   className="h-[20rem] w-[20rem] relative "
+                  loop
+                  autoplay
+                  background="transparent"
+                />
+                <Player
+                  src={item.lotti}
+                  className="h-[90%] w-full relative "
                   loop
                   autoplay
                   background="transparent"
@@ -40,7 +46,7 @@ const MegaMenu = ({ classes, setHover }) => {
                     {item.children.map((items) => {
                       return (
                         <li className="group  hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
-                            <Link key={items.title} href={items.link}>
+                          <Link key={items.title} href={items.link}>
                             <span className="flex items-center gap-[1rem]">
                               {items.title}
                               <svg
@@ -75,8 +81,8 @@ const MegaMenu = ({ classes, setHover }) => {
                                 </ul>
                               </>
                             )}
-                        </Link>
-                          </li>
+                          </Link>
+                        </li>
                       );
                     })}
                   </ul>
