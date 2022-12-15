@@ -1379,6 +1379,262 @@ export const Content = [
     ],
   },
 
+
+
+
+
+  {
+    page: "seo",
+    inforaphic: {
+      img: wordpressInfoGraphic,
+      alt: "why you should use wordpress",
+    },
+    steps: {
+      mainHeading: {
+        one: "Our ",
+        two: " WordPress",
+        three: " Development Process",
+      },
+      // subHeading: "",
+      steps: [
+        {
+          title1: "Requirement",
+          title2: "Analysis",
+          para: "In this phase, we gather your requirements and identify your business goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Designing",
+          para: "In this phase, our expert designers create an appealing design for your website.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "Development",
+          para: "After approval of the design from your side, our developers begin developing your project.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "",
+          title2: "SEO-friendly",
+          para: "During the development phase, our marketing team works directly with the development team to ensure that your website is mobile-friendly and SEO-optimized.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Quality ",
+          title2: "assurance",
+          para: "In this phase, our QA analysts perform split testing to ensure that your website is free from any technical errors.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Launching",
+          title2: "the site",
+          para: "Our engineers will deploy and launch your website in the final phase.",
+          imgage: {
+            img: null,
+          },
+        },
+      ],
+    },
+    section1: {
+      heading:
+        "Expand Your Business By Taking Our WordPress Development Services",
+      paras: (
+        <>
+          <p>
+            In this competitive world, having a website is a must if you want to
+            remain in the market. However, developing your website and then
+            making your online presence is not a piece of cake; this is where
+            WordPress comes to help. WordPress is a CMS platform where you can
+            easily set up your blog or a fully functional business website.
+            Creaditech is one of the best WordPress development agencies in USA
+            that provides the best WordPress development services.
+          </p>
+
+          <p>
+            WordPress has some unique features and functions that cannot be
+            ignored; this is the reason that{" "}
+            <Link
+              href={"https://blog.hubspot.com/website/wordpress-stats"}
+              className="anchor"
+              rel="nofollow"
+              target="_blank"
+            >
+              WordPress is used by 43.2% of all websites on the Internet.
+            </Link>{" "}
+            Apart from that, it is one of the leading CMS platforms having a
+            share of almost 65.2% of all websites using a CMS. However, if not
+            developed by expert WordPress developers, a WordPress website won't
+            benefit you; therefore, you shall always take WordPress website
+            development services from expert companies like Creaditech.
+          </p>
+          <p>
+            By taking our WordPress web development services, you can expand
+            your business by increasing your site’s functionality. Contact us if
+            you are a blogger, freelancer, or company, and get a fully
+            functional and scalable WordPress website within a few days.
+          </p>
+        </>
+      ),
+      image: { img: wordpressDev, alt: "wordpress development services" },
+      link: "",
+    },
+    ecommerceExtra: false,
+    section2: {
+      heading: "Achieve Your Goals Using WordPress Technology",
+      paras: (
+        <>
+          <p>
+            What makes WordPress so popular is the ease of use that it offers.
+            Someone with zero coding knowledge can easily add or update content
+            within a few minutes on WordPress. Because of its extensive themes
+            and plugins, WordPress is an all-one solution for commercial
+            websites and personal blogs. Being the top-rated{" "}
+            <Link href={"https://creaditech.com"} className="anchor">
+              web development company
+            </Link>
+            in the USA, Creaditech realizes the importance of WordPress and
+            therefore offers robust WordPress development services to its
+            clients.
+          </p>
+          <p>
+            At Creaditech, we are always ready to cater to any sort of web
+            development challenge. Our expert web developers can create any
+            WordPress website according to your requirements. Our WordPress
+            website development services include theme and plugin development,
+            WordPress migration, 3rd party API integration, and much more.
+          </p>
+          <p>
+            We have more than 8 years of developing WordPress websites. Our
+            experience over the years has helped us further improve our custom
+            WordPress development services. Therefore, we assure you that you
+            will get a fully functional and responsive WordPress website that
+            will help you achieve your goals.
+          </p>
+        </>
+      ),
+      link: "",
+    },
+    cmsExtra: {
+      heading: "Our Wide Range Of WordPress Development Services:",
+      cards: [
+        {
+          title: "PSD To WordPress Conversion",
+          para: "Our designers and developers understand your requirements and convert your PSD files into fully responsive and W3C-validated WordPress themes.",
+        },
+        {
+          title: "WordPress theme customization",
+          para: "We provide WordPress theme customization so that if you have an already purchased theme and want to modify it, we can do that for you.",
+        },
+        {
+          title: "WordPress Plugin Development",
+          para: "We provide custom plugin development services so that you can get a WordPress plugin developed according to your requirements.",
+        },
+        {
+          title: "Custom WordPress development",
+          para: "From custom theme development to customizing the WordPress dashboard, we provide custom WordPress development services at affordable rates..",
+        },
+        {
+          title: "Maintenance and support",
+          para: "We provide maintenance and support services so that your WordPress site remains updated and free from any technical errors.",
+        },
+        {
+          title: "E-commerce Development",
+          para: `With the help of WooCommerce, we  provide ecommerce website development services on WordPress.`,
+        },
+      ],
+    },
+    blackSection: false,
+    section3: {
+      heading: "Why Choose Creaditech To Get Your WordPress Website Developed?",
+      paras: (
+        <>
+          <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
+            Creaditech is one of the best WordPress development agencies in the
+            USA; we have successfully delivered 300+ WordPress projects as of
+            yet. Below are a few reasons on why you shall take our WordPress
+            development services:
+          </p>
+          <ul className="mt-[2rem] flex flex-col ">
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">1)</span>We have a team of expert
+              WordPress developers and designers.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">2)</span>We deliver websites that are
+              fully responsive and highly optimized for SEO..
+            </li>
+            <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">3)</span>Your website will be highly
+              secure and scalable.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">4)</span>
+              You can reach us anytime, 24/7, through calls and emails.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">5)</span> We provide support and
+              maintenance after delivering and deploying the project.
+            </li>
+          </ul>
+        </>
+      ),
+      image: { img: wordpressExpert, alt: "wordpress developers" },
+    },
+    faqs: [
+      {
+        q: "How much will it cost me to get a WordPress website developed?",
+        a: `It depends on several factors. For example, if you want to go with paid themes and plugins, it will
+        cost from $300 to $2500; if you want to go with a free theme, the price can go from $150 to $1000.`,
+      },
+      {
+        q: "Is WordPress good for website development?",
+        a: `WordPress is one of the most used CMS platforms and is preferred by many developers for website
+        development.`,
+      },
+      {
+        q: "How long will it take to get my WordPress website developed?",
+        a: `It depends on your requirements. If your requirements are limited and clearly defined, it will take 10 to
+        15 days to develop your WordPress website.`,
+      },
+      {
+        q: "Can I get an Ecommerce store developed on WordPress?",
+        a: `Yes, you can get a fully responsive and user-friendly ecommerce store with the help of the
+        WooCommerce plugin.`,
+      },
+      {
+        q: "Do you provide support after the completion of the project?",
+        a: `Being a reputable and trusted web development company in the USA, we provide full support after the
+        completion of your projects.`,
+      },
+      {
+        q: "Will I be kept in the loop throughout the development process?",
+        a: `Yes, the project manager will be in direct touch with you and will provide you with regular updates on
+        your project.`,
+      },
+      {
+        q: "Will my website be SEO-optimized?",
+        a: `Yes, our marketing team works directly with the developers to ensure that your website is fully
+        responsive and SEO-optimized.`,
+      },
+      {
+        q: "Do you provide other CMS development services too?",
+        a: `Yes, we also provide other CMS development services, including Magento, Drupal, Shopify, and custom
+        CMS development.`,
+      },
+    ],
+  },
   //   {
   //     page: "branding",
   //     section1: {
