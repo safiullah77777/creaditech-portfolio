@@ -5,6 +5,7 @@ import { List } from "../../utils/consts";
 import arrow from "../../public/assets/images/icons/arrow-fa2.svg";
 import { Player } from "@lottiefiles/react-lottie-player";
 import loti from "../../public/assets/videos/new.json";
+import lotis from "../../public/assets/images/mega-web-development.json";
 
 const MegaMenu = ({ classes, setHover }) => {
   return (
@@ -33,7 +34,7 @@ const MegaMenu = ({ classes, setHover }) => {
                   // background="transparent"
                 />
                 <Player
-                  src={loti}
+                  src={lotis}
                   className="h-[20rem] w-[20rem] relative "
                   loop
                   autoplay
