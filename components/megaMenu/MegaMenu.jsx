@@ -26,7 +26,7 @@ const MegaMenu = ({ classes, setHover }) => {
                 </div> */}
                 <Player
                   src={{...item.lotti}}
-                  className="h-[20rem] w-[20rem] relative"
+                  // className="h-[20rem] w-[20rem] relative"
                   loop
                   autoplay
                   // background="transparent"
