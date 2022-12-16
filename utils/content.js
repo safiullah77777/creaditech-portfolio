@@ -1449,7 +1449,7 @@ export const Content = [
     },
     section1: {
       heading:
-        "Generate More Traffic And Conversions By Taking Our SEO Services:",
+        "Generate More Traffic And Conversions By Taking Our SEO Services",
       paras: (
         <>
           <p>
@@ -1497,7 +1497,7 @@ export const Content = [
     ecommerceExtra: false,
     section2: {
       heading:
-        "Edge Out Your Competitors With Our Search Engine Optimization Service:",
+        "Edge Out Your Competitors With Our Search Engine Optimization Service",
       paras: (
         <>
           <p>
@@ -1624,5 +1624,351 @@ export const Content = [
       },
     ],
   },
- 
+  {
+    page: "content-creation",
+    inforaphic: { img: webInfoGraphic, alt: "" },
+    steps: {
+      mainHeading: {
+        one: "How We Create A",
+        two: " Content Strategy",
+        three: "",
+      },
+      // subHeading: "",
+      steps: [
+        {
+          title1: "Analyze",
+          title2: " and audit",
+          para: "In this phase, we analyze your business and perform an in-depth audit to understand your business goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Identify",
+          title2: "Audience",
+          para: "In the 2nd phase, we identify your audience based on your business goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Content",
+          title2: "Creation",
+          para: "In the 3rd phase, our content creators begin creating content based on your audience and business goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Content",
+          title2: "Optimization",
+          para: "In this phase, our editorial team optimizes your content for your readers and search engines.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Content",
+          title2: "Promotion",
+          para: "The content is then promoted via multiple channels like influencer marketing.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Content",
+          title2: "Reporting",
+          para: "We publish content on a regular schedule and measure success.",
+          imgage: {
+            img: null,
+          },
+        },
+      ],
+    },
+    section1: {
+      heading:
+        "Increase Visitors To Your Site By Taking Our Content Creation Services",
+      paras: (
+        <>
+          <p>
+            There's no doubt that visuals are appealing and attention-grabbing, but one cannot deny the importance of high-quality content. You might have heard many people saying that "Content is the King". It is true because appealing content is necessary to grab visitors or generate leads from your website.
+            According to {" "}
+            <Link href={"https://www.hubspot.com/hubfs/State-of-Marketing (2).pdf"} className="anchor" target={"_blank"} rel="nofollow">
+              Hubspot,
+            </Link>{" "}
+            82% of marketers actively invest in content marketing. Therefore, to increase brand awareness and your visitors, you must look to take content creation services from a reliable content creation service like Creaditech.
+          </p>
+
+          <p>
+            Creaditech is one of the USA's most trusted and reliable content creation services. We have more than 1000 professional writers, and we believe that knowledge is power. Our writers know the search engine updates and your readers; therefore, they deliver appealing content that will boost your search engine rankings and help your business reach more qualified leads. Explore our content creation services now and increase visitors to your site.
+          </p>
+
+        </>
+      ),
+      image: { img: webDev, alt: "" },
+      link: "",
+    },
+    section2: {
+      heading: "Content Creation Services To Increase Your ROI",
+      paras: (
+        <>
+          <p>
+            Being a reliable content creation service Creaditech provides content creation services that will improve your brand identity and will increase your Return On Investment (ROI). No matter which type of content you want to get written, our writers can write any type of content, including blog posts, press releases, product descriptions, social media posts, landing page content, e-books, email templates, and many more. Let us know your requirements, and we will assign the perfect writer to you.
+          </p>
+          <p>
+          Ranging from social media content creation services to website content creation services, Creaditech is an all-in-one solution for all your content creation needs. Our expert writers not only write in sales languages because they understand that users are always bombarded with advertisements and are fed up with that; therefore, they create content that informs your clients and customers about the problems that your business can solve for them.
+          </p>
+
+          <p>
+          The secret to our content creation strategy is extensive research and our highly motivated writing and editorial team. So, without any 2nd thoughts, take our content generation services now and save more money by increasing your ROI.
+          </p>
+        </>
+      ),
+      link: "",
+    },
+    blackSection: {
+      heading: "Creaditech Offers Content Creation Service At Affordable Rates",
+      paras: `At Creaditech, we just don't create content; instead, we create content that sells that too at affordable rates. The price of our content writing services may vary depending on the type of content you require, your targeted audience, and your competitors. However, we assure you that we will find a solution that suits your budget, and we will deliver top-notch quality content that will generate more conversions for your business`,
+    },
+    section3: {
+      heading: "Why Should You Take Content Creation Services From Creaditech?",
+      paras: (
+        <>
+          <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
+          Being a reliable content creation service, Creaditech has many features that distinguish us from other content writing agencies. Below are a few reasons on why you shall take our content creations services:
+          </p>
+          <ul className="mt-[2rem] flex flex-col ">
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">1)</span>We have a highly motivated and dedicated team of content creators.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">2)</span>Our content creators will create appealing content that will deliver you astonishing results.
+            </li>
+            <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">3)</span>We have a fast turnaround time.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">4)</span>We have a separate quality-checking team that proofreads the content before delivering it to you.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">5)</span>You can contact us anytime.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">6)</span>We allow you to get in touch with the writer directly.
+            </li>
+          </ul>
+        </>
+      ),
+      image: { img: hireExpert, alt: "" },
+    },
+    ecommerceExtra: false,
+    faqs: [
+      {
+        q: "Does the content you deliver unique and original?",
+        a: `Yes, our writers deliver 100% unique and original content. They start each task from scratch and conduct deep research to deliver top-notch quality content`,
+      },
+      {
+        q: "Do I own the content that you write for me?",
+        a: `Yes, you get the copyright of the content that we deliver to you.`,
+      },
+      {
+        q: "What is the cost of your content creation service?",
+        a: `The cost of our content creation service depends on your requirements like which type of content you want, the number of words, the targeted audience, etc.`,
+      },
+      {
+        q: "Do you provide a long-term contract?",
+        a: `Yes, we do provide a long-term contract`,
+      },
+      {
+        q: "Do you provide revisions?",
+        a: `Absolutely yes, we provide unlimited revisions until you’re not satisfied.`,
+      },
+      {
+        q: "Is the content SEO-optimized?",
+        a: `Yes, our content creators and editors are aware of the latest google updates; therefore, they deliver SEO-optimized content that is also appealing to your readers.`,
+      },
+      {
+        q: "What services do you offer under content creation?",
+        a: `From social media to web content creation services, we provide blog posts, articles, newsletters, press releases, social media posts, product descriptions, e-book writing, ghostwriting, video content, white papers, and many more.`,
+      },
+      {
+        q: "Can you write content urgently?",
+        a: `Yes, our content creators can create content on an urgent basis without compromising the quality of the content.`,
+      },
+    ],
+    cmsExtra: false,
+  },
+
+
+  {
+    page: "sem",
+    inforaphic: { img: webInfoGraphic, alt: "" },
+    steps: {
+      mainHeading: {
+        one: "Our",
+        two: " SEM",
+        three: "Process",
+      },
+      // subHeading: "",
+      steps: [
+        {
+          title1: "Understanding",
+          title2: "your business",
+          para: "We hold multiple meetings with you to understand your business and your goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Landing page",
+          title2: "optimization",
+          para: "Our SEM experts create your campaign strategy and optimize your landing page based on your business goals.",
+          imgage: {
+            img: null,
+          },
+        },
+        
+        {
+          title1: "Keyword",
+          title2: "Research",
+          para: "Our experts find low CPC and high-converting keywords to maximize your ROI.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Campaign",
+          title2: "Launch",
+          para: "After finalizing the campaign and a well-designed landing page, our SEM experts launch your campaign and manage your campaign settings.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "A/B",
+          title2: "Testing",
+          para: "Our experts perform A/B testing on ad copies to identify which one gives the best response.",
+          imgage: {
+            img: null,
+          },
+        },
+        {
+          title1: "Analysis",
+          title2: "",
+          para: "After successfully launching the campaign and identifying the best ad copy, we track and analyze the campaign based on your KPIs, click-through rate (CTR), and quality score.",
+          imgage: {
+            img: null,
+          },
+        },
+      ],
+    },
+    section1: {
+      heading:
+        "SEM Services To Boost Your Online Presence",
+      paras: (
+        <>
+          <p>
+          Search engine marketing (SEM) is one of the best-paid marketing strategies to boost your online business. Through SEM, you promote your content to show on top of the search engine result pages based on your targeted keyword. SEM is necessary because it boosts your online presence;
+            according to a study, the first 3 ads on SERPs receive  {" "}
+            <Link href={"https://www.powertraffick.com/ppc-trends-and-statistics"} className="anchor" target={"_blank"} rel="nofollow">
+              46% of all clicks,
+            </Link>{" "}
+            and it is also one of the top 3 resources for website conversions. So, to boost your online presence take SEM services from Creaditech.
+          </p>
+
+          <p>
+          Creaditech has a team of expert digital marketers who do not believe in creating the same strategy for all businesses. As a reliable SEM services company, we believe that every business requires a custom digital marketing strategy. We strategize, implement, split test, and analyze the campaigns to monitor their performance to achieve the best ROI.
+          </p>
+          <p>
+          Our digital marketers aim is to provide conversions and not just clicks for your business. So, without any 2nd thoughts, take our SEM services now and boost your online presence.
+          </p>
+
+        </>
+      ),
+      image: { img: webDev, alt: "" },
+      link: "",
+    },
+    section2: {
+      heading: "Boost Your ROI By Taking Our Search Engine Marketing Services",
+      paras: (
+        <>
+          <p>
+          Consumers love to perform online research about a product or service before spending on it. Search engine marketing is a cost-efficient method to connect your brand with your customers. You can target your specific audience based on their online behavior and position your ads precisely through SEM. SEM is a strategy in which you don't have to pay to show your ads; instead, you only have to pay when a user clicks your ad, i.e., it works on a pay-per-click model (PPC).
+          </p>
+          <p>
+          Our search engine marketing experts identify your audience, find relevant keywords, and bid on them so that they can bring more traffic and conversions to your website, thus boosting your ROI. Based on your industry and business goals, our SEM experts can create any type of paid campaign, including search ads, media ads, video ads, shopping ads, mobile-app-specific ads, etc. Apart from SEM services, Creaditech also offers SEO services so that your brand gets organic traffic too.
+          </p>
+        </>
+      ),
+      link: "",
+    },
+    blackSection: false,
+    section3: {
+      heading: "Why Choose Creaditech For SEM Services?",
+      paras: (
+        <>
+          <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
+          Being a reliable SEM services company, Creaditech has many features that make us stand apart from our competitors. Here's what Creaditech has:
+          </p>
+          <ul className="mt-[2rem] flex flex-col ">
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">1)</span>We have a dedicated and certified team of SEM experts who create the best SEM strategy according to your business and budget.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">2)</span>We give each of our client’s consistent attention.
+            </li>
+            <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">3)</span>We provide weekly reports on the whole strategy.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">4)</span>We offer custom SEM plans.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">5)</span>Our SEM pricing is affordable.
+            </li>
+            <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
+              <span className="mr-[1rem]">6)</span>You can contact us anytime.
+            </li>
+          </ul>
+        </>
+      ),
+      image: { img: hireExpert, alt: "" },
+    },
+    ecommerceExtra: false,
+    faqs: [
+      {
+        q: "What is SEM?",
+        a: `SEM is a paid advertising strategy on search engine results in which you market your product or services to your targeted audience. It works on a pay-per-click model (PPC).`,
+      },
+      {
+        q: "Why is Search Engine Marketing Important?",
+        a: `Search engine marketing is important because growing your brand online is getting tougher day by day. Search engine marketing is a proven way to grow your brand and target your specific audience.`,
+      },
+      {
+        q: "How much do SEM services cost?",
+        a: `The price of our SEM services depends upon your business industry and goals.`,
+      },
+      {
+        q: "What is the difference between SEO and SEM?",
+        a: `SEO is a method in which you reach the top of the search results without spending much; however, it takes time. SEO allows you to grab organic traffic. SEM is a paid marketing technique in which you carry out promotions through multiple marketing channels`,
+      },
+      {
+        q: "What industries have you worked with?",
+        a: `We have worked with almost all major industries, including e-commerce, hospitality, beauty, pharma, tour management, etc.`,
+      },
+      {
+        q: "What tools do you use to manage digital campaigns?",
+        a: `Our SEM experts use a wide range of tools including google keyword planner, SEMrush, Ahrefs, SpyFy, etc.`,
+      },
+      {
+        q: "Will I get reports of my campaign?",
+        a: `Yes, we provide weekly reports of how your campaign is performing.`,
+      },
+      {
+        q: "Do you provide SEO services too?",
+        a: `Yes, we do provide SEO services also. Contact us now and get a customized SEO package.`,
+      },
+    ],
+    cmsExtra: false,
+  },
 ];

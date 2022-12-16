@@ -120,6 +120,38 @@ export const data = [
     },
     tagline: `Get on top of the search results and grab more traffic by taking our SEO services. We are an SEO company that will help your brand be discovered and grow.`,
   },
+  {
+    page: "content-creation",
+    inforaphic: webInfoGraphic,
+    meta: {
+      title: "Custom Web Development In USA - Creaditech",
+      description:
+        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+      link: "services/web-development",
+    },
+    h1: {
+      pre: "Content Creation Services  ",
+      main: " By Expert",
+      post: " Content Writers",
+    },
+    tagline: `Increase your brand awareness and tell visitors what you do by using our content creation services.`,
+  },
+  {
+    page: "sem",
+    inforaphic: webInfoGraphic,
+    meta: {
+      title: "Custom Web Development In USA - Creaditech",
+      description:
+        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+      link: "services/web-development",
+    },
+    h1: {
+      pre: "SEM Services  ",
+      main: "",
+      post: "To Increase Your Customers",
+    },
+    tagline: `Getting organic traffic is great but takes time, so to get early success and increase your customers and sales, you shall look to take SEM services from Creaditech.`,
+  },
   // {
   //   page: "branding",
 
