@@ -43,6 +43,7 @@ import Link from "next/link";
 import { expertiseIcons } from "../utils/expertiseIcons";
 import Card10 from "../components/card10/card10";
 import { blogs } from "../utils/blogs";
+import Banner3 from "../components/banner3/Banner3";
 const Home = () => {
   const carouselRef = React.useRef(null);
   const carouselRef1 = React.useRef(null);
@@ -145,7 +146,8 @@ const Home = () => {
     <div className="flex min-h-screen flex-col">
       <MetaHead />
       <Header />
-      <Banner />
+      {/* <Banner /> */}
+      <Banner3 />
       {/* <div className="grid grid-cols-3 max-[850px]:grid-cols-2 px-[0rem] pt-[0rem] max-[850px]:px-0">
         <Card10
           para={"Subheading description here for more details"}

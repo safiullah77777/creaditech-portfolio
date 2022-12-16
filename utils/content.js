@@ -27,6 +27,17 @@ import seoInfoGraphic from "../public/assets/images/why-your-business-needs-SEO.
 import seoDev from "../public/assets/images/SEO-services.webp";
 import seoExpert from "../public/assets/images/SEO-specialists.svg";
 
+
+import semInfoGraphic from "../public/assets/images/why-your-business-needs-SEM.webp";
+import semDev from "../public/assets/images/SEM-services.webp";
+import semExpert from "../public/assets/images/SEM-experts.svg";
+
+
+import contentInfoGraphic from "../public/assets/images/why-quality-content-is-important.webp";
+import contentDev from "../public/assets/images/Content-creation-services.webp";
+import contentExpert from "../public/assets/images/Content-creators.svg";
+
+
 import logos_woocommerce from "../public/assets/images/icons/logos-woocommerce.svg";
 import open_cart from "../public/assets/images/icons/open-cart.svg";
 import square_space from "../public/assets/images/icons/sqaure-space.svg";
@@ -37,6 +48,7 @@ export const Content = [
   {
     page: "web-development",
     inforaphic: { img: webInfoGraphic, alt: "" },
+    pricing:false,
     section1: {
       heading:
         "Bring Your Business Idea On The Internet By Taking Our Web Development Services",
@@ -1626,7 +1638,7 @@ export const Content = [
   },
   {
     page: "content-creation",
-    inforaphic: { img: webInfoGraphic, alt: "" },
+    inforaphic: { img: contentInfoGraphic, alt: "why quality content is important" },
     steps: {
       mainHeading: {
         one: "How We Create A",
@@ -1705,7 +1717,7 @@ export const Content = [
 
         </>
       ),
-      image: { img: webDev, alt: "" },
+      image: { img: contentDev, alt: "content creation services" },
       link: "",
     },
     section2: {
@@ -1759,7 +1771,7 @@ export const Content = [
           </ul>
         </>
       ),
-      image: { img: hireExpert, alt: "" },
+      image: { img: contentExpert, alt: "content creators" },
     },
     ecommerceExtra: false,
     faqs: [
@@ -1798,11 +1810,10 @@ export const Content = [
     ],
     cmsExtra: false,
   },
-
-
   {
     page: "sem",
-    inforaphic: { img: webInfoGraphic, alt: "" },
+    pricing:false,
+    inforaphic: { img: semInfoGraphic, alt: "why your business needs SEM" },
     steps: {
       mainHeading: {
         one: "Our",
@@ -1885,7 +1896,7 @@ export const Content = [
 
         </>
       ),
-      image: { img: webDev, alt: "" },
+      image: { img: semDev, alt: "SEM services" },
       link: "",
     },
     section2: {
@@ -1932,7 +1943,7 @@ export const Content = [
           </ul>
         </>
       ),
-      image: { img: hireExpert, alt: "" },
+      image: { img: semExpert, alt: "SEM experts" },
     },
     ecommerceExtra: false,
     faqs: [

@@ -24,9 +24,9 @@ export const data = [
     page: "ecommerce-website-development",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Custom Web Development In USA - Creaditech",
+      title: "Ecommerce Website Development Services",
       description:
-        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+        "Boost your online sales and grow your customer reach by taking our ecommerce website development services.",
       link: "services/web-development",
     },
     h1: {
@@ -41,9 +41,9 @@ export const data = [
     page: "cms-development",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Custom Web Development In USA - Creaditech",
+      title: "CMS Development Services By Expert CMS Developers",
       description:
-        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+        "Manage your content easily now by taking our cms website development services. Creaditech is one of the best cms development company in USA that has a team of expert CMS developers.",
       link: "services/web-development",
     },
     h1: {
@@ -58,9 +58,9 @@ export const data = [
     page: "wordpress-development",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Custom Web Development In USA - Creaditech",
+      title: "WordPress Development Services By Expert WordPress Developers",
       description:
-        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+        "Set up your blogging site or a fully functional and interactive business website on WordPress by using our WordPress development services.",
       link: "services/web-development",
     },
     h1: {
@@ -108,15 +108,15 @@ export const data = [
     page: "seo",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Custom Web Development In USA - Creaditech",
+      title: "SEO Services To Boost Your Search Engine Rankings",
       description:
-        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+        "Get on top of the search results and grab more traffic by taking our SEO services. We are an SEO company that will help your brand be discovered and grow.",
       link: "services/web-development",
     },
     h1: {
       pre: "SEO Services  ",
       main: " To Boost Your",
-      post: " Search Engine Rankings:",
+      post: " Search Engine Rankings",
     },
     tagline: `Get on top of the search results and grab more traffic by taking our SEO services. We are an SEO company that will help your brand be discovered and grow.`,
   },
@@ -124,13 +124,13 @@ export const data = [
     page: "content-creation",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Custom Web Development In USA - Creaditech",
+      title: "Content Creation Services By Expert Content Writers",
       description:
-        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+        "Increase your brand awareness and tell visitors what you do by using our content creation services.",
       link: "services/web-development",
     },
     h1: {
-      pre: "Content Creation Services  ",
+      pre: "Content Creation Services ",
       main: " By Expert",
       post: " Content Writers",
     },
@@ -140,9 +140,9 @@ export const data = [
     page: "sem",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Custom Web Development In USA - Creaditech",
+      title: "SEM Services To Increase Your Customers",
       description:
-        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+        "Getting organic traffic is great but takes time, so to get early success and increase your customers and sales, you shall look to take SEM services from Creaditech.",
       link: "services/web-development",
     },
     h1: {
