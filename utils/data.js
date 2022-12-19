@@ -7,15 +7,15 @@ export const data = [
     inforaphic: webInfoGraphic,
 
     meta: {
-      title: "Custom Web Development In USA - Creaditech",
+      title: "Web Development Services - Creaditech",
       description:
-        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+        "Take our custom web development services and bring your business on the web. We are the best custom web development company in the USA that has a pool of expert web developers.",
       link: "services/web-development",
     },
     h1: {
-      pre: "Custom ",
+      pre: "",
       main: "Web Development",
-      post: " Company In The USA",
+      post: "services",
     },
     tagline: `Take our custom web development services and bring your business on the web. We are the
     best custom web development company in the USA that has a pool of expert web developers.`,
@@ -75,9 +75,9 @@ export const data = [
     page: "custom-web-app-development",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Custom Web Development In USA - Creaditech",
+      title: "Custom Web Development Services - Creaditech",
       description:
-        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+        "We develop custom web applications according to your business needs. Our custom web application development services can help your business grow exponentially.",
       link: "services/web-development",
     },
     h1: {
@@ -92,14 +92,14 @@ export const data = [
     page: "php-web-development",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Custom Web Development In USA - Creaditech",
+      title: "How we work on your PHP projects - Creaditech",
       description:
-        "Get your business reach sky level by getting your website developed by Creaditech.We provide custom web development in USA at affordable rates.",
+        "We suggest and develop powerful PHP solutions that will help your business grow.",
       link: "services/web-development",
     },
     h1: {
-      pre: "Custom",
-      main: " PHP Web Development",
+      pre: "PHP ",
+      main: " Web Development",
       post: " Services",
     },
     tagline: `We suggest and develop powerful PHP solutions that will help your business grow.`,

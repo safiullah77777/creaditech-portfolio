@@ -33,6 +33,7 @@ import { Content } from "../../utils/content";
 import contactForm from "../../services/fromService";
 import { toast } from "react-toastify";
 import Card10 from "../../components/card10/card10";
+import { shuffle } from "../../utils/functions";
 
 const Services = ({ datas }) => {
   const countings = ["one", "two", "three", "four", "five", "six"];
@@ -42,21 +43,7 @@ const Services = ({ datas }) => {
     setHydrated(true);
   }, []);
 
-  function shuffle(array) {
-    const newArray = [...array];
-    const length = newArray.length;
-
-    for (let start = 0; start < length; start++) {
-      const randomPosition = Math.floor(
-        (newArray.length - start) * Math.random()
-      );
-      const randomItem = newArray.splice(randomPosition, 1);
-
-      newArray.push(...randomItem);
-    }
-
-    return newArray;
-  }
+  
   const router = useRouter();
   const { serviceName } = router.query;
   const check = List.map((item) => item.children.map((item1) => item1)).reduce(
@@ -98,13 +85,7 @@ const Services = ({ datas }) => {
       toast.error("please fill the form.");
       return;
     }
-    // else if (!formData.phoneNo) {
-    //   toast.error("invalid phone no");
-    //   return;
-    // } else if (!formData.description) {
-    //   toast.error("invalid description");
-    //   return;
-    // }
+
     if (!nameregex.test(formData.name)) {
       toast.error(
         "invalid name.you can not use special characters in your name."
@@ -122,11 +103,6 @@ const Services = ({ datas }) => {
     setFormData({ name: "", email: "", phoneNo: "", url: "", description: "" });
   };
   if (!datas[0].page) return <Error404 />;
-
-  console.log(
-    check.filter((item) => !item.link.includes(serviceName)),
-    check
-  );
   return (
     <>
       <MetaHead

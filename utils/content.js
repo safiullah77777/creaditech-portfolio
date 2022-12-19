@@ -84,7 +84,7 @@ export const Content = [
           </p>
         </>
       ),
-      image: { img: webDev, alt: "" },
+      image: { img: webDev, alt: "web development services" },
       link: "",
     },
     section2: {
@@ -314,7 +314,7 @@ export const Content = [
           </p>
         </>
       ),
-      image: { img: ecommerce, alt: "" },
+      image: { img: ecommerce, alt: "ecommerce website development services" },
       link: "",
     },
     ecommerceExtra: {
