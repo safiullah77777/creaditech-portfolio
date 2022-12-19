@@ -24,7 +24,7 @@ export const data = [
     page: "ecommerce-website-development",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Ecommerce Website Development Services",
+      title: "Ecommerce Website Development Services - Creaditech",
       description:
         "Boost your online sales and grow your customer reach by taking our ecommerce website development services.",
       link: "services/web-development",
@@ -41,7 +41,7 @@ export const data = [
     page: "cms-development",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "CMS Development Services By Expert CMS Developers",
+      title: "CMS Development Services By Expert CMS Developers - Creaditech",
       description:
         "Manage your content easily now by taking our cms website development services. Creaditech is one of the best cms development company in USA that has a team of expert CMS developers.",
       link: "services/web-development",
