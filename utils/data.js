@@ -27,7 +27,7 @@ export const data = [
       title: "Ecommerce Website Development Services - Creaditech",
       description:
         "Boost your online sales and grow your customer reach by taking our ecommerce website development services.",
-      link: "services/web-development",
+      link: "services/ecommerce-website-development",
     },
     h1: {
       pre: "Ecommerce ",
@@ -44,7 +44,7 @@ export const data = [
       title: "CMS Development Services By Expert CMS Developers - Creaditech",
       description:
         "Manage your content easily now by taking our cms website development services. Creaditech is one of the best cms development company in USA that has a team of expert CMS developers.",
-      link: "services/web-development",
+      link: "services/cms-development",
     },
     h1: {
       pre: "",
@@ -61,7 +61,7 @@ export const data = [
       title: "WordPress Development Services - Creaditech",
       description:
         "Set up your blogging site or a fully functional and interactive business website on WordPress by using our WordPress development services.",
-      link: "services/web-development",
+      link: "services/wordpress-development",
     },
     h1: {
       pre: "WordPress",
@@ -78,7 +78,7 @@ export const data = [
       title: "Custom Web Development Services - Creaditech",
       description:
         "We develop custom web applications according to your business needs. Our custom web application development services can help your business grow exponentially.",
-      link: "services/web-development",
+      link: "services/custom-web-app-development",
     },
     h1: {
       pre: "Custom Web",
@@ -92,10 +92,10 @@ export const data = [
     page: "php-web-development",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "How we work on your PHP projects - Creaditech",
+      title: "PHP Web Development Services - Creaditech",
       description:
         "We suggest and develop powerful PHP solutions that will help your business grow.",
-      link: "services/web-development",
+      link: "services/php-development",
     },
     h1: {
       pre: "PHP ",
@@ -111,7 +111,7 @@ export const data = [
       title: "SEO Services To Boost Your Search Engine Rankings - Creaditech",
       description:
         "Get on top of the search results and grab more traffic by taking our SEO services. We are an SEO company that will help your brand be discovered and grow.",
-      link: "services/web-development",
+      link: "services/seo",
     },
     h1: {
       pre: "SEO Services  ",
@@ -127,7 +127,7 @@ export const data = [
       title: "Content Creation Services By Expert Content Writers - Creaditech",
       description:
         "Increase your brand awareness and tell visitors what you do by using our content creation services.",
-      link: "services/web-development",
+      link: "services/content-creation",
     },
     h1: {
       pre: "Content Creation Services ",
@@ -143,7 +143,7 @@ export const data = [
       title: "SEM Services To Increase Your Customers - Creaditech",
       description:
         "Getting organic traffic is great but takes time, so to get early success and increase your customers and sales, you shall look to take SEM services from Creaditech.",
-      link: "services/web-development",
+      link: "services/sem",
     },
     h1: {
       pre: "SEM Services  ",
