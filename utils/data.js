@@ -58,15 +58,15 @@ export const data = [
     page: "wordpress-development",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "WordPress Development Services By Expert WordPress Developers",
+      title: "WordPress Development Services - Creaditech",
       description:
         "Set up your blogging site or a fully functional and interactive business website on WordPress by using our WordPress development services.",
       link: "services/web-development",
     },
     h1: {
-      pre: "",
-      main: "WordPress Development Services",
-      post: " By Expert WordPress Developers",
+      pre: "WordPress",
+      main: " Development",
+      post: " Services",
     },
     tagline: `Set up your blogging site or a fully functional and interactive business website on WordPress by
     using our WordPress development services.`,
@@ -108,7 +108,7 @@ export const data = [
     page: "seo",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "SEO Services To Boost Your Search Engine Rankings",
+      title: "SEO Services To Boost Your Search Engine Rankings - Creaditech",
       description:
         "Get on top of the search results and grab more traffic by taking our SEO services. We are an SEO company that will help your brand be discovered and grow.",
       link: "services/web-development",
@@ -124,7 +124,7 @@ export const data = [
     page: "content-creation",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "Content Creation Services By Expert Content Writers",
+      title: "Content Creation Services By Expert Content Writers - Creaditech",
       description:
         "Increase your brand awareness and tell visitors what you do by using our content creation services.",
       link: "services/web-development",
@@ -140,7 +140,7 @@ export const data = [
     page: "sem",
     inforaphic: webInfoGraphic,
     meta: {
-      title: "SEM Services To Increase Your Customers",
+      title: "SEM Services To Increase Your Customers - Creaditech",
       description:
         "Getting organic traffic is great but takes time, so to get early success and increase your customers and sales, you shall look to take SEM services from Creaditech.",
       link: "services/web-development",
