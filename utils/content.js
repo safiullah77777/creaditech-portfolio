@@ -212,7 +212,6 @@ export const Content = [
     ],
     cmsExtra: false,
   },
-
   {
     cmsExtra: false,
     page: "ecommerce-website-development",
@@ -455,7 +454,6 @@ export const Content = [
       },
     ],
   },
-
   {
     page: "cms-development",
     inforaphic: { img: cmsInfoGraphic, alt: "why your business needs a cms" },
@@ -962,7 +960,6 @@ export const Content = [
       },
     ],
   },
-
   {
     page: "custom-web-app-development",
     inforaphic: {
@@ -1162,7 +1159,6 @@ export const Content = [
       },
     ],
   },
-
   {
     page: "php-web-development",
     inforaphic: {
@@ -1394,7 +1390,6 @@ export const Content = [
       },
     ],
   },
-
   {
     page: "seo",
     inforaphic: {

@@ -24,17 +24,17 @@ const Header = () => {
         </Link>
       </div>
       <ul className="flex w-full justify-center  gap-[4rem] max-[677px]:hidden min-[1000px]:gap-[8rem]">
-        <li className="flex    items-center justify-center">
-          <Link href="/creative-blog">
+        <li className="flex w-[11rem]   items-center justify-center">
+          <Link href="/blog">
             <p className="text-18 text-white">Blogs</p>
           </Link>
         </li>
-        <li className="flex    items-center justify-center">
+        <li className="flex  w-[11rem]  items-center justify-center">
           <Link href="/about-us">
             <p className="text-18 text-white">About</p>
           </Link>
         </li>
-        <li className="flex    items-center justify-center">
+        <li className="flex w-[11rem]    items-center justify-center">
           <Link href="/services">
             <p
               className="text-18 text-white"
@@ -57,17 +57,17 @@ const Header = () => {
             />
           </Link>
         </li>
-        <li className="flex   items-center justify-center">
+        <li className="flex w-[11rem]   items-center justify-center">
           <Link href="/our-clients">
             <p className="text-18 text-white">Our Works</p>
           </Link>
         </li>
-        <li className="flex    items-center justify-center">
+        <li className="flex  w-[11rem]   items-center justify-center">
           <Link href="/careers">
             <p className="text-18 text-white">Careers</p>
           </Link>
         </li>
-        <li className="flex    items-center justify-center">
+        <li className="flex  w-[11rem]  items-center justify-center">
           <Link href="/contact-us">
             <p className="text-18 text-white">Contact Us</p>
           </Link>
