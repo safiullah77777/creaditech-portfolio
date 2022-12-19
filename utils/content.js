@@ -1495,12 +1495,7 @@ export const Content = [
             results. So, without any 2nd thoughts, take our SEO services and
             generate more traffic and conversions for your business.
           </p>
-          <p>
-            By taking our WordPress web development services, you can expand
-            your business by increasing your site’s functionality. Contact us if
-            you are a blogger, freelancer, or company, and get a fully
-            functional and scalable WordPress website within a few days.
-          </p>
+
         </>
       ),
       image: { img: seoDev, alt: "seo services" },
