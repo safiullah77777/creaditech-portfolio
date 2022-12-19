@@ -1,4 +1,4 @@
-export function myArrow({ type, onClick, isEdge }) {
+export function myArrow({ type, onClick, consts }) {
     const pointer =
       type === consts.PREV ? (
         <svg
