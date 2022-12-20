@@ -27,16 +27,13 @@ import seoInfoGraphic from "../public/assets/images/why-your-business-needs-SEO.
 import seoDev from "../public/assets/images/SEO-services.webp";
 import seoExpert from "../public/assets/images/SEO-specialists.svg";
 
-
 import semInfoGraphic from "../public/assets/images/why-your-business-needs-SEM.webp";
 import semDev from "../public/assets/images/SEM-services.webp";
 import semExpert from "../public/assets/images/SEM-experts.svg";
 
-
 import contentInfoGraphic from "../public/assets/images/why-quality-content-is-important.webp";
 import contentDev from "../public/assets/images/Content-creation-services.webp";
 import contentExpert from "../public/assets/images/Content-creators.svg";
-
 
 import logos_woocommerce from "../public/assets/images/icons/logos-woocommerce.svg";
 import open_cart from "../public/assets/images/icons/open-cart.svg";
@@ -44,11 +41,36 @@ import square_space from "../public/assets/images/icons/sqaure-space.svg";
 import magento from "../public/assets/images/icons/magento.svg";
 import big_commerce from "../public/assets/images/icons/big-commerce.svg";
 import shopify from "../public/assets/images/icons/shopify.svg";
+
+import analysis from "../public/assets/images/icons/analysis.svg";
+import ecommerces from "../public/assets/images/icons/ecommerce.svg";
+import design from "../public/assets/images/icons/design.svg";
+import design1 from "../public/assets/images/icons/design1.svg";
+import seo from "../public/assets/images/icons/seo.svg";
+import testing from "../public/assets/images/icons/testing.svg";
+import testing2 from "../public/assets/images/icons/testing2.svg";
+import deployment from "../public/assets/images/icons/deployment.svg";
+import development from "../public/assets/images/icons/development.svg";
+import quality from "../public/assets/images/icons/quality.svg";
+import maintenance from "../public/assets/images/icons/maintenance.svg";
+import competitor from "../public/assets/images/icons/competitor.svg";
+import research from "../public/assets/images/icons/research.svg";
+import strategize from "../public/assets/images/icons/strategize.svg";
+import monitoring from "../public/assets/images/icons/monitoring.svg";
+import refine from "../public/assets/images/icons/refine.svg";
+import understanding from "../public/assets/images/icons/understanding.svg";
+import landing from "../public/assets/images/icons/landing.svg";
+import compaign from "../public/assets/images/icons/compaign.svg";
+import identification from "../public/assets/images/icons/identification.svg";
+import contentCreation from "../public/assets/images/icons/content_creation.svg";
+import contentOptimization from "../public/assets/images/icons/content_optimization.svg";
+import promotion from "../public/assets/images/icons/promotion.svg";
+
 export const Content = [
   {
     page: "web-development",
     inforaphic: { img: webInfoGraphic, alt: "" },
-    pricing:false,
+    pricing: false,
     section1: {
       heading:
         "Bring Your Business Idea On The Internet By Taking Our Web Development Services",
@@ -229,7 +251,8 @@ export const Content = [
           title2: "Analysis",
           para: "We start by understanding your requirements and finding your business goals.",
           imgage: {
-            img: null,
+            img: analysis,
+            alt: "requirement analysis",
           },
         },
         {
@@ -237,7 +260,8 @@ export const Content = [
           title2: "Platform",
           para: "After gathering your requirements, we suggest an e-commerce platform according to your business needs.",
           imgage: {
-            img: null,
+            img: ecommerces,
+            alt: "e-commerce platform",
           },
         },
         {
@@ -245,7 +269,8 @@ export const Content = [
           title2: "and Development",
           para: "Our designers create the layout of your store, and our developers start developing it (after your approval)",
           imgage: {
-            img: null,
+            img: design,
+            alt: "design and development",
           },
         },
         {
@@ -253,7 +278,8 @@ export const Content = [
           title2: "SEO-friendly:",
           para: "After development, our marketing team performs multiple audits and ensures that your e-commerce store is SEO-friendly.",
           imgage: {
-            img: null,
+            img: seo,
+            alt: "seo friendly",
           },
         },
         {
@@ -261,7 +287,8 @@ export const Content = [
           title2: "Testing",
           para: "Our QA analysts perform split testing to ensure that your website is error-free.",
           imgage: {
-            img: null,
+            img: testing,
+            alt: "testing",
           },
         },
         {
@@ -269,7 +296,8 @@ export const Content = [
           title2: "and Launching",
           para: "After successful testing, our engineers deploy your store to the hosting and launch it.",
           imgage: {
-            img: null,
+            img: deployment,
+            alt: "deployment and launching",
           },
         },
       ],
@@ -470,7 +498,8 @@ export const Content = [
           title2: "Analysis",
           para: "We start by understanding your requirements and finding your business goals.",
           imgage: {
-            img: null,
+            img: analysis,
+            alt: "requirement analysis",
           },
         },
         {
@@ -478,7 +507,8 @@ export const Content = [
           title2: "Design",
           para: "Our CMS designers create an appealing design for your CMS.",
           imgage: {
-            img: null,
+            img: design1,
+            alt: "design",
           },
         },
         {
@@ -486,7 +516,8 @@ export const Content = [
           title2: "Development",
           para: "Our CMS developers develop a CMS based on the design and functionalities.",
           imgage: {
-            img: null,
+            img: development,
+            alt: "development",
           },
         },
         {
@@ -494,7 +525,8 @@ export const Content = [
           title2: "SEO-friendly:",
           para: "After development, our marketing team performs multiple audits and ensures that your e-commerce store is SEO-friendly.",
           imgage: {
-            img: null,
+            img: seo,
+            alt: "seo friendly",
           },
         },
         {
@@ -502,7 +534,8 @@ export const Content = [
           title2: "Testing",
           para: "Our QA analysts perform split testing to ensure that your website is error-free.",
           imgage: {
-            img: null,
+            img: testing,
+            alt: "testing",
           },
         },
         {
@@ -510,7 +543,8 @@ export const Content = [
           title2: "",
           para: " Our engineers then deploy your CMS to your hosting.",
           imgage: {
-            img: null,
+            img: deployment,
+            alt: "deployment",
           },
         },
       ],
@@ -727,7 +761,8 @@ export const Content = [
           title2: "Analysis",
           para: "In this phase, we gather your requirements and identify your business goals.",
           imgage: {
-            img: null,
+            img: analysis,
+            alt: "requirement analysis",
           },
         },
         {
@@ -735,7 +770,8 @@ export const Content = [
           title2: "Designing",
           para: "In this phase, our expert designers create an appealing design for your website.",
           imgage: {
-            img: null,
+            img: design1,
+            alt: "designing",
           },
         },
         {
@@ -743,7 +779,8 @@ export const Content = [
           title2: "Development",
           para: "After approval of the design from your side, our developers begin developing your project.",
           imgage: {
-            img: null,
+            img: development,
+            alt: "development",
           },
         },
         {
@@ -751,7 +788,8 @@ export const Content = [
           title2: "SEO-friendly",
           para: "During the development phase, our marketing team works directly with the development team to ensure that your website is mobile-friendly and SEO-optimized.",
           imgage: {
-            img: null,
+            img: seo,
+            alt: "seo friendly",
           },
         },
         {
@@ -759,7 +797,8 @@ export const Content = [
           title2: "assurance",
           para: "In this phase, our QA analysts perform split testing to ensure that your website is free from any technical errors.",
           imgage: {
-            img: null,
+            img: quality,
+            alt: "quality assurance",
           },
         },
         {
@@ -767,7 +806,8 @@ export const Content = [
           title2: "the site",
           para: "Our engineers will deploy and launch your website in the final phase.",
           imgage: {
-            img: null,
+            img: deployment,
+            alt: "launching the site",
           },
         },
       ],
@@ -979,7 +1019,8 @@ export const Content = [
           title2: "and research",
           para: "In this phase, we will hold multiple meetings with you to clearly understand your business requirements and goals.",
           imgage: {
-            img: null,
+            img: analysis,
+            alt: "meeting and research",
           },
         },
         {
@@ -987,7 +1028,8 @@ export const Content = [
           title2: "",
           para: "In the second phase, our designers design your web application and present you with a prototype.",
           imgage: {
-            img: null,
+            img: design1,
+            alt: "prototype",
           },
         },
         {
@@ -995,7 +1037,8 @@ export const Content = [
           title2: "Development",
           para: "After getting approval for the protype from your side, our developers start developing the project.",
           imgage: {
-            img: null,
+            img: development,
+            alt: "development",
           },
         },
         {
@@ -1003,7 +1046,8 @@ export const Content = [
           title2: "SEO-friendly",
           para: "During the development of your project, our marketing team ensures that your website or web application is SEO-optimized and mobile-friendly.",
           imgage: {
-            img: null,
+            img: seo,
+            alt: "seo friendly",
           },
         },
         {
@@ -1011,7 +1055,8 @@ export const Content = [
           title2: "Testing",
           para: "In this phase, our QA analysts perform split testing to ensure that your web application is free from errors.",
           imgage: {
-            img: null,
+            img: testing,
+            alt: "testing",
           },
         },
         {
@@ -1019,7 +1064,8 @@ export const Content = [
           title2: "",
           para: "In the final phase, our engineers launch your web application and make it go live on the internet.",
           imgage: {
-            img: null,
+            img: deployment,
+            alt: "launch",
           },
         },
       ],
@@ -1178,7 +1224,8 @@ export const Content = [
           title2: "And Development",
           para: "We start by understanding your requirements and finding your business goals; based on your requirements, we propose you an estimated solution.",
           imgage: {
-            img: null,
+            img: analysis,
+            alt: "requirement analysis and development",
           },
         },
         {
@@ -1186,7 +1233,8 @@ export const Content = [
           title2: "Designing",
           para: "We prepare the contract and start designing the application's architecture.",
           imgage: {
-            img: null,
+            img: design1,
+            alt: "preperation and designing",
           },
         },
         {
@@ -1194,7 +1242,8 @@ export const Content = [
           title2: "Development",
           para: "Our expert PHP developers then begin developing your application.",
           imgage: {
-            img: null,
+            img: development,
+            alt: "development",
           },
         },
         {
@@ -1202,7 +1251,8 @@ export const Content = [
           title2: "Testing",
           para: "Our QA analysts perform split testing both on software and manually to ensure that your application is error-free.",
           imgage: {
-            img: null,
+            img: testing,
+            alt: "testing",
           },
         },
         {
@@ -1210,7 +1260,8 @@ export const Content = [
           title2: "Deployment",
           para: "Our deployment team then deploys the application to your site.",
           imgage: {
-            img: null,
+            img: deployment,
+            alt: "deployment",
           },
         },
         {
@@ -1218,7 +1269,8 @@ export const Content = [
           title2: "Maintenance",
           para: "We provide maintenance and support that includes new features implementation, new versions, data backups, etc.",
           imgage: {
-            img: null,
+            img: maintenance,
+            alt: "support and maintenance",
           },
         },
       ],
@@ -1409,7 +1461,8 @@ export const Content = [
           title2: " and audit",
           para: "In this phase, we listen to your business requirements and begin analyzing and auditing your website and your business.",
           imgage: {
-            img: null,
+            img: analysis,
+            alt: "Analyze and audit",
           },
         },
         {
@@ -1417,7 +1470,8 @@ export const Content = [
           title2: "Analysis",
           para: "In the 2nd phase, our SEO specialists identify your competitors and research their strategy to create one that sets you apart from them.",
           imgage: {
-            img: null,
+            img: competitor,
+            alt: "competitor analysis",
           },
         },
         {
@@ -1425,7 +1479,8 @@ export const Content = [
           title2: "research",
           para: "This is the most critical phase and involves finding relevant keywords for your business. Our SEO specialists analyze keyword search volume and difficulty and then prepare keywords that will be the most valuable for your business growth.",
           imgage: {
-            img: null,
+            img: research,
+            alt: "keyword research",
           },
         },
         {
@@ -1433,7 +1488,8 @@ export const Content = [
           title2: "and Execute",
           para: "Once our SEO specialists create an SEO strategy for your business, they execute it by performing technical, on-page, and off-page SEO.",
           imgage: {
-            img: null,
+            img: strategize,
+            alt: "strategize and execute",
           },
         },
         {
@@ -1441,7 +1497,9 @@ export const Content = [
           title2: "and Reporting",
           para: "After successfully executing the SEO strategy, we begin monitoring your rankings through different tools, including google search console, SEMrush, google analytics, etc. and provide your weekly reports. ",
           imgage: {
-            img: null,
+            img: monitoring,
+            alt: "monitor rankings",
+
           },
         },
         {
@@ -1449,7 +1507,8 @@ export const Content = [
           title2: "",
           para: "Using your site’s performance data, we modify and refine the SEO strategy to keep up with the latest search engine algorithm updates and market trends.",
           imgage: {
-            img: null,
+            img: refine,
+            alt: "rafine",
           },
         },
       ],
@@ -1490,7 +1549,6 @@ export const Content = [
             results. So, without any 2nd thoughts, take our SEO services and
             generate more traffic and conversions for your business.
           </p>
-
         </>
       ),
       image: { img: seoDev, alt: "seo services" },
@@ -1628,7 +1686,10 @@ export const Content = [
   },
   {
     page: "content-creation",
-    inforaphic: { img: contentInfoGraphic, alt: "why quality content is important" },
+    inforaphic: {
+      img: contentInfoGraphic,
+      alt: "why quality content is important",
+    },
     steps: {
       mainHeading: {
         one: "How We Create A",
@@ -1642,7 +1703,8 @@ export const Content = [
           title2: " and audit",
           para: "In this phase, we analyze your business and perform an in-depth audit to understand your business goals.",
           imgage: {
-            img: null,
+            img: analysis,
+            alt: "analyze and audit",
           },
         },
         {
@@ -1650,7 +1712,9 @@ export const Content = [
           title2: "Audience",
           para: "In the 2nd phase, we identify your audience based on your business goals.",
           imgage: {
-            img: null,
+            img: identification,
+            alt: "indentify audience",
+
           },
         },
         {
@@ -1658,7 +1722,8 @@ export const Content = [
           title2: "Creation",
           para: "In the 3rd phase, our content creators begin creating content based on your audience and business goals.",
           imgage: {
-            img: null,
+            img: contentCreation,
+            alt: "content creation",
           },
         },
         {
@@ -1666,7 +1731,8 @@ export const Content = [
           title2: "Optimization",
           para: "In this phase, our editorial team optimizes your content for your readers and search engines.",
           imgage: {
-            img: null,
+            img: contentOptimization,
+            alt: "content optimization",
           },
         },
         {
@@ -1674,7 +1740,8 @@ export const Content = [
           title2: "Promotion",
           para: "The content is then promoted via multiple channels like influencer marketing.",
           imgage: {
-            img: null,
+            img: promotion,
+            alt: "cotent promotion",
           },
         },
         {
@@ -1682,7 +1749,8 @@ export const Content = [
           title2: "Reporting",
           para: "We publish content on a regular schedule and measure success.",
           imgage: {
-            img: null,
+            img: analysis,
+            alt: "content reporting",
           },
         },
       ],
@@ -1693,18 +1761,34 @@ export const Content = [
       paras: (
         <>
           <p>
-            There's no doubt that visuals are appealing and attention-grabbing, but one cannot deny the importance of high-quality content. You might have heard many people saying that "Content is the King". It is true because appealing content is necessary to grab visitors or generate leads from your website.
-            According to {" "}
-            <Link href={"https://www.hubspot.com/hubfs/State-of-Marketing (2).pdf"} className="anchor" target={"_blank"} rel="nofollow">
+            There's no doubt that visuals are appealing and attention-grabbing,
+            but one cannot deny the importance of high-quality content. You
+            might have heard many people saying that "Content is the King". It
+            is true because appealing content is necessary to grab visitors or
+            generate leads from your website. According to{" "}
+            <Link
+              href={"https://www.hubspot.com/hubfs/State-of-Marketing (2).pdf"}
+              className="anchor"
+              target={"_blank"}
+              rel="nofollow"
+            >
               Hubspot,
             </Link>{" "}
-            82% of marketers actively invest in content marketing. Therefore, to increase brand awareness and your visitors, you must look to take content creation services from a reliable content creation service like Creaditech.
+            82% of marketers actively invest in content marketing. Therefore, to
+            increase brand awareness and your visitors, you must look to take
+            content creation services from a reliable content creation service
+            like Creaditech.
           </p>
 
           <p>
-            Creaditech is one of the USA's most trusted and reliable content creation services. We have more than 1000 professional writers, and we believe that knowledge is power. Our writers know the search engine updates and your readers; therefore, they deliver appealing content that will boost your search engine rankings and help your business reach more qualified leads. Explore our content creation services now and increase visitors to your site.
+            Creaditech is one of the USA's most trusted and reliable content
+            creation services. We have more than 1000 professional writers, and
+            we believe that knowledge is power. Our writers know the search
+            engine updates and your readers; therefore, they deliver appealing
+            content that will boost your search engine rankings and help your
+            business reach more qualified leads. Explore our content creation
+            services now and increase visitors to your site.
           </p>
-
         </>
       ),
       image: { img: contentDev, alt: "content creation services" },
@@ -1715,14 +1799,30 @@ export const Content = [
       paras: (
         <>
           <p>
-            Being a reliable content creation service Creaditech provides content creation services that will improve your brand identity and will increase your Return On Investment (ROI). No matter which type of content you want to get written, our writers can write any type of content, including blog posts, press releases, product descriptions, social media posts, landing page content, e-books, email templates, and many more. Let us know your requirements, and we will assign the perfect writer to you.
+            Being a reliable content creation service Creaditech provides
+            content creation services that will improve your brand identity and
+            will increase your Return On Investment (ROI). No matter which type
+            of content you want to get written, our writers can write any type
+            of content, including blog posts, press releases, product
+            descriptions, social media posts, landing page content, e-books,
+            email templates, and many more. Let us know your requirements, and
+            we will assign the perfect writer to you.
           </p>
           <p>
-          Ranging from social media content creation services to website content creation services, Creaditech is an all-in-one solution for all your content creation needs. Our expert writers not only write in sales languages because they understand that users are always bombarded with advertisements and are fed up with that; therefore, they create content that informs your clients and customers about the problems that your business can solve for them.
+            Ranging from social media content creation services to website
+            content creation services, Creaditech is an all-in-one solution for
+            all your content creation needs. Our expert writers not only write
+            in sales languages because they understand that users are always
+            bombarded with advertisements and are fed up with that; therefore,
+            they create content that informs your clients and customers about
+            the problems that your business can solve for them.
           </p>
 
           <p>
-          The secret to our content creation strategy is extensive research and our highly motivated writing and editorial team. So, without any 2nd thoughts, take our content generation services now and save more money by increasing your ROI.
+            The secret to our content creation strategy is extensive research
+            and our highly motivated writing and editorial team. So, without any
+            2nd thoughts, take our content generation services now and save more
+            money by increasing your ROI.
           </p>
         </>
       ),
@@ -1737,26 +1837,36 @@ export const Content = [
       paras: (
         <>
           <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
-          Being a reliable content creation service, Creaditech has many features that distinguish us from other content writing agencies. Below are a few reasons on why you shall take our content creations services:
+            Being a reliable content creation service, Creaditech has many
+            features that distinguish us from other content writing agencies.
+            Below are a few reasons on why you shall take our content creations
+            services:
           </p>
           <ul className="mt-[2rem] flex flex-col ">
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">1)</span>We have a highly motivated and dedicated team of content creators.
+              <span className="mr-[1rem]">1)</span>We have a highly motivated
+              and dedicated team of content creators.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">2)</span>Our content creators will create appealing content that will deliver you astonishing results.
+              <span className="mr-[1rem]">2)</span>Our content creators will
+              create appealing content that will deliver you astonishing
+              results.
             </li>
             <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">3)</span>We have a fast turnaround time.
+              <span className="mr-[1rem]">3)</span>We have a fast turnaround
+              time.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">4)</span>We have a separate quality-checking team that proofreads the content before delivering it to you.
+              <span className="mr-[1rem]">4)</span>We have a separate
+              quality-checking team that proofreads the content before
+              delivering it to you.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
               <span className="mr-[1rem]">5)</span>You can contact us anytime.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">6)</span>We allow you to get in touch with the writer directly.
+              <span className="mr-[1rem]">6)</span>We allow you to get in touch
+              with the writer directly.
             </li>
           </ul>
         </>
@@ -1802,7 +1912,7 @@ export const Content = [
   },
   {
     page: "sem",
-    pricing:false,
+    pricing: false,
     inforaphic: { img: semInfoGraphic, alt: "why your business needs SEM" },
     steps: {
       mainHeading: {
@@ -1817,7 +1927,8 @@ export const Content = [
           title2: "your business",
           para: "We hold multiple meetings with you to understand your business and your goals.",
           imgage: {
-            img: null,
+            img: understanding,
+            alt: "understanding your business",
           },
         },
         {
@@ -1825,16 +1936,18 @@ export const Content = [
           title2: "optimization",
           para: "Our SEM experts create your campaign strategy and optimize your landing page based on your business goals.",
           imgage: {
-            img: null,
+            img: landing,
+            alt: "landing page optimization",
           },
         },
-        
+
         {
           title1: "Keyword",
           title2: "Research",
           para: "Our experts find low CPC and high-converting keywords to maximize your ROI.",
           imgage: {
-            img: null,
+            img: research,
+            alt: "keyword research",
           },
         },
         {
@@ -1842,7 +1955,8 @@ export const Content = [
           title2: "Launch",
           para: "After finalizing the campaign and a well-designed landing page, our SEM experts launch your campaign and manage your campaign settings.",
           imgage: {
-            img: null,
+            img: compaign,
+            alt: "campaign launch",
           },
         },
         {
@@ -1850,7 +1964,8 @@ export const Content = [
           title2: "Testing",
           para: "Our experts perform A/B testing on ad copies to identify which one gives the best response.",
           imgage: {
-            img: null,
+            img: testing2,
+            alt: "a/b testing",
           },
         },
         {
@@ -1858,32 +1973,48 @@ export const Content = [
           title2: "",
           para: "After successfully launching the campaign and identifying the best ad copy, we track and analyze the campaign based on your KPIs, click-through rate (CTR), and quality score.",
           imgage: {
-            img: null,
+            img: analysis,
+            alt: "analysis",
           },
         },
       ],
     },
     section1: {
-      heading:
-        "SEM Services To Boost Your Online Presence",
+      heading: "SEM Services To Boost Your Online Presence",
       paras: (
         <>
           <p>
-          Search engine marketing (SEM) is one of the best-paid marketing strategies to boost your online business. Through SEM, you promote your content to show on top of the search engine result pages based on your targeted keyword. SEM is necessary because it boosts your online presence;
-            according to a study, the first 3 ads on SERPs receive  {" "}
-            <Link href={"https://www.powertraffick.com/ppc-trends-and-statistics"} className="anchor" target={"_blank"} rel="nofollow">
+            Search engine marketing (SEM) is one of the best-paid marketing
+            strategies to boost your online business. Through SEM, you promote
+            your content to show on top of the search engine result pages based
+            on your targeted keyword. SEM is necessary because it boosts your
+            online presence; according to a study, the first 3 ads on SERPs
+            receive{" "}
+            <Link
+              href={"https://www.powertraffick.com/ppc-trends-and-statistics"}
+              className="anchor"
+              target={"_blank"}
+              rel="nofollow"
+            >
               46% of all clicks,
             </Link>{" "}
-            and it is also one of the top 3 resources for website conversions. So, to boost your online presence take SEM services from Creaditech.
+            and it is also one of the top 3 resources for website conversions.
+            So, to boost your online presence take SEM services from Creaditech.
           </p>
 
           <p>
-          Creaditech has a team of expert digital marketers who do not believe in creating the same strategy for all businesses. As a reliable SEM services company, we believe that every business requires a custom digital marketing strategy. We strategize, implement, split test, and analyze the campaigns to monitor their performance to achieve the best ROI.
+            Creaditech has a team of expert digital marketers who do not believe
+            in creating the same strategy for all businesses. As a reliable SEM
+            services company, we believe that every business requires a custom
+            digital marketing strategy. We strategize, implement, split test,
+            and analyze the campaigns to monitor their performance to achieve
+            the best ROI.
           </p>
           <p>
-          Our digital marketers aim is to provide conversions and not just clicks for your business. So, without any 2nd thoughts, take our SEM services now and boost your online presence.
+            Our digital marketers aim is to provide conversions and not just
+            clicks for your business. So, without any 2nd thoughts, take our SEM
+            services now and boost your online presence.
           </p>
-
         </>
       ),
       image: { img: semDev, alt: "SEM services" },
@@ -1894,10 +2025,23 @@ export const Content = [
       paras: (
         <>
           <p>
-          Consumers love to perform online research about a product or service before spending on it. Search engine marketing is a cost-efficient method to connect your brand with your customers. You can target your specific audience based on their online behavior and position your ads precisely through SEM. SEM is a strategy in which you don't have to pay to show your ads; instead, you only have to pay when a user clicks your ad, i.e., it works on a pay-per-click model (PPC).
+            Consumers love to perform online research about a product or service
+            before spending on it. Search engine marketing is a cost-efficient
+            method to connect your brand with your customers. You can target
+            your specific audience based on their online behavior and position
+            your ads precisely through SEM. SEM is a strategy in which you don't
+            have to pay to show your ads; instead, you only have to pay when a
+            user clicks your ad, i.e., it works on a pay-per-click model (PPC).
           </p>
           <p>
-          Our search engine marketing experts identify your audience, find relevant keywords, and bid on them so that they can bring more traffic and conversions to your website, thus boosting your ROI. Based on your industry and business goals, our SEM experts can create any type of paid campaign, including search ads, media ads, video ads, shopping ads, mobile-app-specific ads, etc. Apart from SEM services, Creaditech also offers SEO services so that your brand gets organic traffic too.
+            Our search engine marketing experts identify your audience, find
+            relevant keywords, and bid on them so that they can bring more
+            traffic and conversions to your website, thus boosting your ROI.
+            Based on your industry and business goals, our SEM experts can
+            create any type of paid campaign, including search ads, media ads,
+            video ads, shopping ads, mobile-app-specific ads, etc. Apart from
+            SEM services, Creaditech also offers SEO services so that your brand
+            gets organic traffic too.
           </p>
         </>
       ),
@@ -1909,23 +2053,30 @@ export const Content = [
       paras: (
         <>
           <p className="font-Montserrat mt-[2rem] text-[18px] font-300 leading-[130%]">
-          Being a reliable SEM services company, Creaditech has many features that make us stand apart from our competitors. Here's what Creaditech has:
+            Being a reliable SEM services company, Creaditech has many features
+            that make us stand apart from our competitors. Here's what
+            Creaditech has:
           </p>
           <ul className="mt-[2rem] flex flex-col ">
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">1)</span>We have a dedicated and certified team of SEM experts who create the best SEM strategy according to your business and budget.
+              <span className="mr-[1rem]">1)</span>We have a dedicated and
+              certified team of SEM experts who create the best SEM strategy
+              according to your business and budget.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">2)</span>We give each of our client’s consistent attention.
+              <span className="mr-[1rem]">2)</span>We give each of our client’s
+              consistent attention.
             </li>
             <li className="font-Montserrat text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">3)</span>We provide weekly reports on the whole strategy.
+              <span className="mr-[1rem]">3)</span>We provide weekly reports on
+              the whole strategy.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
               <span className="mr-[1rem]">4)</span>We offer custom SEM plans.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
-              <span className="mr-[1rem]">5)</span>Our SEM pricing is affordable.
+              <span className="mr-[1rem]">5)</span>Our SEM pricing is
+              affordable.
             </li>
             <li className="font-Montserrat  text-[18px] font-300 leading-[150%]">
               <span className="mr-[1rem]">6)</span>You can contact us anytime.

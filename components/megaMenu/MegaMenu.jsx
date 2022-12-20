@@ -19,19 +19,19 @@ const MegaMenu = ({ classes, setHover }) => {
                 key={item.heading}
                 className="flex  gap-[1rem] items-center  bg-[#313131] p-[4rem] rounded-[1.5rem]"
               >
-                {/* <div className="">
-                  <Image  loader={({ src }) => {
-                return src;
-              }} src={item.logo} alt="" />
-                </div> */}
-                <Player
+                <div className="">
+                  <Image className="h-[20rem] w-[20rem] relative" loader={({ src }) => {
+                    return src;
+                  }} src={item.logo} alt="" />
+                </div>
+                {/* <Player
                   src={{...item.lotti}}
                   className="h-[20rem] w-[20rem] relative"
                   loop
                   autoplay
                   // background="transparent"
-                />
-                
+                /> */}
+
                 <div className="flex flex-col gap-[1rem] items-center">
                   <h2 className="clash w-full  after:z-[100] -z-[0] text-[2.5rem] after:border-solid after:w-[19rem] mr-auto after:left-0 pb-[1rem] after:absolute relative after:bottom-0  after:border-b-[2px] after:border-[#FFFFFF]/[0.5] font-500 text-[#ffffff]">
                     {item.heading}

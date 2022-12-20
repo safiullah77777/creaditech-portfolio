@@ -51,10 +51,10 @@ const Home = () => {
   const [show, setShow] = useState(false);
   let resetTimeout;
   const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-    { width: 850, itemsToShow: 3 },
-    { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
+    // { width: 750, itemsToShow: 1 },
+    // { width: 950, itemsToShow: 2 },
+    { width: 1100, itemsToShow: 3 },
+    { width: 1367, itemsToShow: 4, itemsToScroll: 2 },
     { width: 1450, itemsToShow: 5 },
     { width: 1850, itemsToShow: 6 },
   ];
@@ -666,10 +666,10 @@ const Home = () => {
         </Carousel>
       </div>
       <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[1rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
-        <h2 className="robot-condensed text-center  text-[4rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
+        <h1 className="robot-condensed text-center  text-[4rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
           Achieve Your Business Goals By Taking Web Development Services From
           The Best Web Development Company
-        </h2>
+        </h1>
         <div className="flex  flex-wrap gap-x-[.4rem] gap-y-[1rem] max-[850px]:p-12">
           {/* <p className="Montserrat flex flex-wrap text-[1.6rem] font-500 text-white/[0.7] max-[850px]:text-[16px]">
             “If your business is not on the Internet, then your business will be

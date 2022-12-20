@@ -341,7 +341,7 @@ const Services = ({ datas }) => {
         ) : (
           <></>
         )}
-        <div className="flex flex-col w-full items-center bg-[#eeeeee] pt-[4rem] pb-[6rem] gap-[5rem] ">
+        {/* <div className=" flex flex-col w-full items-center bg-[#eeeeee] pt-[4rem] pb-[6rem] gap-[5rem] ">
           <h2 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
             Look into our Projects
           </h2>
@@ -377,7 +377,7 @@ const Services = ({ datas }) => {
               src={require("../../public/assets/images/service-image2.png")}
             />
           </div>
-        </div>
+        </div> */}
         {/* pricing section */}
         {pageContent.pricing !== false && (
           <div className=" flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
@@ -524,7 +524,7 @@ const Services = ({ datas }) => {
           {pageContent?.steps?.steps.map((data, index) => (
             <DesignCard
               bg={`bg-[url('/assets/images/icons/${countings[index]}.svg')]`}
-              image={bxmessage}
+              image={data?.imgage?.img}
               para={data.para}
               title1={data?.title1}
               title2={data?.title2}

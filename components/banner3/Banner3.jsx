@@ -10,11 +10,12 @@ const Banner3 = () => {
     videoRef?.current?.play();
   }, []);
   return (
-    <div className="w-full relative">
+    <div className="w-full relative min-h-[60rem]">
       {/* <video controls width={'auto'} height="auto" autoPlay   className="w-full h-full">
         <source src={video} type="video/mp4" />
       </video> */}
       <video
+      // poster="/assets/images/backgrounds/banner.png"
         autoPlay
         loop
         muted
@@ -35,12 +36,10 @@ const Banner3 = () => {
       </video> */}
       <div className="flex bg-[#000000]/[0.2] flex-col items-center w-full h-full justify-center absolute top-0 left-0 ">
         <div className="flex flex-wrap font-600 max-w-[70rem]  text-center gap-x-[15px] robot-condensed text-65 uppercase leading-85 text-white max-[850px]:justify-center max-[850px]:text-center max-[850px]:text-[5rem]">
-          <h1>Best Web Development Company In The USA</h1>
+          <h2>Transformering businesses through digital empowerment</h2>
         </div>
-        <p className="mt-4 text-center font-600 max-w-[484px] text-16  leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
-          Creaditech is one of the best web development companies in the USA. We
-          design and develop websites and web applications that will bring value
-          to your customers.
+        <p className="mt-4 text-center font-600 max-w-[70rem] text-16  leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
+          Offering cost-effective digital transformation for small businesses and startups that want to inspire the world with their products and services. We wish to empower you as we move forward in becoming universal market leaders in putting value-addition in Design, Branding and Technology.
         </p>
         <div className="my-8 flex gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
           <Link href={"/contact-us"}>
