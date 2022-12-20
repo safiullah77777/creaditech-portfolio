@@ -4,6 +4,15 @@ import Image3 from "../public/assets/images/ecommerce-development-services.svg";
 import Image4 from "../public/assets/images/custom-web-development-services.svg";
 import Image5 from "../public/assets/images/wordpress.-development-services.svg";
 import Image6 from "../public/assets/images/php-development-services.svg";
+
+import portfolio1 from "../public/assets/images/portfolio1.jpg";
+import portfolio2 from "../public/assets/images/portfolio2.jpg";
+import portfolio3 from "../public/assets/images/portfolio3.jpg";
+import portfolio4 from "../public/assets/images/portfolio4.jpg";
+import portfolio5 from "../public/assets/images/portfolio5.jpg";
+import portfolio6 from "../public/assets/images/portfolio6.jpg";
+import portfolio7 from "../public/assets/images/portfolio7.jpg";
+
 export const serviceCards = [
   {
     title: "website",
@@ -49,28 +58,27 @@ export const serviceCards = [
     link: "/php-web-development",
   },
 
-
-  // below all are not included 
+  // below all are not included
   {
     title: "Wordpress | Shopify",
     title1: "Development",
     icon: Image2,
     styles: "h-[120px] w-[120px]",
-    link:"/wordpress-wix-shopify-development"
+    link: "/wordpress-wix-shopify-development",
   },
   {
     title: "Branding",
     title1: "",
     icon: Image3,
     styles: "h-[96px] w-[96px]",
-    link:"/branding"
+    link: "/branding",
   },
   {
     title: "Infographics",
     title1: " Design",
     icon: Image4,
     styles: "h-[98px] w-[107px]",
-    link:"/infographics-design"
+    link: "/infographics-design",
   },
   {
     title: "Database",
@@ -129,5 +137,41 @@ export const serviceCards = [
     title1: "Solution",
     icon: Image5,
     styles: "h-[85px] w-[85px]",
+  },
+];
+
+export const portfolioCards = [
+  {
+    img: portfolio1,
+    alt: "",
+    name:"Smartength"
+  },
+  {
+    img: portfolio2,
+    alt: "",
+    name:"Pillar"
+  },
+  {
+    img: portfolio3,
+    alt: "",
+    name:"Fushius"
+  },
+  {
+    img: portfolio4,
+    alt: "",
+    name:"Fulfil"
+  },
+  {
+    img: portfolio5,
+    alt: "",
+    name:"Animaxers"
+  },
+  {
+    img: portfolio6,
+    alt: "Cancun Corner",
+  },
+  {
+    img: portfolio7,
+    alt: "Gymble",
   },
 ];

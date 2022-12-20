@@ -37,7 +37,7 @@ import robot from "../public/assets/images/robot.png";
 import robot1 from "../public/assets/images/robot1.png";
 import robot2 from "../public/assets/images/robot2.png";
 import MetaHead from "../components/metaHead/MetaHead";
-import { serviceCards } from "../utils/card";
+import { portfolioCards, serviceCards } from "../utils/card";
 import VisibilitySensor from "react-visibility-sensor";
 import Link from "next/link";
 import { expertiseIcons } from "../utils/expertiseIcons";
@@ -272,11 +272,14 @@ const Home = () => {
           </h2> */}
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
             {/* <Card heading1="website" heading2="Development" image={Image1} /> */}
-            <Card3 classes="" />
+            {/* <Card3 classes="" />
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img12.png')]" />
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img9.png')]" />
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img10.png')]" />
-            <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img11.png')]" />
+            <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img11.png')]" /> */}
+            {
+              portfolioCards.slice(0,5).map((item,index)=><Card3 classes="" img={item.img} />)
+            }
             <div
               onMouseEnter={() => {
                 setHover(true);

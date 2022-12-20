@@ -16,6 +16,7 @@ import Slider from "../components/slider/Slider";
 import Footer from "../components/footer/Footer";
 import BottomNav from "../components/bottomNav/BottomNav";
 import MetaHead from "../components/metaHead/MetaHead";
+import { portfolioCards } from "../utils/card";
 // import client1 from '../public/assets/images/client1.png'
 
 const OurClients = () => {
@@ -57,129 +58,129 @@ const OurClients = () => {
         </h2>
 
         <div className="marquee">
-					<div className="marquee--inner">
-						<div className="flex h-full">
-							<Image  loader={({ src }) => {
+          <div className="marquee--inner">
+            <div className="flex h-full">
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client1}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client1}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client2}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client2}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client3}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client3}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client4}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client4}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client5}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client5}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client6}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client6}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client7}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							
-						</div>
-						<div className="flex h-full">
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client7}
+                alt=""
+                width={204}
+                height={204}
+              />
+
+            </div>
+            <div className="flex h-full">
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client1}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client1}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client2}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client2}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client3}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client3}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client4}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client4}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client5}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							<Image  loader={({ src }) => {
+                className="h-full"
+                src={client5}
+                alt=""
+                width={204}
+                height={204}
+              />
+              <Image loader={({ src }) => {
                 return src;
               }}
-								className="h-full"
-								src={client6}
-								alt=""
-								width={204}
-								height={204}
-							/>
-							{/* <Image  loader={({ src }) => {
+                className="h-full"
+                src={client6}
+                alt=""
+                width={204}
+                height={204}
+              />
+              {/* <Image  loader={({ src }) => {
                 return src;
               }}
 								className="h-full"
@@ -188,10 +189,10 @@ const OurClients = () => {
 								width={204}
 								height={204}
 							/> */}
-							
-						</div>
-					</div>
-				</div>
+
+            </div>
+          </div>
+        </div>
 
         {/* <marquee direction="left">
           <div className="flex">
@@ -363,61 +364,55 @@ const OurClients = () => {
         <div className="mt-[6rem] mb-[4rem] flex flex-wrap justify-center gap-4">
           <button
             onClick={() => setCat("all")}
-            className={`clash rounded-[10px]  ${
-              cat == "all"
+            className={`clash rounded-[10px]  ${cat == "all"
                 ? "bg-[#000] text-white"
                 : " border-[#000] border-solid border-[1px] bg-[white] text-[#000] hover:bg-[#000] hover:text-white"
-            }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
+              }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
           >
             All
           </button>
           <button
             onClick={() => setCat("web")}
-            className={`clash rounded-[10px]  ${
-              cat == "web"
+            className={`clash rounded-[10px]  ${cat == "web"
                 ? "bg-[#000] text-white"
                 : " border-[#000] border-solid border-[1px] bg-[white] text-[#000] hover:bg-[#000] hover:text-white"
-            }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
+              }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
           >
             Web Developemnt
           </button>
           <button
             onClick={() => setCat("app")}
-            className={`clash rounded-[10px]  ${
-              cat == "app"
+            className={`clash rounded-[10px]  ${cat == "app"
                 ? "bg-[#000] text-white"
                 : " border-[#000] border-solid border-[1px] bg-[white] text-[#000] hover:bg-[#000] hover:text-white"
-            }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
+              }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
           >
             App Developemnt
           </button>
           <button
             onClick={() => setCat("ui")}
-            className={`clash rounded-[10px]  ${
-              cat == "ui"
+            className={`clash rounded-[10px]  ${cat == "ui"
                 ? "bg-[#000] text-white"
                 : " border-[#000] border-solid border-[1px] bg-[white] text-[#000] hover:bg-[#000] hover:text-white"
-            }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
+              }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
           >
             UI / UX Design
           </button>
           <button
             onClick={() => setCat("design")}
-            className={`clash rounded-[10px]  ${
-              cat == "design"
+            className={`clash rounded-[10px]  ${cat == "design"
                 ? "bg-[#000] text-white"
                 : " border-[#000] border-solid border-[1px] bg-[white] text-[#000] hover:bg-[#000] hover:text-white"
-            }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
+              }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
           >
             Graphic Design
           </button>
           <button
             onClick={() => setCat("content")}
-            className={`clash rounded-[10px]  ${
-              cat == "content"
+            className={`clash rounded-[10px]  ${cat == "content"
                 ? "bg-[#000] text-white"
                 : " border-[#000] border-solid border-[1px] bg-[white] text-[#000] hover:bg-[#000] hover:text-white"
-            }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
+              }  px-[2rem] py-[1.5rem] text-[20px] font-500 `}
           >
             Content Writing
           </button>
@@ -425,14 +420,9 @@ const OurClients = () => {
         <div className="flex flex-wrap justify-center gap-[1rem]">
           {cat == "all" ? (
             <>
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img.png')]" />
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img2.png')]" />
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img3.png')]" />
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img4.png')]" />
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img5.png')]" />
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img6.png')]" />
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img7.png')]" />
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img8.png')]" />
+              {
+                portfolioCards.map((item, index) => <Card3 classes="" name={item.name} img={item.img} />)
+              }
             </>
           ) : (
             <>
