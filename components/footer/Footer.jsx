@@ -10,6 +10,7 @@ import twitter from "../../public/assets/images/icons/twitter-rounded.svg";
 import linkedin from "../../public/assets/images/icons/linkedin-rounded.svg";
 import pinterest from "../../public/assets/images/icons/pinterest-rounded.svg";
 import Logo from "../../public/assets/images/Logo1.svg";
+
 const Footer = () => {
   return (
     <footer className="flex flex-col bg-primary px-24 pt-44 pb-24 max-[850px]:px-8  max-[600px]:pt-[4rem]">
@@ -26,36 +27,66 @@ const Footer = () => {
           </p>
           <div className="item-center flex gap-4">
             <div className="rounded-icons">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={facebook} className="" alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={facebook}
+                className=""
+                alt=""
+              />
             </div>
             <div className="rounded-icons">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={insta} className="" alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={insta}
+                className=""
+                alt=""
+              />
             </div>
             <div className="rounded-icons">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={linkedin} className="" alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={linkedin}
+                className=""
+                alt=""
+              />
             </div>
             <div className="rounded-icons">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={twitter} className="" alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={twitter}
+                className=""
+                alt=""
+              />
             </div>
             <div className="rounded-icons">
-              <Image  loader={({ src }) => {
-                return src;
-              }} src={pinterest} className="" alt="" />
+              <Image
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={pinterest}
+                className=""
+                alt=""
+              />
             </div>
           </div>
         </div>
         <div className="flex w-1/2 flex-col items-center py-16 max-[850px]:order-1 max-[850px]:w-full min-[600px]:px-8">
-          <Image  loader={({ src }) => {
-                return src;
-              }} src={Logo} className="logo max-[500px]:w-[59px]" alt="" />
+          <Image
+            loader={({ src }) => {
+              return src;
+            }}
+            src={Logo}
+            className="logo max-[500px]:w-[59px]"
+            alt=""
+          />
           <p className="heading-grey robot-condensed my-10 text-45 font-600 leading-[80%] max-[400px]:text-[30px]">
             Join our Newsletter
           </p>
@@ -67,7 +98,6 @@ const Footer = () => {
                 className="inputs h-60 w-full rounded-5  border-b-8 border-solid bg-[#fff]/[0.2]  px-8 text-16 font-300 text-white  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
                 name=""
                 id=""
-
               />
             </div>
             <button className="clash yellow-button relative flex h-60  min-w-[72px] items-center justify-center rounded-05 border-b-8 bg-yellow text-20 text-black max-[850px]:-left-[2rem] max-[850px]:h-[60px] max-[850px]:rounded-[.5rem]  min-[500px]:w-120   min-[850px]:w-170 ">

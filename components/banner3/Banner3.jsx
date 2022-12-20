@@ -10,16 +10,17 @@ const Banner3 = () => {
     videoRef?.current?.play();
   }, []);
   return (
-    <div className="w-full relative min-h-[60rem]">
+    <div className="w-full relative min-h-[80rem] max-[600px]:min-h-[100rem]">
       {/* <video controls width={'auto'} height="auto" autoPlay   className="w-full h-full">
         <source src={video} type="video/mp4" />
       </video> */}
       <video
       // poster="/assets/images/backgrounds/banner.png"
+      
         autoPlay
         loop
         muted
-        className="w-full h-full z-10"
+        className="min-h-[80rem]  max-[600px]:min-h-[100rem]"
         src={"/assets/videos/globe.mp4"}
         type="video/mp4"
       />
@@ -34,11 +35,11 @@ const Banner3 = () => {
       >
         <source src={video} />
       </video> */}
-      <div className="flex bg-[#000000]/[0.2] flex-col items-center w-full h-full justify-center absolute top-0 left-0 ">
+      <div className="flex bg-[#000000]/[0.2] px-[3rem] flex-col items-center w-full h-full justify-center absolute top-0 left-0 ">
         <div className="flex flex-wrap font-600 max-w-[70rem]  text-center gap-x-[15px] robot-condensed text-65 uppercase leading-85 text-white max-[850px]:justify-center max-[850px]:text-center max-[850px]:text-[5rem]">
           <h2>Transformering businesses through digital empowerment</h2>
         </div>
-        <p className="mt-4 text-center font-600 max-w-[70rem] text-16  leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
+        <p className="mt-4 text-center font-400 max-w-[70rem] text-16  leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
           Offering cost-effective digital transformation for small businesses and startups that want to inspire the world with their products and services. We wish to empower you as we move forward in becoming universal market leaders in putting value-addition in Design, Branding and Technology.
         </p>
         <div className="my-8 flex gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
