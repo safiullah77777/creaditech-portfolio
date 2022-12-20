@@ -25,12 +25,12 @@ html {
 }
 @media screen and (max-width: 850px) {
   html,
-body {
-  /* overflow-x: hidden; */
-  /* contain: strict; */
-  /* box-sizing: border-box;
+  body {
+    /* overflow-x: hidden; */
+    /* contain: strict; */
+    /* box-sizing: border-box;
   position: relative; */
-}
+  }
 }
 html,
 body {
@@ -39,10 +39,12 @@ body {
   /* box-sizing: border-box;
   position: relative; */
 }
-a[rel~="nofollow"], a[rel~="ugc"], a[rel~="sponsored"] {
+a[rel~="nofollow"],
+a[rel~="ugc"],
+a[rel~="sponsored"] {
   text-decoration: none !important;
 }
-.anchor{
+.anchor {
   color: rgb(3, 119, 188, 1);
   /* text-decoration: underline; */
 }
@@ -50,6 +52,30 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* width */
+.price::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+}
+
+/* Track */
+.price::-webkit-scrollbar-track {
+  background: grey;
+  border-radius: 2px;
+}
+
+/* Handle */
+.price::-webkit-scrollbar-thumb {
+  background: #ffe100;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+.price::-webkit-scrollbar-thumb:hover {
+  background: #ffe100;
+  border-radius: 2px;
 }
 
 /* Firefox */

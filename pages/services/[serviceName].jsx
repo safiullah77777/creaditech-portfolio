@@ -43,7 +43,6 @@ const Services = ({ datas }) => {
     setHydrated(true);
   }, []);
 
-  
   const router = useRouter();
   const { serviceName } = router.query;
   const check = List.map((item) => item.children.map((item1) => item1)).reduce(
