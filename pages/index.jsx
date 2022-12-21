@@ -127,7 +127,7 @@ const Home = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <MetaHead
-        link={"/"}
+        link={""}
         title={"Best Web Development Company In The USA - Creaditech"}
         description={
           "Creaditech is one of the best web development company in the USA. We design and develop websites and web applications that will bring value to your customers."
