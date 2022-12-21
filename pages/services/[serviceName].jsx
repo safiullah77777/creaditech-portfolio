@@ -58,7 +58,7 @@ const Services = ({ datas }) => {
     shuffle(
       shuffle(shuffle(check.filter((item) => !item.link.includes(serviceName))))
     )
-  ).slice(4, 8);
+  ).slice(3, 7);
   const content = data.filter((data) => data?.page === serviceName)[0];
   const pageContent = Content.filter((data) => data?.page === serviceName)[0];
   const [formData, setFormData] = useState({
