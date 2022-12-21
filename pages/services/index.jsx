@@ -131,7 +131,7 @@ const LogoService = () => {
             Our Services
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
-            {serviceCards.map((item, index) => (
+            {serviceCards.slice(0,6).map((item, index) => (
               <Link href={"/services"+item?.link} key={index}>
                 <Card
                   styles={item.styles}

@@ -49,10 +49,11 @@ const AboutUs = () => {
           About <p className=" px-4 text-yellow  sm:px-[4rem]"> us</p>
         </h1>
         <p className=" sm:max-[868px] clash flex w-full justify-center px-[5rem] text-center text-[35px] font-[500]  leading-[85%] text-[#5B5E71]  max-[850px]:text-[3rem] sm:items-center sm:px-[30rem] sm:leading-[101.5%] sm:tracking-[0.02em] ">
-          Creaditech is a digital marketing company bringing future which is
-          already just around the corner – and will distribute it in the market
-          fairly, by means of technology and business strategies your business
-          needs the most in the digital age.
+          Offering cost-effective digital transformation for small businesses
+          and startups that want to inspire the world with their products and
+          services. We wish to empower you as we move forward in becoming
+          universal market leaders in putting value-addition in Design, Branding
+          and Technology.
         </p>
       </div>
 
@@ -63,12 +64,7 @@ const AboutUs = () => {
               our vision
             </h3>
             <p className="py-[2rem] text-[13px] leading-[18px] text-[#1E1E1E] sm:text-[15px] sm:font-[300] sm:leading-[21px]">
-              “If your business is not on the Internet, then your business will
-              be out of business”. This quote from Bill Gates proves the value
-              of getting your business online. However, getting your business
-              software or website getting developed and then doing it’s
-              marketing is not a piece of cake. You need to take help from an
-              expert software development and marketing agency like Creaditech.
+              “The global market leader in digital transformation"
             </p>
           </div>
         </div>
@@ -78,12 +74,8 @@ const AboutUs = () => {
               our mission
             </h3>
             <p className="py-[2rem] text-[13px] leading-[18px] text-[#1E1E1E] sm:text-[15px] sm:font-[300] sm:leading-[21px]">
-              “If your business is not on the Internet, then your business will
-              be out of business”. This quote from Bill Gates proves the value
-              of getting your business online. However, getting your business
-              software or website getting developed and then doing it’s
-              marketing is not a piece of cake. You need to take help from an
-              expert software development and marketing agency like Creaditech.
+              “Empowering small businesses/startups with cost effective digital
+              transformation".
             </p>
           </div>
         </div>

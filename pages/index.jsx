@@ -178,8 +178,8 @@ const Home = () => {
         </h1>
       </div>
 
-      <section className="flex justify-center px-8 pt-32 ">
-        <div className="flex items-center max-[850px]:flex-col">
+      <section className="flex justify-center  px-[3rem] pt-32 ">
+        <div className="flex items-center max-[850px]:flex-col ">
           <h2 className="leading-1 robot-condensed m-auto flex h-[30rem] max-w-[28rem] items-center justify-center text-150 font-600 uppercase leading-[80%] text-black max-[640px]:text-[70px]  max-[640px]:font-900 min-[850px]:-rotate-90">
             Our <br /> Service
           </h2>
@@ -611,7 +611,7 @@ const Home = () => {
           </div>
         </div>
       </Link>
-      <h2 className="clash mx-auto mb-[3rem] mt-[6rem] text-[6rem] underline font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
+      <h2 className="clash mx-auto mb-[3rem] mt-[6rem] text-[6rem] pb-[1rem] border-solid border-[#2A2A2A] border-b-[.6rem] rounded-[.4rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
         Blogs
       </h2>
       <div className="my-[4rem] ">
