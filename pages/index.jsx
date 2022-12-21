@@ -44,6 +44,7 @@ import { expertiseIcons } from "../utils/expertiseIcons";
 import Card10 from "../components/card10/card10";
 import { blogs } from "../utils/blogs";
 import Banner3 from "../components/banner3/Banner3";
+import { reviews } from "../utils/reviews";
 
 // "scripts": {
 //   "dev": "next dev",
@@ -113,11 +114,10 @@ const Home = () => {
       );
     return (
       <button
-        className={`${
-          consts.PREV ? "rounded-r-[5px]" : "rounded-l-[5px]"
-        } flex h-[14rem] w-[4.5rem] items-center justify-center self-center bg-black disabled:cursor-not-allowed`}
+        className={`${consts.PREV ? "rounded-r-[5px]" : "rounded-l-[5px]"
+          } flex h-[14rem] w-[4.5rem] items-center justify-center self-center bg-black disabled:cursor-not-allowed`}
         onClick={onClick}
-        // disabled={isEdge}
+      // disabled={isEdge}
       >
         {pointer}
       </button>
@@ -168,7 +168,7 @@ const Home = () => {
           src={require("../public/assets/images/service-image2.png")}
         />
       </div> */}
-      <div className=" rounded-[2rem] bg-[#ffe100] pt-[4rem] shadow-2xl my-[3rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
+      {/* <div className=" rounded-[2rem] bg-[#ffe100] pt-[4rem] shadow-2xl my-[3rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
         <p className="robot-condensed text-center  text-[3rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[3rem] leading-[100%] max-[850px]:text-white">
           Offering cost-effective digital transformation for small businesses
           and startups that want to inspire the world with their products and
@@ -176,9 +176,60 @@ const Home = () => {
           universal market leaders in putting value-addition in Design, Branding
           and Technology.
         </p>
-      </div>
+      </div> */}
+      <section className="flex p-20 max-[850px]:flex-col max-[850px]:gap-[6rem] ">
+        <div className="flex w-1/2 flex-col   max-[850px]:order-3 max-[850px]:w-full gap-[2rem]">
+          <h2 className="robot-condensed text-[4rem] font-600 uppercase leading-[90%] text-[#5B5E71] max-[640px]:text-[40px]">
+            why choose creaditech?
+          </h2>
+          <div className="flex flex-col gap-[1rem]">
+            <p className="max-w-[58rem] text-16 font-300 text-[#000000] max-[640px]:text-[16px]">
+              At this point, you might be considering why I shall I choose
+              Creaditech to develop my website or web application? Well,
+              Creaditech has a proven track record of developing custom websites
+              and web applications for many years. We have an expert web
+              development team that includes highly qualified and experienced
+              UI/ UX designers, front-end developers, back-end developers,
+              DevOps Engineers, QA experts, and a project manager.
+            </p>
+            <p className="max-w-[58rem] text-16 font-300 text-[#000000] max-[640px]:text-[16px]">
+              We have been in the industry for years and have a long list of
+              satisfied customers; we claim to be the best web development
+              company just because of our expert team members and satisfied
+              clients.
+            </p>
+          </div>
+          <div className="hidden w-1/2 max-[850px]:flex max-[850px]:w-full">
+            <Image
+              loader={({ src }) => {
+                return src;
+              }}
+              className="h-full w-full"
+              src={imageChoose}
+              alt="why choose creaditech"
+            />
+          </div>
+          <div className="flex flex-wrap items-center gap-8 py-8 max-[850px]:justify-center">
+            <Card2 show={show} numbers={500} text="Projects delivered" />
+            <Card2 numbers={10} text="Years of experience" />
+            <Card2 numbers={150} text="Team Members" />
+            <Card2 numbers={20} text="Countries" />
+          </div>
+        </div>
+        <div className="w-1/2 max-[850px]:hidden max-[850px]:w-full">
+          <Image
+            loader={({ src }) => {
+              return src;
+            }}
+            className="h-full w-full"
+            src={imageChoose}
+            alt=""
+          />
+        </div>
+      </section>
 
-      <section className="flex justify-center  px-[3rem] pt-32 ">
+      {/* our service */}
+      <section className="flex justify-center  px-[3rem] pt-32 pb-[4rem]">
         <div className="flex items-center max-[850px]:flex-col ">
           <h2 className="leading-1 robot-condensed m-auto flex h-[30rem] max-w-[28rem] items-center justify-center text-150 font-600 uppercase leading-[80%] text-black max-[640px]:text-[70px]  max-[640px]:font-900 min-[850px]:-rotate-90">
             Our <br /> Services
@@ -241,58 +292,62 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* min-[850px]:bg-[url('/assets/images/backgrounds/service-bg.png')] bg-[#2B2B2B]*/}
-
-      <section className="flex p-20 max-[850px]:flex-col max-[850px]:gap-[6rem] ">
-        <div className="flex w-1/2 flex-col   max-[850px]:order-3 max-[850px]:w-full gap-[2rem]">
-          <h2 className="robot-condensed text-[4rem] font-600 uppercase leading-[90%] text-[#5B5E71] max-[640px]:text-[40px]">
-            why choose creaditech?
+      {/* technologies min-[850px]:bg-[url('/assets/images/backgrounds/service-bg.png')] bg-[#2B2B2B]*/}
+      <div className="flex bg-[#FFE100] px-[6rem] py-[4rem] gap-[4rem] max-[850px]:flex-col justify-center max-[850px]:items-center">
+        <div className="flex ml-auto mt-[4rem] flex-col gap-[1rem] max-[850px]:max-w-full max-w-[75rem]">
+          <h2 className="robot-condensed text-[5rem] text-[#2B2B2B] uppercase  font-600  leading-[100%]">
+            Web Development Technologies And Frameworks We Work On
           </h2>
-          <div className="flex flex-col gap-[1rem]">
-            <p className="max-w-[58rem] text-16 font-300 text-[#000000] max-[640px]:text-[16px]">
-              At this point, you might be considering why I shall I choose
-              Creaditech to develop my website or web application? Well,
-              Creaditech has a proven track record of developing custom websites
-              and web applications for many years. We have an expert web
-              development team that includes highly qualified and experienced
-              UI/ UX designers, front-end developers, back-end developers,
-              DevOps Engineers, QA experts, and a project manager.
-            </p>
-            <p className="max-w-[58rem] text-16 font-300 text-[#000000] max-[640px]:text-[16px]">
-              We have been in the industry for years and have a long list of
-              satisfied customers; we claim to be the best web development
-              company just because of our expert team members and satisfied
-              clients.
-            </p>
-          </div>
-          <div className="hidden w-1/2 max-[850px]:flex max-[850px]:w-full">
-            <Image
-              loader={({ src }) => {
-                return src;
-              }}
-              className="h-full w-full"
-              src={imageChoose}
-              alt="why choose creaditech"
-            />
-          </div>
-          <div className="flex flex-wrap items-center gap-8 py-8 max-[850px]:justify-center">
-            <Card2 show={show} numbers={500} text="Projects delivered" />
-            <Card2 numbers={10} text="Years of experience" />
-            <Card2 numbers={150} text="Team Members" />
-            <Card2 numbers={20} text="Countries" />
-          </div>
+          <p className="Montserrat text-[2rem] leading-[130%] font-300 text-[#000000]">
+            Ranging from front-end development technologies like React JS, Next
+            JS, Angular JS, Vue JS, Bootstrap, etc to back-end development like
+            Node JS, PHP, Python, MySQL, MongoDB, etc. Our software engineers
+            are experts in all web development technologies and frameworks
+            needed to deliver custom websites and web applications.
+          </p>
         </div>
-        <div className="w-1/2 max-[850px]:hidden max-[850px]:w-full">
-          <Image
-            loader={({ src }) => {
-              return src;
-            }}
-            className="h-full w-full"
-            src={imageChoose}
-            alt=""
-          />
+        <div className="mr-auto justify-center grid gap-[2rem] grid-cols-5 min-[851px]:ml-auto max-w-[65rem] max-[850px]:max-w-full rounded-[5rem] px-[4rem] pt-[3rem]">
+          {expertiseIcons.map((item) => (
+            <div className=" flex items-center">
+              <Image
+                src={item}
+                loader={({ src }) => {
+                  return src;
+                }}
+                alt=""
+                className="w-6rem "
+              />
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+
+
+      {/* industries we have */}
+      <div className="flex bg-[#2B2B2B] py-24 pr-[4rem]  pl-[6rem] max-[850px]:flex-col max-[640px]:gap-[4rem]">
+        <div className="flex w-[50%] flex-col gap-[2rem] max-[850px]:w-full  max-[850px]:items-center">
+          <div className="clash flex max-w-[42rem] flex-wrap gap-x-[1rem] text-[8rem] font-600 leading-85 text-white max-[850px]:max-w-[100%] max-[850px]:justify-center max-[850px]:text-center ">
+            Industries we've{" "}
+            <p className="text-yellow  max-[850px]:text-white"> Worked</p> with
+          </div>
+          <p className="Montserrat mt-4 max-w-[460px] text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
+            At this point, you might be considering why shall I choose
+            Creaditech to get my software/ app developed or ask them to promote
+            my business. Well, Creaditech has a proven track record of
+            developing custom softwares and doing digital marketing for
+            different brands. We have a team.
+          </p>
+        </div>
+        <div className="max-[850px]:flex grid grid-cols-3 max-[1000px]:grid-cols-2 max-w-[90rem] mx-auto flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
+          {industriesCards.map((item, index) => (
+            <Card4 key={index} title={item.title} icon={item.icon} />
+          ))}
+        </div>
+      </div>
+
+
+
+      {/* our  portfolio*/}
       <div className="flex bg-[#2B2B2B] max-[850px]:py-[4rem] py-32 max-[850px]:px-8">
         <div className="mx-auto flex max-[850px]:flex-col max-[850px]:gap-[2rem]">
           <h2 className="leading-1 robot-condensed max-[850px]:leading-[100%] min-[850px]:mr-auto max-[850px]:text-center flex justify-center text-[14rem] max-[850px]:items-center font-600 uppercase leading-[80%] text-white max-[850px]:text-[10rem] max-[640px]:h-auto max-[640px]:w-auto max-[640px]:text-[7rem] max-[640px]:font-700 max-[350px]:text-[6rem] min-[850px]:m-auto min-[850px]:h-[30rem] min-[850px]:w-[25rem] min-[850px]:max-w-[310px] min-[850px]:-rotate-90  min-[850px]:items-center">
@@ -361,35 +416,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex bg-[#FFE100] px-[6rem] py-[4rem] gap-[4rem] max-[850px]:flex-col justify-center max-[850px]:items-center">
-        <div className="flex ml-auto mt-[4rem] flex-col gap-[1rem] max-[850px]:max-w-full max-w-[75rem]">
-          <h2 className="robot-condensed text-[5rem] text-[#2B2B2B] uppercase  font-600  leading-[100%]">
-            Web Development Technologies And Frameworks We Work On
-          </h2>
-          <p className="Montserrat text-[2rem] leading-[130%] font-300 text-[#000000]">
-            Ranging from front-end development technologies like React JS, Next
-            JS, Angular JS, Vue JS, Bootstrap, etc to back-end development like
-            Node JS, PHP, Python, MySQL, MongoDB, etc. Our software engineers
-            are experts in all web development technologies and frameworks
-            needed to deliver custom websites and web applications.
-          </p>
-        </div>
-        <div className="mr-auto justify-center grid gap-[2rem] grid-cols-5 min-[851px]:ml-auto max-w-[65rem] max-[850px]:max-w-full rounded-[5rem] px-[4rem] pt-[3rem]">
-          {expertiseIcons.map((item) => (
-            <div className=" flex items-center">
-              <Image
-                src={item}
-                loader={({ src }) => {
-                  return src;
-                }}
-                alt=""
-                className="w-6rem "
-              />
-            </div>
-          ))}
-        </div>
-      </div>
 
+      {/* impressed */}
       <div className="flex flex-col gap-[2rem] px-8 py-32">
         <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[640px]:text-[4rem]">
           Impressed?
@@ -404,111 +432,86 @@ const Home = () => {
         </>
         {/* <Button title="Let’s Work Together" classes="" /> */}
       </div>
-      <div className="flex bg-[#2B2B2B] py-24 pr-[4rem]  pl-[6rem] max-[850px]:flex-col max-[640px]:gap-[4rem]">
-        <div className="flex w-[50%] flex-col gap-[2rem] max-[850px]:w-full  max-[850px]:items-center">
-          <div className="clash flex max-w-[42rem] flex-wrap gap-x-[1rem] text-[8rem] font-600 leading-85 text-white max-[850px]:max-w-[100%] max-[850px]:justify-center max-[850px]:text-center ">
-            Industries we've{" "}
-            <p className="text-yellow  max-[850px]:text-white"> Worked</p> with
-          </div>
-          <p className="Montserrat mt-4 max-w-[460px] text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
-            At this point, you might be considering why shall I choose
-            Creaditech to get my software/ app developed or ask them to promote
-            my business. Well, Creaditech has a proven track record of
-            developing custom softwares and doing digital marketing for
-            different brands. We have a team.
-          </p>
+      {/* our happy clients */}
+      <>
+        <div className="flex flex-col px-12 py-28">
+          <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
+            Our Happy Clients
+          </h2>
         </div>
-        <div className="max-[850px]:flex grid grid-cols-3 max-[1000px]:grid-cols-2 max-w-[90rem] mx-auto flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
-          {industriesCards.map((item, index) => (
-            <Card4 key={index} title={item.title} icon={item.icon} />
-          ))}
+        <div className="my-[4rem] ">
+          <Carousel
+            ref={carouselRef}
+            {...consts}
+            showEmptySlots
+            // enableAutoPlay
+            focusOnSelect={true}
+            renderArrow={myArrow}
+            onPrevStart={(currentItem, nextItem) => {
+              if (currentItem.index === nextItem.index) {
+                // we hit the last item, go to first item
+                carouselRef.current.goTo(10);
+              }
+            }}
+            onPrevEnd={({ index }) => {
+              clearTimeout(resetTimeout);
+              if (index + 1 === 0) {
+                if (carouselRef?.current?.goTo) {
+                  resetTimeout = setTimeout(() => {
+                    if (carouselRef?.current?.goTo) {
+                      carouselRef?.current?.goTo(10);
+                    }
+                  }, 3000);
+                }
+              }
+            }}
+            onNextStart={(currentItem, nextItem) => {
+              if (currentItem.index === nextItem.index) {
+                // we hit the last item, go to first item
+                carouselRef.current.goTo(0);
+              }
+            }}
+            onNextEnd={({ index }) => {
+              clearTimeout(resetTimeout);
+              if (index + 1 === 10) {
+                if (carouselRef?.current?.goTo) {
+                  resetTimeout = setTimeout(() => {
+                    if (carouselRef?.current?.goTo) {
+                      carouselRef.current.goTo(0);
+                    }
+                  }, 3000);
+                }
+              }
+            }}
+            breakPoints={breakPoints}
+            // outerSpacing={100}
+            itemPadding={[0, 10]}
+            itemsToShow={3}
+            renderPagination={({ pages, activePage, onClick }) => {
+              console.log("===>", activePage);
+              return (
+                <div className="my-12 flex gap-4">
+                  {pages.map((page, index) => {
+                    return (
+                      <div
+                        key={index}
+                        onClick={() => onClick(String(page))}
+                        // active={isActivePage}
+                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${activePage != index ? "bg-[#D9D9D9]" : "bg-black"
+                          }  `}
+                      ></div>
+                    );
+                  })}
+                </div>
+              );
+            }}
+          >
+            {reviews.map((item,index)=><Card5 key={index} item={item} />)}
+          </Carousel>
         </div>
-      </div>
-      <div className="flex flex-col px-12 py-28">
-        <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
-          Our Happy Clients
-        </h2>
-      </div>
-      <div className="my-[4rem] ">
-        <Carousel
-          ref={carouselRef}
-          {...consts}
-          showEmptySlots
-          // enableAutoPlay
-          focusOnSelect={true}
-          renderArrow={myArrow}
-          onPrevStart={(currentItem, nextItem) => {
-            if (currentItem.index === nextItem.index) {
-              // we hit the last item, go to first item
-              carouselRef.current.goTo(10);
-            }
-          }}
-          onPrevEnd={({ index }) => {
-            clearTimeout(resetTimeout);
-            if (index + 1 === 0) {
-              if (carouselRef?.current?.goTo) {
-                resetTimeout = setTimeout(() => {
-                  if (carouselRef?.current?.goTo) {
-                    carouselRef?.current?.goTo(10);
-                  }
-                }, 3000);
-              }
-            }
-          }}
-          onNextStart={(currentItem, nextItem) => {
-            if (currentItem.index === nextItem.index) {
-              // we hit the last item, go to first item
-              carouselRef.current.goTo(0);
-            }
-          }}
-          onNextEnd={({ index }) => {
-            clearTimeout(resetTimeout);
-            if (index + 1 === 10) {
-              if (carouselRef?.current?.goTo) {
-                resetTimeout = setTimeout(() => {
-                  if (carouselRef?.current?.goTo) {
-                    carouselRef.current.goTo(0);
-                  }
-                }, 3000);
-              }
-            }
-          }}
-          breakPoints={breakPoints}
-          // outerSpacing={100}
-          itemPadding={[0, 10]}
-          itemsToShow={3}
-          renderPagination={({ pages, activePage, onClick }) => {
-            console.log("===>", activePage);
-            return (
-              <div className="my-12 flex gap-4">
-                {pages.map((page, index) => {
-                  return (
-                    <div
-                      key={index}
-                      onClick={() => onClick(String(page))}
-                      // active={isActivePage}
-                      className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
-                        activePage != index ? "bg-[#D9D9D9]" : "bg-black"
-                      }  `}
-                    ></div>
-                  );
-                })}
-              </div>
-            );
-          }}
-        >
-          <Card5 />
-          <Card5 />
-          <Card5 />
-          <Card5 />
-          <Card5 />
-          <Card5 />
-          <Card5 />
-          <Card5 />
-          <Card5 />
-          <Card5 />
-        </Carousel>
-      </div>
+      </>
+
+      {/* Estimated projects */}
       <Link
         href={"/contact-us"}
         className="group  flex border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] max-[850px]:border-[#3D404E]"
@@ -611,83 +614,87 @@ const Home = () => {
           </div>
         </div>
       </Link>
-      <h2 className="clash mx-auto mb-[3rem] mt-[6rem] text-[6rem] pb-[1rem] border-solid border-[#2A2A2A] border-b-[.6rem] rounded-[.4rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
-        Blogs
-      </h2>
-      <div className="my-[4rem] ">
-        <Carousel
-          ref={carouselRef1}
-          showEmptySlots
-          // enableAutoPlay
-          focusOnSelect={true}
-          renderArrow={myArrow}
-          breakPoints={breakPoints}
-          onPrevStart={(currentItem, nextItem) => {
-            if (currentItem.index === nextItem.index) {
-              // we hit the last item, go to first item
-              carouselRef1.current.goTo(10);
-            }
-          }}
-          onPrevEnd={({ index }) => {
-            clearTimeout(resetTimeout);
-            if (index + 1 === 0) {
-              if (carouselRef1?.current?.goTo) {
-                resetTimeout = setTimeout(() => {
-                  if (carouselRef1?.current?.goTo) {
-                    carouselRef.current.goTo(10);
-                  }
-                }, 3000);
+
+
+
+      {/* blogs */}
+      <>
+        <h2 className="clash mx-auto mb-[3rem] mt-[6rem] text-[6rem] pb-[1rem] border-solid border-[#2A2A2A] border-b-[.6rem] rounded-[.4rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
+          Blogs
+        </h2>
+        <div className="my-[4rem] ">
+          <Carousel
+            ref={carouselRef1}
+            showEmptySlots
+            // enableAutoPlay
+            focusOnSelect={true}
+            renderArrow={myArrow}
+            breakPoints={breakPoints}
+            onPrevStart={(currentItem, nextItem) => {
+              if (currentItem.index === nextItem.index) {
+                // we hit the last item, go to first item
+                carouselRef1.current.goTo(10);
               }
-            }
-          }}
-          onNextStart={(currentItem, nextItem) => {
-            if (currentItem.index === nextItem.index) {
-              // we hit the last item, go to first item
-              carouselRef1.current.goTo(0);
-            }
-          }}
-          onNextEnd={({ index }) => {
-            clearTimeout(resetTimeout);
-            if (index + 1 === 10) {
-              if (carouselRef1?.current?.goTo) {
-                resetTimeout = setTimeout(() => {
-                  if (carouselRef1?.current?.goTo) {
-                    carouselRef1.current.goTo(0);
-                  }
-                }, 3000);
+            }}
+            onPrevEnd={({ index }) => {
+              clearTimeout(resetTimeout);
+              if (index + 1 === 0) {
+                if (carouselRef1?.current?.goTo) {
+                  resetTimeout = setTimeout(() => {
+                    if (carouselRef1?.current?.goTo) {
+                      carouselRef.current.goTo(10);
+                    }
+                  }, 3000);
+                }
               }
-            }
-          }}
-          // outerSpacing={100}
-          itemPadding={[0, 10]}
-          itemsToShow={3}
-          renderPagination={({ pages, activePage, onClick }) => {
-            return (
-              <div className="my-12 flex gap-4">
-                {pages.map((page, index) => {
-                  return (
-                    <div
-                      key={index}
-                      onClick={() => onClick(page)}
-                      // active={isActivePage}
-                      className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
-                        activePage != index ? "bg-[#D9D9D9]" : "bg-black"
-                      }  `}
-                    ></div>
-                  );
-                })}
-              </div>
-            );
-          }}
-        >
-          {blogs.map((item) => {
-            return (
-              <Link href={`/blog/${item?.title}`}>
-                <Card7 title={item?.h1} image={item.featuredImage.img} />
-              </Link>
-            );
-          })}
-          {/* <Card7 image={robot1} />
+            }}
+            onNextStart={(currentItem, nextItem) => {
+              if (currentItem.index === nextItem.index) {
+                // we hit the last item, go to first item
+                carouselRef1.current.goTo(0);
+              }
+            }}
+            onNextEnd={({ index }) => {
+              clearTimeout(resetTimeout);
+              if (index + 1 === 10) {
+                if (carouselRef1?.current?.goTo) {
+                  resetTimeout = setTimeout(() => {
+                    if (carouselRef1?.current?.goTo) {
+                      carouselRef1.current.goTo(0);
+                    }
+                  }, 3000);
+                }
+              }
+            }}
+            // outerSpacing={100}
+            itemPadding={[0, 10]}
+            itemsToShow={3}
+            renderPagination={({ pages, activePage, onClick }) => {
+              return (
+                <div className="my-12 flex gap-4">
+                  {pages.map((page, index) => {
+                    return (
+                      <div
+                        key={index}
+                        onClick={() => onClick(page)}
+                        // active={isActivePage}
+                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${activePage != index ? "bg-[#D9D9D9]" : "bg-black"
+                          }  `}
+                      ></div>
+                    );
+                  })}
+                </div>
+              );
+            }}
+          >
+            {blogs.map((item) => {
+              return (
+                <Link href={`/blog/${item?.title}`}>
+                  <Card7 title={item?.h1} image={item.featuredImage.img} />
+                </Link>
+              );
+            })}
+            {/* <Card7 image={robot1} />
           <Card7 image={robot2} />
           <Card7 image={robot} />
           <Card7 image={robot1} />
@@ -695,11 +702,14 @@ const Home = () => {
           <Card7 image={robot} />
           <Card7 image={robot1} />
           <Card7 image={robot2} /> */}
-          <Link href={"/blog"}>
-            <Card6 />
-          </Link>
-        </Carousel>
-      </div>
+            <Link href={"/blog"}>
+              <Card6 />
+            </Link>
+          </Carousel>
+        </div>
+      </>
+
+      {/* achieve your business */}
       <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[1rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
         <h1 className="robot-condensed text-center  text-[4rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
           Achieve Your Business Goals By Taking Web Development Services From
