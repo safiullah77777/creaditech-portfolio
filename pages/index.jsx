@@ -392,7 +392,7 @@ const Home = () => {
 
       <div className="flex flex-col gap-[2rem] px-8 py-32">
         <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[640px]:text-[4rem]">
-          Too Impressed?
+          Impressed?
         </h2>
         <>
           <Link
