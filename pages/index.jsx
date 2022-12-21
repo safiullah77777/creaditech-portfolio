@@ -168,14 +168,14 @@ const Home = () => {
           src={require("../public/assets/images/service-image2.png")}
         />
       </div> */}
-      <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[3rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
-        <h1 className="robot-condensed text-center  text-[4rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
+      <div className=" rounded-[2rem] bg-[#ffe100] pt-[4rem] shadow-2xl my-[3rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
+        <p className="robot-condensed text-center  text-[3rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[3rem] leading-[100%] max-[850px]:text-white">
           Offering cost-effective digital transformation for small businesses
           and startups that want to inspire the world with their products and
           services. We wish to empower you as we move forward in becoming
           universal market leaders in putting value-addition in Design, Branding
           and Technology.
-        </h1>
+        </p>
       </div>
 
       <section className="flex justify-center  px-[3rem] pt-32 ">

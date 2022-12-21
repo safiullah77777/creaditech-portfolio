@@ -528,7 +528,7 @@ const Services = ({ datas }) => {
           {pageContent?.steps?.steps.map((data, index) => {
             return (
               <DesignCard
-                no={index+1}
+                no={index + 1}
                 // bg={`bg-[url('/assets/images/icons/${countings[index]}')]`}
                 image={data?.imgage?.img}
                 alt={data.imgage.alt}
@@ -551,8 +551,8 @@ const Services = ({ datas }) => {
                 className="relative !max-[850px]:top-[21rem]  top-[12rem] w-full"
                 src={CardFull}
                 alt=""
-                //   width={2000}
-                //   height={200}
+              //   width={2000}
+              //   height={200}
               />
             </div>
 
