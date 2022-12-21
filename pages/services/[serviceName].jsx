@@ -35,14 +35,20 @@ import { toast } from "react-toastify";
 import { shuffle } from "../../utils/functions";
 
 const Services = ({ datas }) => {
-  const countings = ["one", "two", "three", "four", "five", "six"];
+  const countings = [
+    "two.svg",
+    "two.svg",
+    "one.svg",
+    "four.svg",
+    "five.svg",
+    "six.svg",
+  ];
   const [hydrated, setHydrated] = useState(false);
   const [loading, setLoading] = useState(false);
   React.useEffect(() => {
     setHydrated(true);
   }, []);
 
-  
   const router = useRouter();
   const { serviceName } = router.query;
   const check = List.map((item) => item.children.map((item1) => item1)).reduce(
@@ -395,7 +401,7 @@ const Services = ({ datas }) => {
 
             <div className="relative mt-[3rem] flex flex-col  before:absolute before:top-0 before:left-0 before:z-40 before:h-[50%] before:w-full after:absolute after:bottom-0 after:left-0 after:z-40 after:h-[50%] after:w-full max-[1055px]:pb-[5rem] max-[1055px]:after:bg-[transparent] after:bg-[#FFFFFF]">
               <div className="z-50  flex flex-wrap justify-center gap-[2rem] ">
-              {pageContent?.pricing.map((item, index) => (
+                {pageContent?.pricing.map((item, index) => (
                   <PriceCard key={index} item={item} no={index} />
                 ))}
               </div>
@@ -517,17 +523,21 @@ const Services = ({ datas }) => {
             {pageContent?.steps?.mainHeading.three}
           </h2>
         </div>
+
         <div className=" grid grid-cols-3 mx-auto max-[850px]:grid-cols-2 items-stretch max-[500px]:grid-cols-1 flex-wrap items-center justify-center gap-[3rem] px-[2rem]">
-          {pageContent?.steps?.steps.map((data, index) => (
-            <DesignCard
-              bg={`bg-[url('/assets/images/icons/${countings[index]}.svg')]`}
-              image={data?.imgage?.img}
-              alt={data.imgage.alt}
-              para={data.para}
-              title1={data?.title1}
-              title2={data?.title2}
-            />
-          ))}
+          {pageContent?.steps?.steps.map((data, index) => {
+            return (
+              <DesignCard
+                no={index+1}
+                // bg={`bg-[url('/assets/images/icons/${countings[index]}')]`}
+                image={data?.imgage?.img}
+                alt={data.imgage.alt}
+                para={data.para}
+                title1={data?.title1}
+                title2={data?.title2}
+              />
+            );
+          })}
         </div>
         {/* <div className="bg-[#1E1E1E] p-[3rem] w-full"></div> */}
         {/* Payless logo design page  */}

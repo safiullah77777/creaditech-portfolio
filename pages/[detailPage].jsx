@@ -1,15 +1,33 @@
 import React from "react";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
+import MetaHead from "../components/metaHead/MetaHead";
 import { privacyPolicy, TermsAndConditions } from "../utils/terms";
 
 const DetailsPage = ({ data }) => {
   const pageContent =
-    data.page !== "privacy-policy" ? privacyPolicy : TermsAndConditions;
+    data.page === "privacy-policy" ? privacyPolicy : TermsAndConditions;
   return (
     <>
+      <MetaHead
+        title={
+          data.page === "privacy-policy"
+            ? "Privacy Policy - Creaditech"
+            : "Terms and Conditions - Creaditech"
+        }
+        description={
+          data.page === "privacy-policy"
+            ? "Read our Privacy Policy"
+            : "Read our Terms and Conditions"
+        }
+        link={
+          data.page === "privacy-policy"
+            ? "privacy-policy"
+            : "terms-and-conditions"
+        }
+      />
       <Header />
-      <div className="clash font-700 flex justify-center items-center h-[50rem] bg-[grey] text-[5rem] text-[#ffe100]">
+      <div className="clash font-700 flex justify-center items-center h-[50rem] bg-[#111111]  text-[8rem] text-[#ffe100]">
         <h1>{data.h1}</h1>
       </div>
       <div className="flex justify-center">
@@ -29,16 +47,16 @@ const DetailsPage = ({ data }) => {
               );
             if (item.includes("jsx")) return pageContent[item];
             if (item.includes("listTitle"))
-            return (
-              <p className="clash font-300 text-[#000000] text-[1.8rem] my-[.5rem]">
-                {pageContent[item]}
-              </p>
-            );
+              return (
+                <p className="clash font-300 text-[#000000] text-[1.8rem] my-[.5rem]">
+                  {pageContent[item]}
+                </p>
+              );
             if (item.includes("paras"))
               return (
                 <div>
                   {pageContent[item].map((item1) => (
-                    <p 
+                    <p
                       key={item1}
                       className="text-[1.8rem] clash leading-[100%] font-300 text-[#000000]"
                     >
@@ -71,15 +89,15 @@ export async function getStaticProps({ params = {} }) {
   return {
     props: {
       data:
-        params.detailPage === "terms&conditions"
-          ? { h1: "Terms And Conditions", page: "terms&conditions" }
+        params.detailPage === "terms-and-conditions"
+          ? { h1: "Terms And Conditions", page: "terms-and-conditions" }
           : { h1: "Privacy Policy", page: "privacy-policy" }, // will be passed to the page component as props
     },
   };
 }
 export async function getStaticPaths() {
   const paths = [
-    { params: { detailPage: "terms&conditions" } },
+    { params: { detailPage: "terms-and-conditions" } },
     { params: { detailPage: "privacy-policy" } },
   ];
   return {

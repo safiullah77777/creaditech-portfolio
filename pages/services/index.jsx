@@ -50,7 +50,13 @@ const LogoService = () => {
 
   return (
     <>
-      <MetaHead />
+      <MetaHead
+        title={"Our Services - Creaditech"}
+        description="Few companies have the expertise to build and market your product
+              on the Internet. Creaditech is one of those companies that
+              provides digital transformation for your business."
+        link={"services"}
+      />
       <div className=" bg-black ">
         <Header />
       </div>
@@ -60,14 +66,13 @@ const LogoService = () => {
       >
         <div className="flex h-full max-w-[700px] flex-col justify-center gap-[2rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
           <h1 className="robot-condensed flex flex-wrap text-[6.5rem] font-600 uppercase leading-85 text-white  max-[1440px]:text-[6.5rem] max-[1300px]:text-[5rem] max-[850px]:justify-center max-[850px]:text-center max-[400px]:text-[5rem] min-[1600px]:text-[5rem]">
-            LOGO <span className="mx-5 text-yellow"> DESIGN</span> SERVICES
+            OUR SERVICES
           </h1>
           <div className="detail-heading">
             <p className=" Montserrat mt-4  max-w-[646px] text-[2.2rem] font-[300] leading-130 text-white max-[850px]:text-center">
-              Let’s Bring in the Power of Popularity.It’s all about Your brand,
-              your logo design & our services.Let’s Bring in the Power of
-              Popularity It’s all about Your brand, your logo design & our
-              services.
+              Few companies have the expertise to build and market your product
+              on the Internet. Creaditech is one of those companies that
+              provides digital transformation for your business.
             </p>
             <div className="mt-[4rem] flex flex-wrap gap-8 max-[850px]:justify-center">
               <Button classes="" title={"View Pricing & Plan"} />
@@ -131,8 +136,8 @@ const LogoService = () => {
             Our Services
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
-            {serviceCards.slice(0,6).map((item, index) => (
-              <Link href={"/services"+item?.link} key={index}>
+            {serviceCards.slice(0, 6).map((item, index) => (
+              <Link href={"/services" + item?.link} key={index}>
                 <Card
                   styles={item.styles}
                   heading1={item.title}

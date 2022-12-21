@@ -16,7 +16,11 @@ import MetaHead from "../components/metaHead/MetaHead";
 const AboutUs = () => {
   return (
     <>
-      <MetaHead />
+      <MetaHead
+        link={'about-us'}
+        title={"About Us - Creaditech"}
+        description="Creaditech is one of the most recommended web development company in the USA. We provide digital transformation for your business."
+      />
 
       <div>
         <Header />

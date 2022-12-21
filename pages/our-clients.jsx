@@ -26,7 +26,11 @@ const OurClients = () => {
 
   return (
     <>
-      <MetaHead />
+      <MetaHead
+        title={"Our Portfolio - Creaditech"}
+        description="View our delivered projects"
+        link={"our-clients"}
+      />
 
       <Header />
       <div
@@ -34,18 +38,18 @@ const OurClients = () => {
     max-[850px]:pt-80"
       >
         <div className="m-auto flex h-full flex-col items-center justify-center font-semibold max-[850px]:mx-auto max-[850px]:max-w-full  max-[850px]:px-8 max-[850px]:pl-12 ">
-          <h1 className="flex max-w-[71rem] flex-wrap justify-center gap-[1.5rem] text-center robot-condensed text-65 uppercase leading-[81%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
+          <h1 className="max-w-[71rem] flex-wrap justify-center gap-[1.5rem] text-center robot-condensed text-65 uppercase leading-[81%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
             <span> Every</span> <span className="text-yellow">Great</span>{" "}
             <span className="text-yellow">Brand</span> <span>is</span> Like a
             <span className="text-yellow">Great Story</span>
             {/* {"Every "} <span className="text-yellow"> Great brands {" "}</span> is like a{" "}
             <span className="text-yellow"> grand story</span> */}
           </h1>
-          <p className="mt-4 text-center max-w-[53rem] text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
+          {/* <p className="mt-4 text-center max-w-[53rem] text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
             We help companies grow by providing them the best software
             development and marketing services in the USA. Get in touch with our
             experts now and make your business reach your targeted audience.
-          </p>
+          </p> */}
           <div className="my-8 flex gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
             <Button classes="" title={"Contact Us"} />
             <Button2 title={"Custom Quote"} />
@@ -438,10 +442,10 @@ const OurClients = () => {
           {cat == "all" ? (
             <>
               {portfolioCards.map((item, index) => {
-                console.log(item)
+                console.log(item);
                 return (
                   <Card3
-                  alt={item.alt}
+                    alt={item.alt}
                     key={index}
                     classes=""
                     name={item.name}
@@ -452,8 +456,17 @@ const OurClients = () => {
             </>
           ) : (
             <>
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img5.png')]" />
-              <Card3 classes="bg-[url('/assets/images/backgrounds/portfolio-img6.png')]" />
+              {portfolioCards.slice(2, 4).map((item, index) => {
+                return (
+                  <Card3
+                    alt={item.alt}
+                    key={index}
+                    classes=""
+                    name={item.name}
+                    img={item.img}
+                  />
+                );
+              })}
             </>
           )}
         </div>

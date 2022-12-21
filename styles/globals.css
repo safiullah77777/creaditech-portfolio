@@ -25,12 +25,12 @@ html {
 }
 @media screen and (max-width: 850px) {
   html,
-body {
-  /* overflow-x: hidden; */
-  /* contain: strict; */
-  /* box-sizing: border-box;
+  body {
+    /* overflow-x: hidden; */
+    /* contain: strict; */
+    /* box-sizing: border-box;
   position: relative; */
-}
+  }
 }
 /* width */
 .price::-webkit-scrollbar {
@@ -55,10 +55,12 @@ body {
   background: #ffe100;
   border-radius: 2px;
 }
-a[rel~="nofollow"], a[rel~="ugc"], a[rel~="sponsored"] {
+a[rel~="nofollow"],
+a[rel~="ugc"],
+a[rel~="sponsored"] {
   text-decoration: none !important;
 }
-.anchor{
+.anchor {
   color: rgb(3, 119, 188, 1);
   /* text-decoration: underline; */
 }
@@ -67,7 +69,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-video{
+video {
   object-fit: cover;
 }
 /* Firefox */
@@ -317,6 +319,18 @@ input[type="number"] {
 }
 .bg-pos {
   background-position: 1rem 1rem;
+  background-size: 6rem;
+}
+.grey-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(91, 94, 113, 0.28) 0%,
+    rgba(91, 94, 113, 0.01) 91.42%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 .loader {
   border: 0.5rem solid #f3f3f3;

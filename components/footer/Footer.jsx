@@ -154,15 +154,19 @@ const Footer = () => {
         © Copyright 2022 by Creaditech. All Rights Reserved.
       </div>
       <div className="Montserrat flex flex-wrap justify-center max-[678px]:mb-[7rem]">
-        <span className="cursor-pointer border-r-2 border-solid border-white px-8 text-16 font-500 text-white">
+        <Link
+          href={"/privacy-policy"}
+          className="cursor-pointer border-r-2 border-solid border-white px-8 text-16 font-500 text-white"
+        >
           Privacy Policy
-        </span>
-        <span className="cursor-pointer border-r-2 border-solid border-white px-8 text-16 font-500 text-white">
-          Refund Policy
-        </span>
-        <span className="cursor-pointer px-8 text-16 font-500 text-white">
+        </Link>
+
+        <Link
+          href={"/terms-and-conditions"}
+          className="cursor-pointer px-8 text-16 font-500 text-white"
+        >
           Terms & Conditions
-        </span>
+        </Link>
       </div>
     </footer>
   );

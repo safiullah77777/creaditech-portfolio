@@ -169,7 +169,7 @@ const Home = () => {
         />
       </div> */}
       <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[3rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
-        <h1 className="robot-condensed text-center  text-[3rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[3rem] leading-[100%] max-[850px]:text-white">
+        <h1 className="robot-condensed text-center  text-[4rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[4rem] leading-[100%] max-[850px]:text-white">
           Offering cost-effective digital transformation for small businesses
           and startups that want to inspire the world with their products and
           services. We wish to empower you as we move forward in becoming
@@ -181,7 +181,7 @@ const Home = () => {
       <section className="flex justify-center  px-[3rem] pt-32 ">
         <div className="flex items-center max-[850px]:flex-col ">
           <h2 className="leading-1 robot-condensed m-auto flex h-[30rem] max-w-[28rem] items-center justify-center text-150 font-600 uppercase leading-[80%] text-black max-[640px]:text-[70px]  max-[640px]:font-900 min-[850px]:-rotate-90">
-            Our <br /> Service
+            Our <br /> Services
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
             {serviceCards.slice(0, 6).map((item, index) => (
@@ -392,7 +392,7 @@ const Home = () => {
 
       <div className="flex flex-col gap-[2rem] px-8 py-32">
         <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[640px]:text-[4rem]">
-          Let’s build your next Product
+          Too Impressed?
         </h2>
         <>
           <Link
