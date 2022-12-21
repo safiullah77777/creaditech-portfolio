@@ -397,9 +397,9 @@ const Services = ({ datas }) => {
 
             <div className="relative mt-[3rem] flex flex-col  before:absolute before:top-0 before:left-0 before:z-40 before:h-[50%] before:w-full after:absolute after:bottom-0 after:left-0 after:z-40 after:h-[50%] after:w-full max-[1055px]:pb-[5rem] max-[1055px]:after:bg-[transparent] after:bg-[#FFFFFF]">
               <div className="z-50  flex flex-wrap justify-center gap-[2rem] ">
-                <PriceCard />
-                <PriceCard />
-                <PriceCard />
+                {pageContent?.pricingSection.map((item, index) => (
+                  <PriceCard key={index} item={item} />
+                ))}
               </div>
             </div>
           </div>

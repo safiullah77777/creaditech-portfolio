@@ -110,7 +110,7 @@ const Home = () => {
       </button>
     );
   }
-  
+
   return (
     <div className="flex min-h-screen flex-col">
       <MetaHead />
@@ -149,6 +149,25 @@ const Home = () => {
           src={require("../public/assets/images/service-image2.png")}
         />
       </div> */}
+      <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[4rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
+        <h1 className="robot-condensed text-center  text-[3rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[3rem] leading-[100%] max-[850px]:text-white">
+          Offering cost-effective digital transformation for small businesses
+          and startups that want to inspire the world with their products and
+          services. We wish to empower you as we move forward in becoming
+          universal market leaders in putting value-addition in Design, Branding
+          and Technology.
+        </h1>
+        <Image
+          loader={({ src }) => {
+            return src;
+          }}
+          width={1000}
+          height={1000}
+          className="hidden w-full max-[850px]:flex"
+          src={"/assets/images/backgrounds/service-bg-mob.png"}
+          alt=""
+        />
+      </div>
 
       <section className="flex justify-center px-8 pt-32   ">
         <div className="flex items-center max-[850px]:flex-col">
@@ -157,13 +176,16 @@ const Home = () => {
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
             {serviceCards.slice(0, 6).map((item, index) => (
-             <Link href={"/services"+item?.link}> <Card
-                styles={item.styles}
-                key={index}
-                heading1={item.title}
-                heading2={item.title1}
-                image={item.icon}
-              /></Link>
+              <Link href={"/services" + item?.link}>
+                {" "}
+                <Card
+                  styles={item.styles}
+                  key={index}
+                  heading1={item.title}
+                  heading2={item.title1}
+                  image={item.icon}
+                />
+              </Link>
             ))}
             {/* <div
               onMouseEnter={() => {
@@ -277,9 +299,9 @@ const Home = () => {
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img9.png')]" />
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img10.png')]" />
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img11.png')]" /> */}
-            {
-              portfolioCards.slice(0,5).map((item,index)=><Card3 classes="" img={item.img} />)
-            }
+            {portfolioCards.slice(0, 5).map((item, index) => (
+              <Card3 classes="" img={item.img} />
+            ))}
             <div
               onMouseEnter={() => {
                 setHover(true);
@@ -663,8 +685,8 @@ const Home = () => {
           <Card7 image={robot} />
           <Card7 image={robot1} />
           <Card7 image={robot2} /> */}
-          <Link href={'/blog'}>
-          <Card6 />
+          <Link href={"/blog"}>
+            <Card6 />
           </Link>
         </Carousel>
       </div>

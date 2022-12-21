@@ -15,8 +15,8 @@ const Banner3 = () => {
         <source src={video} type="video/mp4" />
       </video> */}
       <video
-      // poster="/assets/images/backgrounds/banner.png"
-      
+        // poster="/assets/images/backgrounds/banner.png"
+
         autoPlay
         loop
         muted
@@ -39,9 +39,7 @@ const Banner3 = () => {
         <div className="flex flex-wrap font-600 max-w-[70rem]  text-center gap-x-[15px] robot-condensed text-65 uppercase leading-85 text-white max-[850px]:justify-center max-[850px]:text-center max-[850px]:text-[5rem]">
           <h2>Transformering businesses through digital empowerment</h2>
         </div>
-        <p className="mt-4 text-center font-400 max-w-[70rem] text-16  leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
-          Offering cost-effective digital transformation for small businesses and startups that want to inspire the world with their products and services. We wish to empower you as we move forward in becoming universal market leaders in putting value-addition in Design, Branding and Technology.
-        </p>
+
         <div className="my-8 flex gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
           <Link href={"/contact-us"}>
             <Button classes="" title={"Get a Quote"} />
