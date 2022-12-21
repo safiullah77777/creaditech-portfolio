@@ -65,8 +65,8 @@ const Home = () => {
   const [show, setShow] = useState(false);
   let resetTimeout;
   const breakPoints = [
-    // { width: 750, itemsToShow: 1 },
-    // { width: 950, itemsToShow: 2 },
+    { width: 550, itemsToShow: 1 },
+    { width: 750, itemsToShow: 2 },
     { width: 1100, itemsToShow: 3 },
     { width: 1367, itemsToShow: 4, itemsToScroll: 2 },
     { width: 1450, itemsToShow: 5 },
