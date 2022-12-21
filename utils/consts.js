@@ -113,7 +113,7 @@ export const BottomList = (active) => [
         />
       </svg>
     ),
-    link: "/creative-blog",
+    link: "/blog",
   },
   {
     title: "About",

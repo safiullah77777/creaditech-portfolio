@@ -32,7 +32,6 @@ import Link from "next/link";
 import { Content } from "../../utils/content";
 import contactForm from "../../services/fromService";
 import { toast } from "react-toastify";
-import Card10 from "../../components/card10/card10";
 import { shuffle } from "../../utils/functions";
 
 const Services = ({ datas }) => {
@@ -43,6 +42,7 @@ const Services = ({ datas }) => {
     setHydrated(true);
   }, []);
 
+  
   const router = useRouter();
   const { serviceName } = router.query;
   const check = List.map((item) => item.children.map((item1) => item1)).reduce(
@@ -66,7 +66,6 @@ const Services = ({ datas }) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
   const onSubmit = (e) => {
-    console.log(formData);
     e.preventDefault();
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -264,7 +263,6 @@ const Services = ({ datas }) => {
       <br />
 
       <div className=" mt-20 w-full px-20">
-        {console.log(pageContent)}
         <Image
           loader={({ src }) => {
             return src;
@@ -379,7 +377,7 @@ const Services = ({ datas }) => {
         </div> */}
         {/* pricing section */}
         {pageContent.pricing !== false && (
-          <div className=" flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem]">
+          <div className=" flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem] mt-[3rem]">
             <div className="mb-2 mt-12 text-center">
               <h2 className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
                 Pricing & Packages.
@@ -397,8 +395,8 @@ const Services = ({ datas }) => {
 
             <div className="relative mt-[3rem] flex flex-col  before:absolute before:top-0 before:left-0 before:z-40 before:h-[50%] before:w-full after:absolute after:bottom-0 after:left-0 after:z-40 after:h-[50%] after:w-full max-[1055px]:pb-[5rem] max-[1055px]:after:bg-[transparent] after:bg-[#FFFFFF]">
               <div className="z-50  flex flex-wrap justify-center gap-[2rem] ">
-                {pageContent?.pricingSection.map((item, index) => (
-                  <PriceCard key={index} item={item} />
+              {pageContent?.pricing.map((item, index) => (
+                  <PriceCard key={index} item={item} no={index} />
                 ))}
               </div>
             </div>
@@ -524,6 +522,7 @@ const Services = ({ datas }) => {
             <DesignCard
               bg={`bg-[url('/assets/images/icons/${countings[index]}.svg')]`}
               image={data?.imgage?.img}
+              alt={data.imgage.alt}
               para={data.para}
               title1={data?.title1}
               title2={data?.title2}

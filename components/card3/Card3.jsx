@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React, { FC, useState } from "react";
 
-const Card3 = ({ classes, img, name }) => {
-  
+const Card3 = ({ classes, img, name, alt }) => {
+
   return (
     <>
       <div
@@ -10,7 +10,7 @@ const Card3 = ({ classes, img, name }) => {
         className={` relative flex h-[40rem] w-[31.3rem] items-end bg-[url('/assets/images/backgrounds/portfolio-img.png')] bg-cover bg-no-repeat   duration-300 ease-linear max-[400px]:h-[50rem] max-[400px]:w-[40rem]  ${classes} `}
       >
         <div className="absolute overflow-hidden top-0 z-1 left-0 w-full h-full bg-[#000000]/[0.3]">
-          <Image src={img} loader={({ src }) => {
+          <Image src={img} alt={alt} loader={({ src }) => {
             return src;
           }} className="w-full " />
         </div>

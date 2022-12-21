@@ -7,15 +7,14 @@ import MegaMenu from "../megaMenu/MegaMenu";
 import SideNav from "../sideNav/SideNav";
 const Header = () => {
   const [isHover, setHover] = useState(false);
-
+  
   return (
     <div className=" absolute top-0 left-0 z-[54] w-[100%] py-16 min-[720px]:px-[8rem] px-[2rem] ">
       <div className="hidden justify-center max-[677px]:flex">
         <Link href="/">
-          <Image
-            loader={({ src }) => {
-              return src;
-            }}
+          <Image  loader={({ src }) => {
+                return src;
+              }}
             src={Logo}
             className="h-[50px] w-[101px]"
             alt=""
@@ -47,8 +46,7 @@ const Header = () => {
         </li>
         <li className="mx-auto w-[140px] max-[1000px]:w-[100px] ">
           <Link href="/">
-            <Image
-              loader={({ src }) => {
+            <Image  loader={({ src }) => {
                 return src;
               }}
               src={Logo}
@@ -78,7 +76,10 @@ const Header = () => {
       <MegaMenu
         setHover={setHover}
         classes={
-          isHover ? "!opacity-100 max-h-auto !visible" : "max-h-0 -z-[1000]"
+          isHover 
+
+            ? "!opacity-100 max-h-auto !visible"
+            : "max-h-0 -z-[1000]"
         }
       />
     </div>

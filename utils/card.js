@@ -143,54 +143,32 @@ export const serviceCards = [
 export const portfolioCards = [
   {
     img: portfolio1,
-    alt: "",
+    alt: "Smartength",
     name:"Smartength"
   },
   {
     img: portfolio2,
-    alt: "",
-    name:"Pillar"
-  },
-  {
-    img: portfolio3,
-    alt: "",
+    alt:"Fushius",
     name:"Fushius"
   },
   {
     img: portfolio4,
-    alt: "",
+    alt: "Fulfil",
     name:"Fulfil"
   },
   {
     img: portfolio5,
-    alt: "",
+    alt: "Animaxers",
     name:"Animaxers"
   },
   {
     img: portfolio6,
     alt: "Cancun Corner",
+    name:"Cancun Corner"
   },
   {
     img: portfolio7,
-    alt: "Gymble",
+    alt: "Cancun Corner",
+    name:"Cancun Corner"
   },
 ];
-
-export const pricingCards = [
-  {
-    page:"web-development",
-    packages:[
-      {
-        services:[
-          ""
-        ]
-      },
-      {
-
-      },
-      {
-
-      }
-    ]
-  }
-]

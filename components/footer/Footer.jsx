@@ -10,7 +10,7 @@ import twitter from "../../public/assets/images/icons/twitter-rounded.svg";
 import linkedin from "../../public/assets/images/icons/linkedin-rounded.svg";
 import pinterest from "../../public/assets/images/icons/pinterest-rounded.svg";
 import Logo from "../../public/assets/images/Logo1.svg";
-
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="flex flex-col bg-primary px-24 pt-44 pb-24 max-[850px]:px-8  max-[600px]:pt-[4rem]">
@@ -26,67 +26,37 @@ const Footer = () => {
             Connect
           </p>
           <div className="item-center flex gap-4">
-            <div className="rounded-icons">
-              <Image
-                loader={({ src }) => {
-                  return src;
-                }}
-                src={facebook}
-                className=""
-                alt=""
-              />
-            </div>
-            <div className="rounded-icons">
-              <Image
-                loader={({ src }) => {
-                  return src;
-                }}
-                src={insta}
-                className=""
-                alt=""
-              />
-            </div>
-            <div className="rounded-icons">
-              <Image
-                loader={({ src }) => {
-                  return src;
-                }}
-                src={linkedin}
-                className=""
-                alt=""
-              />
-            </div>
-            <div className="rounded-icons">
-              <Image
-                loader={({ src }) => {
-                  return src;
-                }}
-                src={twitter}
-                className=""
-                alt=""
-              />
-            </div>
-            <div className="rounded-icons">
-              <Image
-                loader={({ src }) => {
-                  return src;
-                }}
-                src={pinterest}
-                className=""
-                alt=""
-              />
-            </div>
+            <Link href={'https://www.facebook.com/creaditech'} target="_blank" className="rounded-icons">
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={facebook} className="" alt="" />
+            </Link>
+            <Link href={'https://www.instagram.com/creaditech/'} target="_blank" className="rounded-icons">
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={insta} className="" alt="" />
+            </Link>
+            <Link href={'https://www.linkedin.com/company/creaditechus/'} target="_blank" className="rounded-icons">
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={linkedin} className="" alt="" />
+            </Link>
+            <Link href={'https://twitter.com/Creaditech'} target="_blank" className="rounded-icons">
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={twitter} className="" alt="" />
+            </Link>
+            <Link href={'https://www.pinterest.com/Creaditech/'} target="_blank" className="rounded-icons">
+              <Image  loader={({ src }) => {
+                return src;
+              }} src={pinterest} className="" alt="" />
+            </Link>
           </div>
         </div>
         <div className="flex w-1/2 flex-col items-center py-16 max-[850px]:order-1 max-[850px]:w-full min-[600px]:px-8">
-          <Image
-            loader={({ src }) => {
-              return src;
-            }}
-            src={Logo}
-            className="logo max-[500px]:w-[59px]"
-            alt=""
-          />
+          <Image  loader={({ src }) => {
+                return src;
+              }} src={Logo} className="logo max-[500px]:w-[59px]" alt="" />
           <p className="heading-grey robot-condensed my-10 text-45 font-600 leading-[80%] max-[400px]:text-[30px]">
             Join our Newsletter
           </p>

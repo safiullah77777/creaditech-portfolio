@@ -14,6 +14,7 @@ import BottomNav from "../components/bottomNav/BottomNav";
 import MetaHead from "../components/metaHead/MetaHead";
 import { toast } from "react-toastify";
 import contactForm from "../services/fromService";
+import Link from "next/link";
 
 const ContactUs = () => {
   const [loading, setLoading] = useState(false);
@@ -199,51 +200,62 @@ const ContactUs = () => {
           Connect Us On Social Media{" "}
         </h2>
         <div className="  flex flex-wrap justify-center gap-[2rem] py-[10rem]">
-          <Image
-            loader={({ src }) => {
-              return src;
-            }}
-            src={Facbook}
-            alt="Facbook"
-            width={144}
-            height={144}
-          />
-          <Image
-            loader={({ src }) => {
-              return src;
-            }}
-            src={Instagram}
-            alt="Instagram"
-            width={144}
-            height={144}
-          />
-          <Image
-            loader={({ src }) => {
-              return src;
-            }}
-            src={Pintrest}
-            alt="Pintrest"
-            width={144}
-            height={144}
-          />
-          <Image
-            loader={({ src }) => {
-              return src;
-            }}
-            src={LinkedIn}
-            alt="LinkedIn"
-            width={144}
-            height={144}
-          />
-          <Image
-            loader={({ src }) => {
-              return src;
-            }}
-            src={Youtube}
-            alt="Youtube"
-            width={144}
-            height={144}
-          />
+          <Link href={'https://www.facebook.com/creaditech'} target="_blank" >
+            <Image
+              loader={({ src }) => {
+                return src;
+              }}
+              src={Facbook}
+              alt="Facbook"
+              width={144}
+              height={144}
+            />
+          </Link>
+          <Link href={'https://www.instagram.com/creaditech/'} target="_blank" >
+
+            <Image
+              loader={({ src }) => {
+                return src;
+              }}
+              src={Instagram}
+              alt="Instagram"
+              width={144}
+              height={144}
+            />
+          </Link>
+          <Link href={'https://www.pinterest.com/Creaditech/'} target="_blank" >
+            <Image
+              loader={({ src }) => {
+                return src;
+              }}
+              src={Pintrest}
+              alt="Pintrest"
+              width={144}
+              height={144}
+            />
+          </Link>
+          <Link href={'https://www.linkedin.com/company/creaditechus/'} target="_blank" >
+            <Image
+              loader={({ src }) => {
+                return src;
+              }}
+              src={LinkedIn}
+              alt="LinkedIn"
+              width={144}
+              height={144}
+            />
+          </Link>
+          {/* <Link href={'https://www.facebook.com/creaditech'} target="_blank" >
+
+            <Image
+              loader={({ src }) => {
+                return src;
+              }}
+              src={Youtube}
+              alt="Youtube"
+              width={144}
+              height={144}
+            /></Link> */}
         </div>
         <Slider />
       </div>
