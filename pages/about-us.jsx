@@ -40,7 +40,7 @@ const AboutUs = () => {
           </p>
           <div className="my-8 flex flex-wrap justify-center gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
             <Button title={"Meet our Team"} classes={""} />
-            <Button2 title={"Download Company Profile"}  />
+            <Button2 title={"Download Company Profile"} />
           </div>
         </div>
       </div>
@@ -90,9 +90,8 @@ const AboutUs = () => {
       </div>
 
       {/* about us section */}
-      <div>
+      {/* <div>
         <div className="relative grid  grid-cols-1 gap-[20px] p-9 sm:grid-cols-4 sm:gap-[20px] sm:px-[64px] sm:pb-[8rem] ">
-          {/* on desktop */}
           <div className="relative  ">
             <h2 className="leading-1 robot-condensed absolute bottom-[12rem] left-[-27rem] flex h-[63rem] w-[88rem] flex-col flex-wrap justify-center  text-[12rem] font-600 uppercase leading-[80%] text-black max-[640px]:hidden max-[640px]:text-[10rem] max-[640px]:font-900   min-[850px]:-rotate-90 ">
               Meet <br />{" "}
@@ -102,7 +101,7 @@ const AboutUs = () => {
             </h2>
           </div>
 
-          {/* on mobile */}
+          
           <div className="flex flex-wrap sm:hidden ">
             <h2 className=" leading-1 text-130 robot-condensed m-auto flex h-[10rem] items-center justify-center text-center font-600 uppercase leading-[80%] text-black max-[640px]:text-[10rem] max-[640px]:font-900 sm:h-[30rem] sm:text-left  sm:text-150 min-[850px]:-rotate-90">
               Meet <p className="text-yellow">Our</p> <br />
@@ -387,9 +386,9 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="flex flex-col bg-[#C6CED3] py-[8rem] px-[4rem]">
+      {/* <div className="flex flex-col bg-[#C6CED3] py-[8rem] px-[4rem]">
         <h2 className="clash mx-auto text-center text-[8rem] font-600 text-[#1E1E1E]">
           Want to join our Team?
         </h2>
@@ -404,7 +403,7 @@ const AboutUs = () => {
           productive in both cases.
         </p>
 
-        {/* want to join our team */}
+        
         <div className="mx-auto my-[3rem] flex max-w-[43rem] flex-col items-center gap-[1rem] rounded-[4rem] border-[2px] border-dashed border-[#5B5E71] p-[2rem]">
           <h2 className="robot-condensed text-[3rem] font-300 leading-[100%] text-[#5B5E71]">
             {" "}
@@ -425,7 +424,7 @@ const AboutUs = () => {
           {" "}
           Careers@creaditech.com
         </h2>
-      </div>
+      </div> */}
 
       <Slider />
       <BottomNav index={2} />

@@ -52,7 +52,6 @@ import Banner3 from "../components/banner3/Banner3";
 //   "lint": "next lint"
 // },
 
-
 // "scripts": {
 //   "dev": "node server.js",
 //   "build": "next build",
@@ -114,10 +113,11 @@ const Home = () => {
       );
     return (
       <button
-        className={`${consts.PREV ? "rounded-r-[5px]" : "rounded-l-[5px]"
-          } flex h-[14rem] w-[4.5rem] items-center justify-center self-center bg-black disabled:cursor-not-allowed`}
+        className={`${
+          consts.PREV ? "rounded-r-[5px]" : "rounded-l-[5px]"
+        } flex h-[14rem] w-[4.5rem] items-center justify-center self-center bg-black disabled:cursor-not-allowed`}
         onClick={onClick}
-      // disabled={isEdge}
+        // disabled={isEdge}
       >
         {pointer}
       </button>
@@ -126,7 +126,13 @@ const Home = () => {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <MetaHead link={'/'} title={'Best Web Development Company In The USA - Creaditech'} description={'Creaditech is one of the best web development company in the USA. We design and develop websites and web applications that will bring value to your customers.'} />
+      <MetaHead
+        link={"/"}
+        title={"Best Web Development Company In The USA - Creaditech"}
+        description={
+          "Creaditech is one of the best web development company in the USA. We design and develop websites and web applications that will bring value to your customers."
+        }
+      />
       <Header />
       {/* <Banner /> */}
       <Banner3 />
@@ -162,21 +168,33 @@ const Home = () => {
           src={require("../public/assets/images/service-image2.png")}
         />
       </div> */}
+      <div className="bg-[#fff]  rounded-[2rem] pt-[4rem] shadow-2xl my-[3rem] px-[4rem] max-[850px]:bg-none max-[850px]:mx-0 mx-[6rem] justify-center items-center flex flex-col  gap-[0rem] min-[850px]:gap-[2rem]  bg-cover bg-center bg-no-repeat pb-20  max-[850px]:h-auto  max-[850px]:p-0">
+        <h1 className="robot-condensed text-center  text-[3rem]  font-700 text-[#111111]  max-[850px]:p-12 max-[850px]:pb-0  max-[850px]:text-[3rem] leading-[100%] max-[850px]:text-white">
+          Offering cost-effective digital transformation for small businesses
+          and startups that want to inspire the world with their products and
+          services. We wish to empower you as we move forward in becoming
+          universal market leaders in putting value-addition in Design, Branding
+          and Technology.
+        </h1>
+      </div>
 
-      <section className="flex justify-center px-8 pt-32   ">
+      <section className="flex justify-center px-8 pt-32 ">
         <div className="flex items-center max-[850px]:flex-col">
           <h2 className="leading-1 robot-condensed m-auto flex h-[30rem] max-w-[28rem] items-center justify-center text-150 font-600 uppercase leading-[80%] text-black max-[640px]:text-[70px]  max-[640px]:font-900 min-[850px]:-rotate-90">
             Our <br /> Service
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
             {serviceCards.slice(0, 6).map((item, index) => (
-              <Link href={"/services" + item?.link}> <Card
-                styles={item.styles}
-                key={index}
-                heading1={item.title}
-                heading2={item.title1}
-                image={item.icon}
-              /></Link>
+              <Link href={"/services" + item?.link}>
+                {" "}
+                <Card
+                  styles={item.styles}
+                  key={index}
+                  heading1={item.title}
+                  heading2={item.title1}
+                  image={item.icon}
+                />
+              </Link>
             ))}
             {/* <div
               onMouseEnter={() => {
@@ -290,10 +308,11 @@ const Home = () => {
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img9.png')]" />
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img10.png')]" />
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img11.png')]" /> */}
-            {
-              portfolioCards.slice(0, 5).map((item, index) => <Card3 classes="" img={item.img} />)
-            }
-            <Link href={'/our-clients'}
+            {portfolioCards.slice(0, 5).map((item, index) => (
+              <Card3 classes="" img={item.img} />
+            ))}
+            <Link
+              href={"/our-clients"}
               onMouseEnter={() => {
                 setHover(true);
               }}
@@ -468,8 +487,9 @@ const Home = () => {
                       key={index}
                       onClick={() => onClick(String(page))}
                       // active={isActivePage}
-                      className={`h-[14px] w-[14px] cursor-pointer rounded-full ${activePage != index ? "bg-[#D9D9D9]" : "bg-black"
-                        }  `}
+                      className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
+                        activePage != index ? "bg-[#D9D9D9]" : "bg-black"
+                      }  `}
                     ></div>
                   );
                 })}
@@ -591,8 +611,8 @@ const Home = () => {
           </div>
         </div>
       </Link>
-      <h2 className="clash mx-auto mb-[3rem] mt-[6rem] text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
-        Our Creative Blogs
+      <h2 className="clash mx-auto mb-[3rem] mt-[6rem] text-[6rem] underline font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
+        Blogs
       </h2>
       <div className="my-[4rem] ">
         <Carousel
@@ -650,8 +670,9 @@ const Home = () => {
                       key={index}
                       onClick={() => onClick(page)}
                       // active={isActivePage}
-                      className={`h-[14px] w-[14px] cursor-pointer rounded-full ${activePage != index ? "bg-[#D9D9D9]" : "bg-black"
-                        }  `}
+                      className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
+                        activePage != index ? "bg-[#D9D9D9]" : "bg-black"
+                      }  `}
                     ></div>
                   );
                 })}
@@ -674,7 +695,7 @@ const Home = () => {
           <Card7 image={robot} />
           <Card7 image={robot1} />
           <Card7 image={robot2} /> */}
-          <Link href={'/blog'}>
+          <Link href={"/blog"}>
             <Card6 />
           </Link>
         </Carousel>
