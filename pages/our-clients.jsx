@@ -17,6 +17,8 @@ import Footer from "../components/footer/Footer";
 import BottomNav from "../components/bottomNav/BottomNav";
 import MetaHead from "../components/metaHead/MetaHead";
 import { portfolioCards } from "../utils/card";
+import Link from "next/link";
+
 // import client1 from '../public/assets/images/client1.png'
 
 const OurClients = () => {
@@ -51,7 +53,9 @@ const OurClients = () => {
             experts now and make your business reach your targeted audience.
           </p> */}
           <div className="my-8 flex gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
-            <Button classes="" title={"Contact Us"} />
+            <Link href={"/contact-us"}>
+              <Button classes="" title={"Contact Us"} />
+            </Link>
             <Button2 title={"Custom Quote"} />
           </div>
         </div>
