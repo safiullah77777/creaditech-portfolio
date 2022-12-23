@@ -35,7 +35,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -49,7 +49,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -63,7 +63,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -77,7 +77,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -91,7 +91,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -103,7 +103,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex w-1/2 flex-col items-center py-16 max-[850px]:order-1 max-[850px]:w-full min-[600px]:px-8">
-          <Image priority={true}
+          <Image  priority={true}
             loader={({ src }) => {
               return src;
             }}

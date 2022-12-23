@@ -214,7 +214,7 @@ const ContactUs = () => {
           </Link>
           <Link href={'https://www.instagram.com/creaditech/'} target="_blank" >
 
-            <Image priority={true}
+            <Image  priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -225,7 +225,7 @@ const ContactUs = () => {
             />
           </Link>
           <Link href={'https://www.pinterest.com/Creaditech/'} target="_blank" >
-            <Image priority={true}
+            <Image  priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -236,7 +236,7 @@ const ContactUs = () => {
             />
           </Link>
           <Link href={'https://www.linkedin.com/company/creaditechus/'} target="_blank" >
-            <Image priority={true}
+            <Image  priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -248,7 +248,7 @@ const ContactUs = () => {
           </Link>
           {/* <Link href={'https://www.facebook.com/creaditech'} target="_blank" >
 
-            <Image priority={true}
+            <Image  priority={true}
               loader={({ src }) => {
                 return src;
               }}

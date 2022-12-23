@@ -200,7 +200,7 @@ const Home = () => {
             </p>
           </div>
           <div className="hidden w-1/2 max-[850px]:flex max-[850px]:w-full">
-            <Image priority={true}
+            <Image  priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -217,7 +217,7 @@ const Home = () => {
           </div>
         </div>
         <div className="w-1/2 max-[850px]:hidden max-[850px]:w-full">
-          <Image priority={true}
+          <Image  priority={true}
             loader={({ src }) => {
               return src;
             }}
@@ -309,7 +309,7 @@ const Home = () => {
         <div className="mr-auto justify-center grid gap-[2rem] grid-cols-5 min-[851px]:ml-auto max-w-[65rem] max-[850px]:max-w-full rounded-[5rem] px-[4rem] pt-[3rem]">
           {expertiseIcons.map((item) => (
             <div className=" flex items-center">
-              <Image priority={true}
+              <Image  priority={true}
                 src={item}
                 loader={({ src }) => {
                   return src;
@@ -381,7 +381,7 @@ const Home = () => {
               className="group flex  h-[40rem] w-[31.3rem] flex-col items-center justify-center gap-4 overflow-hidden  bg-[#5B5E71] p-12   shadow-xl duration-300 ease-linear hover:border-0 hover:bg-yellow max-[400px]:h-[50rem] max-[400px]:w-[40rem]"
             >
               <div className=" group-hover:after:wi relative flex h-160 w-160  items-center justify-center ease-linear after:absolute after:bottom-0 after:left-0 after:h-full after:w-full after:rounded-full after:bg-[#E4E4E4] after:duration-700 group-hover:after:bg-black   ">
-                {/* <Image priority={true}  loader={({ src }) => {
+                {/* <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} alt="" src={Image2} className="z-10" />
                 {Image2} */}
@@ -535,7 +535,7 @@ const Home = () => {
           </h2>
           <div className="relative z-[1000] flex flex-1 overflow-hidden">
             <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -544,7 +544,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -553,7 +553,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -562,7 +562,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -571,7 +571,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -580,7 +580,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -589,7 +589,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -598,7 +598,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -607,7 +607,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-              <Image priority={true}
+              <Image  priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -794,7 +794,7 @@ const Home = () => {
             achieve your business goals.
           </p>
         </div>
-        {/* <Image priority={true}
+        {/* <Image  priority={true}
           loader={({ src }) => {
             return src;
           }}
@@ -805,7 +805,7 @@ const Home = () => {
           alt=""
         /> */}
       </div>
-      <Image priority={true}sLine />
+      <Image  priority={true}sLine />
       <BottomNav index={0} />
       <Footer />
     </div>

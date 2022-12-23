@@ -2,6 +2,7 @@ import Link from "next/link";
 import BottomNav from "../components/bottomNav/BottomNav";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
+import MetaHead from "../components/metaHead/MetaHead";
 // import { Banner } from "../element/banner";
 
 function Error404() {
@@ -12,6 +13,7 @@ function Error404() {
   return (
     <>
       <Header />
+      <MetaHead title={""} description="" link={""} />
       <main class="h-screen w-full flex flex-col justify-center items-center bg-[#1E1E1E]">
         <h1 class="text-[18rem] font-extrabold text-white tracking-widest">
           404

@@ -12,7 +12,7 @@ const Header = () => {
     <div className=" absolute top-0 left-0 z-[54] w-[100%] py-16 min-[720px]:px-[8rem] px-[2rem] ">
       <div className="hidden justify-center max-[677px]:flex">
         <Link href="/">
-          <Image priority={true}  loader={({ src }) => {
+          <Image  priority={true}  loader={({ src }) => {
                 return src;
               }}
             src={Logo}
@@ -46,7 +46,7 @@ const Header = () => {
         </li>
         <li className="mx-auto w-[140px] max-[1000px]:w-[100px] ">
           <Link href="/">
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }}
               src={Logo}

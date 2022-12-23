@@ -6,7 +6,7 @@ const Card5 = ({item}) => {
   return (
     <div className="group relative z-50 flex   min-h-[400px] w-[314px]  after:absolute after:top-0 after:left-0 after:z-40 after:h-[96%] after:w-full after:rounded-[10px] after:border-2 after:border-b-[6px] after:border-solid  after:border-black after:duration-300 after:ease-linear after:hover:h-[100%]">
       <div className="flex h-[96%] flex-col gap-[1rem] p-[20px]">
-        <Image priority={true}  loader={({ src }) => {
+        <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} alt="" width={30} height={27} src={coma} />
         <p className="clash text-[22px] font-400 leading-[100%]">
@@ -14,19 +14,19 @@ const Card5 = ({item}) => {
         </p>
         <div className="mt-auto flex flex-col items-end">
           <div className="flex ">
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} alt="" width={18} height={18} src={star} />
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} alt="" width={18} height={18} src={star} />
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} alt="" width={18} height={18} src={star} />
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} alt="" width={18} height={18} src={star} />
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} alt="" width={18} height={18} src={star} />
           </div>

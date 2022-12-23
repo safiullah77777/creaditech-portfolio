@@ -14,8 +14,8 @@ const BlogPost = ({ blogInfo }) => {
   const ref = useRef(null);
   const blogContent = blogs[0];
   const [dropdown, setDropdown] = useState(-1);
-  const [email, setEmail] = useState('')
-  const [loading, setLoading] = useState('')
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState("");
   let headings = Object.keys(blogContent)
     .map((item) => {
       return {
@@ -37,11 +37,16 @@ const BlogPost = ({ blogInfo }) => {
   return (
     <>
       {/* after:w-full after:h-full after:absolute after:top-0 after:z-[1000] after:bg-gradient-bg */}
-      <MetaHead title={blogContent?.meta?.title} description={blogContent?.meta?.description} link={`/blog/${blogContent.title}`} />
+      <MetaHead
+        title={blogContent?.meta?.title}
+        description={blogContent?.meta?.description}
+        link={`/blog/${blogContent.title}`}
+      />
       <Header />
       <div className="flex flex-col relative min-h-[60rem]  ">
         <div className="flex ">
-          <Image priority={true}
+          <Image
+            
             loader={({ src }) => {
               return src;
             }}
@@ -99,10 +104,11 @@ const BlogPost = ({ blogInfo }) => {
                         viewBox="0 0 44 71"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className={`ease-linear duration-150 relative top-[.5rem] ${dropdown === index
-                          ? "rotate-[90deg]"
-                          : "rotate-[0deg]"
-                          }`}
+                        className={`ease-linear duration-150 relative top-[.5rem] ${
+                          dropdown === index
+                            ? "rotate-[90deg]"
+                            : "rotate-[0deg]"
+                        }`}
                       >
                         <path
                           d="M-0.000488281 8.3425L27.0978 35.5L-0.000488281 62.6575L8.34201 71L43.842 35.5L8.34201 0L-0.000488281 8.3425Z"
@@ -114,10 +120,11 @@ const BlogPost = ({ blogInfo }) => {
                   {Object.keys(item).length > 1 && (
                     <ul
                       ref={ref}
-                      className={`list-disc pl-[3rem] ease-linear transition-[height] duration-200 ${dropdown === index
-                        ? "max-h-auto opacity-100"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`list-disc pl-[3rem] ease-linear transition-[height] duration-200 ${
+                        dropdown === index
+                          ? "max-h-auto opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       {Object.keys(item)
                         .slice(1)
@@ -339,7 +346,8 @@ const BlogPost = ({ blogInfo }) => {
           </div>
           <div className="flex flex-col max-[850px]:w-full gap-[1rem] items-center bg-[#F9F9F9] rounded-[2rem] w-[33rem] py-[3rem] px-[2rem] ">
             <div className="w-[21rem] h-[21rem]">
-              <Image priority={true}
+              <Image
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -401,15 +409,21 @@ const BlogPost = ({ blogInfo }) => {
               name=""
               id=""
             />
-            <button disabled={loading} onClick={() => {
-              const emailregex = new RegExp(
-                /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-              );
-              if (!emailregex.test(email)) { return toast.error('invalid email') };
-              setLoading(true);
-              contactForm({ email }, setLoading)
-              setEmail('')
-            }} className="clash h-60 max-[600px]:w-full  w-[25rem] rounded-b-[0.5rem] active:scale-y-[1.02]   bg-[#ffe100] border-solid border-b-[5px] border-[#000000]/[0.3]  px-8 text-16 font-500 text-[#000000]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  ">
+            <button
+              disabled={loading}
+              onClick={() => {
+                const emailregex = new RegExp(
+                  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+                );
+                if (!emailregex.test(email)) {
+                  return toast.error("invalid email");
+                }
+                setLoading(true);
+                contactForm({ email }, setLoading);
+                setEmail("");
+              }}
+              className="clash h-60 max-[600px]:w-full  w-[25rem] rounded-b-[0.5rem] active:scale-y-[1.02]   bg-[#ffe100] border-solid border-b-[5px] border-[#000000]/[0.3]  px-8 text-16 font-500 text-[#000000]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
+            >
               {loading ? "loading..." : "Subscribe"}
             </button>
           </div>

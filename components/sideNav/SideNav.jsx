@@ -42,27 +42,27 @@ const SideNav = ({ classes }) => {
         <Tag logo={logo} classes="" text="info@creaditech.com" />
         <div className="item-center flex gap-4">
           <div className="rounded-icons1">
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} src={facebook} className="w-[29px]" alt="" />
           </div>
           <div className="rounded-icons1">
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} src={insta} className="w-[29px]" alt="" />
           </div>
           <div className="rounded-icons1">
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} src={linkedin} className="w-[29px]" alt="" />
           </div>
           <div className="rounded-icons1">
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} src={twitter} className="w-[29px]" alt="" />
           </div>
           <div className="rounded-icons1">
-            <Image priority={true}  loader={({ src }) => {
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
               }} src={pinterest} className="w-[29px]" alt="" />
           </div>

@@ -20,7 +20,7 @@ const MegaMenu = ({ classes, setHover }) => {
                 className="flex  gap-[1rem] items-center  bg-[#313131] p-[4rem] rounded-[1.5rem]"
               >
                 <div className="">
-                  <Image priority={true} className="h-[20rem] w-[20rem] relative" loader={({ src }) => {
+                  <Image  priority={true} className="h-[20rem] w-[20rem] relative" loader={({ src }) => {
                     return src;
                   }} src={item.logo} alt="" />
                 </div>
