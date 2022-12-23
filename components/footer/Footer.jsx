@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../public/assets/images/icons/@.svg";
 import logo1 from "../../public/assets/images/icons/whatsapp-icon.svg";
 import logo2 from "../../public/assets/images/icons/call-icon.svg";
@@ -11,7 +11,11 @@ import linkedin from "../../public/assets/images/icons/linkedin-rounded.svg";
 import pinterest from "../../public/assets/images/icons/pinterest-rounded.svg";
 import Logo from "../../public/assets/images/Logo1.svg";
 import Link from "next/link";
+import contactForm from "../../services/fromService";
+import { toast } from "react-toastify";
 const Footer = () => {
+  const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState('')
   return (
     <footer className="flex flex-col bg-primary px-24 pt-44 pb-24 max-[850px]:px-8  max-[600px]:pt-[4rem]">
       <div className="flex max-[850px]:flex-col">
@@ -31,7 +35,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -45,7 +49,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -59,7 +63,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -73,7 +77,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -87,7 +91,7 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -99,7 +103,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex w-1/2 flex-col items-center py-16 max-[850px]:order-1 max-[850px]:w-full min-[600px]:px-8">
-          <Image
+          <Image priority={true}
             loader={({ src }) => {
               return src;
             }}
@@ -115,15 +119,26 @@ const Footer = () => {
               <input
                 placeholder="Email Address"
                 type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="inputs h-60 w-full rounded-5  border-b-8 border-solid bg-[#fff]/[0.2]  px-8 text-16 font-300 text-white  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
-                name=""
+                name="email"
                 id=""
               />
             </div>
-            <button className="clash yellow-button relative flex h-60  min-w-[72px] items-center justify-center rounded-05 border-b-8 bg-yellow text-20 text-black max-[850px]:-left-[2rem] max-[850px]:h-[60px] max-[850px]:rounded-[.5rem]  min-[500px]:w-120   min-[850px]:w-170 ">
-              <span className="flex max-[850px]:hidden">Subscribe</span>
+            <button disabled={loading} onClick={() => {
+               const emailregex = new RegExp(
+                /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+              );
+              if (!emailregex.test(email)) { return toast.error('invalid email') };
+              setLoading(true);
+              contactForm({ email }, setLoading)
+              setEmail('')
+            }} className="clash yellow-button relative flex h-60  min-w-[72px] items-center justify-center rounded-05 border-b-8 bg-yellow text-20 text-black max-[850px]:-left-[2rem] max-[850px]:h-[60px] max-[850px]:rounded-[.5rem]  min-[500px]:w-120   min-[850px]:w-170 ">
+
+              <span className="flex max-[850px]:hidden">{loading ? "loading..." : "Subscribe"}</span>
               <div className="mx-8 hidden max-[850px]:flex">
-                <svg
+                {loading ? "..." : <svg
                   width="26"
                   height="25"
                   viewBox="0 0 26 25"
@@ -136,7 +151,7 @@ const Footer = () => {
                     strokeWidth="2.5"
                     strokeLinejoin="round"
                   />
-                </svg>
+                </svg>}
               </div>
             </button>
           </div>

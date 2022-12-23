@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 const contactForm = async (params, setLoading) => {
-  await fetch("http://localhost:5000/api/forms/contactus", {
+  await fetch("https://nervous-ruby-hippo.cyclic.app/api/forms/contactus", {
     method: "post",
     headers: {
       Accept: "application/json",
@@ -17,6 +17,9 @@ const contactForm = async (params, setLoading) => {
       setLoading(false);
       if (response.status == 200) toast.success("email sent successfully");
     })
-    .then((err) => console.log(err));
+    .then((err) => {
+      setLoading(false);
+      console.log(err);
+    });
 };
 export default contactForm;

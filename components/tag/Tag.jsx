@@ -6,7 +6,7 @@ const Tag = ({ text, logo, classes }) => {
     <div
       className={`flex items-center justify-center gap-4 rounded-10 bg-black px-8 py-4 ${classes}`}
     >
-      <Image  loader={({ src }) => {
+      <Image priority={true}  loader={({ src }) => {
                 return src;
               }}
         alt=""

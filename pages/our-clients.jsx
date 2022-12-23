@@ -40,10 +40,10 @@ const OurClients = () => {
     max-[850px]:pt-80"
       >
         <div className="m-auto flex h-full flex-col items-center justify-center font-semibold max-[850px]:mx-auto max-[850px]:max-w-full  max-[850px]:px-8 max-[850px]:pl-12 ">
-          <h1 className="max-w-[71rem] flex-wrap justify-center gap-[1.5rem] text-center robot-condensed text-65 uppercase leading-[81%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
-            <span> Every</span> <span className="text-yellow">Great</span>{" "}
-            <span className="text-yellow">Brand</span> <span>is</span> Like a
-            <span className="text-yellow">Great Story</span>
+          <h1 className="max-w-[71rem]  justify-center gap-[1.5rem] text-center robot-condensed text-65 uppercase leading-[81%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
+            Every <span className="text-yellow">Great{" "}</span>
+            <span className="text-yellow">Brand</span> is Like a
+            <span className="text-yellow">{" "}Great Story</span>
             {/* {"Every "} <span className="text-yellow"> Great brands {" "}</span> is like a{" "}
             <span className="text-yellow"> grand story</span> */}
           </h1>
@@ -68,7 +68,7 @@ const OurClients = () => {
         <div className="marquee">
           <div className="marquee--inner">
             <div className="flex h-full">
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -78,7 +78,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -88,7 +88,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -98,7 +98,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -108,7 +108,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -118,7 +118,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -128,7 +128,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              {/* <Image
+              {/* <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -140,7 +140,7 @@ const OurClients = () => {
               /> */}
             </div>
             <div className="flex h-full">
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -150,7 +150,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -160,7 +160,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -170,7 +170,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -180,7 +180,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -190,7 +190,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              <Image priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -200,7 +200,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              {/* <Image  loader={({ src }) => {
+              {/* <Image priority={true}  loader={({ src }) => {
                 return src;
               }}
 								className="h-full"
@@ -215,7 +215,7 @@ const OurClients = () => {
 
         {/* <marquee direction="left">
           <div className="flex">
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -225,7 +225,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -235,7 +235,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -245,7 +245,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -255,7 +255,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -265,7 +265,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -275,7 +275,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -285,7 +285,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -295,7 +295,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -305,7 +305,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -315,7 +315,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -325,7 +325,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -335,7 +335,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -345,7 +345,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image
+            <Image priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -358,25 +358,25 @@ const OurClients = () => {
           </div>
         </marquee> */}
         {/* <div className="flex">
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={client1} alt="" width={204} height={204} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={client2} alt="" width={204} height={204} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={client3} alt="" width={204} height={204} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={client4} alt="" width={204} height={204} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={client5} alt="" width={204} height={204} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={client6} alt="" width={204} height={204} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={client7} alt="" width={204} height={204} />
         </div> */}

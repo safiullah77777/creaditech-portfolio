@@ -128,31 +128,31 @@ const Portfolio = () => {
             );
           }}
         >
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={money} alt="" width={646} height={410} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={money} alt="" width={646} height={410} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={money} alt="" width={646} height={410} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={money} alt="" width={646} height={410} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={money} alt="" width={646} height={410} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={money} alt="" width={646} height={410} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={money} alt="" width={646} height={410} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={money} alt="" width={646} height={410} />
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }} src={money} alt="" width={646} height={410} />
         </Carousel>
@@ -194,7 +194,7 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="w-[53.5rem] max-[850px]:w-full ">
-          <Image  loader={({ src }) => {
+          <Image priority={true}  loader={({ src }) => {
                 return src;
               }}
             src={portfolio}
