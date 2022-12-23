@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Button from "../button/Button";
 
@@ -43,7 +44,9 @@ const PriceCard = ({ item, no }) => {
             </li>
           ))}
         </ul>
+        <Link href={"/contact-us"} className="">
         <Button title="Contact Us" classes="" />
+        </Link>
       </div>
     </div>
   );

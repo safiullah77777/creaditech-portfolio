@@ -195,7 +195,7 @@ export const BottomList = (active) => [
         />
       </svg>
     ),
-    link: "/portfolio",
+    link: "/our-clients",
   },
   {
     title: "Careers",

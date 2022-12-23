@@ -128,7 +128,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              <Image
+              {/* <Image
                 loader={({ src }) => {
                   return src;
                 }}
@@ -137,7 +137,7 @@ const OurClients = () => {
                 alt=""
                 width={204}
                 height={204}
-              />
+              /> */}
             </div>
             <div className="flex h-full">
               <Image
