@@ -69,6 +69,7 @@ import promotion from "../public/assets/images/icons/promotion.svg";
 export const Content = [
   {
     page: "web-development",
+    button:"Web development Portfolio",
     inforaphic: { img: webInfoGraphic, alt: "" },
     pricing: false,
     section1: {
@@ -237,6 +238,8 @@ export const Content = [
   {
     cmsExtra: false,
     page: "ecommerce-website-development",
+    button:"Ecommerce development Portfolio",
+
     inforaphic: { img: ecommerceInfoGraphic, alt: "" },
     pricing: [
       {
@@ -578,6 +581,8 @@ export const Content = [
   },
   {
     page: "cms-development",
+    button:"CMS development Portfolio",
+
     inforaphic: { img: cmsInfoGraphic, alt: "why your business needs a cms" },
     pricing: [
       {
@@ -913,6 +918,7 @@ export const Content = [
   },
   {
     page: "wordpress-development",
+    button:"Wordpress development Portfolio",
     pricing: [
       {
         features: [
@@ -1250,6 +1256,8 @@ export const Content = [
   },
   {
     page: "custom-web-app-development",
+    button:"Custom Web development Portfolio",
+
     inforaphic: {
       img: customInfoGraphic,
       alt: "why your business needs a custom web app",
@@ -1455,6 +1463,8 @@ export const Content = [
   },
   {
     page: "php-web-development",
+    button:"Php development Portfolio",
+
     inforaphic: {
       img: phpInfoGraphic,
       alt: "advantages of php",
@@ -1692,6 +1702,7 @@ export const Content = [
   },
   {
     page: "seo",
+    button:"SEO Portfolio",
     inforaphic: {
       img: seoInfoGraphic,
       alt: "why your business needs seo",
@@ -1934,6 +1945,7 @@ export const Content = [
   },
   {
     page: "content-creation",
+    button:"Content Creation Portfolio",
     inforaphic: {
       img: contentInfoGraphic,
       alt: "why quality content is important",
@@ -2160,6 +2172,7 @@ export const Content = [
   },
   {
     page: "sem",
+    button:"SEM Portfolio",
     pricing: false,
     inforaphic: { img: semInfoGraphic, alt: "why your business needs SEM" },
     steps: {

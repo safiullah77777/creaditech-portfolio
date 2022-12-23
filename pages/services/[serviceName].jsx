@@ -121,7 +121,7 @@ const Services = ({ datas }) => {
         className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.png')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
     			min-[500px]:px-28 "
       >
-        <div className="flex h-full max-w-[660px]  flex-col justify-center gap-[1rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
+        <div className="flex h-full max-w-[66rem]  flex-col justify-center gap-[1rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
           <h1 className="robot-condensed  gap-x-[1rem] flex-wrap text-[4rem] font-600 uppercase leading-[110%] text-white  max-[1440px]:text-[6.5rem] max-[1300px]:text-[5rem] max-[850px]:justify-center max-[850px]:text-center max-[400px]:text-[5rem] min-[1600px]:text-[3.8rem]">
             {/* {content?.h1?.pre
               .trim()
@@ -151,9 +151,11 @@ const Services = ({ datas }) => {
             </p>
             <div className="mt-[4rem] flex flex-wrap gap-8 max-[850px]:justify-center">
               <Link href={"#pricing"}>
-              <Button classes="" title={"View Pricing & Plan"} />
+                <Button classes="" title={"View Pricing & Plan"} />
               </Link>
-              <Button2 title={"Logo Design Portfolio"} />
+              <Link href={"our-clients"}>
+                <Button2 title={pageContent.button} />
+              </Link>
             </div>
           </div>
         </div>
@@ -222,7 +224,7 @@ const Services = ({ datas }) => {
           )}
         </form>
       </div>
-      <Image priority={true}sLine />
+      <Image priority={true} sLine />
       <br />
       <div className="parent flex gap-[2rem] px-20 max-[850px]:flex-col">
         <div className="setion-right flex-1">
@@ -402,7 +404,7 @@ const Services = ({ datas }) => {
             </div>
 
             <div className="relative mt-[3rem] flex flex-col  before:absolute before:top-0 before:left-0 before:z-40 before:h-[50%] before:w-full after:absolute after:bottom-0 after:left-0 after:z-40 after:h-[50%] after:w-full max-[1055px]:pb-[5rem] max-[1055px]:after:bg-[transparent] after:bg-[#FFFFFF]">
-              <div className="z-50  flex flex-wrap justify-center gap-[2rem] ">
+              <div className="z-50 mx-[3rem] flex items-stretch flex-wrap justify-center gap-[2rem] ">
                 {pageContent?.pricing.map((item, index) => (
                   <PriceCard key={index} item={item} no={index} />
                 ))}
