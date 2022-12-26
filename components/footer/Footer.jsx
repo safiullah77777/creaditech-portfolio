@@ -42,7 +42,7 @@ const Footer = () => {
                 }}
                 src={facebook}
                 className=""
-                alt=""
+                alt="creaditech facebook"
               />
             </Link>
             <Link
@@ -57,7 +57,7 @@ const Footer = () => {
                 }}
                 src={insta}
                 className=""
-                alt=""
+                alt="creaditech instagram"
               />
             </Link>
             <Link
@@ -72,7 +72,7 @@ const Footer = () => {
                 }}
                 src={linkedin}
                 className=""
-                alt=""
+                alt="creaditech linkedin"
               />
             </Link>
             <Link
@@ -87,7 +87,7 @@ const Footer = () => {
                 }}
                 src={twitter}
                 className=""
-                alt=""
+                alt="creaditech twitter"
               />
             </Link>
             <Link
@@ -102,7 +102,7 @@ const Footer = () => {
                 }}
                 src={pinterest}
                 className=""
-                alt=""
+                alt="creaditech pinterest"
               />
             </Link>
           </div>
@@ -115,7 +115,7 @@ const Footer = () => {
             }}
             src={Logo}
             className="logo max-[500px]:w-[59px]"
-            alt=""
+            alt="creaditech"
           />
           <p className="heading-grey robot-condensed my-10 text-45 font-600 leading-[80%] max-[400px]:text-[30px] max-sm:text-center">
             Join our Newsletter
