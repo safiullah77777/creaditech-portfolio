@@ -224,7 +224,7 @@ const Services = ({ datas }) => {
           )}
         </form>
       </div>
-      <ImagesLine  />
+      <ImagesLine />
       <br />
       <div className="parent flex gap-[2rem] px-20 max-[850px]:flex-col">
         <div className="setion-right flex-1">
@@ -245,7 +245,8 @@ const Services = ({ datas }) => {
         </div>
         <div className="section-left flex  w-[64.6rem] flex-col gap-[3rem]  max-[850px]:w-full">
           <div className="w-full  ">
-            <Image  priority={true}
+            <Image
+              priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -273,7 +274,8 @@ const Services = ({ datas }) => {
       <br />
 
       <div className=" mt-20 w-full px-20">
-        <Image  priority={true}
+        <Image
+          priority={true}
           loader={({ src }) => {
             return src;
           }}
@@ -329,12 +331,13 @@ const Services = ({ datas }) => {
         {pageContent.ecommerceExtra !== false ? (
           <>
             <div className="flex py-[8rem] px-[3rem] flex-col gap-[3rem]">
-              <h2 className="mx-auto font-600 text-[#000000] text-[4rem] leading-[100%]">
+              <h2 className="mx-auto font-600 text-[#000000] text-[4rem] leading-[100%] max-sm:text-center max-sm:text-[3.5rem] max-sm:py-2">
                 {pageContent.ecommerceExtra.heading}
               </h2>
               <div className="flex gap-[4rem] flex-wrap justify-center">
                 {pageContent.ecommerceExtra.icons.map((item) => (
-                  <Image  priority={true}
+                  <Image
+                    priority={true}
                     loader={({ src }) => {
                       return src;
                     }}
@@ -389,7 +392,10 @@ const Services = ({ datas }) => {
         {pageContent.pricing !== false && (
           <div className=" flex w-full flex-col bg-[#C6CED3] max-[500px]:px-[3rem] mt-[3rem]">
             <div className="mb-2 mt-12 text-center">
-              <h2 id="pricing" className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]">
+              <h2
+                id="pricing"
+                className=" clash mb-4 text-[8rem] font-semibold leading-[79.5%] tracking-[0.02em] max-[360px]:text-[50px]"
+              >
                 Pricing & Packages.
               </h2>
               <div className=" flex w-full  flex-col justify-center ">
@@ -432,7 +438,8 @@ const Services = ({ datas }) => {
             </h2>
             <div className="relative z-[1000] flex flex-1 overflow-hidden">
               <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-                <Image  priority={true}
+                <Image
+                  priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -441,7 +448,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-                <Image  priority={true}
+                <Image
+                  priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -450,7 +458,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-                <Image  priority={true}
+                <Image
+                  priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -459,7 +468,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-                <Image  priority={true}
+                <Image
+                  priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -468,7 +478,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-                <Image  priority={true}
+                <Image
+                  priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -477,7 +488,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-                <Image  priority={true}
+                <Image
+                  priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -486,7 +498,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-                <Image  priority={true}
+                <Image
+                  priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -495,7 +508,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-                <Image  priority={true}
+                <Image
+                  priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -504,7 +518,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-                <Image  priority={true}
+                <Image
+                  priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -548,15 +563,16 @@ const Services = ({ datas }) => {
         {pageContent.blackSection !== false ? (
           <div className="mt-10 flex w-full gap-[2rem] bg-[#1E1E1E] p-4 pr-20 pl-[3rem] max-[850px]:flex-col">
             <div className="relative  order-1 mx-auto mb-2 min-[850px]:mt-12 max-[850px]:w-full w-[50rem] text-center max-[850px]:order-2  ">
-              <Image  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="relative !max-[850px]:top-[21rem]  top-[12rem] w-full"
                 src={CardFull}
                 alt=""
-              //   width={2000}
-              //   height={200}
+                //   width={2000}
+                //   height={200}
               />
             </div>
 
@@ -616,7 +632,8 @@ const Services = ({ datas }) => {
             {pageContent.section3.paras}
           </div>
           <div className="flex items-center justify-center max-[850px]:pt-[5rem] min-[500px]:px-[5rem] ">
-            <Image  priority={true}
+            <Image
+              priority={true}
               loader={({ src }) => {
                 return src;
               }}

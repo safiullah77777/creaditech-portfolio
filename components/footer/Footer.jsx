@@ -14,8 +14,8 @@ import Link from "next/link";
 import contactForm from "../../services/fromService";
 import { toast } from "react-toastify";
 const Footer = () => {
-  const [email, setEmail] = useState('')
-  const [loading, setLoading] = useState('')
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState("");
   return (
     <footer className="flex flex-col bg-primary px-24 pt-44 pb-24 max-[850px]:px-8  max-[600px]:pt-[4rem]">
       <div className="flex max-[850px]:flex-col">
@@ -35,7 +35,8 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -49,7 +50,8 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -63,7 +65,8 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -77,7 +80,8 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -91,7 +95,8 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -103,7 +108,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex w-1/2 flex-col items-center py-16 max-[850px]:order-1 max-[850px]:w-full min-[600px]:px-8">
-          <Image  priority={true}
+          <Image
+            priority={true}
             loader={({ src }) => {
               return src;
             }}
@@ -111,7 +117,7 @@ const Footer = () => {
             className="logo max-[500px]:w-[59px]"
             alt=""
           />
-          <p className="heading-grey robot-condensed my-10 text-45 font-600 leading-[80%] max-[400px]:text-[30px]">
+          <p className="heading-grey robot-condensed my-10 text-45 font-600 leading-[80%] max-[400px]:text-[30px] max-sm:text-center">
             Join our Newsletter
           </p>
           <div className="flex  items-center justify-center max-[850px]:w-full">
@@ -126,32 +132,43 @@ const Footer = () => {
                 id=""
               />
             </div>
-            <button disabled={loading} onClick={() => {
-               const emailregex = new RegExp(
-                /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-              );
-              if (!emailregex.test(email)) { return toast.error('invalid email') };
-              setLoading(true);
-              contactForm({ email }, setLoading)
-              setEmail('')
-            }} className="clash yellow-button relative flex h-60  min-w-[72px] items-center justify-center rounded-05 border-b-8 bg-yellow text-20 text-black max-[850px]:-left-[2rem] max-[850px]:h-[60px] max-[850px]:rounded-[.5rem]  min-[500px]:w-120   min-[850px]:w-170 ">
-
-              <span className="flex max-[850px]:hidden">{loading ? "loading..." : "Subscribe"}</span>
+            <button
+              disabled={loading}
+              onClick={() => {
+                const emailregex = new RegExp(
+                  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+                );
+                if (!emailregex.test(email)) {
+                  return toast.error("invalid email");
+                }
+                setLoading(true);
+                contactForm({ email }, setLoading);
+                setEmail("");
+              }}
+              className="clash yellow-button relative flex h-60  min-w-[72px] items-center justify-center rounded-05 border-b-8 bg-yellow text-20 text-black max-[850px]:-left-[2rem] max-[850px]:h-[60px] max-[850px]:rounded-[.5rem]  min-[500px]:w-120   min-[850px]:w-170 "
+            >
+              <span className="flex max-[850px]:hidden">
+                {loading ? "loading..." : "Subscribe"}
+              </span>
               <div className="mx-8 hidden max-[850px]:flex">
-                {loading ? "..." : <svg
-                  width="26"
-                  height="25"
-                  viewBox="0 0 26 25"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24.5877 12.6248L1.54564 2.07936L8.67416 12.6285L2.051 23.6757L24.5877 12.6248Z"
-                    stroke="#1E1E1E"
-                    strokeWidth="2.5"
-                    strokeLinejoin="round"
-                  />
-                </svg>}
+                {loading ? (
+                  "..."
+                ) : (
+                  <svg
+                    width="26"
+                    height="25"
+                    viewBox="0 0 26 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24.5877 12.6248L1.54564 2.07936L8.67416 12.6285L2.051 23.6757L24.5877 12.6248Z"
+                      stroke="#1E1E1E"
+                      strokeWidth="2.5"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                )}
               </div>
             </button>
           </div>

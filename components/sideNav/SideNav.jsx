@@ -42,29 +42,75 @@ const SideNav = ({ classes }) => {
         <Tag logo={logo} classes="" text="info@creaditech.com" />
         <div className="item-center flex gap-4">
           <div className="rounded-icons1">
-            <Image  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={facebook} className="w-[29px]" alt="" />
+            <Link href={"https://www.facebook.com/creaditech"} target="_blank">
+              <Image
+                priority={true}
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={facebook}
+                className="w-[29px]"
+                alt="creaditech facebook"
+              />
+            </Link>
           </div>
           <div className="rounded-icons1">
-            <Image  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={insta} className="w-[29px]" alt="" />
+            <Link href={"https://www.instagram.com/creaditech"} target="_blank">
+              <Image
+                priority={true}
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={insta}
+                className="w-[29px]"
+                alt="creaditech instagram"
+              />
+            </Link>
           </div>
           <div className="rounded-icons1">
-            <Image  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={linkedin} className="w-[29px]" alt="" />
+            <Link
+              href={"https://www.linkedin.com/company/creaditechus"}
+              target="_blank"
+            >
+              <Image
+                priority={true}
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={linkedin}
+                className="w-[29px]"
+                alt="creaditech linkedin"
+              />
+            </Link>
           </div>
           <div className="rounded-icons1">
-            <Image  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={twitter} className="w-[29px]" alt="" />
+            <Link href={"https://twitter.com/Creaditech"} target="_blank">
+              <Image
+                priority={true}
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={twitter}
+                className="w-[29px]"
+                alt="creaditech twitter"
+              />
+            </Link>
           </div>
           <div className="rounded-icons1">
-            <Image  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={pinterest} className="w-[29px]" alt="" />
+            <Link
+              href={"https://www.pinterest.com/Creaditech/"}
+              target="_blank"
+            >
+              <Image
+                priority={true}
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={pinterest}
+                className="w-[29px]"
+                alt="creaditech pinterest"
+              />
+            </Link>
           </div>
         </div>
       </div>

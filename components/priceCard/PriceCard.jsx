@@ -13,8 +13,8 @@ const PriceCard = ({ item, no }) => {
           LOGO DESIGN ONLY
         </h2> */}
 
-        <h2 className="clash py-[1rem] text-center text-[35px] font-[500] leading-[80%] text-[#000000] ">
-          {no === 0 ? "Silver" : no === 1 ? "Gold" : "Patinum"} Package
+        <h2 className="clash py-[1rem] text-center text-[28px] font-[500] leading-[80%] text-[#000000] ">
+          {no === 0 ? "Silver" : no === 1 ? "Gold" : "Platinum"} Package
         </h2>
         <h2 className="clash pb-[2rem] text-center text-[35px] font-[500] leading-[80%] text-[#C6CED3]  ">
           {item.price}
@@ -45,7 +45,7 @@ const PriceCard = ({ item, no }) => {
           ))}
         </ul>
         <Link href={"/contact-us"} className="">
-        <Button title="Contact Us" classes="" />
+          <Button title="Contact Us" classes="" />
         </Link>
       </div>
     </div>
