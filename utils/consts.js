@@ -180,7 +180,7 @@ export const BottomList = (active) => [
     link: "",
   },
   {
-    title: "Work",
+    title: "Portfolio}",
     icon: (
       <svg
         width="23"

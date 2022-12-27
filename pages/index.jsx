@@ -328,7 +328,7 @@ const Home = () => {
       </div>
 
       {/* industries we have */}
-      <div className="flex bg-[#2B2B2B] py-24 pr-[4rem]  pl-[6rem] max-[850px]:flex-col max-[640px]:gap-[4rem]">
+      <div className="flex bg-[#2B2B2B] py-24 px-[4rem] min-[851px]:pl-[6rem] max-[850px]:flex-col max-[640px]:gap-[4rem]">
         <div className="flex w-[50%] flex-col gap-[2rem] max-[850px]:w-full  max-[850px]:items-center">
           <div className="clash flex max-w-[42rem] flex-wrap gap-x-[1rem] text-[8rem] font-600 leading-[85%] text-white max-[850px]:max-w-[100%] max-[850px]:justify-center max-[850px]:text-center ">
             Industries we've{" "}

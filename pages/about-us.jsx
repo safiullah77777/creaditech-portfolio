@@ -64,9 +64,9 @@ const AboutUs = () => {
       <div className="flex flex-wrap justify-center gap-[5rem] gap-x-[8rem] py-[3rem] px-[6rem]     ">
         <div className="group relative z-[1000] box-border rounded-t-[10px] border-[2px] border-solid border-black after:absolute after:-left-[5%]  after:bottom-[-2.25rem]  after:-z-[1] after:h-[4.5rem]  after:w-[110%] after:rounded-[2rem] after:bg-[#ffe100]/[0.7]  after:duration-300 after:ease-linear hover:after:h-[115%]  max-w-[40rem] ">
           <div className="z-[10000] flex w-full flex-col items-center justify-center px-[5rem] py-[5rem] pb-[10px]">
-            <h3 className="robot-condensed flex items-center text-center  text-[30px] uppercase text-[#5B5E71] sm:text-[50px]  sm:font-[600] sm:leading-[59px]">
+            <p className="robot-condensed flex items-center text-center  text-[30px] uppercase text-[#5B5E71] sm:text-[50px]  sm:font-[600] sm:leading-[59px]">
               our vision
-            </h3>
+            </p>
             <p className="py-[2rem] text-[13px] leading-[18px] text-[#1E1E1E] sm:text-[15px] sm:font-[300] sm:leading-[21px]">
               “The global market leader in digital transformation"
             </p>
@@ -74,9 +74,9 @@ const AboutUs = () => {
         </div>
         <div className="group relative z-[1000] box-border rounded-t-[10px] border-[2px] border-solid border-black after:absolute after:-left-[5%]  after:bottom-[-2.25rem]  after:-z-[1] after:h-[4.5rem]  after:w-[110%] after:rounded-[2rem] after:bg-[#ffe100]/[0.7]  after:duration-300 after:ease-linear hover:after:h-[115%] max-w-[40rem] ">
           <div className="z-[10000] flex w-full flex-col items-center justify-center px-[5rem] py-[5rem] pb-[10px]">
-            <h3 className="robot-condensed flex items-center text-center  text-[30px] uppercase text-[#5B5E71] sm:text-[50px]  sm:font-[600] sm:leading-[59px]">
+            <p className="robot-condensed flex items-center text-center  text-[30px] uppercase text-[#5B5E71] sm:text-[50px]  sm:font-[600] sm:leading-[59px]">
               our mission
-            </h3>
+            </p>
             <p className="py-[2rem] text-[13px] leading-[18px] text-[#1E1E1E] sm:text-[15px] sm:font-[300] sm:leading-[21px]">
               “Empowering small businesses/startups with cost effective digital
               transformation".

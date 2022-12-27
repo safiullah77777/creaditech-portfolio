@@ -145,7 +145,7 @@ const OurClients = () => {
                 height={204}
               /> */}
             </div>
-            <div className="flex h-full">
+            {/* <div className="flex h-full">
               <Image
                 
                 loader={({ src }) => {
@@ -212,16 +212,8 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              {/* <Image     loader={({ src }) => {
-                return src;
-              }}
-								className="h-full"
-								src={client7}
-								alt=""
-								width={204}
-								height={204}
-							/> */}
-            </div>
+              
+            </div> */}
           </div>
         </div>
 
@@ -488,7 +480,7 @@ const OurClients = () => {
         {/* <Pagination /> */}
       </div>
       <Slider />
-      <BottomNav />
+      <BottomNav index={4} />
 
       <Footer />
     </>
