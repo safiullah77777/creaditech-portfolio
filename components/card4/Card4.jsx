@@ -11,7 +11,7 @@ const Card4 = ({ icon, title,alt }) => {
               }} className="group group-hover:scale-[1.05] ease-linear duration-200" alt={alt} src={icon} />
       </div>
       {/* max-[640px]:text-[#2B2B2B] max-[640px]:text-[2.4rem] */}
-      <h2 className="clash text-[2rem]  font-600 text-[#C6CED3] group group-hover:scale-[1.05] ease-linear duration-200">{title}</h2>
+      <p className="clash text-[2rem]  font-600 text-[#C6CED3] group group-hover:scale-[1.05] ease-linear duration-200">{title}</p>
     </div>
   );
 };

@@ -39,9 +39,9 @@ const MegaMenu = ({ classes, setHover }) => {
                 /> */}
 
                 <div className="flex flex-col gap-[1rem] items-center">
-                  <h2 className="clash w-full  after:z-[100] -z-[0] text-[2.5rem] after:border-solid after:w-[19rem] mr-auto after:left-0 pb-[1rem] after:absolute relative after:bottom-0  after:border-b-[2px] after:border-[#FFFFFF]/[0.5] font-500 text-[#ffffff]">
+                  <p className="clash w-full  after:z-[100] -z-[0] text-[2.5rem] after:border-solid after:w-[19rem] mr-auto after:left-0 pb-[1rem] after:absolute relative after:bottom-0  after:border-b-[2px] after:border-[#FFFFFF]/[0.5] font-500 text-[#ffffff]">
                     {item.heading}
-                  </h2>
+                  </p>
                   <ul className="flex flex-col ">
                     {item.children.map((items) => {
                       return (

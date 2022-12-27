@@ -24,9 +24,9 @@ const Card3 = ({ classes, img, name, alt }) => {
           Logo Design
         </span>
         <div className="flex h-[100%] max-h-[8rem] w-full z-[10] flex-col overflow-hidden bg-card p-[1rem] duration-300 ease-linear min-[500px]:group-hover:max-h-[100%] min-[500px]:group-hover:pb-[3rem]">
-          <h2 className=" clash mx-auto group-hover:mt-[4rem] text-[2rem] text-white">
+          <p className=" clash mx-auto group-hover:mt-[4rem] text-[2rem] text-white">
             {name}
-          </h2>
+          </p>
           {/* hidden  */}
           <p className="order-2 hidden text-[1.6rem] text-center  leading-[120%]  text-white/[.5] duration-300 ease-linear   max-[500px]:overflow-hidden  min-[500px]:group-hover:order-1">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat

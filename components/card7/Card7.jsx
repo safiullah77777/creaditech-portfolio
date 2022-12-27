@@ -17,9 +17,9 @@ const Card7 = ({ image, title, alt }) => {
           width={500}
           height={500}
         />
-        <h2 className="clash text-white font-500 text-[25px] leading-[25px] text-center">
+        <p className="clash text-white font-500 text-[25px] leading-[25px] text-center">
           {title}
-        </h2>
+        </p>
       </div>
     </div>
   );

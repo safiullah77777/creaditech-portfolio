@@ -29,9 +29,9 @@ const Card6 = () => {
             />
           </svg>
         </div>
-        <h2 className=" robot-condensed uppercase text-center text-[3rem] font-600 leading-[80%] text-white  group-hover:text-black">
+        <p className=" robot-condensed uppercase text-center text-[3rem] font-600 leading-[80%] text-white  group-hover:text-black">
           More <br /> Blogs
-        </h2>
+        </p>
         {/* </div> */}
       </div>
     </div>

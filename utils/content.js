@@ -79,7 +79,7 @@ export const Content = [
         <>
           <p>
             “If you have a website, it makes your small business look big” (
-            <Link href={"www.facebook.com"} className="text-sky-500 	">
+            <Link href={"www.facebook.com"} className="anchor">
               Natalie Sequera
             </Link>{" "}
             ). This quote signifies the importance of a website for any

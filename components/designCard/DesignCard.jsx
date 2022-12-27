@@ -18,9 +18,9 @@ const DesignCard = ({ title1, title2, para, image, bg, alt, no }) => {
           className=" mt-[2rem] h-[9rem] w-[8.4rem]"
         />
       </div>
-      <h2 className=" robot-condensed max-w-[19rem] min-h-[6rem] mt-[1rem] text-center text-[3rem] font-700 leading-[100%] text-[#5B5E71]">
+      <p className=" robot-condensed max-w-[19rem] min-h-[6rem] mt-[1rem] text-center text-[3rem] font-700 leading-[100%] text-[#5B5E71]">
         {title1} {title2}
-      </h2>
+      </p>
       <p className="Montserrat text-center text-[1.6rem] font-300 leading-[100%] text-[#000000]/[0.8]">
         {para}
       </p>

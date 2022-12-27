@@ -118,7 +118,7 @@ const Services = ({ datas }) => {
       <Header />
 
       <div
-        className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.png')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
+        className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.png')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] gap-[5rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
     			min-[500px]:px-28 "
       >
         <div className="flex h-full max-w-[66rem]  flex-col justify-center gap-[1rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">
@@ -608,9 +608,9 @@ const Services = ({ datas }) => {
                 {pageContent.cmsExtra.cards.map((item,index) => (
                   <>
                     <div key={index} className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
-                      <h2 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">
+                      <h3 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">
                         {item.title}
-                      </h2>
+                      </h3>
                       <p className="font-300 text-[#000000] text-[1.6rem]">
                         {item.para}
                       </p>

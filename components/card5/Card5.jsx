@@ -30,9 +30,9 @@ const Card5 = ({item}) => {
                 return src;
               }} alt="star4" width={18} height={18} src={star} />
           </div>
-          <h2 className="clash flex items-center pl-[30px] text-[20px] font-600 text-[#1E1E1E] before:h-[3px] before:w-[26px] before:rounded-5 before:bg-[#9747FF] ">
+          <p className="clash flex items-center pl-[30px] text-[20px] font-600 text-[#1E1E1E] before:h-[3px] before:w-[26px] before:rounded-5 before:bg-[#9747FF] ">
             {item?.name}
-          </h2>
+          </p>
           {/* <h2 className="clash flex items-center text-[15px] gap-[1rem] font-300 text-[#C6CED3]">
             CEO,  <span className="font-500"> Avantis Solutions</span>
           </h2> */}

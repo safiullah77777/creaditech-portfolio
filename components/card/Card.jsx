@@ -9,9 +9,9 @@ const Card = ({ image, heading1, heading2, styles,alt }) => {
           return src;
         }} alt={alt} className={`z-50 w-full h-full p-8 `} src={image} />
       </div>
-      <h2 className=" Montserrat upp  max-[500px]:text-[25px] text-center uppercase text-[2.3rem] font-700 leading-[92%] text-[#1E1E1E] group-hover:text-white">
+      <p className=" Montserrat upp  max-[500px]:text-[25px] text-center uppercase text-[2.3rem] font-700 leading-[92%] text-[#1E1E1E] group-hover:text-white">
         {heading1} <br /> {heading2}
-      </h2>
+      </p>
     </div>
   );
 };

@@ -6,9 +6,9 @@ const Card9 = ({ title, job, experience, salary, keySkills, setShowModal }) => {
       onClick={() => setShowModal(true)}
       className="flex min-w-[425px] max-[450px]:min-w-[303px]  max-[400px]:w-[303px]  max-[500px]:max-w-[333px] cursor-pointer  flex-col rounded-[20px] border-[2px] border-solid border-[#1E1E1E] bg-[#F2F2F2] px-[3rem] py-[2rem] duration-300 ease-linear hover:shadow-cardShadow"
     >
-      <h2 className="clash text-[35px] max-[500px]:text-[28px] font-500 leading-[100%] text-[#1E1E1E]">
+      <p className="clash text-[35px] max-[500px]:text-[28px] font-500 leading-[100%] text-[#1E1E1E]">
         {title}
-      </h2>
+      </p>
       <h4 className="clash mb-[3rem] text-[20px] max-[500px]:text-[16px] font-400 leading-[100%] text-[#303030]/[0.5]">
         {job}
       </h4>

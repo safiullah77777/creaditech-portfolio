@@ -38,9 +38,9 @@ const Modal= ({ showModal, setShowModal }) => {
 									</svg>
 								</button>
 								<div className="flex items-center justify-between max-[600px]:flex-col max-[600px]:gap-[1.3rem]">
-									<h2 className="clash mr-[2rem] text-[3.5rem] font-600 leading-[80%] text-[#1E1E1E]">
+									<p className="clash mr-[2rem] text-[3.5rem] font-600 leading-[80%] text-[#1E1E1E]">
 										Design Lead
-									</h2>
+									</p>
 									<span className="flex-1 border-[1px] border-solid border-[#cccaca] max-[600px]:w-[148px]"></span>
 									<p className="clash ml-[1rem] text-[2rem] font-600 leading-[80%] text-[#1E1E1E]">
 										Job Description:

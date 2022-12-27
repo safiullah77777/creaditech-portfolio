@@ -19,9 +19,9 @@ const SideNav = ({ classes }) => {
         {List.map((item, index) => {
           return (
             <div key={item.heading} className="flex flex-col gap-[1rem] ">
-              <h2 className="clash w-[200px]  text-[2.5rem] border-solid pb-[1rem] border-b-[2px] border-[#363636] font-500 text-[#ffffff]">
+              <p className="clash w-[200px]  text-[2.5rem] border-solid pb-[1rem] border-b-[2px] border-[#363636] font-500 text-[#ffffff]">
                 {item.heading}
-              </h2>
+              </p>
               <ul className="flex flex-col ">
                 {item.children.map((item) => {
                   return (

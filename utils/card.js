@@ -158,6 +158,11 @@ export const portfolioCards = [
   },
   {
     img: portfolio2,
+    alt:"Mr Pillar",
+    name:"Mr Pillar"
+  },
+  {
+    img: portfolio3,
     alt:"Fushius",
     name:"Fushius"
   },
@@ -178,7 +183,7 @@ export const portfolioCards = [
   },
   {
     img: portfolio7,
-    alt: "Cancun Corner",
-    name:"Cancun Corner"
+    alt: "Gymble",
+    name:"Gymble"
   },
 ];
