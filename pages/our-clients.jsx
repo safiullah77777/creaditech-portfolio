@@ -56,7 +56,7 @@ const OurClients = () => {
             <Link href={"/contact-us"}>
               <Button classes="text-[2rem]" title={"Contact Us"} />
             </Link>
-            <Button2 classes="!text-[2rem]"  title={"Custom Quote"} />
+            {/* <Button2 classes="!text-[2rem]"  title={"Custom Quote"} /> */}
           </div>
         </div>
       </div>

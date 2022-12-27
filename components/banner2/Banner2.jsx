@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import Button from '../button/Button';
 
@@ -18,7 +19,7 @@ const Banner2 = () => {
 						experts now and make your business reach your targeted audience.
 					</p>
 					<div className="my-8 flex gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
-						<Button title={'Request a topic'} classes="" />
+						<Link href={"/contact-us"}><Button title={'Request a topic'} classes="" /></Link>
 					</div>
 				</div>
 			</div>
