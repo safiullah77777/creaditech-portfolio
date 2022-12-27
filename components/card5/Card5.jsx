@@ -9,7 +9,7 @@ const Card5 = ({item}) => {
         <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} alt="coma" width={30} height={27} src={coma} />
-        <p className="clash text-[22px] font-400 leading-[100%]">
+        <p className="clash text-[22px] h-[250px] overflow-hidden font-400 leading-[100%]">
           {item?.review}
         </p>
         <div className="mt-auto flex flex-col items-end">

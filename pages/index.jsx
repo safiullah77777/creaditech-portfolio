@@ -353,7 +353,86 @@ const Home = () => {
           ))}
         </div>
       </div>
-
+{/* our happy clients */}
+<>
+        <div className="flex flex-col px-12 py-28">
+          <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
+            Our Happy Clients
+          </h2>
+        </div>
+        <div className="my-[4rem] ">
+          <Carousel
+            ref={carouselRef}
+            {...consts}
+            showEmptySlots
+            // enableAutoPlay
+            focusOnSelect={true}
+            renderArrow={myArrow}
+            onPrevStart={(currentItem, nextItem) => {
+              if (currentItem.index === nextItem.index) {
+                // we hit the last item, go to first item
+                carouselRef.current.goTo(10);
+              }
+            }}
+            onPrevEnd={({ index }) => {
+              clearTimeout(resetTimeout);
+              if (index + 1 === 0) {
+                if (carouselRef?.current?.goTo) {
+                  resetTimeout = setTimeout(() => {
+                    if (carouselRef?.current?.goTo) {
+                      carouselRef?.current?.goTo(10);
+                    }
+                  }, 3000);
+                }
+              }
+            }}
+            onNextStart={(currentItem, nextItem) => {
+              if (currentItem.index === nextItem.index) {
+                // we hit the last item, go to first item
+                carouselRef.current.goTo(0);
+              }
+            }}
+            onNextEnd={({ index }) => {
+              clearTimeout(resetTimeout);
+              if (index + 1 === 10) {
+                if (carouselRef?.current?.goTo) {
+                  resetTimeout = setTimeout(() => {
+                    if (carouselRef?.current?.goTo) {
+                      carouselRef.current.goTo(0);
+                    }
+                  }, 3000);
+                }
+              }
+            }}
+            breakPoints={breakPoints}
+            // outerSpacing={100}
+            itemPadding={[0, 10]}
+            itemsToShow={3}
+            renderPagination={({ pages, activePage, onClick }) => {
+              return (
+                <div className="my-12 flex gap-4">
+                  {pages.map((page, index) => {
+                    return (
+                      <div
+                        key={index}
+                        onClick={() => onClick(String(page))}
+                        // active={isActivePage}
+                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
+                          activePage != index ? "bg-[#D9D9D9]" : "bg-black"
+                        }  `}
+                      ></div>
+                    );
+                  })}
+                </div>
+              );
+            }}
+          >
+            {reviews.map((item, index) => (
+              <Card5 key={index} item={item} />
+            ))}
+          </Carousel>
+        </div>
+      </>
       {/* our  portfolio*/}
       <div className="flex bg-[#2B2B2B] max-[850px]:py-[4rem] py-32 max-[850px]:px-8">
         <div className="mx-auto flex max-[850px]:flex-col max-[850px]:gap-[2rem]">
@@ -444,97 +523,18 @@ const Home = () => {
         </>
         {/* <Button title="Let’s Work Together" classes="" /> */}
       </div>
-      {/* our happy clients */}
-      <>
-        <div className="flex flex-col px-12 py-28">
-          <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
-            Our Happy Clients
-          </h2>
-        </div>
-        <div className="my-[4rem] ">
-          <Carousel
-            ref={carouselRef}
-            {...consts}
-            showEmptySlots
-            // enableAutoPlay
-            focusOnSelect={true}
-            renderArrow={myArrow}
-            onPrevStart={(currentItem, nextItem) => {
-              if (currentItem.index === nextItem.index) {
-                // we hit the last item, go to first item
-                carouselRef.current.goTo(10);
-              }
-            }}
-            onPrevEnd={({ index }) => {
-              clearTimeout(resetTimeout);
-              if (index + 1 === 0) {
-                if (carouselRef?.current?.goTo) {
-                  resetTimeout = setTimeout(() => {
-                    if (carouselRef?.current?.goTo) {
-                      carouselRef?.current?.goTo(10);
-                    }
-                  }, 3000);
-                }
-              }
-            }}
-            onNextStart={(currentItem, nextItem) => {
-              if (currentItem.index === nextItem.index) {
-                // we hit the last item, go to first item
-                carouselRef.current.goTo(0);
-              }
-            }}
-            onNextEnd={({ index }) => {
-              clearTimeout(resetTimeout);
-              if (index + 1 === 10) {
-                if (carouselRef?.current?.goTo) {
-                  resetTimeout = setTimeout(() => {
-                    if (carouselRef?.current?.goTo) {
-                      carouselRef.current.goTo(0);
-                    }
-                  }, 3000);
-                }
-              }
-            }}
-            breakPoints={breakPoints}
-            // outerSpacing={100}
-            itemPadding={[0, 10]}
-            itemsToShow={3}
-            renderPagination={({ pages, activePage, onClick }) => {
-              return (
-                <div className="my-12 flex gap-4">
-                  {pages.map((page, index) => {
-                    return (
-                      <div
-                        key={index}
-                        onClick={() => onClick(String(page))}
-                        // active={isActivePage}
-                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
-                          activePage != index ? "bg-[#D9D9D9]" : "bg-black"
-                        }  `}
-                      ></div>
-                    );
-                  })}
-                </div>
-              );
-            }}
-          >
-            {reviews.map((item, index) => (
-              <Card5 key={index} item={item} />
-            ))}
-          </Carousel>
-        </div>
-      </>
+      
 
       {/* Estimated projects */}
       <Link
         href={"/contact-us"}
         className="group  flex border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] max-[850px]:border-[#3D404E]"
       >
-        <div className="relative flex w-1/2 bg-white py-[2rem] pl-[6rem] pr-[2rem] max-[850px]:w-full max-[850px]:flex-col max-[850px]:gap-[5rem] max-[850px]:bg-[#5B5E71] max-[850px]:py-[6rem]">
+        <div className="relative flex w-1/2 bg-white py-[2rem] pl-[2rem] pr-[2rem] max-[850px]:w-full max-[850px]:flex-col max-[850px]:gap-[5rem] max-[850px]:bg-[#5B5E71] max-[850px]:py-[6rem]">
           <h2 className="clash relative  mx-auto text-[5.5rem] font-600 leading-[90%] text-[#3D404E] max-[850px]:text-center max-[850px]:text-white max-[640px]:text-[4rem]">
             We love to listen your requirements
           </h2>
-          <button className="clash mx-auto h-[60px] rounded-[1.5rem] border-b-[6px] border-solid border-black/[0.4] bg-[#FFE100] px-[6rem] py-4 text-[2.5rem]  font-500 text-black  active:scale-[1.01] max-[400px]:w-[80%] min-[850px]:hidden ">
+          <button className="clash mx-auto h-[60px] rounded-[1.5rem] border-b-[6px] border-solid border-black/[0.4] bg-[#FFE100] px-[6rem] max-[350px]:px-[4rem] py-4 text-[2.5rem]  font-500 text-black  active:scale-[1.01] max-[400px]:w-[100%] min-[850px]:hidden ">
             Estimate Project
           </button>
           {/* <Button title="Let’s Work Together" classes="" /> */}

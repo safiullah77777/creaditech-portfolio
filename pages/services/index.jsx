@@ -75,8 +75,8 @@ const LogoService = () => {
               provides digital transformation for your business.
             </p>
             <div className="mt-[4rem] flex flex-wrap gap-8 max-[850px]:justify-center">
-              <Button classes="" title={"View Pricing & Plan"} />
-              <Button2 classes={"!text-[2rem]"} title={"View Portfolio"} />
+              {/* <Button classes="" title={"View Pricing & Plan"} /> */}
+              <Link href={"/our-clients"}><Button2 classes={"!text-[2rem]"} title={"View Portfolio"} /></Link>
             </div>
           </div>
         </div>

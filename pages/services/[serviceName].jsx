@@ -153,7 +153,7 @@ const Services = ({ datas }) => {
               <Link href={"#pricing"}>
                 <Button classes="" title={"View Pricing & Plan"} />
               </Link>
-              <Link href={"our-clients"}>
+              <Link href={"/our-clients"}>
                 <Button2 title={"View Portfolio"} />
               </Link>
             </div>
