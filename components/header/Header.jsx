@@ -55,7 +55,7 @@ const Header = () => {
               }}
               src={Logo}
               className="h-full w-full "
-              alt=""
+              alt="creaditech"
               width={120}
               height={120}
             />

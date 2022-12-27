@@ -444,12 +444,12 @@ export const Content = [
     ecommerceExtra: {
       heading: "Leading Ecommerce Platforms.",
       icons: [
-        logos_woocommerce,
-        open_cart,
-        square_space,
-        magento,
-        big_commerce,
-        shopify,
+        { img: logos_woocommerce, alt: "woocommerce" },
+        { img: open_cart, alt: "open cart" },
+        { img: square_space, alt: "square space" },
+        { img: magento, alt: "magento" },
+        { img: big_commerce, alt: "big commerce" },
+        { img: shopify, alt: "shipify" },
       ],
     },
     section2: {

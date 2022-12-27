@@ -12,7 +12,6 @@ const Input = ({ type, classes, placeholder, name, onChange, value }) => {
         className={`rounded-[5px] outline-none border-none bg-[#515151] p-[2rem] text-[1.6rem] font-300 text-[#FFFFFF]/[0.5] ${
           classes ? classes : ""
         }`}
-        alt=""
         value={value || ""}
       />
     </div>

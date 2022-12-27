@@ -357,7 +357,7 @@ const BlogPost = ({ blogInfo }) => {
                 src={
                   "https://img.freepik.com/premium-vector/female-character-working-from-home_14588-430.jpg"
                 }
-                alt=""
+                alt="content writer"
               />
             </div>
             <h3 className="text-[2rem]  font-500 text-[#000000] clash">

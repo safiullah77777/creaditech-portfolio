@@ -20,9 +20,15 @@ const MegaMenu = ({ classes, setHover }) => {
                 className="flex  gap-[1rem] items-center  bg-[#313131] p-[4rem] rounded-[1.5rem]"
               >
                 <div className="">
-                  <Image  priority={true} className="h-[20rem] w-[20rem] relative" loader={({ src }) => {
-                    return src;
-                  }} src={item.logo} alt="" />
+                  <Image
+                    priority={true}
+                    className="h-[20rem] w-[20rem] relative"
+                    loader={({ src }) => {
+                      return src;
+                    }}
+                    src={item.logo}
+                    alt={index == 0 ? "web development" : "marketing"}
+                  />
                 </div>
                 {/* <Player
                   src={{...item.lotti}}
@@ -39,7 +45,10 @@ const MegaMenu = ({ classes, setHover }) => {
                   <ul className="flex flex-col ">
                     {item.children.map((items) => {
                       return (
-                        <li onClick={()=>setHover(false)} className="group  hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
+                        <li
+                          onClick={() => setHover(false)}
+                          className="group  hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]"
+                        >
                           <Link key={items.title} href={items.link}>
                             <span className="flex items-center gap-[1rem]">
                               {items.title}

@@ -16,14 +16,24 @@ const CreativeBlogs = () => {
 
   return (
     <>
-      <MetaHead title={"Blog - Creaditech"} description={"Read some of the best and informative blogs from expert writers."} link="/blog" />
+      <MetaHead
+        title={"Blog - Creaditech"}
+        description={
+          "Read some of the best and informative blogs from expert writers."
+        }
+        link="/blog"
+      />
 
       <Header />
       <Banner2 />
       <div className="flex flex-wrap justify-center gap-5 p-8">
         {blogs.map((item) => (
           <Link href={`blog/${item?.title}`}>
-            <Card8  title={item?.h1} img={item?.featuredImage?.img} />
+            <Card8
+              title={item?.h1}
+              alt={item?.h1.toLowerCase()}
+              img={item?.featuredImage?.img}
+            />
           </Link>
         ))}
       </div>

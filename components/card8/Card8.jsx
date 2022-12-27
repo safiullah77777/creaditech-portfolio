@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import robot from "../../public/assets/images/card8.png";
 
-const Card8 = ({title,img}) => {
+const Card8 = ({ title, img, alt }) => {
   return (
     <div className="group  relative z-10 flex h-[388px]  min-[501px]:max-w-[423px] rounded-[10px] border-2  border-b-[6px] border-solid border-[#5B5E71] bg-[#F3F3F3] max-[500px]:h-[50rem]  max-[500px]:max-w-[40rem] ">
       <div className="z-50  flex max-[500px]:w-full h-full flex-col gap-[1rem] p-[20px] max-[500px]:p-[10px]">
@@ -10,11 +10,13 @@ const Card8 = ({title,img}) => {
           <h2 className="clash absolute max-[500px]:rounded-[10px] left-[50%] top-[50%] z-[10000] hidden -translate-x-1/2 text-[24px] font-600 text-white group-hover:flex">
             Read More
           </h2>
-          <Image  priority={true}   loader={({ src }) => {
-                return src;
-              }}
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
             src={img}
-            alt=""
+            alt={alt}
             className="z-50 h-full w-full grayscale-0 group-hover:grayscale max-[500px]:h-full max-[500px]:w-full"
           />
         </div>
