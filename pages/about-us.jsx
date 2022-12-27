@@ -48,11 +48,11 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="">
-        <h1 className="  robot-condensed flex items-center justify-center gap-2 text-center font-600 uppercase text-[#1E1E1E] max-[850px]:text-center max-[850px]:text-[7rem] sm:text-[130px]">
-          About <p className=" px-4 text-yellow  sm:px-[4rem]"> us</p>
+      <div className="flex flex-col items-center">
+        <h1 className="  robot-condensed flex items-center justify-center gap-2 text-center font-600 uppercase text-[#1E1E1E] max-[850px]:text-center max-[850px]:text-[7rem] sm:text-[13rem]">
+          About <p className="  text-yellow "> {" "}us</p>
         </h1>
-        <p className=" sm:max-[868px] clash flex w-full justify-center px-[5rem] text-center text-[35px] font-[500]  leading-[85%] text-[#5B5E71]  max-[850px]:text-[3rem] sm:items-center sm:px-[30rem] sm:leading-[101.5%] sm:tracking-[0.02em] ">
+        <p className=" sm:max-[868px] clash flex w-full justify-center px-[5rem] text-center text-[2.5rem] font-[500]  leading-[85%] text-[#5B5E71]  max-[850px]:text-[3rem] sm:items-center sm:px-[3rem] max-w-[90rem] sm:leading-[101.5%] sm:tracking-[0.02em] ">
           Offering cost-effective digital transformation for small businesses
           and startups that want to inspire the world with their products and
           services. We wish to empower you as we move forward in becoming
@@ -62,7 +62,7 @@ const AboutUs = () => {
       </div>
 
       <div className="flex flex-wrap justify-center gap-[5rem] gap-x-[8rem] py-[3rem] px-[6rem]     ">
-        <div className="group relative z-[1000] box-border rounded-t-[10px] border-[2px] border-solid border-black after:absolute after:-left-[5%]  after:bottom-[-2.25rem]  after:-z-[1] after:h-[4.5rem]  after:w-[110%] after:rounded-[2rem] after:bg-[#ffe100]/[0.7]  after:duration-300 after:ease-linear hover:after:h-[115%]  max-w-[55rem] ">
+        <div className="group relative z-[1000] box-border rounded-t-[10px] border-[2px] border-solid border-black after:absolute after:-left-[5%]  after:bottom-[-2.25rem]  after:-z-[1] after:h-[4.5rem]  after:w-[110%] after:rounded-[2rem] after:bg-[#ffe100]/[0.7]  after:duration-300 after:ease-linear hover:after:h-[115%]  max-w-[40rem] ">
           <div className="z-[10000] flex w-full flex-col items-center justify-center px-[5rem] py-[5rem] pb-[10px]">
             <h3 className="robot-condensed flex items-center text-center  text-[30px] uppercase text-[#5B5E71] sm:text-[50px]  sm:font-[600] sm:leading-[59px]">
               our vision
@@ -72,7 +72,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div className="group relative z-[1000] box-border rounded-t-[10px] border-[2px] border-solid border-black after:absolute after:-left-[5%]  after:bottom-[-2.25rem]  after:-z-[1] after:h-[4.5rem]  after:w-[110%] after:rounded-[2rem] after:bg-[#ffe100]/[0.7]  after:duration-300 after:ease-linear hover:after:h-[115%] max-w-[55rem] ">
+        <div className="group relative z-[1000] box-border rounded-t-[10px] border-[2px] border-solid border-black after:absolute after:-left-[5%]  after:bottom-[-2.25rem]  after:-z-[1] after:h-[4.5rem]  after:w-[110%] after:rounded-[2rem] after:bg-[#ffe100]/[0.7]  after:duration-300 after:ease-linear hover:after:h-[115%] max-w-[40rem] ">
           <div className="z-[10000] flex w-full flex-col items-center justify-center px-[5rem] py-[5rem] pb-[10px]">
             <h3 className="robot-condensed flex items-center text-center  text-[30px] uppercase text-[#5B5E71] sm:text-[50px]  sm:font-[600] sm:leading-[59px]">
               our mission
