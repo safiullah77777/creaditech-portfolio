@@ -21,8 +21,8 @@ const CreativeBlogs = () => {
       <Header />
       <Banner2 />
       <div className="flex flex-wrap justify-center gap-5 p-8">
-        {blogs.map((item) => (
-          <Link href={`blog/${item?.title}`}>
+        {blogs.map((item,index) => (
+          <Link key={index} href={`blog/${item?.title}`}>
             <Card8  title={item?.h1} img={item?.featuredImage?.img} />
           </Link>
         ))}

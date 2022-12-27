@@ -29,7 +29,7 @@ const Card2 = ({ numbers, text }) => {
           )}
         </CountUp>
       </h2>
-      <p className="Montserra text-16 font-300 text-[#5B5E71]">{text}</p>
+      <p className="Montserra text-[1.6rem] font-300 text-[#5B5E71]">{text}</p>
     </div>
   );
 };

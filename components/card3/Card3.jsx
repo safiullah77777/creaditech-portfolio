@@ -9,12 +9,14 @@ const Card3 = ({ classes, img, name, alt }) => {
         className={` relative flex h-[40rem] w-[31.3rem] items-end  bg-cover bg-no-repeat   duration-300 ease-linear max-[400px]:h-[50rem] max-[400px]:w-[40rem]  ${classes} `}
       >
         <div className="absolute overflow-hidden top-0 z-1 left-0 w-full h-full bg-[#000000]/[0.3]">
-          <Image  priority={true}
+          <Image unoptimized  priority={true}
             src={img}
             alt={alt}
             loader={({ src }) => {
               return src;
             }}
+            
+            width={340} height={400}
             className="w-full "
           />
         </div>
@@ -26,7 +28,7 @@ const Card3 = ({ classes, img, name, alt }) => {
             {name}
           </h2>
           {/* hidden  */}
-          <p className="order-2 hidden text-16 text-center  leading-[120%]  text-white/[.5] duration-300 ease-linear   max-[500px]:overflow-hidden  min-[500px]:group-hover:order-1">
+          <p className="order-2 hidden text-[1.6rem] text-center  leading-[120%]  text-white/[.5] duration-300 ease-linear   max-[500px]:overflow-hidden  min-[500px]:group-hover:order-1">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
             quod cupiditate eaque corporis voluptates est blanditiis reiciendis
             ullam laboriosam explicabo expedita dolorem voluptatibus accusamus

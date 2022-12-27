@@ -9,7 +9,7 @@ const Banner2 = () => {
     max-[850px]:py-80 "
 			>
 				<div className="m-auto flex h-full flex-col items-center justify-center font-semibold max-[850px]:mx-auto max-[850px]:max-w-full  max-[850px]:px-8 max-[850px]:pl-12 ">
-					<h1 className="robot-condensed flex  flex-wrap gap-[1.5rem] text-65 max-[400px]:text-[50px] font-[600] uppercase items-center justify-center leading-[85%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
+					<h1 className="robot-condensed flex  flex-wrap gap-[1.5rem] text-[6.5rem] max-[400px]:text-[50px] font-[600] uppercase items-center justify-center leading-[85%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
 						Our <p className="text-yellow"> Creative</p> Blogs
 					</h1>
 					<p className="Montserrat mt-4 max-w-[53rem] text-center text-[16px] font-[300] leading-[130%] text-[#FFFFFF] max-[850px]:text-center max-[850px]:text-[2.5rem]">

@@ -27,17 +27,17 @@ const AboutUs = () => {
       </div>
       <div className="banner6  bg-[url('/assets/images/backgrounds/banner6.png')]  relative flex h-[100vh] w-full  bg-cover bg-center bg-no-repeat  bg-blend-overlay max-[850px]:h-[850px] max-[850px]:flex-col max-[850px]:p-0 ">
         <div className="m-auto flex h-full flex-col items-center justify-center font-semibold max-[850px]:mx-auto max-[850px]:max-w-full  max-[850px]:px-8 max-[850px]:pl-12 ">
-          <h1 className="robot-condensed px-[3.5rem] text-center text-65 uppercase leading-85 text-white max-[850px]:text-center max-[850px]:text-[5rem]">
+          <h1 className="robot-condensed px-[3.5rem] text-center text-[6.5rem] uppercase leading-[85%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
             creative <span className="text-yellow"> workspace </span>
           </h1>
-          <h1 className="robot-condensed px-[3.5rem] text-center text-65 uppercase leading-85 text-white max-[850px]:text-center max-[850px]:text-[5rem]">
+          <h1 className="robot-condensed px-[3.5rem] text-center text-[6.5rem] uppercase leading-[85%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
             <span className="text-yellow">behind </span>successful{" "}
           </h1>{" "}
-          <h1 className="robot-condensed px-[3.5rem] text-center text-65 uppercase leading-85 text-white max-[850px]:text-center max-[850px]:text-[5rem]">
+          <h1 className="robot-condensed px-[3.5rem] text-center text-[6.5rem] uppercase leading-[85%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
             {" "}
             Journey!
           </h1>
-          <p className="Montserrat mt-4 max-w-[53rem] text-center  text-[16px] font-[100] leading-130 text-[#FFFFFF] max-[850px]:text-center max-[850px]:text-[2.5rem]">
+          <p className="Montserrat mt-4 max-w-[53rem] text-center  text-[16px] font-[100] leading-[130%] text-[#FFFFFF] max-[850px]:text-center max-[850px]:text-[2.5rem]">
             We help companies grow by providing them the best software
             development and marketing services in the USA. Get in touch with our
             experts now and make your business reach your targeted audience.
@@ -99,10 +99,10 @@ const AboutUs = () => {
 
           
           <div className="flex flex-wrap sm:hidden ">
-            <h2 className=" leading-1 text-130 robot-condensed m-auto flex h-[10rem] items-center justify-center text-center font-600 uppercase leading-[80%] text-black max-[640px]:text-[10rem] max-[640px]:font-900 sm:h-[30rem] sm:text-left  sm:text-150 min-[850px]:-rotate-90">
+            <h2 className=" leading-1 text-130 robot-condensed m-auto flex h-[10rem] items-center justify-center text-center font-600 uppercase leading-[80%] text-black max-[640px]:text-[10rem] max-[640px]:font-900 sm:h-[30rem] sm:text-left  sm:text-[15rem] min-[850px]:-rotate-90">
               Meet <p className="text-yellow">Our</p> <br />
             </h2>
-            <h2 className=" leading-1 text-130 robot-condensed m-auto flex h-[10rem] items-center justify-center text-center font-600 uppercase leading-[80%] text-black max-[640px]:text-[10rem] max-[640px]:font-900 sm:h-[30rem] sm:text-left  sm:text-150 min-[850px]:-rotate-90">
+            <h2 className=" leading-1 text-130 robot-condensed m-auto flex h-[10rem] items-center justify-center text-center font-600 uppercase leading-[80%] text-black max-[640px]:text-[10rem] max-[640px]:font-900 sm:h-[30rem] sm:text-left  sm:text-[15rem] min-[850px]:-rotate-90">
               team
             </h2>
           </div>
@@ -110,7 +110,7 @@ const AboutUs = () => {
           <div className=" flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px]">
             <div className="">
               <div>
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }}
                   width={0}
@@ -134,13 +134,13 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo1} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo2} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
@@ -149,7 +149,7 @@ const AboutUs = () => {
           <div className=" flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px]">
             <div className="gap-1  ">
               <div>
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }}
                   width={0}
@@ -173,13 +173,13 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo1} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo2} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
@@ -188,7 +188,7 @@ const AboutUs = () => {
           <div className="flex  justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px]">
             <div className="gap-1">
               <div>
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }}
                   width={0}
@@ -212,13 +212,13 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo1} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo2} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
@@ -227,7 +227,7 @@ const AboutUs = () => {
           <div className="flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px] max-[850px]:hidden">
             <div className="gap-1">
               <div>
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }}
                   width={0}
@@ -251,13 +251,13 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo1} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo2} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
@@ -266,7 +266,7 @@ const AboutUs = () => {
           <div className="flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px] max-[850px]:hidden">
             <div className="gap-1">
               <div>
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }}
                   width={0}
@@ -290,13 +290,13 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo1} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo2} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
@@ -305,7 +305,7 @@ const AboutUs = () => {
           <div className="flex justify-center gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px] max-[850px]:hidden">
             <div className="gap-1">
               <div>
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }}
                   width={0}
@@ -329,13 +329,13 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo1} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo2} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo3} alt="logo" />
               </div>
@@ -345,7 +345,7 @@ const AboutUs = () => {
           <div className="flex justify-center  gap-[10px] rounded-[10px] bg-[#DCDCDC] px-[20px] pt-[20px] pb-[13px] max-[850px]:hidden">
             <div className="gap-1">
               <div>
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }}
                   width={0}
@@ -369,13 +369,13 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex justify-center gap-[8px] pt-4">
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo1} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo2} alt="logo" />
-                <Image  priority={true}  loader={({ src }) => {
+                <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }} width={0} height={0} src={Logo3} alt="logo" />
               </div>

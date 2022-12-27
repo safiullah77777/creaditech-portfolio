@@ -46,7 +46,7 @@ const BlogPost = ({ blogInfo }) => {
       <div className="flex flex-col relative min-h-[60rem]  ">
         <div className="flex ">
           <Image
-            
+
             loader={({ src }) => {
               return src;
             }}
@@ -83,6 +83,7 @@ const BlogPost = ({ blogInfo }) => {
             {headings.map((item, index) => {
               return (
                 <li
+                  key={index}
                   onClick={() =>
                     setDropdown((prev) => (prev == index ? -1 : index))
                   }
@@ -104,11 +105,10 @@ const BlogPost = ({ blogInfo }) => {
                         viewBox="0 0 44 71"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className={`ease-linear duration-150 relative top-[.5rem] ${
-                          dropdown === index
-                            ? "rotate-[90deg]"
-                            : "rotate-[0deg]"
-                        }`}
+                        className={`ease-linear duration-150 relative top-[.5rem] ${dropdown === index
+                          ? "rotate-[90deg]"
+                          : "rotate-[0deg]"
+                          }`}
                       >
                         <path
                           d="M-0.000488281 8.3425L27.0978 35.5L-0.000488281 62.6575L8.34201 71L43.842 35.5L8.34201 0L-0.000488281 8.3425Z"
@@ -120,17 +120,16 @@ const BlogPost = ({ blogInfo }) => {
                   {Object.keys(item).length > 1 && (
                     <ul
                       ref={ref}
-                      className={`list-disc pl-[3rem] ease-linear transition-[height] duration-200 ${
-                        dropdown === index
-                          ? "max-h-auto opacity-100"
-                          : "max-h-0 opacity-0"
-                      }`}
+                      className={`list-disc pl-[3rem] ease-linear transition-[height] duration-200 ${dropdown === index
+                        ? "max-h-auto opacity-100"
+                        : "max-h-0 opacity-0"
+                        }`}
                     >
                       {Object.keys(item)
                         .slice(1)
-                        .map((item1) => {
+                        .map((item1, key) => {
                           return (
-                            <li className="flex  py-[.2rem]  gap-[0.5rem] Montserrat text-[1.4rem] leading-[130%] text-[#000000]">
+                            <li key={`#${item[item1].split(" ").join("") + key}`} className="flex  py-[.2rem]  gap-[0.5rem] Montserrat text-[1.4rem] leading-[130%] text-[#000000]">
                               <a
                                 className="flex "
                                 href={`#${item[item1].split(" ").join("")}`}
@@ -183,7 +182,7 @@ const BlogPost = ({ blogInfo }) => {
             if (item.includes("parasonly")) {
               return blogContent[item].map((para) => {
                 return (
-                  <p className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                  <p key={index + para} className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
                     {para}
                   </p>
                 );
@@ -195,13 +194,14 @@ const BlogPost = ({ blogInfo }) => {
                 <>
                   <h2
                     id={`${temp.h2.split(" ").join("")}`}
+                    key={`${temp.h2.split(" ").join("") + index}`}
                     className="clash text-[#000000] leading-[100%] clash font-600 text-[3.5rem]"
                   >
                     {temp.h2}
                   </h2>
-                  {temp.paras.map((para) => {
+                  {temp.paras.map((para, key) => {
                     return (
-                      <p className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                      <p key={key} className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
                         {para}
                       </p>
                     );
@@ -211,9 +211,9 @@ const BlogPost = ({ blogInfo }) => {
                       className="pl-[2rem] flex flex-col gap-[.5rem] list-decimal"
                       start={1}
                     >
-                      {temp.ols.map((li) => {
+                      {temp.ols.map((li, index) => {
                         return (
-                          <li className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                          <li key={index + li} className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
                             {li}
                           </li>
                         );
@@ -225,11 +225,12 @@ const BlogPost = ({ blogInfo }) => {
             }
             if (item.includes("headingParasAndSubHeadings")) {
               const temp = Object.keys(blogContent[item]);
-              return temp.map((item1) => {
+              return temp.map((item1, index) => {
                 if (item1.includes("h2")) {
                   return (
                     <h2
                       id={`${blogContent[item][item1].split(" ").join("")}`}
+                      key={index + blogContent[item][item1]}
                       className="clash text-[#000000] leading-[100%] clash font-600 text-[3.5rem]"
                     >
                       {blogContent[item][item1]}
@@ -239,6 +240,7 @@ const BlogPost = ({ blogInfo }) => {
                 if (item1.includes("h3")) {
                   return (
                     <h3
+                      key={`${blogContent[item][item1].split(" ").join("")+index}`}
                       id={`${blogContent[item][item1].split(" ").join("")}`}
                       className="clash text-[#000000] leading-[100%] clash font-600 text-[2.5rem]"
                     >
@@ -247,9 +249,11 @@ const BlogPost = ({ blogInfo }) => {
                   );
                 }
                 if (item1.includes("paras")) {
-                  return blogContent[item][item1].map((para) => {
+                  return blogContent[item][item1].map((para, index) => {
                     return (
-                      <p className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                      <p
+                        key={index}
+                        className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
                         {para}
                       </p>
                     );
@@ -258,9 +262,11 @@ const BlogPost = ({ blogInfo }) => {
                 if (item1.includes("uls")) {
                   return (
                     <ul className="flex flex-col list-disc pl-[5rem]">
-                      {blogContent[item][item1].map((li) => {
+                      {blogContent[item][item1].map((li, index) => {
                         return (
-                          <li className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                          <li
+                            key={index+li}
+                            className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
                             {li}
                           </li>
                         );
@@ -271,9 +277,11 @@ const BlogPost = ({ blogInfo }) => {
                 if (item1.includes("ulWithHeadings")) {
                   return (
                     <ul className="flex flex-col list-disc pl-[5rem]">
-                      {blogContent[item][item1].map((li) => {
+                      {blogContent[item][item1].map((li, index) => {
                         return (
-                          <li className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                          <li
+                            key={index+li?.heading}
+                            className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
                             <span className="font-700">{li?.heading}</span>{" "}
                             {li?.des}
                           </li>
@@ -347,7 +355,7 @@ const BlogPost = ({ blogInfo }) => {
           <div className="flex flex-col max-[850px]:w-full gap-[1rem] items-center bg-[#F9F9F9] rounded-[2rem] w-[33rem] py-[3rem] px-[2rem] ">
             <div className="w-[21rem] h-[21rem]">
               <Image
-                
+
                 loader={({ src }) => {
                   return src;
                 }}
@@ -405,7 +413,7 @@ const BlogPost = ({ blogInfo }) => {
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className=" h-60 max-[600px]:w-full  w-[25rem] rounded-t-[0.5rem]   bg-[#515151]   px-8 text-16 font-300 text-[#FFFFFF]/[0.5]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
+              className=" h-60 max-[600px]:w-full  w-[25rem] rounded-t-[0.5rem]   bg-[#515151]   px-8 text-[1.6rem] font-300 text-[#FFFFFF]/[0.5]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
               name=""
               id=""
             />
@@ -422,7 +430,7 @@ const BlogPost = ({ blogInfo }) => {
                 contactForm({ email }, setLoading);
                 setEmail("");
               }}
-              className="clash h-60 max-[600px]:w-full  w-[25rem] rounded-b-[0.5rem] active:scale-y-[1.02]   bg-[#ffe100] border-solid border-b-[5px] border-[#000000]/[0.3]  px-8 text-16 font-500 text-[#000000]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
+              className="clash h-60 max-[600px]:w-full  w-[25rem] rounded-b-[0.5rem] active:scale-y-[1.02]   bg-[#ffe100] border-solid border-b-[5px] border-[#000000]/[0.3]  px-8 text-[1.6rem] font-500 text-[#000000]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
             >
               {loading ? "loading..." : "Subscribe"}
             </button>

@@ -6,14 +6,14 @@ const Tag = ({ text, logo, classes }) => {
     <div
       className={`flex items-center justify-center gap-4 rounded-10 bg-black px-8 py-4 ${classes}`}
     >
-      <Image  priority={true}  loader={({ src }) => {
+      <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
               }}
         alt=""
         className="h-25 w-25  max-[400px]:h-[25px] max-[400px]:w-[25px]"
         src={logo}
       />
-      <p className="text-20 max-[400px]:text-[20px] text-white">{text}</p>
+      <p className="text-[2rem] max-[400px]:text-[20px] text-white">{text}</p>
     </div>
   );
 };

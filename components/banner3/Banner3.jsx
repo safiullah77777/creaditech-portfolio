@@ -36,7 +36,7 @@ const Banner3 = () => {
         <source src={video} />
       </video> */}
       <div className="flex bg-[#000000]/[0.2] px-[3rem] flex-col items-center w-full h-full justify-center absolute top-0 left-0 ">
-        <div className="flex flex-wrap font-600 max-w-[70rem]  text-center gap-x-[15px] robot-condensed text-65 uppercase leading-85 text-white max-[850px]:justify-center max-[850px]:text-center max-[850px]:text-[5rem]">
+        <div className="flex flex-wrap font-600 max-w-[70rem]  text-center gap-x-[15px] robot-condensed text-[6.5rem] uppercase leading-[85%] text-white max-[850px]:justify-center max-[850px]:text-center max-[850px]:text-[5rem]">
           <h2>Transforming businesses through digital empowerment</h2>
         </div>
         <div className="my-8 flex items-center gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">

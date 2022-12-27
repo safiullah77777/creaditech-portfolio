@@ -146,7 +146,7 @@ const Services = ({ datas }) => {
             {content?.h1?.post.trim()}
           </h1>
           <div className="detail-heading">
-            <p className=" Montserrat mt-4  max-w-[646px] text-[2.2rem] font-[300] leading-130 text-white max-[850px]:text-center">
+            <p className=" Montserrat mt-4  max-w-[646px] text-[2.2rem] font-[300] leading-[130%] text-white max-[850px]:text-center">
               {content?.tagline}
             </p>
             <div className="mt-[4rem] flex flex-wrap gap-8 max-[850px]:justify-center">
@@ -160,9 +160,7 @@ const Services = ({ datas }) => {
           </div>
         </div>
         <form
-          action={(e) => {
-            e.preventDefault();
-          }}
+
           className="flex h-full flex-col justify-center gap-[2rem]"
         >
           <div className="flex gap-[2rem]">
@@ -224,7 +222,7 @@ const Services = ({ datas }) => {
           )}
         </form>
       </div>
-      <ImagesLine  />
+      <ImagesLine />
       <br />
       <div className="parent flex gap-[2rem] px-20 max-[850px]:flex-col">
         <div className="setion-right flex-1">
@@ -245,7 +243,7 @@ const Services = ({ datas }) => {
         </div>
         <div className="section-left flex  w-[64.6rem] flex-col gap-[3rem]  max-[850px]:w-full">
           <div className="w-full  ">
-            <Image  priority={true}
+            <Image unoptimized priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -264,7 +262,7 @@ const Services = ({ datas }) => {
             </div>
             <div className=" clash max-[550px]:flex  flex-col min-[550px]:grid min-[550px]:grid-cols-2 flex-wrap justify-between gap-y-5 p-5 text-3xl font-normal tracking-wide text-[#0377BC]">
               {randomItems.map((item) => (
-                <Link href={item.link}>{hydrated && item.title}</Link>
+                <Link key={item?.link + item?.title} href={item.link}>{hydrated && item.title}</Link>
               ))}
             </div>
           </div>
@@ -273,7 +271,7 @@ const Services = ({ datas }) => {
       <br />
 
       <div className=" mt-20 w-full px-20">
-        <Image  priority={true}
+        <Image unoptimized priority={true}
           loader={({ src }) => {
             return src;
           }}
@@ -295,9 +293,9 @@ const Services = ({ datas }) => {
               {pageContent.phpExtra.p}
             </p>
             <div className="grid grid-cols-3 max-[550px]:grid-cols-2 max-[380px]:grid-cols-1 justify-center gap-[5rem] mx-auto mt-[5rem]">
-              {pageContent.phpExtra.cards.map((item) => (
+              {pageContent.phpExtra.cards.map((item,index) => (
                 <>
-                  <div className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
+                  <div key={item.title+index} className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
                     <h2 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">
                       {item.title}
                     </h2>
@@ -333,11 +331,12 @@ const Services = ({ datas }) => {
                 {pageContent.ecommerceExtra.heading}
               </h2>
               <div className="flex gap-[4rem] flex-wrap justify-center">
-                {pageContent.ecommerceExtra.icons.map((item) => (
-                  <Image  priority={true}
+                {pageContent.ecommerceExtra.icons.map((item,index) => (
+                  <Image unoptimized priority={true}
                     loader={({ src }) => {
                       return src;
                     }}
+                    key={index}
                     src={item}
                     alt=""
                   />
@@ -432,7 +431,7 @@ const Services = ({ datas }) => {
             </h2>
             <div className="relative z-[1000] flex flex-1 overflow-hidden">
               <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-                <Image  priority={true}
+                <Image unoptimized priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -441,7 +440,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-                <Image  priority={true}
+                <Image unoptimized priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -450,7 +449,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-                <Image  priority={true}
+                <Image unoptimized priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -459,7 +458,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-                <Image  priority={true}
+                <Image unoptimized priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -468,7 +467,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-                <Image  priority={true}
+                <Image unoptimized priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -477,7 +476,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-                <Image  priority={true}
+                <Image unoptimized priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -486,7 +485,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-                <Image  priority={true}
+                <Image unoptimized priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -495,7 +494,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-                <Image  priority={true}
+                <Image unoptimized priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -504,7 +503,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-                <Image  priority={true}
+                <Image unoptimized priority={true}
                   loader={({ src }) => {
                     return src;
                   }}
@@ -533,6 +532,7 @@ const Services = ({ datas }) => {
             return (
               <DesignCard
                 no={index + 1}
+                key={index}
                 // bg={`bg-[url('/assets/images/icons/${countings[index]}')]`}
                 image={data?.imgage?.img}
                 alt={data.imgage.alt}
@@ -548,7 +548,7 @@ const Services = ({ datas }) => {
         {pageContent.blackSection !== false ? (
           <div className="mt-10 flex w-full gap-[2rem] bg-[#1E1E1E] p-4 pr-20 pl-[3rem] max-[850px]:flex-col">
             <div className="relative  order-1 mx-auto mb-2 min-[850px]:mt-12 max-[850px]:w-full w-[50rem] text-center max-[850px]:order-2  ">
-              <Image  priority={true}
+              <Image unoptimized priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
@@ -590,9 +590,9 @@ const Services = ({ datas }) => {
                 {pageContent.cmsExtra.heading}
               </h2>
               <div className="grid grid-cols-3 max-[550px]:grid-cols-2 max-[380px]:grid-cols-1 justify-center gap-[5rem] mx-auto mt-[5rem]">
-                {pageContent.cmsExtra.cards.map((item) => (
+                {pageContent.cmsExtra.cards.map((item,index) => (
                   <>
-                    <div className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
+                    <div key={index} className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
                       <h2 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">
                         {item.title}
                       </h2>
@@ -616,7 +616,7 @@ const Services = ({ datas }) => {
             {pageContent.section3.paras}
           </div>
           <div className="flex items-center justify-center max-[850px]:pt-[5rem] min-[500px]:px-[5rem] ">
-            <Image  priority={true}
+            <Image unoptimized priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -632,7 +632,7 @@ const Services = ({ datas }) => {
           </h2>
           <div className="grid grid-cols-2 max-[500px]:grid-cols-1  items-center flex-wrap justify-center gap-[2rem] ">
             {pageContent.faqs.map((item, index) => {
-              return <Accordian item={item} index={index + 1} />;
+              return <Accordian item={item} key={index} index={index + 1} />;
             })}
           </div>
         </div>

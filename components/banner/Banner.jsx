@@ -11,7 +11,7 @@ const Banner = () => {
     max-[850px]:pt-[8rem] "
     >
       <div className="my-auto mt-auto max-[850px]:items-center flex h-full max-w-[57rem] flex-col justify-center font-semibold max-[1400px]:mt-[16rem] max-[850px]:mx-auto max-[850px]:max-w-full max-[850px]:px-8  max-[850px]:pl-12  ">
-        <div className="flex flex-wrap  gap-x-[15px] robot-condensed text-65 uppercase leading-85 text-white max-[850px]:justify-center max-[850px]:text-center max-[850px]:text-[5rem]">
+        <div className="flex flex-wrap  gap-x-[15px] robot-condensed text-[6.5rem] uppercase leading-[85%] text-white max-[850px]:justify-center max-[850px]:text-center max-[850px]:text-[5rem]">
           {/* <p> Best</p> <p className="flex flex-wrap text-yellow">Software</p>{" "}
           <p className="flex flex-wrap text-yellow">development</p>
           <p> and</p>
@@ -19,7 +19,7 @@ const Banner = () => {
           <p> agency</p> */}
           <h1>Best Web Development Company In The USA</h1>
         </div>
-        <p className="mt-4 max-w-[484px] text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
+        <p className="mt-4 max-w-[484px] text-[1.6rem] font-light leading-[130%] text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
           Creaditech is one of the best web development companies in the USA. We
           design and develop websites and web applications that will bring value
           to your customers.

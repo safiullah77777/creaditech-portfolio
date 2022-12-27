@@ -64,11 +64,11 @@ const Careers = () => {
     max-[850px]:pt-[5rem]"
       >
         <div className="m-auto flex h-full flex-col items-center justify-center font-semibold max-[850px]:mx-auto max-[850px]:max-w-full  max-[850px]:px-8 max-[850px]:pl-12 ">
-          <h1 className="robot-condensed max-w-[790px] text-center text-65 font-600 uppercase leading-85 text-white max-[850px]:text-center max-[850px]:text-[5rem] max-[393px]:text-[6rem]">
+          <h1 className="robot-condensed max-w-[790px] text-center text-[6.5rem] font-600 uppercase leading-[85%] text-white max-[850px]:text-center max-[850px]:text-[5rem] max-[393px]:text-[6rem]">
             <span className="text-yellow">JOIN US</span> and realise the{" "}
             <span className="text-yellow">UNIMAGINED.</span>
           </h1>
-          <p className="Montserrat mt-4 max-w-[76rem] text-center text-16 font-light leading-130 text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
+          <p className="Montserrat mt-4 max-w-[76rem] text-center text-[1.6rem] font-light leading-[130%] text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
             Together as a team, we create experiences used and loved by millions
             of people every day. For over 20 years, we have worked with
             ambitious global organizations to launch world-leading digital

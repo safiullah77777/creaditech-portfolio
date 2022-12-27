@@ -4,7 +4,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["localhost", "creaditech.com"],
+    domains: ["localhost", "creaditech.com","ferraradentaltampa.creaditech"],
     formats: ["image/webp"],
   },
   // i18n: {

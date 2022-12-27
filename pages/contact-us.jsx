@@ -36,7 +36,6 @@ const ContactUs = () => {
     );
     const nameregex = new RegExp(/^[a-zA-Z][a-zA-Z ]*$/);
     const companynameregex = new RegExp(/^[a-zA-Z][a-zA-Z ]*$/);
-    console.log(formData.companyName.length > 0, nameregex.test(formData.name));
     if (loading) return;
     else if (
       formData?.name?.length <= 0 ||
@@ -202,7 +201,7 @@ const ContactUs = () => {
         </h2>
         <div className="  flex flex-wrap justify-center gap-[2rem] py-[10rem]">
           <Link href={'https://www.facebook.com/creaditech'} target="_blank" >
-            <Image priority={true}
+            <Image unoptimized priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -214,7 +213,7 @@ const ContactUs = () => {
           </Link>
           <Link href={'https://www.instagram.com/creaditech/'} target="_blank" >
 
-            <Image  priority={true}
+            <Image unoptimized  priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -225,7 +224,7 @@ const ContactUs = () => {
             />
           </Link>
           <Link href={'https://www.pinterest.com/Creaditech/'} target="_blank" >
-            <Image  priority={true}
+            <Image unoptimized  priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -236,7 +235,7 @@ const ContactUs = () => {
             />
           </Link>
           <Link href={'https://www.linkedin.com/company/creaditechus/'} target="_blank" >
-            <Image  priority={true}
+            <Image unoptimized  priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -248,7 +247,7 @@ const ContactUs = () => {
           </Link>
           {/* <Link href={'https://www.facebook.com/creaditech'} target="_blank" >
 
-            <Image  priority={true}
+            <Image unoptimized  priority={true}
               loader={({ src }) => {
                 return src;
               }}
