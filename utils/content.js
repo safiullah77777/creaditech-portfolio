@@ -70,7 +70,7 @@ export const Content = [
   {
     page: "web-development",
     button: "Web development Portfolio",
-    inforaphic: { img: webInfoGraphic, alt: "" },
+    inforaphic: { img: webInfoGraphic, alt: "web development" },
     pricing: false,
     section1: {
       heading:
@@ -108,7 +108,7 @@ export const Content = [
         </>
       ),
       image: { img: webDev, alt: "web development services" },
-      link: "",
+      link: "web development services",
     },
     section2: {
       heading: "Custom Web Development Services In The USA At Affordable Rates",
@@ -186,7 +186,7 @@ export const Content = [
           </ul>
         </>
       ),
-      image: { img: hireExpert, alt: "" },
+      image: { img: hireExpert, alt: "hire an expert" },
     },
     ecommerceExtra: false,
     faqs: [
@@ -240,7 +240,7 @@ export const Content = [
     page: "ecommerce-website-development",
     button: "Ecommerce development Portfolio",
 
-    inforaphic: { img: ecommerceInfoGraphic, alt: "" },
+    inforaphic: { img: ecommerceInfoGraphic, alt: "why you should have an ecommerce website" },
     pricing: [
       {
         features: [
@@ -444,12 +444,12 @@ export const Content = [
     ecommerceExtra: {
       heading: "Leading Ecommerce Platforms.",
       icons: [
-        logos_woocommerce,
-        open_cart,
-        square_space,
-        magento,
-        big_commerce,
-        shopify,
+        { img: logos_woocommerce, alt: "woocommerce" },
+        { img: open_cart, alt: "open cart" },
+        { img: square_space, alt: "square space" },
+        { img: magento, alt: "magento" },
+        { img: big_commerce, alt: "big commerce" },
+        { img: shopify, alt: "shipify" },
       ],
     },
     section2: {
@@ -537,7 +537,7 @@ export const Content = [
           </ul>
         </>
       ),
-      image: { img: ecommercehireExpert, alt: "" },
+      image: { img: ecommercehireExpert, alt: "hire an ecommerce expert" },
     },
     faqs: [
       {

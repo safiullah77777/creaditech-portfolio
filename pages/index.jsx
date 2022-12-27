@@ -73,15 +73,15 @@ const Home = () => {
     { width: 1850, itemsToShow: 6 },
   ];
   const industriesCards = [
-    { title: "Education", icon: icon1 },
-    { title: "Finance", icon: icon2 },
-    { title: "E-commerce", icon: icon3 },
-    { title: "Sports", icon: icon4 },
-    { title: "Travel", icon: icon5 },
-    { title: "Resturant", icon: icon6 },
-    { title: "Health", icon: icon7 },
-    { title: "Fashion", icon: icon8 },
-    { title: "Video", icon: icon9 },
+    { title: "Education", icon: icon1, alt: "education" },
+    { title: "Finance", icon: icon2, alt: "Finance" },
+    { title: "E-commerce", icon: icon3, alt: "E-commerce" },
+    { title: "Sports", icon: icon4, alt: "Sports" },
+    { title: "Travel", icon: icon5, alt: "Travel" },
+    { title: "Resturant", icon: icon6, alt: "Resturant" },
+    { title: "Health", icon: icon7, alt: "Health" },
+    { title: "Fashion", icon: icon8, alt: "Fashion" },
+    { title: "Video", icon: icon9, alt: "Video" },
   ];
   function myArrow({ type, onClick }) {
     const pointer =
@@ -114,10 +114,11 @@ const Home = () => {
       );
     return (
       <button
-        className={`${consts.PREV ? "rounded-r-[5px]" : "rounded-l-[5px]"
-          } flex h-[14rem] w-[4.5rem] items-center justify-center self-center bg-black disabled:cursor-not-allowed`}
+        className={`${
+          consts.PREV ? "rounded-r-[5px]" : "rounded-l-[5px]"
+        } flex h-[14rem] w-[4.5rem] items-center justify-center self-center bg-black disabled:cursor-not-allowed`}
         onClick={onClick}
-      // disabled={isEdge}
+        // disabled={isEdge}
       >
         {pointer}
       </button>
@@ -200,7 +201,8 @@ const Home = () => {
             </p>
           </div>
           <div className="hidden w-1/2 max-[850px]:flex max-[850px]:w-full">
-            <Image unoptimized  priority={true}
+            <Image
+              priority={true}
               loader={({ src }) => {
                 return src;
               }}
@@ -217,13 +219,14 @@ const Home = () => {
           </div>
         </div>
         <div className="w-1/2 max-[850px]:hidden max-[850px]:w-full">
-          <Image unoptimized  priority={true}
+          <Image
+            priority={true}
             loader={({ src }) => {
               return src;
             }}
             className="h-full w-full"
             src={imageChoose}
-            alt=""
+            alt="choose"
           />
         </div>
       </section>
@@ -244,6 +247,7 @@ const Home = () => {
                   heading1={item.title}
                   heading2={item.title1}
                   image={item.icon}
+                  alt={item?.alt}
                 />
               </Link>
             ))}
@@ -309,19 +313,19 @@ const Home = () => {
         <div className="mr-auto justify-center grid gap-[2rem] grid-cols-5 min-[851px]:ml-auto max-w-[65rem] max-[850px]:max-w-full rounded-[5rem] px-[4rem] pt-[3rem]">
           {expertiseIcons.map((item) => (
             <div className=" flex items-center">
-              <Image unoptimized  priority={true}
-                src={item}
+              <Image
+                priority={true}
+                src={item?.img}
                 loader={({ src }) => {
                   return src;
                 }}
-                alt=""
+                alt={item?.alt}
                 className="w-6rem "
               />
             </div>
           ))}
         </div>
       </div>
-
 
       {/* industries we have */}
       <div className="flex bg-[#2B2B2B] py-24 pr-[4rem]  pl-[6rem] max-[850px]:flex-col max-[640px]:gap-[4rem]">
@@ -340,12 +344,15 @@ const Home = () => {
         </div>
         <div className="max-[850px]:flex grid grid-cols-3 max-[1000px]:grid-cols-2 max-w-[90rem] mx-auto flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
           {industriesCards.map((item, index) => (
-            <Card4 key={index} title={item.title} icon={item.icon} />
+            <Card4
+              key={index}
+              alt={item.alt}
+              title={item.title}
+              icon={item.icon}
+            />
           ))}
         </div>
       </div>
-
-
 
       {/* our  portfolio*/}
       <div className="flex bg-[#2B2B2B] max-[850px]:py-[4rem] py-32 max-[850px]:px-8">
@@ -364,11 +371,13 @@ const Home = () => {
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img10.png')]" />
             <Card3 classes="!bg-[url('/assets/images/backgrounds/portfolio-img11.png')]" /> */}
             {portfolioCards.slice(0, 5).map((item, index) => (
-              <Card3 alt={item.alt}
-              key={index}
-              classes=""
-              name={item.name}
-              img={item.img}   />
+              <Card3
+                alt={item.alt}
+                key={index}
+                classes=""
+                name={item.name}
+                img={item.img}
+              />
             ))}
             <Link
               href={"/our-clients"}
@@ -419,7 +428,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
 
       {/* impressed */}
       <div className="flex flex-col gap-[2rem] px-8 py-32">
@@ -500,8 +508,9 @@ const Home = () => {
                         key={index}
                         onClick={() => onClick(String(page))}
                         // active={isActivePage}
-                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${activePage != index ? "bg-[#D9D9D9]" : "bg-black"
-                          }  `}
+                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
+                          activePage != index ? "bg-[#D9D9D9]" : "bg-black"
+                        }  `}
                       ></div>
                     );
                   })}
@@ -509,7 +518,9 @@ const Home = () => {
               );
             }}
           >
-            {reviews.map((item,index)=><Card5 key={index} item={item} />)}
+            {reviews.map((item, index) => (
+              <Card5 key={index} item={item} />
+            ))}
           </Carousel>
         </div>
       </>
@@ -534,91 +545,98 @@ const Home = () => {
           </h2>
           <div className="relative z-[1000] flex flex-1 overflow-hidden">
             <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
-                alt=""
+                alt="arrow1"
               />
             </div>
             <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
-                alt=""
+                alt="arrow2"
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
-                alt=""
+                alt="arrow3"
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
-                alt=""
+                alt="arrow4"
               />
             </div>
             <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
-                alt=""
+                alt="arrow5"
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
-                alt=""
+                alt="arrow6"
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
-                alt=""
+                alt="arrow7"
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
-                alt=""
+                alt="arrow8"
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
-                alt=""
+                alt="arrow9"
               />
             </div>
           </div>
         </div>
       </Link>
-
-
 
       {/* blogs */}
       <>
@@ -681,8 +699,9 @@ const Home = () => {
                         key={index}
                         onClick={() => onClick(page)}
                         // active={isActivePage}
-                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${activePage != index ? "bg-[#D9D9D9]" : "bg-black"
-                          }  `}
+                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
+                          activePage != index ? "bg-[#D9D9D9]" : "bg-black"
+                        }  `}
                       ></div>
                     );
                   })}
@@ -693,7 +712,11 @@ const Home = () => {
             {blogs.map((item) => {
               return (
                 <Link href={`/blog/${item?.title}`}>
-                  <Card7 title={item?.h1} image={item.featuredImage.img} />
+                  <Card7
+                    alt={item?.h1.toLowerCase()}
+                    title={item?.h1}
+                    image={item.featuredImage.img}
+                  />
                 </Link>
               );
             })}
@@ -804,7 +827,7 @@ const Home = () => {
           alt=""
         /> */}
       </div>
-      <Image unoptimized  priority={true}sLine />
+      <ImagesLine priority={true}  />
       <BottomNav index={0} />
       <Footer />
     </div>

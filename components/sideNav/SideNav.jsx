@@ -38,8 +38,8 @@ const SideNav = ({ classes }) => {
         })}
       </div>
       <div className="flex flex-col mt-[2rem] gap-[1rem] items-center">
-        <Tag logo={logo2} classes="" text="+1 2144734887" />
-        <Tag logo={logo} classes="" text="info@creaditech.com" />
+        <Tag alt="phone no" logo={logo2} classes="" text="+1 2144734887" />
+        <Tag alt="email" logo={logo} classes="" text="info@creaditech.com" />
         <div className="item-center flex gap-4">
           <div className="rounded-icons1">
             <Link href={"https://www.facebook.com/creaditech"} target="_blank">

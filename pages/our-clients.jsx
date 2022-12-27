@@ -41,9 +41,9 @@ const OurClients = () => {
       >
         <div className="m-auto flex h-full flex-col items-center justify-center font-semibold max-[850px]:mx-auto max-[850px]:max-w-full  max-[850px]:px-8 max-[850px]:pl-12 ">
           <h1 className="max-w-[71rem]  justify-center gap-[1.5rem] text-center robot-condensed text-[6.5rem] uppercase leading-[81%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
-            Every <span className="text-yellow">Great{" "}</span>
+            Every <span className="text-yellow">Great </span>
             <span className="text-yellow">Brand</span> is Like a
-            <span className="text-yellow">{" "}Great Story</span>
+            <span className="text-yellow"> Great Story</span>
             {/* {"Every "} <span className="text-yellow"> Great brands {" "}</span> is like a{" "}
             <span className="text-yellow"> grand story</span> */}
           </h1>
@@ -54,9 +54,9 @@ const OurClients = () => {
           </p> */}
           <div className="my-8 flex gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
             <Link href={"/contact-us"}>
-              <Button classes="" title={"Contact Us"} />
+              <Button classes="text-[2rem]" title={"Contact Us"} />
             </Link>
-            <Button2 title={"Custom Quote"} />
+            <Button2 classes="!text-[2rem]"  title={"Custom Quote"} />
           </div>
         </div>
       </div>
@@ -68,63 +68,69 @@ const OurClients = () => {
         <div className="marquee">
           <div className="marquee--inner">
             <div className="flex h-full">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client1}
-                alt=""
+                alt="fushius"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client2}
-                alt=""
+                alt="animaxers"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client3}
-                alt=""
+                alt="mr pillar"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client4}
-                alt=""
+                alt="fulfil"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client5}
-                alt=""
+                alt="laviana"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client6}
-                alt=""
+                alt="cake king"
                 width={204}
                 height={204}
               />
@@ -140,63 +146,69 @@ const OurClients = () => {
               /> */}
             </div>
             <div className="flex h-full">
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client1}
-                alt=""
+                alt="fushius"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client2}
-                alt=""
+                alt="animaxers"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client3}
-                alt=""
+                alt="mr pillar"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client4}
-                alt=""
+                alt="fulfil"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client5}
-                alt=""
+                alt="laviana"
                 width={204}
                 height={204}
               />
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 className="h-full"
                 src={client6}
-                alt=""
+                alt="cake king"
                 width={204}
                 height={204}
               />

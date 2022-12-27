@@ -76,7 +76,7 @@ const LogoService = () => {
             </p>
             <div className="mt-[4rem] flex flex-wrap gap-8 max-[850px]:justify-center">
               <Button classes="" title={"View Pricing & Plan"} />
-              <Button2 title={"Logo Design Portfolio"} />
+              <Button2 classes={"!text-[2rem]"} title={"View Portfolio"} />
             </div>
           </div>
         </div>
@@ -143,6 +143,7 @@ const LogoService = () => {
                   heading1={item.title}
                   heading2={item.title1}
                   image={item.icon}
+                  alt={item?.alt}
                 />
               </Link>
             ))}

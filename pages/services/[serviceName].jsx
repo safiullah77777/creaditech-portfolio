@@ -154,7 +154,7 @@ const Services = ({ datas }) => {
                 <Button classes="" title={"View Pricing & Plan"} />
               </Link>
               <Link href={"our-clients"}>
-                <Button2 title={pageContent.button} />
+                <Button2 title={"View Portfolio"} />
               </Link>
             </div>
           </div>
@@ -339,9 +339,8 @@ const Services = ({ datas }) => {
                     loader={({ src }) => {
                       return src;
                     }}
-                    key={index}
-                    src={item}
-                    alt=""
+                    src={item?.img}
+                    alt={item?.alt}
                   />
                 ))}
               </div>
@@ -443,7 +442,7 @@ const Services = ({ datas }) => {
                     return src;
                   }}
                   src={arrow}
-                  alt=""
+                  alt="arrow1"
                 />
               </div>
               <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
@@ -453,7 +452,7 @@ const Services = ({ datas }) => {
                     return src;
                   }}
                   src={arrow}
-                  alt=""
+                  alt="arrow2"
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
@@ -463,7 +462,7 @@ const Services = ({ datas }) => {
                     return src;
                   }}
                   src={arrow}
-                  alt=""
+                  alt="arrow3"
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
@@ -473,7 +472,7 @@ const Services = ({ datas }) => {
                     return src;
                   }}
                   src={arrow}
-                  alt=""
+                  alt="arrow4"
                 />
               </div>
               <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
@@ -483,7 +482,7 @@ const Services = ({ datas }) => {
                     return src;
                   }}
                   src={arrow}
-                  alt=""
+                  alt="arrow5"
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
@@ -493,7 +492,7 @@ const Services = ({ datas }) => {
                     return src;
                   }}
                   src={arrow}
-                  alt=""
+                  alt="arrow6"
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
@@ -503,7 +502,7 @@ const Services = ({ datas }) => {
                     return src;
                   }}
                   src={arrow}
-                  alt=""
+                  alt="arrow7"
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
@@ -513,7 +512,7 @@ const Services = ({ datas }) => {
                     return src;
                   }}
                   src={arrow}
-                  alt=""
+                  alt="arrow8"
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
@@ -523,7 +522,7 @@ const Services = ({ datas }) => {
                     return src;
                   }}
                   src={arrow}
-                  alt=""
+                  alt="arrow9"
                 />
               </div>
             </div>
@@ -570,7 +569,7 @@ const Services = ({ datas }) => {
                 }}
                 className="relative !max-[850px]:top-[21rem]  top-[12rem] w-full"
                 src={CardFull}
-                alt=""
+                alt="card"
                 //   width={2000}
                 //   height={200}
               />

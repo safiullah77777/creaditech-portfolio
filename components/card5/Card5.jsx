@@ -8,7 +8,7 @@ const Card5 = ({item}) => {
       <div className="flex h-[96%] flex-col gap-[1rem] p-[20px]">
         <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
-              }} alt="" width={30} height={27} src={coma} />
+              }} alt="coma" width={30} height={27} src={coma} />
         <p className="clash text-[22px] font-400 leading-[100%]">
           {item?.review}
         </p>
@@ -16,19 +16,19 @@ const Card5 = ({item}) => {
           <div className="flex ">
             <Image unoptimized  priority={true}  loader={({ src }) => {
                 return src;
-              }} alt="" width={18} height={18} src={star} />
-            <Image unoptimized  priority={true}  loader={({ src }) => {
+              }} alt="star1" width={18} height={18} src={star} />
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
-              }} alt="" width={18} height={18} src={star} />
-            <Image unoptimized  priority={true}  loader={({ src }) => {
+              }} alt="star2" width={18} height={18} src={star} />
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
-              }} alt="" width={18} height={18} src={star} />
-            <Image unoptimized  priority={true}  loader={({ src }) => {
+              }} alt="star3" width={18} height={18} src={star} />
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
-              }} alt="" width={18} height={18} src={star} />
-            <Image unoptimized  priority={true}  loader={({ src }) => {
+              }} alt="star4" width={18} height={18} src={star} />
+            <Image  priority={true}  loader={({ src }) => {
                 return src;
-              }} alt="" width={18} height={18} src={star} />
+              }} alt="star4" width={18} height={18} src={star} />
           </div>
           <h2 className="clash flex items-center pl-[30px] text-[20px] font-600 text-[#1E1E1E] before:h-[3px] before:w-[26px] before:rounded-5 before:bg-[#9747FF] ">
             {item?.name}

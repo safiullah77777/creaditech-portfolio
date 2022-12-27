@@ -128,33 +128,96 @@ const Portfolio = () => {
             );
           }}
         >
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={money} alt="" width={646} height={410} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={money} alt="" width={646} height={410} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={money} alt="" width={646} height={410} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={money} alt="" width={646} height={410} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={money} alt="" width={646} height={410} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={money} alt="" width={646} height={410} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={money} alt="" width={646} height={410} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={money} alt="" width={646} height={410} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }} src={money} alt="" width={646} height={410} />
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
+            src={money}
+            alt="money"
+            width={646}
+            height={410}
+          />
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
+            src={money}
+            alt="money"
+            width={646}
+            height={410}
+          />
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
+            src={money}
+            alt="money"
+            width={646}
+            height={410}
+          />
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
+            src={money}
+            alt="money"
+            width={646}
+            height={410}
+          />
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
+            src={money}
+            alt="money"
+            width={646}
+            height={410}
+          />
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
+            src={money}
+            alt="money"
+            width={646}
+            height={410}
+          />
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
+            src={money}
+            alt="money"
+            width={646}
+            height={410}
+          />
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
+            src={money}
+            alt="money"
+            width={646}
+            height={410}
+          />
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
+            src={money}
+            alt="money"
+            width={646}
+            height={410}
+          />
         </Carousel>
       </div>
       <div className="flex gap-[5rem]  px-[6rem] py-[8rem] max-[850px]:flex-col max-[850px]:px-[3rem]">
@@ -194,11 +257,13 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="w-[53.5rem] max-[850px]:w-full ">
-          <Image unoptimized  priority={true}  loader={({ src }) => {
-                return src;
-              }}
+          <Image
+            priority={true}
+            loader={({ src }) => {
+              return src;
+            }}
             src={portfolio}
-            alt=""
+            alt="portfolio"
             className="w-full "
             width={646}
             height={550}

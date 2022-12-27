@@ -20,6 +20,7 @@ export const serviceCards = [
     icon: Image1,
     styles: "",
     link: "/web-development",
+    alt:"website development"
   },
   {
     title: "CMS Web ",
@@ -27,6 +28,8 @@ export const serviceCards = [
     icon: Image2,
     styles: "h-[120px] w-[120px]",
     link: "/cms-development",
+    alt:"cms development"
+
   },
   {
     title: "Ecommerce Web",
@@ -34,6 +37,8 @@ export const serviceCards = [
     icon: Image3,
     styles: "h-[96px] w-[96px]",
     link: "/ecommerce-website-development",
+    alt:"ecommerce website development"
+
   },
   {
     title: "Custom Web App",
@@ -41,6 +46,8 @@ export const serviceCards = [
     icon: Image4,
     styles: "h-[98px] w-[107px]",
     link: "/custom-web-app-development",
+    alt:"custom web app development"
+
   },
   {
     title: "Wordpress",
@@ -48,6 +55,8 @@ export const serviceCards = [
     icon: Image5,
     styles: "h-[85px] w-[85px]",
     link: "/wordpress-development",
+    alt:"wordpress development"
+
   },
 
   {
@@ -56,6 +65,7 @@ export const serviceCards = [
     icon: Image6,
     styles: "",
     link: "/php-web-development",
+    alt:"php web development"
   },
 
   // below all are not included
