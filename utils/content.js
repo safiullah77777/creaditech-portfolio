@@ -69,7 +69,7 @@ import promotion from "../public/assets/images/icons/promotion.svg";
 export const Content = [
   {
     page: "web-development",
-    button:"Web development Portfolio",
+    button: "Web development Portfolio",
     inforaphic: { img: webInfoGraphic, alt: "" },
     pricing: false,
     section1: {
@@ -238,7 +238,7 @@ export const Content = [
   {
     cmsExtra: false,
     page: "ecommerce-website-development",
-    button:"Ecommerce development Portfolio",
+    button: "Ecommerce development Portfolio",
 
     inforaphic: { img: ecommerceInfoGraphic, alt: "" },
     pricing: [
@@ -581,7 +581,7 @@ export const Content = [
   },
   {
     page: "cms-development",
-    button:"CMS development Portfolio",
+    button: "CMS development Portfolio",
 
     inforaphic: { img: cmsInfoGraphic, alt: "why your business needs a cms" },
     pricing: [
@@ -918,7 +918,7 @@ export const Content = [
   },
   {
     page: "wordpress-development",
-    button:"Wordpress development Portfolio",
+    button: "Wordpress development Portfolio",
     pricing: [
       {
         features: [
@@ -1256,7 +1256,7 @@ export const Content = [
   },
   {
     page: "custom-web-app-development",
-    button:"Custom Web development Portfolio",
+    button: "Custom Web development Portfolio",
 
     inforaphic: {
       img: customInfoGraphic,
@@ -1463,7 +1463,7 @@ export const Content = [
   },
   {
     page: "php-web-development",
-    button:"Php development Portfolio",
+    button: "Php development Portfolio",
 
     inforaphic: {
       img: phpInfoGraphic,
@@ -1702,12 +1702,90 @@ export const Content = [
   },
   {
     page: "seo",
-    button:"SEO Portfolio",
+    button: "SEO Portfolio",
     inforaphic: {
       img: seoInfoGraphic,
       alt: "why your business needs seo",
     },
-    pricing:false,
+    // pricing:false,
+    // SEO Pricing Packages Start
+    pricing: [
+      {
+        features: [
+          "Up to 5 keywords",
+          "Website and competitor analysis",
+          "Initial ranking report",
+          "Keywords research",
+          "Meta tags creation",
+          "Content optimization",
+          "Image optimization",
+          "Sitemap creation",
+          "Robots.txt",
+          "Google analytics and search console setup",
+          "1 blog posting",
+          "30 social sharing",
+          "1 infographic submission",
+          "Keyword ranking report",
+        ],
+        adons: [
+          "1 on site blog content (up to 1000 words)",
+          "Local citations (5)",
+        ],
+        price: "USD 699",
+      },
+      {
+        features: [
+          "Up to 15 keywords",
+          "Website and competitor analysis",
+          "Initial ranking report",
+          "Keywords research",
+          "Meta tags creation",
+          "Content optimization",
+          "Image optimization",
+          "Sitemap creation",
+          "Robots.txt",
+          "Google analytics and search console setup",
+          "1 blog posting (offsite)",
+          "2 on site blog content (up to 1000 words each)",
+          "Local citations (5)",
+          "Google my business setup (if applicable)",
+          "40 social sharing",
+          "2 infographic submissions",
+          "Keyword ranking report",
+          "3 guest posts",
+        ],
+        adons: ["5 guest posts ", "2 video creations"],
+        price: "USD 999 ",
+      },
+      {
+        features: [
+          "Up to 25 keywords",
+          "Website and competitor analysis",
+          "Initial ranking report",
+          "Keywords research",
+          "Meta tags creation",
+          "Content optimization",
+          "Image optimization",
+          "Sitemap creation",
+          "Robots.txt",
+          "Google analytics and search console setup",
+          "3 blog posting (offsite)",
+          "5 on site blog content (up to 1000 words each)",
+          "Local citations (10)",
+          "Google my business setup (if applicable)",
+          "50 social sharing",
+          "2 infographic submissions",
+          "Keyword ranking report",
+          "5 guest posts",
+          "2 video creations",
+        ],
+        adons: ["7 guest posts ", "4 video creations"],
+        price: "USD 1499  ",
+      },
+    ],
+
+    // SEO Princing Packages End
+
     steps: {
       mainHeading: {
         one: "Our  ",
@@ -1945,12 +2023,12 @@ export const Content = [
   },
   {
     page: "content-creation",
-    button:"Content Creation Portfolio",
+    button: "Content Creation Portfolio",
     inforaphic: {
       img: contentInfoGraphic,
       alt: "why quality content is important",
     },
-    pricing:false,
+    pricing: false,
     steps: {
       mainHeading: {
         one: "How We Create A",
@@ -2172,7 +2250,7 @@ export const Content = [
   },
   {
     page: "sem",
-    button:"SEM Portfolio",
+    button: "SEM Portfolio",
     pricing: false,
     inforaphic: { img: semInfoGraphic, alt: "why your business needs SEM" },
     steps: {

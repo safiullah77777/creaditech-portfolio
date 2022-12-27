@@ -14,8 +14,8 @@ import Link from "next/link";
 import contactForm from "../../services/fromService";
 import { toast } from "react-toastify";
 const Footer = () => {
-  const [email, setEmail] = useState('')
-  const [loading, setLoading] = useState('')
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState("");
   return (
     <footer className="flex flex-col bg-primary px-24 pt-44 pb-24 max-[850px]:px-8  max-[600px]:pt-[4rem]">
       <div className="flex max-[850px]:flex-col">
@@ -35,13 +35,14 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={facebook}
                 className=""
-                alt=""
+                alt="creaditech facebook"
               />
             </Link>
             <Link
@@ -49,13 +50,14 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={insta}
                 className=""
-                alt=""
+                alt="creaditech instagram"
               />
             </Link>
             <Link
@@ -63,13 +65,14 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={linkedin}
                 className=""
-                alt=""
+                alt="creaditech linkedin"
               />
             </Link>
             <Link
@@ -77,13 +80,14 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={twitter}
                 className=""
-                alt=""
+                alt="creaditech twitter"
               />
             </Link>
             <Link
@@ -91,25 +95,27 @@ const Footer = () => {
               target="_blank"
               className="rounded-icons"
             >
-              <Image unoptimized  priority={true}
+              <Image
+                priority={true}
                 loader={({ src }) => {
                   return src;
                 }}
                 src={pinterest}
                 className=""
-                alt=""
+                alt="creaditech pinterest"
               />
             </Link>
           </div>
         </div>
         <div className="flex w-1/2 flex-col items-center py-16 max-[850px]:order-1 max-[850px]:w-full min-[600px]:px-8">
-          <Image unoptimized  priority={true}
+          <Image
+            priority={true}
             loader={({ src }) => {
               return src;
             }}
             src={Logo}
             className="logo max-[500px]:w-[59px]"
-            alt=""
+            alt="creaditech"
           />
           <p className="heading-grey robot-condensed my-10 text-[4.5rem] font-600 leading-[80%] max-[400px]:text-[30px]">
             Join our Newsletter
@@ -138,20 +144,24 @@ const Footer = () => {
 
               <span className="flex max-[850px]:hidden">{loading ? "loading..." : "Subscribe"}</span>
               <div className="mx-8 hidden max-[850px]:flex">
-                {loading ? "..." : <svg
-                  width="26"
-                  height="25"
-                  viewBox="0 0 26 25"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24.5877 12.6248L1.54564 2.07936L8.67416 12.6285L2.051 23.6757L24.5877 12.6248Z"
-                    stroke="#1E1E1E"
-                    strokeWidth="2.5"
-                    strokeLinejoin="round"
-                  />
-                </svg>}
+                {loading ? (
+                  "..."
+                ) : (
+                  <svg
+                    width="26"
+                    height="25"
+                    viewBox="0 0 26 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24.5877 12.6248L1.54564 2.07936L8.67416 12.6285L2.051 23.6757L24.5877 12.6248Z"
+                      stroke="#1E1E1E"
+                      strokeWidth="2.5"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                )}
               </div>
             </button>
           </div>

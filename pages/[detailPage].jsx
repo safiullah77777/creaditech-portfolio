@@ -28,7 +28,9 @@ const DetailsPage = ({ data }) => {
       />
       <Header />
       <div className="clash font-700 flex justify-center items-center h-[50rem] bg-[#111111]  text-[8rem] text-[#ffe100]">
-        <h1>{data.h1}</h1>
+        <h1 className="max-sm:text-center max-sm:text-[7rem] max-sm:px-2">
+          {data.h1}
+        </h1>
       </div>
       <div className="flex justify-center">
         <div className="flex flex-col p-[4rem] gap-[2rem] max-w-[120rem] ">

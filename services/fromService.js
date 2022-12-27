@@ -13,13 +13,11 @@ const contactForm = async (params, setLoading) => {
     .then(async (response) => {
       //do something awesome that makes the world a better place
       const data = await response.json();
-      console.log(data, response);
       setLoading(false);
       if (response.status == 200) toast.success("email sent successfully");
     })
     .then((err) => {
       setLoading(false);
-      console.log(err);
     });
 };
 export default contactForm;
