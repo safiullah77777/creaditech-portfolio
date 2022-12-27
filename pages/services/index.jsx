@@ -8,7 +8,7 @@ import imageWriting from "../../public/assets/images/image-2.png";
 import mono from "../../public/assets/images/mogogram.png";
 import image3 from "../../public/assets/images/image-3.jpg";
 import arrow from "../../public/assets/images/icons/arrow-fa2.svg";
-import CardFull from "../../public/assets/images/Card-Full.png";
+import CardFull from "../../public/assets/images/Card-Full.webp";
 import PriceCard from "../../components/priceCard/PriceCard";
 import DesignCard from "../../components/designCard/DesignCard";
 import Slider from "../../components/slider/Slider";
@@ -61,7 +61,7 @@ const LogoService = () => {
         <Header />
       </div>
       <div
-        className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.png')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
+        className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.webp')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
     			min-[500px]:px-28 "
       >
         <div className="flex h-full max-w-[700px] flex-col justify-center gap-[2rem] font-semibold max-[850px]:mx-auto max-[850px]:max-w-full ">

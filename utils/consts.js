@@ -1,6 +1,6 @@
-import development from "../public/assets/images/mega-development.png";
+import development from "../public/assets/images/mega-development.webp";
 import designing from "../public/assets/images/mega-designing.png";
-import marketing from "../public/assets/images/mega-marketing.png";
+import marketing from "../public/assets/images/mega-marketing.webp";
 import lottiDevelopment from "../public/assets/images/mega-web-development.json";
 import lottiMarketing from "../public/assets/images/mega-digital-marketing.json";
 

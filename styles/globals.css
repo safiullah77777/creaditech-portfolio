@@ -99,7 +99,7 @@ input[type="number"] {
   background: linear-gradient(180deg, yellow 6%, #ffe100 100%);
 }
 .banner2 {
-  background-image: url(../public/assets/images/backgrounds/banner2.png),
+  background-image: url(../public/assets/images/backgrounds/banner2.webp),
     linear-gradient(180.94deg, #1e1e1e 7.76%, rgba(30, 30, 30, 0) 52.42%);
   background-blend-mode: overlay !important;
   background-repeat: no-repeat;
@@ -107,7 +107,7 @@ input[type="number"] {
   background-position: center;
 }
 .banner3 {
-  background-image: url(../public/assets/images/backgrounds/banner3.png),
+  background-image: url(../public/assets/images/backgrounds/banner3.webp),
     linear-gradient(180.94deg, #1e1e1e 7.76%, rgba(30, 30, 30, 0) 52.42%);
   background-blend-mode: overlay !important;
   background-repeat: no-repeat;
@@ -123,7 +123,7 @@ input[type="number"] {
   background-position: center;
 }
 .banner5 {
-  background-image: url(../public/assets/images/backgrounds/banner5.png),
+  background-image: url(../public/assets/images/backgrounds/banner5.webp),
     linear-gradient(180.94deg, #1e1e1e 7.76%, rgba(30, 30, 30, 0) 52.42%);
   background-blend-mode: overlay !important;
   background-repeat: no-repeat;
@@ -132,7 +132,7 @@ input[type="number"] {
 }
 
 .banner6 {
-  background-image: url(../public/assets/images/backgrounds/banner6.png),
+  background-image: url(../public/assets/images/backgrounds/banner6.webp),
     linear-gradient(180.94deg, #1e1e1e 7.76%, rgba(30, 30, 30, 0) 52.42%);
   background-blend-mode: overlay !important;
   background-repeat: no-repeat;
@@ -141,7 +141,7 @@ input[type="number"] {
 }
 
 .banner7 {
-  background-image: url(../public/assets/images/backgrounds/banner7.png),
+  background-image: url(../public/assets/images/backgrounds/banner7.webp),
     linear-gradient(180.94deg, #1e1e1e 7.76%, rgba(30, 30, 30, 0) 52.42%);
   background-blend-mode: overlay !important;
   background-repeat: no-repeat;

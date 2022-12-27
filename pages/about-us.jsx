@@ -25,7 +25,7 @@ const AboutUs = () => {
       <div>
         <Header />
       </div>
-      <div className="banner6  bg-[url('/assets/images/backgrounds/banner6.png')]  relative flex min-h-[70rem] h-[100vh] w-full  bg-cover bg-center bg-no-repeat  bg-blend-overlay max-[850px]:h-[850px] max-[850px]:flex-col max-[850px]:p-0 ">
+      <div className="banner6  bg-[url('/assets/images/backgrounds/banner6.webp')]  relative flex min-h-[70rem] h-[100vh] w-full  bg-cover bg-center bg-no-repeat  bg-blend-overlay max-[850px]:h-[850px] max-[850px]:flex-col max-[850px]:p-0 ">
         <div className="m-auto flex h-full flex-col items-center justify-center font-semibold max-[850px]:mx-auto max-[850px]:max-w-full  max-[850px]:px-8 max-[850px]:pl-12 ">
           <h1 className="robot-condensed px-[3.5rem] text-center text-[6.5rem] uppercase leading-[85%] text-white max-[850px]:text-center max-[850px]:text-[5rem]">
             creative <span className="text-yellow"> workspace </span>

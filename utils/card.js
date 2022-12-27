@@ -5,13 +5,13 @@ import Image4 from "../public/assets/images/custom-web-development-services.svg"
 import Image5 from "../public/assets/images/wordpress.-development-services.svg";
 import Image6 from "../public/assets/images/php-development-services.svg";
 
-import portfolio1 from "../public/assets/images/portfolio1.jpg";
-import portfolio2 from "../public/assets/images/portfolio2.jpg";
-import portfolio3 from "../public/assets/images/portfolio3.jpg";
-import portfolio4 from "../public/assets/images/portfolio4.jpg";
-import portfolio5 from "../public/assets/images/portfolio5.jpg";
-import portfolio6 from "../public/assets/images/portfolio6.jpg";
-import portfolio7 from "../public/assets/images/portfolio7.jpg";
+import portfolio1 from "../public/assets/images/portfolio1.webp";
+import portfolio2 from "../public/assets/images/portfolio2.webp";
+import portfolio3 from "../public/assets/images/portfolio3.webp";
+import portfolio4 from "../public/assets/images/portfolio4.webp";
+import portfolio5 from "../public/assets/images/portfolio5.webp";
+import portfolio6 from "../public/assets/images/portfolio6.webp";
+import portfolio7 from "../public/assets/images/portfolio7.webp";
 
 export const serviceCards = [
   {

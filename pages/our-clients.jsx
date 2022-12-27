@@ -3,13 +3,12 @@ import React, { useState } from "react";
 import Button from "../components/button/Button";
 import Button2 from "../components/button2/Button2";
 import Header from "../components/header/Header";
-import client1 from "../public/assets/images/client1.png";
-import client2 from "../public/assets/images/client2.png";
-import client3 from "../public/assets/images/client3.png";
-import client4 from "../public/assets/images/client4.png";
-import client5 from "../public/assets/images/client5.png";
-import client6 from "../public/assets/images/client6.png";
-import client7 from "../public/assets/images/client7.png";
+import client1 from "../public/assets/images/client1.webp";
+import client2 from "../public/assets/images/client2.webp";
+import client3 from "../public/assets/images/client3.webp";
+import client4 from "../public/assets/images/client4.webp";
+import client5 from "../public/assets/images/client5.webp";
+import client6 from "../public/assets/images/client6.webp";
 import Card3 from "../components/card3/Card3";
 import Pagination from "../components/pagination/Pagination";
 import Slider from "../components/slider/Slider";
@@ -36,7 +35,7 @@ const OurClients = () => {
 
       <Header />
       <div
-        className="banner3  bg-[url('/assets/images/backgrounds/banner3.png')]  relative flex h-[100vh] w-full  bg-cover bg-center bg-no-repeat bg-blend-overlay max-[850px]:h-[90rem] max-[850px]:flex-col max-[850px]:p-0 
+        className="banner3  bg-[url('/assets/images/backgrounds/banner3.webp')]  relative flex h-[100vh] w-full  bg-cover bg-center bg-no-repeat bg-blend-overlay max-[850px]:h-[90rem] max-[850px]:flex-col max-[850px]:p-0 
     "
       >
         <div className="m-auto flex h-full flex-col items-center justify-center font-semibold max-[850px]:mx-auto max-[850px]:max-w-full  max-[850px]:px-8 max-[850px]:pl-12 ">
