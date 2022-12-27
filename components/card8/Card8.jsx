@@ -11,7 +11,7 @@ const Card8 = ({ title, img, alt }) => {
             Read More
           </p>
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}

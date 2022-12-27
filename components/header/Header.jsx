@@ -13,7 +13,7 @@ const Header = () => {
       <div className="hidden justify-center max-[677px]:flex">
         <Link href="/">
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -49,7 +49,7 @@ const Header = () => {
         <li className="mx-auto w-[140px] max-[1000px]:w-[100px] ">
           <Link href="/">
             <Image
-              priority={true}
+              
               loader={({ src }) => {
                 return src;
               }}

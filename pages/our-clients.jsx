@@ -69,7 +69,7 @@ const OurClients = () => {
           <div className="marquee--inner">
             <div className="flex h-full">
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -80,7 +80,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -91,7 +91,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -102,7 +102,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -113,7 +113,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -124,7 +124,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -134,7 +134,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              {/* <Image unoptimized  priority={true}
+              {/* <Image   
                 loader={({ src }) => {
                   return src;
                 }}
@@ -147,7 +147,7 @@ const OurClients = () => {
             </div>
             <div className="flex h-full">
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -158,7 +158,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -169,7 +169,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -180,7 +180,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -191,7 +191,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -202,7 +202,7 @@ const OurClients = () => {
                 height={204}
               />
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -212,7 +212,7 @@ const OurClients = () => {
                 width={204}
                 height={204}
               />
-              {/* <Image unoptimized  priority={true}  loader={({ src }) => {
+              {/* <Image     loader={({ src }) => {
                 return src;
               }}
 								className="h-full"
@@ -227,7 +227,7 @@ const OurClients = () => {
 
         {/* <marquee direction="left">
           <div className="flex">
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -237,7 +237,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -247,7 +247,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -257,7 +257,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -267,7 +267,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -277,7 +277,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -287,7 +287,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -297,7 +297,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -307,7 +307,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -317,7 +317,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -327,7 +327,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -337,7 +337,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -347,7 +347,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -357,7 +357,7 @@ const OurClients = () => {
               width={204}
               height={204}
             />
-            <Image unoptimized  priority={true}
+            <Image   
               loader={({ src }) => {
                 return src;
               }}
@@ -370,25 +370,25 @@ const OurClients = () => {
           </div>
         </marquee> */}
         {/* <div className="flex">
-          <Image unoptimized  priority={true}  loader={({ src }) => {
+          <Image     loader={({ src }) => {
                 return src;
               }} src={client1} alt="" width={204} height={204} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
+          <Image     loader={({ src }) => {
                 return src;
               }} src={client2} alt="" width={204} height={204} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
+          <Image     loader={({ src }) => {
                 return src;
               }} src={client3} alt="" width={204} height={204} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
+          <Image     loader={({ src }) => {
                 return src;
               }} src={client4} alt="" width={204} height={204} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
+          <Image     loader={({ src }) => {
                 return src;
               }} src={client5} alt="" width={204} height={204} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
+          <Image     loader={({ src }) => {
                 return src;
               }} src={client6} alt="" width={204} height={204} />
-          <Image unoptimized  priority={true}  loader={({ src }) => {
+          <Image     loader={({ src }) => {
                 return src;
               }} src={client7} alt="" width={204} height={204} />
         </div> */}

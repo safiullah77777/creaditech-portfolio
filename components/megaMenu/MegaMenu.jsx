@@ -21,7 +21,7 @@ const MegaMenu = ({ classes, setHover }) => {
               >
                 <div className="">
                   <Image
-                    priority={true}
+                    
                     className="h-[20rem] w-[20rem] relative"
                     loader={({ src }) => {
                       return src;

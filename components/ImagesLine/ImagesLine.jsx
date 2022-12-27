@@ -10,7 +10,7 @@ const ImagesLine = () => {
     <div className="flex flex-wrap items-center justify-center gap-28  min-[400px]:px-20 py-8 px-[2rem]">
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]  ">
         <Image
-          priority={true}
+          
           loader={({ src }) => {
             return src;
           }}
@@ -23,7 +23,7 @@ const ImagesLine = () => {
       </div>
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]">
         <Image
-          priority={true}
+          
           loader={({ src }) => {
             return src;
           }}
@@ -36,7 +36,7 @@ const ImagesLine = () => {
       </div>
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]">
         <Image
-          priority={true}
+          
           loader={({ src }) => {
             return src;
           }}
@@ -49,7 +49,7 @@ const ImagesLine = () => {
       </div>
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]">
         <Image
-          priority={true}
+          
           loader={({ src }) => {
             return src;
           }}

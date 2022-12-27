@@ -44,7 +44,7 @@ const SideNav = ({ classes }) => {
           <div className="rounded-icons1">
             <Link href={"https://www.facebook.com/creaditech"} target="_blank">
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -57,7 +57,7 @@ const SideNav = ({ classes }) => {
           <div className="rounded-icons1">
             <Link href={"https://www.instagram.com/creaditech"} target="_blank">
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -73,7 +73,7 @@ const SideNav = ({ classes }) => {
               target="_blank"
             >
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -86,7 +86,7 @@ const SideNav = ({ classes }) => {
           <div className="rounded-icons1">
             <Link href={"https://twitter.com/Creaditech"} target="_blank">
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}
@@ -102,7 +102,7 @@ const SideNav = ({ classes }) => {
               target="_blank"
             >
               <Image
-                priority={true}
+                
                 loader={({ src }) => {
                   return src;
                 }}

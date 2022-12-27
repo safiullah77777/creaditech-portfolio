@@ -17,7 +17,7 @@ const Slider = () => {
         <div className="flex items-center gap-4 max-[850px]:flex-col ">
           <div className="box-border  flex h-[77px] w-[77px] items-center justify-center rounded-full border-[5px] border-solid border-black bg-yellow duration-200 ease-linear group-hover:h-[80px] group-hover:w-[80px]">
             <Image
-              priority={true}
+              
               loader={({ src }) => {
                 return src;
               }}
@@ -40,7 +40,7 @@ const Slider = () => {
         <div className="flex items-center gap-4 max-[850px]:flex-col ">
           <div className="box-border flex h-[77px] w-[77px] items-center justify-center rounded-full border-[5px] border-solid border-black bg-yellow duration-200 ease-linear group-hover:h-[80px] group-hover:w-[80px]">
             <Image
-              priority={true}
+              
               loader={({ src }) => {
                 return src;
               }}

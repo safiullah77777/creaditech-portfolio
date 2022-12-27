@@ -5,7 +5,7 @@ const Card10 = ({ src, heading, para }) => {
   return (
     <div className="relative group h-[30rem]">
       <div className="w-full h-full">
-        <Image unoptimized  priority={true}
+        <Image   
           
           loader={({ src }) => {
             return src;

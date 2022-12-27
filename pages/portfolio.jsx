@@ -129,7 +129,7 @@ const Portfolio = () => {
           }}
         >
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -139,7 +139,7 @@ const Portfolio = () => {
             height={410}
           />
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -149,7 +149,7 @@ const Portfolio = () => {
             height={410}
           />
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -159,7 +159,7 @@ const Portfolio = () => {
             height={410}
           />
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -169,7 +169,7 @@ const Portfolio = () => {
             height={410}
           />
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -179,7 +179,7 @@ const Portfolio = () => {
             height={410}
           />
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -189,7 +189,7 @@ const Portfolio = () => {
             height={410}
           />
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -199,7 +199,7 @@ const Portfolio = () => {
             height={410}
           />
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -209,7 +209,7 @@ const Portfolio = () => {
             height={410}
           />
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
@@ -258,7 +258,7 @@ const Portfolio = () => {
         </div>
         <div className="w-[53.5rem] max-[850px]:w-full ">
           <Image
-            priority={true}
+            
             loader={({ src }) => {
               return src;
             }}
