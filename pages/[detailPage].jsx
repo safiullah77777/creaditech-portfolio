@@ -1,4 +1,5 @@
 import React from "react";
+import BottomNav from "../components/bottomNav/BottomNav";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import MetaHead from "../components/metaHead/MetaHead";
@@ -83,6 +84,7 @@ const DetailsPage = ({ data }) => {
           })}
         </div>
       </div>
+      <BottomNav />
       <Footer />
     </>
   );
