@@ -1,7 +1,7 @@
 export const reviews = [
   {
     review:
-      "I was looking to develop my business and brand’s online presence. Creaditech has been amazing when it came to developing my website and app. The user experience has been impressive as I have been getting a lot of lead generation. I would highly recommend!",
+      "I was looking to develop my business and brand’s online presence. Creaditech has been amazing when it came to developing my website and app. The user experience has been impressive as I have been getting a lot of lead generation.",
     name: "Jordan Smith",
   },
   {
