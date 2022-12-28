@@ -128,7 +128,7 @@ const Portfolio = () => {
             );
           }}
         >
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -138,7 +138,7 @@ const Portfolio = () => {
             width={646}
             height={410}
           />
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -148,7 +148,7 @@ const Portfolio = () => {
             width={646}
             height={410}
           />
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -158,7 +158,7 @@ const Portfolio = () => {
             width={646}
             height={410}
           />
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -168,7 +168,7 @@ const Portfolio = () => {
             width={646}
             height={410}
           />
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -178,7 +178,7 @@ const Portfolio = () => {
             width={646}
             height={410}
           />
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -188,7 +188,7 @@ const Portfolio = () => {
             width={646}
             height={410}
           />
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -198,7 +198,7 @@ const Portfolio = () => {
             width={646}
             height={410}
           />
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -208,7 +208,7 @@ const Portfolio = () => {
             width={646}
             height={410}
           />
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -257,7 +257,7 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="w-[53.5rem] max-[850px]:w-full ">
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;

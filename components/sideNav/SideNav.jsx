@@ -43,7 +43,7 @@ const SideNav = ({ classes }) => {
         <div className="item-center flex gap-4">
           <div className="rounded-icons1">
             <Link href={"https://www.facebook.com/creaditech"} target="_blank">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -56,7 +56,7 @@ const SideNav = ({ classes }) => {
           </div>
           <div className="rounded-icons1">
             <Link href={"https://www.instagram.com/creaditech"} target="_blank">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -72,7 +72,7 @@ const SideNav = ({ classes }) => {
               href={"https://www.linkedin.com/company/creaditechus"}
               target="_blank"
             >
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -85,7 +85,7 @@ const SideNav = ({ classes }) => {
           </div>
           <div className="rounded-icons1">
             <Link href={"https://twitter.com/Creaditech"} target="_blank">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -101,7 +101,7 @@ const SideNav = ({ classes }) => {
               href={"https://www.pinterest.com/Creaditech/"}
               target="_blank"
             >
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;

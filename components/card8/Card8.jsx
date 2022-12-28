@@ -10,7 +10,7 @@ const Card8 = ({ title, img, alt }) => {
           <p className="clash absolute max-[500px]:rounded-[10px] left-[50%] top-[50%] z-[10000] hidden -translate-x-1/2 text-[24px] font-600 text-white group-hover:flex">
             Read More
           </p>
-          <Image
+          <Image unoptimized
             
             loader={({ src }) => {
               return src;

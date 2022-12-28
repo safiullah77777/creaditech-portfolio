@@ -71,8 +71,8 @@ const DetailsPage = ({ data }) => {
             if (item.includes("li"))
               return (
                 <ul className="flex flex-col gap-[1rem] pl-[4rem]">
-                  {pageContent[item].map((item1) => (
-                    <li className="text-[15px] flex   clash font-300 text-[#000000]">
+                  {pageContent[item].map((item1,index) => (
+                    <li key={index} className="text-[15px] flex   clash font-300 text-[#000000]">
                       <span className="relative -top-[.4rem] mr-[1rem] text-[2rem] ">
                         &#x2022;
                       </span>

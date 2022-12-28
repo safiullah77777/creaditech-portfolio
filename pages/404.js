@@ -14,18 +14,18 @@ function Error404() {
     <>
       <Header />
       <MetaHead title={""} description="" link={""} />
-      <main class="h-screen w-full flex flex-col justify-center items-center bg-[#1E1E1E]">
-        <h1 class="text-[18rem] font-extrabold text-white tracking-widest">
+      <main className="h-screen w-full flex flex-col justify-center items-center bg-[#1E1E1E]">
+        <h1 className="text-[18rem] font-extrabold text-white tracking-widest">
           404
         </h1>
-        <div class="bg-[#ffe100] px-2 text-[4rem] rounded rotate-12 absolute">
+        <div className="bg-[#ffe100] px-2 text-[4rem] rounded rotate-12 absolute">
           <p> Page Not Found</p>
         </div>
-        <button class="mt-5">
-          <span class="relative inline-block text-sm font-medium text-[#ffe100] group active:text-[ffe100] focus:outline-none focus:ring">
-            <span class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#ffe100] group-hover:translate-y-0 group-hover:translate-x-0"></span>
+        <button className="mt-5">
+          <span className="relative inline-block text-sm font-medium text-[#ffe100] group active:text-[ffe100] focus:outline-none focus:ring">
+            <span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#ffe100] group-hover:translate-y-0 group-hover:translate-x-0"></span>
 
-            <span class="relative block px-8 pt-[4rem] pb-[2rem] bg-[#1A2238] border border-current">
+            <span className="relative block px-8 pt-[4rem] pb-[2rem] bg-[#1A2238] border border-current">
               <Link href="/">
                 <span className="text-[6rem]">Go Home</span>
               </Link>

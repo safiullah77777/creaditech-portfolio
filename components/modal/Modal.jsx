@@ -104,7 +104,7 @@ const Modal= ({ showModal, setShowModal }) => {
 									<div className="flex-1 p-[1rem] pt-0 ">
 										<ul className="flex flex-col gap-[.5rem]">
 											{points.map((point, index) => {
-												if (index == points.length - 1) return;
+												if (index == points?.length - 1) return;
 												return (
 													<li
 														className="list-disc text-[1.5rem] font-300 leading-[130%] text-[#5B5E71]"

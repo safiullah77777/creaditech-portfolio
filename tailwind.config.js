@@ -38,6 +38,24 @@ module.exports = {
         120: "12rem",
         160: "16rem",
       },
+      maxWidth: {
+        500: "52rem",
+        570: "57rem",
+        760: "76rem",
+      },
+      fontSize: {
+        0: "0rem",
+        1: "0.1rem",
+        16: "1.6rem",
+        18: "1.8rem",
+        30: "3rem",
+        65: "6.5rem",
+        35: "3.5rem",
+        20: "2rem",
+        45: "4.5rem",
+        150: "15rem",
+        28: "2.8rem",
+      },
       colors: {
         yellow: "rgba(255, 225, 0, 1)",
         "light-grey": "rgba(198, 206, 211, 1)",
@@ -47,6 +65,10 @@ module.exports = {
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
+      },
+      lineHeight: {
+        85: "85%",
+        130: "130%",
       },
       fontWeight: {
         100: 100,

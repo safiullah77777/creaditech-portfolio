@@ -201,7 +201,7 @@ const ContactUs = () => {
         </h2>
         <div className="  flex flex-wrap justify-center gap-[2rem] py-[10rem]">
           <Link href={'https://www.facebook.com/creaditech'} target="_blank" >
-            <Image  
+            <Image unoptimized  
               loader={({ src }) => {
                 return src;
               }}
@@ -213,7 +213,7 @@ const ContactUs = () => {
           </Link>
           <Link href={'https://www.instagram.com/creaditech/'} target="_blank" >
 
-            <Image   
+            <Image unoptimized   
               loader={({ src }) => {
                 return src;
               }}
@@ -224,7 +224,7 @@ const ContactUs = () => {
             />
           </Link>
           <Link href={'https://www.pinterest.com/Creaditech/'} target="_blank" >
-            <Image   
+            <Image unoptimized   
               loader={({ src }) => {
                 return src;
               }}
@@ -235,7 +235,7 @@ const ContactUs = () => {
             />
           </Link>
           <Link href={'https://www.linkedin.com/company/creaditechus/'} target="_blank" >
-            <Image   
+            <Image unoptimized   
               loader={({ src }) => {
                 return src;
               }}
@@ -247,7 +247,7 @@ const ContactUs = () => {
           </Link>
           {/* <Link href={'https://www.facebook.com/creaditech'} target="_blank" >
 
-            <Image   
+            <Image unoptimized   
               loader={({ src }) => {
                 return src;
               }}

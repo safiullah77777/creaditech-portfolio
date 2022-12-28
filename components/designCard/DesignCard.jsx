@@ -9,7 +9,7 @@ const DesignCard = ({ title1, title2, para, image, bg, alt, no }) => {
         {no}
       </div>
       <div className="design-icon relative before:duration-300 before:ease-linear group-hover:before:h-[110%] group-hover:before:w-[140%]">
-        <Image   
+        <Image unoptimized   
           loader={({ src }) => {
             return src;
           }}

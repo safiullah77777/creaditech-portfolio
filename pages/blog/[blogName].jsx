@@ -45,7 +45,7 @@ const BlogPost = ({ blogInfo }) => {
       <Header />
       <div className="flex flex-col relative min-h-[60rem]  ">
         <div className="flex ">
-          <Image
+          <Image unoptimized 
 
             loader={({ src }) => {
               return src;
@@ -98,7 +98,7 @@ const BlogPost = ({ blogInfo }) => {
                       <span>{index + 1}.</span>
                       <span>{item.h2}</span>
                     </a>
-                    {Object.keys(item).length > 1 && (
+                    {Object.keys(item)?.length > 1 && (
                       <svg
                         width="26"
                         height="17"
@@ -117,7 +117,7 @@ const BlogPost = ({ blogInfo }) => {
                       </svg>
                     )}
                   </div>
-                  {Object.keys(item).length > 1 && (
+                  {Object.keys(item)?.length > 1 && (
                     <ul
                       ref={ref}
                       className={`list-disc pl-[3rem] ease-linear transition-[height] duration-200 ${dropdown === index
@@ -354,7 +354,7 @@ const BlogPost = ({ blogInfo }) => {
           </div>
           <div className="flex flex-col max-[850px]:w-full gap-[1rem] items-center bg-[#F9F9F9] rounded-[2rem] w-[33rem] py-[3rem] px-[2rem] ">
             <div className="w-[21rem] h-[21rem]">
-              <Image
+              <Image unoptimized 
 
                 loader={({ src }) => {
                   return src;

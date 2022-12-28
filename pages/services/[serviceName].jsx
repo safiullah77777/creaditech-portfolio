@@ -210,7 +210,7 @@ const Services = ({ datas }) => {
             id=""
           ></textarea>
           {loading ? (
-            <div class="loader"></div>
+            <div className="loader"></div>
           ) : (
             <Button
               onClick={onSubmit}
@@ -243,7 +243,7 @@ const Services = ({ datas }) => {
         </div>
         <div className="section-left flex  w-[64.6rem] flex-col gap-[3rem]  max-[850px]:w-full">
           <div className="w-full  ">
-            <Image
+            <Image unoptimized 
               
               loader={({ src }) => {
                 return src;
@@ -272,7 +272,7 @@ const Services = ({ datas }) => {
       <br />
 
       <div className=" mt-20 w-full px-20">
-        <Image
+        <Image unoptimized 
           
           loader={({ src }) => {
             return src;
@@ -334,7 +334,7 @@ const Services = ({ datas }) => {
               </h2>
               <div className="flex gap-[4rem] flex-wrap justify-center">
                 {pageContent.ecommerceExtra.icons.map((item) => (
-                  <Image
+                  <Image unoptimized 
                     
                     loader={({ src }) => {
                       return src;
@@ -436,7 +436,7 @@ const Services = ({ datas }) => {
             </h2>
             <div className="relative z-[1000] flex flex-1 overflow-hidden">
               <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-                <Image
+                <Image unoptimized 
                   
                   loader={({ src }) => {
                     return src;
@@ -446,7 +446,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-                <Image
+                <Image unoptimized 
                   
                   loader={({ src }) => {
                     return src;
@@ -456,7 +456,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-                <Image
+                <Image unoptimized 
                   
                   loader={({ src }) => {
                     return src;
@@ -466,7 +466,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-                <Image
+                <Image unoptimized 
                   
                   loader={({ src }) => {
                     return src;
@@ -476,7 +476,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-                <Image
+                <Image unoptimized 
                   
                   loader={({ src }) => {
                     return src;
@@ -486,7 +486,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-                <Image
+                <Image unoptimized 
                   
                   loader={({ src }) => {
                     return src;
@@ -496,7 +496,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-                <Image
+                <Image unoptimized 
                   
                   loader={({ src }) => {
                     return src;
@@ -506,7 +506,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-                <Image
+                <Image unoptimized 
                   
                   loader={({ src }) => {
                     return src;
@@ -516,7 +516,7 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-                <Image
+                <Image unoptimized 
                   
                   loader={({ src }) => {
                     return src;
@@ -562,7 +562,7 @@ const Services = ({ datas }) => {
         {pageContent.blackSection !== false ? (
           <div className="mt-10 flex w-full gap-[2rem] bg-[#1E1E1E] p-4 pr-20 pl-[3rem] max-[850px]:flex-col">
             <div className="relative  order-1 mx-auto mb-2 min-[850px]:mt-12 max-[850px]:w-full w-[50rem] text-center max-[850px]:order-2  ">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -631,7 +631,7 @@ const Services = ({ datas }) => {
             {pageContent.section3.paras}
           </div>
           <div className="flex items-center justify-center max-[850px]:pt-[5rem] min-[500px]:px-[5rem] ">
-            <Image
+            <Image unoptimized 
               
               loader={({ src }) => {
                 return src;

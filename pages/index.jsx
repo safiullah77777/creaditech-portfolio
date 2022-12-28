@@ -201,7 +201,7 @@ const Home = () => {
             </p>
           </div>
           <div className="hidden w-1/2 max-[850px]:flex max-[850px]:w-full">
-            <Image
+            <Image unoptimized 
               
               loader={({ src }) => {
                 return src;
@@ -219,7 +219,7 @@ const Home = () => {
           </div>
         </div>
         <div className="w-1/2 max-[850px]:hidden max-[850px]:w-full">
-          <Image
+          <Image unoptimized 
             
             loader={({ src }) => {
               return src;
@@ -239,7 +239,7 @@ const Home = () => {
           </h2>
           <div className="flex  max-w-[100rem] flex-wrap gap-8 max-[850px]:justify-center">
             {serviceCards.slice(0, 6).map((item, index) => (
-              <Link href={"/services" + item?.link}>
+              <Link key={index} href={"/services" + item?.link}>
                 {" "}
                 <Card
                   styles={item.styles}
@@ -311,9 +311,9 @@ const Home = () => {
           </p>
         </div>
         <div className="mr-auto justify-center grid gap-[2rem] grid-cols-5 min-[851px]:ml-auto max-w-[65rem] max-[850px]:max-w-full rounded-[5rem] px-[4rem] pt-[3rem]">
-          {expertiseIcons.map((item) => (
-            <div className=" flex items-center">
-              <Image
+          {expertiseIcons.map((item,index) => (
+            <div key={item?.alt+index} className=" flex items-center">
+              <Image unoptimized 
                 
                 src={item?.img}
                 loader={({ src }) => {
@@ -469,7 +469,7 @@ const Home = () => {
               className="group flex  h-[40rem] w-[31.3rem] flex-col items-center justify-center gap-4 overflow-hidden  bg-[#5B5E71] p-12   shadow-xl duration-300 ease-linear hover:border-0 hover:bg-yellow max-[400px]:h-[50rem] max-[400px]:w-[40rem]"
             >
               <div className=" group-hover:after:wi relative flex h-160 w-160  items-center justify-center ease-linear after:absolute after:bottom-0 after:left-0 after:h-full after:w-full after:rounded-full after:bg-[#E4E4E4] after:duration-700 group-hover:after:bg-black   ">
-                {/* <Image     loader={({ src }) => {
+                {/* <Image unoptimized      loader={({ src }) => {
                 return src;
               }} alt="" src={Image2} className="z-10" />
                 {Image2} */}
@@ -545,7 +545,7 @@ const Home = () => {
           </p>
           <div className="relative z-[1000] flex flex-1 overflow-hidden">
             <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -555,7 +555,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -565,7 +565,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -575,7 +575,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -585,7 +585,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -595,7 +595,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -605,7 +605,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -615,7 +615,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -625,7 +625,7 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-              <Image
+              <Image unoptimized 
                 
                 loader={({ src }) => {
                   return src;
@@ -709,9 +709,9 @@ const Home = () => {
               );
             }}
           >
-            {blogs.map((item) => {
+            {blogs.map((item,index) => {
               return (
-                <Link href={`/blog/${item?.title}`}>
+                <Link href={`/blog/${item?.title}`} key={index}>
                   <Card7
                     alt={item?.h1.toLowerCase()}
                     title={item?.h1}
@@ -816,7 +816,7 @@ const Home = () => {
             achieve your business goals.
           </p>
         </div>
-        {/* <Image   
+        {/* <Image unoptimized  
           loader={({ src }) => {
             return src;
           }}

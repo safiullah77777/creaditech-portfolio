@@ -20,7 +20,7 @@ const MegaMenu = ({ classes, setHover }) => {
                 className="flex  gap-[1rem] items-center  bg-[#313131] p-[4rem] rounded-[1.5rem]"
               >
                 <div className="">
-                  <Image
+                  <Image unoptimized 
                     
                     className="h-[20rem] w-[20rem] relative"
                     loader={({ src }) => {
@@ -43,9 +43,10 @@ const MegaMenu = ({ classes, setHover }) => {
                     {item.heading}
                   </p>
                   <ul className="flex flex-col ">
-                    {item.children.map((items) => {
+                    {item.children.map((items,index) => {
                       return (
                         <li
+                        key={index}
                           onClick={() => setHover(false)}
                           className="group  hover:text-[#ffe100] cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]"
                         >
