@@ -10,7 +10,7 @@ const Banner3 = () => {
     videoRef?.current?.play();
   }, []);
   return (
-    <div className="w-full relative min-h-[80rem] max-[600px]:min-h-[100rem] bg-blend-overlay">
+    <div className="w-full relative min-h-[80rem] max-[600px]:min-h-[100rem]">
       {/* <video controls width={'auto'} height="auto" autoPlay   className="w-full h-full">
         <source src={video} type="video/mp4" />
       </video> */}
