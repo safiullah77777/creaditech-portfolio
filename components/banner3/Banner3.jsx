@@ -20,7 +20,7 @@ const Banner3 = () => {
         autoPlay
         loop
         muted
-        className="min-h-[80rem]  max-[600px]:min-h-[100rem]"
+        className="min-h-[80rem] w-full  max-[600px]:min-h-[100rem]"
         src={"/assets/videos/globe.mp4"}
         type="video/mp4"
       />
