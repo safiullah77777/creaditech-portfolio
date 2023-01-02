@@ -78,7 +78,7 @@ const Home = () => {
     { title: "E-commerce", icon: icon3, alt: "E-commerce" },
     { title: "Sports", icon: icon4, alt: "Sports" },
     { title: "Travel", icon: icon5, alt: "Travel" },
-    { title: "Resturant", icon: icon6, alt: "Resturant" },
+    { title: "Restaurant", icon: icon6, alt: "Restaurant" },
     { title: "Health", icon: icon7, alt: "Health" },
     { title: "Fashion", icon: icon8, alt: "Fashion" },
     { title: "Video", icon: icon9, alt: "Video" },
@@ -114,11 +114,10 @@ const Home = () => {
       );
     return (
       <button
-        className={`${
-          consts.PREV ? "rounded-r-[5px]" : "rounded-l-[5px]"
-        } flex h-[14rem] w-[4.5rem] items-center justify-center self-center bg-black disabled:cursor-not-allowed`}
+        className={`${consts.PREV ? "rounded-r-[5px]" : "rounded-l-[5px]"
+          } flex h-[14rem] w-[4.5rem] items-center justify-center self-center bg-black disabled:cursor-not-allowed`}
         onClick={onClick}
-        // disabled={isEdge}
+      // disabled={isEdge}
       >
         {pointer}
       </button>
@@ -185,24 +184,15 @@ const Home = () => {
           </h2>
           <div className="flex flex-col gap-[1rem]">
             <p className="max-w-[58rem] text-[1.6rem] font-300 text-[#000000] max-[640px]:text-[16px]">
-              At this point, you might be considering why I shall I choose
-              Creaditech to develop my website or web application? Well,
-              Creaditech has a proven track record of developing custom websites
-              and web applications for many years. We have an expert web
-              development team that includes highly qualified and experienced
-              UI/ UX designers, front-end developers, back-end developers,
-              DevOps Engineers, QA experts, and a project manager.
+              Creaditech has a proven track record of developing custom web applications and providing marketing solutions for many years. From small-scale to large-scale, we have helped several B2B and B2C businesses achieve their business goals by providing the best digital transformation solutions.
             </p>
             <p className="max-w-[58rem] text-[1.6rem] font-300 text-[#000000] max-[640px]:text-[16px]">
-              We have been in the industry for years and have a long list of
-              satisfied customers; we claim to be the best web development
-              company just because of our expert team members and satisfied
-              clients.
+              Adopting a digital model is no more a choice but a necessity for survival. So, whether you need a CRM for your company or a marketing strategy for your brand, contact Creaditech and take your business to the next level.
             </p>
           </div>
           <div className="hidden w-1/2 max-[850px]:flex max-[850px]:w-full">
-            <Image unoptimized 
-              
+            <Image unoptimized
+
               loader={({ src }) => {
                 return src;
               }}
@@ -219,8 +209,8 @@ const Home = () => {
           </div>
         </div>
         <div className="w-1/2 max-[850px]:hidden max-[850px]:w-full">
-          <Image unoptimized 
-            
+          <Image unoptimized
+
             loader={({ src }) => {
               return src;
             }}
@@ -311,10 +301,10 @@ const Home = () => {
           </p>
         </div>
         <div className="mr-auto justify-center grid gap-[2rem] grid-cols-5 min-[851px]:ml-auto max-w-[65rem] max-[850px]:max-w-full rounded-[5rem] px-[4rem] pt-[3rem]">
-          {expertiseIcons.map((item,index) => (
-            <div key={item?.alt+index} className=" flex items-center">
-              <Image unoptimized 
-                
+          {expertiseIcons.map((item, index) => (
+            <div key={item?.alt + index} className=" flex items-center">
+              <Image unoptimized
+
                 src={item?.img}
                 loader={({ src }) => {
                   return src;
@@ -335,11 +325,7 @@ const Home = () => {
             <p className="text-yellow  max-[850px]:text-white"> Worked</p> with
           </div>
           <p className="Montserrat mt-4 max-w-[460px] text-[1.6rem] font-light leading-[130%] text-white max-[850px]:text-center max-[850px]:text-[2.5rem]">
-            At this point, you might be considering why shall I choose
-            Creaditech to get my software/ app developed or ask them to promote
-            my business. Well, Creaditech has a proven track record of
-            developing custom softwares and doing digital marketing for
-            different brands. We have a team.
+            We have worked with all the major industries including:
           </p>
         </div>
         <div className="max-[850px]:flex grid grid-cols-3 max-[1000px]:grid-cols-2 max-w-[90rem] mx-auto flex-wrap justify-center gap-[2.5rem] max-[850px]:mt-[3rem] max-[850px]:w-full">
@@ -353,8 +339,8 @@ const Home = () => {
           ))}
         </div>
       </div>
-{/* our happy clients */}
-<>
+      {/* our happy clients */}
+      <>
         <div className="flex flex-col px-12 py-28">
           <h2 className="clash mx-auto text-[6rem] font-600 leading-[90%] text-[#2A2A2A] max-[640px]:text-center max-[400px]:text-[30px]">
             Our Happy Clients
@@ -417,9 +403,8 @@ const Home = () => {
                         key={index}
                         onClick={() => onClick(String(page))}
                         // active={isActivePage}
-                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
-                          activePage != index ? "bg-[#D9D9D9]" : "bg-black"
-                        }  `}
+                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${activePage != index ? "bg-[#D9D9D9]" : "bg-black"
+                          }  `}
                       ></div>
                     );
                   })}
@@ -523,7 +508,7 @@ const Home = () => {
         </>
         {/* <Button title="Let’s Work Together" classes="" /> */}
       </div>
-      
+
 
       {/* Estimated projects */}
       <Link
@@ -532,7 +517,7 @@ const Home = () => {
       >
         <div className="relative flex w-1/2 bg-white py-[2rem] pl-[2rem] pr-[2rem] max-[850px]:w-full max-[850px]:flex-col max-[850px]:gap-[5rem] max-[850px]:bg-[#5B5E71] max-[850px]:py-[6rem]">
           <p className="clash relative  mx-auto text-[5.5rem] font-600 leading-[90%] text-[#3D404E] max-[850px]:text-center max-[850px]:text-white max-[640px]:text-[4rem]">
-            We love to listen your requirements
+            We'd love to hear your requirements
           </p>
           <button className="clash mx-auto h-[60px] rounded-[1.5rem] border-b-[6px] border-solid border-black/[0.4] bg-[#FFE100] px-[6rem] max-[350px]:px-[4rem] py-4 text-[2.5rem]  font-500 text-black  active:scale-[1.01] max-[400px]:w-[100%] min-[850px]:hidden ">
             Estimate Project
@@ -545,8 +530,8 @@ const Home = () => {
           </p>
           <div className="relative z-[1000] flex flex-1 overflow-hidden">
             <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-              <Image unoptimized 
-                
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
@@ -555,8 +540,8 @@ const Home = () => {
               />
             </div>
             <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-              <Image unoptimized 
-                
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
@@ -565,8 +550,8 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-              <Image unoptimized 
-                
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
@@ -575,8 +560,8 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-              <Image unoptimized 
-                
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
@@ -585,8 +570,8 @@ const Home = () => {
               />
             </div>
             <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-              <Image unoptimized 
-                
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
@@ -594,9 +579,9 @@ const Home = () => {
                 alt="arrow5"
               />
             </div>
-            <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-              <Image unoptimized 
-                
+            <div className="max-[935px]:hidden absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
@@ -604,9 +589,9 @@ const Home = () => {
                 alt="arrow6"
               />
             </div>
-            <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-              <Image unoptimized 
-                
+            <div className="max-[1060px]:hidden absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
@@ -614,9 +599,9 @@ const Home = () => {
                 alt="arrow7"
               />
             </div>
-            <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-              <Image unoptimized 
-                
+            <div className="max-[1123px]:hidden absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
@@ -624,14 +609,15 @@ const Home = () => {
                 alt="arrow8"
               />
             </div>
-            <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-              <Image unoptimized 
-                
+            <div className="max-[1320px]:hidden absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
                 src={arrow}
                 alt="arrow9"
+                style={{objectFit:"contain"}}
               />
             </div>
           </div>
@@ -699,9 +685,8 @@ const Home = () => {
                         key={index}
                         onClick={() => onClick(page)}
                         // active={isActivePage}
-                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${
-                          activePage != index ? "bg-[#D9D9D9]" : "bg-black"
-                        }  `}
+                        className={`h-[14px] w-[14px] cursor-pointer rounded-full ${activePage != index ? "bg-[#D9D9D9]" : "bg-black"
+                          }  `}
                       ></div>
                     );
                   })}
@@ -709,7 +694,7 @@ const Home = () => {
               );
             }}
           >
-            {blogs.map((item,index) => {
+            {blogs.map((item, index) => {
               return (
                 <Link href={`/blog/${item?.title}`} key={index}>
                   <Card7
@@ -827,7 +812,7 @@ const Home = () => {
           alt=""
         /> */}
       </div>
-      <ImagesLine   />
+      <ImagesLine />
       <BottomNav index={0} />
       <Footer />
     </div>

@@ -62,7 +62,7 @@ const BottomNav = ({ index }) => {
           })}
         </ul>
       </div>
-      <SideNav classes={`${openDrawer ? "left-0" : "-left-[120%]"}`} />
+      <SideNav setOpenDrawer={setOpenDrawer} classes={`${openDrawer ? "left-0" : "-left-[120%]"}`} />
       <div
         onClick={() => setOpenDrawer(false)}
         className={`${

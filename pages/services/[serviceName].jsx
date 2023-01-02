@@ -104,7 +104,7 @@ const Services = ({ datas }) => {
     }
     setLoading(true);
     contactForm({ ...formData, type: "service" }, setLoading);
-    setFormData({ name: "", email: "", phoneNo: "", url: "", description: "" });
+    setFormData(prev => ({ ...prev,name: "", email: "", phoneNo: "", url: "", description: "" }));
   };
   if (!datas[0].page) return <Error404 />;
   return (
@@ -243,8 +243,8 @@ const Services = ({ datas }) => {
         </div>
         <div className="section-left flex  w-[64.6rem] flex-col gap-[3rem]  max-[850px]:w-full">
           <div className="w-full  ">
-            <Image unoptimized 
-              
+            <Image unoptimized
+
               loader={({ src }) => {
                 return src;
               }}
@@ -257,9 +257,9 @@ const Services = ({ datas }) => {
           </div>
           <div className="  flex flex-col justify-center gap-5 rounded-[10px] border-[0.2rem] border-solid border-[#1E1E1E0D] bg-[#1E1E1E0D] p-8 text-center max-[850px]:w-full">
             <div>
-              <h2 className=" clash h-25 bg-transparent text-[2.5rem] font-medium">
+              <p className=" clash h-25 bg-transparent text-[2.5rem] font-medium">
                 Other Services
-              </h2>
+              </p>
             </div>
             <div className=" clash max-[550px]:flex  flex-col min-[550px]:grid min-[550px]:grid-cols-2 flex-wrap justify-between gap-y-5 p-5 text-3xl font-normal tracking-wide text-[#0377BC]">
               {randomItems.map((item) => (
@@ -272,8 +272,8 @@ const Services = ({ datas }) => {
       <br />
 
       <div className=" mt-20 w-full px-20">
-        <Image unoptimized 
-          
+        <Image unoptimized
+
           loader={({ src }) => {
             return src;
           }}
@@ -288,19 +288,19 @@ const Services = ({ datas }) => {
       {pageContent?.phpExtra?.is === true ? (
         <>
           <div className="flex flex-col w-full p-[5rem] pb-0 ">
-            <h2 className="mx-auto font-600 text-[#000000] text-[4rem] leading-[100%]">
+            <h2 className="mx-auto font-600 text-[#000000] text-[4rem] leading-[100%] !text-center	 ">
               {pageContent.phpExtra.heading}
             </h2>
             <p className="font-300 text-[#000000] text-[1.8rem] max-w-[100rem] mx-auto text-center py-[2rem]">
               {pageContent.phpExtra.p}
             </p>
             <div className="grid grid-cols-3 max-[550px]:grid-cols-2 max-[380px]:grid-cols-1 justify-center gap-[5rem] mx-auto mt-[5rem]">
-              {pageContent.phpExtra.cards.map((item,index) => (
+              {pageContent.phpExtra.cards.map((item, index) => (
                 <>
-                  <div key={item.title+index} className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
-                    <h2 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">
+                  <div key={item.title + index} className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
+                    <h3 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">
                       {item.title}
-                    </h2>
+                    </h3>
                     <p className="font-300 text-[#000000] text-[1.6rem]">
                       {item.para}
                     </p>
@@ -334,8 +334,8 @@ const Services = ({ datas }) => {
               </h2>
               <div className="flex gap-[4rem] flex-wrap justify-center">
                 {pageContent.ecommerceExtra.icons.map((item) => (
-                  <Image unoptimized 
-                    
+                  <Image unoptimized
+
                     loader={({ src }) => {
                       return src;
                     }}
@@ -417,11 +417,15 @@ const Services = ({ datas }) => {
           </div>
         )}
         {/* //we love to listen your requirements */}
-        <div className="group mt-[7rem] flex w-full border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] max-[850px]:border-[#3D404E]">
+
+        {/* old code of estimate */}
+
+        <Link
+          href={"/contact-us"} className="group mt-[7rem] flex w-full border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] max-[850px]:border-[#3D404E]">
           <div className="relative flex w-1/2 bg-white py-[2rem] pl-[6rem] pr-[2rem] max-[850px]:w-full max-[850px]:flex-col max-[850px]:gap-[5rem] max-[850px]:bg-[#5B5E71] max-[850px]:py-[6rem]">
-            <h2 className="clash relative mx-auto  text-[5.5rem] font-600 leading-[90%] text-[#3D404E] max-[850px]:text-center max-[850px]:text-white max-[640px]:text-center max-[640px]:text-[4rem]">
-              We love to listen your requirements
-            </h2>
+            <p className="clash relative mx-auto  text-[5.5rem] font-600 leading-[90%] text-[#3D404E] max-[850px]:text-center max-[850px]:text-white max-[640px]:text-center max-[640px]:text-[4rem]">
+              We'd love to hear your requirements
+            </p>
             <button className="clash mx-auto h-[60px] rounded-[1rem] border-b-[6px] border-solid border-black/[0.4] bg-[#FFE100] px-12 py-4 text-[2.5rem] font-500  text-black active:scale-[1.01]  max-[850px]:hidden max-[400px]:w-[80%] min-[850px]:hidden ">
               Let’s Work Together
             </button>
@@ -430,14 +434,15 @@ const Services = ({ datas }) => {
               title="Estimate Project"
             />
           </div>
+
           <div className="relative flex w-1/2  items-center gap-9 overflow-hidden duration-300 ease-linear after:absolute after:top-0 after:-left-[200%] after:h-full after:w-[90rem] after:bg-[#ffe100] after:duration-500 after:ease-linear group-hover:after:left-0 max-[850px]:hidden">
             <h2 className="clash z-20 my-[2rem] ml-[6rem] max-w-[24rem] bg-[trasnparent] text-[5.5rem] font-400 leading-[90%] text-[#1E1E1E] max-[640px]:text-center max-[640px]:text-[4rem]">
               Estimate Project
             </h2>
             <div className="relative z-[1000] flex flex-1 overflow-hidden">
               <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
-                <Image unoptimized 
-                  
+                <Image unoptimized
+
                   loader={({ src }) => {
                     return src;
                   }}
@@ -446,8 +451,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
-                <Image unoptimized 
-                  
+                <Image unoptimized
+
                   loader={({ src }) => {
                     return src;
                   }}
@@ -456,8 +461,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
-                <Image unoptimized 
-                  
+                <Image unoptimized
+
                   loader={({ src }) => {
                     return src;
                   }}
@@ -466,8 +471,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
-                <Image unoptimized 
-                  
+                <Image unoptimized
+
                   loader={({ src }) => {
                     return src;
                   }}
@@ -476,8 +481,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
-                <Image unoptimized 
-                  
+                <Image unoptimized
+
                   loader={({ src }) => {
                     return src;
                   }}
@@ -486,8 +491,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
-                <Image unoptimized 
-                  
+                <Image unoptimized
+
                   loader={({ src }) => {
                     return src;
                   }}
@@ -496,8 +501,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
-                <Image unoptimized 
-                  
+                <Image unoptimized
+
                   loader={({ src }) => {
                     return src;
                   }}
@@ -506,8 +511,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
-                <Image unoptimized 
-                  
+                <Image unoptimized
+
                   loader={({ src }) => {
                     return src;
                   }}
@@ -516,8 +521,8 @@ const Services = ({ datas }) => {
                 />
               </div>
               <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
-                <Image unoptimized 
-                  
+                <Image unoptimized
+
                   loader={({ src }) => {
                     return src;
                   }}
@@ -525,10 +530,128 @@ const Services = ({ datas }) => {
                   alt="arrow9"
                 />
               </div>
+
+            </div>
+          </div>
+        </Link>
+
+        {/* Estimated projects */}
+        {/* <Button title="Let’s Work Together" classes="" /> */}
+
+        {/* <Link
+        href={"/contact-us"}
+        className="group w-full flex mt-[3rem] border-y-[6px] border-solid border-[#5B5E71] bg-[#C6CED3] max-[850px]:border-[#3D404E]"
+      >
+        
+        <div className="relative flex w-1/2 bg-white py-[2rem] pl-[2rem] pr-[2rem] max-[850px]:w-full max-[850px]:flex-col max-[850px]:gap-[5rem] max-[850px]:bg-[#5B5E71] max-[850px]:py-[6rem]">
+          <p className="clash relative  mx-auto text-[5.5rem] font-600 leading-[90%] text-[#3D404E] max-[850px]:text-center max-[850px]:text-white max-[640px]:text-[4rem]">
+            We'd love to hear your requirements
+          </p>
+          <button className="clash mx-auto h-[60px] rounded-[1.5rem] border-b-[6px] border-solid border-black/[0.4] bg-[#FFE100] px-[6rem] max-[350px]:px-[4rem] py-4 text-[2.5rem]  font-500 text-black  active:scale-[1.01] max-[400px]:w-[100%] min-[850px]:hidden ">
+            Estimate Project
+          </button>
+        </div>
+        <div className="relative flex w-1/2  items-center gap-9 overflow-hidden duration-300 ease-linear after:absolute after:top-0 after:-left-[200%] after:h-full after:w-[90rem] after:bg-[#ffe100] after:duration-500 after:ease-linear group-hover:after:left-0 max-[850px]:hidden">
+          <p className="clash z-20 my-[2rem] ml-[6rem] max-w-[24rem] bg-[trasnparent] text-[5.5rem] font-400 leading-[90%] text-[#1E1E1E] max-[640px]:text-center max-[640px]:text-[4rem]">
+            Estimate Project
+          </p>
+          <div className="relative z-[1000] flex flex-1 overflow-hidden">
+            <div className=" top-0 left-0  z-[1000] duration-300 ease-linear group-hover:relative">
+              <Image unoptimized 
+                
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt="arrow1"
+              />
+            </div>
+            <div className=" absolute left-0 z-[1000]  duration-300 ease-linear group-hover:left-[37px]">
+              <Image unoptimized 
+                
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt="arrow2"
+              />
+            </div>
+            <div className=" absolute top-0 left-0  z-[1000]   duration-300 ease-linear group-hover:left-[74px]">
+              <Image unoptimized 
+                
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt="arrow3"
+              />
+            </div>
+            <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[111px]">
+              <Image unoptimized 
+                
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt="arrow4"
+              />
+            </div>
+            <div className=" absolute top-0 left-0   z-[1000] duration-300 ease-linear group-hover:left-[146px]">
+              <Image unoptimized 
+                
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt="arrow5"
+              />
+            </div>
+            <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[184px]">
+              <Image unoptimized 
+                
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt="arrow6"
+              />
+            </div>
+            <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[221px]">
+              <Image unoptimized 
+                
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt="arrow7"
+              />
+            </div>
+            <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[258px]">
+              <Image unoptimized 
+                
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt="arrow8"
+              />
+            </div>
+            <div className=" absolute top-0 left-0  z-[1000]  duration-300 ease-linear group-hover:left-[288px]">
+              <Image unoptimized 
+                
+                loader={({ src }) => {
+                  return src;
+                }}
+                src={arrow}
+                alt="arrow9"
+              />
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap flex-col justify-center gap-[4rem] py-[5rem]">
+
+      </Link> */}
+
+        <div className="flex flex-wrap flex-col mt-[4rem] justify-center gap-[4rem] pb-[5rem]">
           {/* <span className="font-clash max-w-[1092px] text-center text-[4rem] font-300 leading-[100%] tracking-[0.02em]">
             How we involve
           </span> */}
@@ -562,16 +685,16 @@ const Services = ({ datas }) => {
         {pageContent.blackSection !== false ? (
           <div className="mt-10 flex w-full gap-[2rem] bg-[#1E1E1E] p-4 pr-20 pl-[3rem] max-[850px]:flex-col">
             <div className="relative  order-1 mx-auto mb-2 min-[850px]:mt-12 max-[850px]:w-full w-[50rem] text-center max-[850px]:order-2  ">
-              <Image unoptimized 
-                
+              <Image unoptimized
+
                 loader={({ src }) => {
                   return src;
                 }}
                 className="relative !max-[850px]:top-[21rem]  top-[12rem] w-full"
                 src={CardFull}
                 alt="card"
-                //   width={2000}
-                //   height={200}
+              //   width={2000}
+              //   height={200}
               />
             </div>
 
@@ -591,7 +714,9 @@ const Services = ({ datas }) => {
                 {pageContent.blackSection.paras}
               </p>
               <div className="my-[3rem] mr-auto max-[850px]:mx-auto">
-                <Button title="Get Started Now" classes="" />
+                <Link href={"/contact-us"}>
+                  <Button title="Get Started Now" classes="" />
+                </Link>
               </div>
             </div>
           </div>
@@ -605,7 +730,7 @@ const Services = ({ datas }) => {
                 {pageContent.cmsExtra.heading}
               </h2>
               <div className="grid grid-cols-3 max-[550px]:grid-cols-2 max-[380px]:grid-cols-1 justify-center gap-[5rem] mx-auto mt-[5rem]">
-                {pageContent.cmsExtra.cards.map((item,index) => (
+                {pageContent.cmsExtra.cards.map((item, index) => (
                   <>
                     <div key={index} className="flex flex-col border-t-[.3rem] pt-[1rem] gap-[2rem] border-[#000000] border-solid max-w-[35rem] ">
                       <h3 className="font-600 max-w-[25rem] text-[#000000] text-[2rem] leading-[100%]">
@@ -631,8 +756,8 @@ const Services = ({ datas }) => {
             {pageContent.section3.paras}
           </div>
           <div className="flex items-center justify-center max-[850px]:pt-[5rem] min-[500px]:px-[5rem] ">
-            <Image unoptimized 
-              
+            <Image unoptimized
+
               loader={({ src }) => {
                 return src;
               }}

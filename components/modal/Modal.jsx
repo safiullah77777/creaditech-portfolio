@@ -1,11 +1,8 @@
 import React, { FC, useState } from 'react';
 import Button from '../button/Button';
 
-const Modal= ({ showModal, setShowModal }) => {
-	const points =
-		'You’ll lead the design and provide strategic guidance throughout the duration of projects. You’ll execute against the principles that create great, human-centered products. As a hands-on designer with a meticulous eye for detail, you’ll help oversee the work to ensure it is realized with incredible creativity and expert craftsmanship. You’ll help construct design systems that combine delight and systematic thinking to deliver incredible experiences for global audiences. You’ll work with other disciplines to establish unified strategic and experiential approaches.'.split(
-			'.'
-		);
+const Modal = ({ data, showModal, setShowModal }) => {
+
 	return (
 		<>
 			{showModal ? (
@@ -39,7 +36,7 @@ const Modal= ({ showModal, setShowModal }) => {
 								</button>
 								<div className="flex items-center justify-between max-[600px]:flex-col max-[600px]:gap-[1.3rem]">
 									<p className="clash mr-[2rem] text-[3.5rem] font-600 leading-[80%] text-[#1E1E1E]">
-										Design Lead
+										{data?.title}
 									</p>
 									<span className="flex-1 border-[1px] border-solid border-[#cccaca] max-[600px]:w-[148px]"></span>
 									<p className="clash ml-[1rem] text-[2rem] font-600 leading-[80%] text-[#1E1E1E]">
@@ -49,11 +46,7 @@ const Modal= ({ showModal, setShowModal }) => {
 								<div className="mt-[2rem] flex gap-x-[3rem] max-[600px]:flex-col max-[600px]:gap-[2rem]">
 									<div className="flex w-[45%] flex-col max-[600px]:w-full max-[600px]:flex-col">
 										<p className="Montserrat text-[1.4rem] font-300 leading-[130%] text-[#5B5E71]">
-											Together as a team, we create experiences used and loved
-											by millions of people every day. For over 20 years, we
-											have worked with ambitious global organizations to launch
-											world-leading digital products and services. Come and join
-											us.
+											{data?.description}
 										</p>
 
 										<div className="mt-[3rem] flex max-w-[325px] cursor-pointer  flex-col rounded-[20px] border-[2px] border-solid border-[#1E1E1E] bg-[#F2F2F2] px-[2rem] py-[2rem] duration-300 ease-linear">
@@ -62,49 +55,36 @@ const Modal= ({ showModal, setShowModal }) => {
 													Experience:{' '}
 												</p>
 												<p className="clash text-[15px] font-400 text-[#1E1E1E]/[0.5]">
-													{'experience'}
+													{data?.experience}
 												</p>
 											</div>
 
 											<div className="flex items-center gap-[1rem]">
 												<p className="clash text-[15px] font-500 text-[#1E1E1E]">
-													Experience:{' '}
+													Salary:{' '}
 												</p>
 												<p className="clash text-[15px] font-400 text-[#1E1E1E]/[0.5]">
-													{'experience'}
+													{data?.salary}
 												</p>
 											</div>
 
 											<div className="flex items-center gap-[1rem]">
 												<p className="clash text-[15px] font-500 text-[#1E1E1E]">
-													Experience:{' '}
+													Key Skills:{' '}
 												</p>
 												<p className="clash text-[15px] font-400 text-[#1E1E1E]/[0.5]">
-													{'experience'}
+													{data?.keySkills}
 												</p>
 											</div>
-											<div className="flex items-center gap-[1rem]">
-												<p className="clash text-[15px] font-500 text-[#1E1E1E]">
-													Experience:{' '}
-												</p>
-												<p className="clash text-[15px] font-400 text-[#1E1E1E]/[0.5]">
-													{'experience'}
-												</p>
-											</div>
-											<div className="flex items-center gap-[1rem]">
-												<p className="clash text-[15px] font-500 text-[#1E1E1E]">
-													Experience:{' '}
-												</p>
-												<p className="clash text-[15px] font-400 text-[#1E1E1E]/[0.5]">
-													{'experience'}
-												</p>
-											</div>
+
+
 										</div>
 									</div>
-									<div className="flex-1 p-[1rem] pt-0 ">
-										<ul className="flex flex-col gap-[.5rem]">
-											{points.map((point, index) => {
-												if (index == points?.length - 1) return;
+									<div className="flex-1 p-[1rem] pl-0 pt-0 ">
+									<p className='text-[1.8rem] font-500 leading-[130%] text-[#000] mb-[1rem]'>{data?.line}</p>
+										<ul className="flex flex-col pl-[2rem] gap-[.5rem]">
+											{data?.responsibilities.map((point, index) => {
+												if (index == data?.responsibilities?.length - 1) return;
 												return (
 													<li
 														className="list-disc text-[1.5rem] font-300 leading-[130%] text-[#5B5E71]"
@@ -126,20 +106,15 @@ const Modal= ({ showModal, setShowModal }) => {
 									</div>
 									<div className="flex items-center max-[600px]:flex-col">
 										<div className="flex flex-wrap  gap-[2rem]  max-[600px]:gap-[1rem]  max-[400px]:justify-center  ">
-											<span className="rounded-[9px]  bg-[#CECECE] px-[20px] py-[15px] text-[1.6rem] font-500 leading-[130%] text-[#1E1E1E] max-[600px]:h-[26px] max-[600px]:px-[10px] max-[600px]:py-[5px]">
-												Photoshop
-											</span>
-											<span className="rounded-[9px]  bg-[#CECECE] px-[20px] py-[15px] text-[1.6rem] font-500 leading-[130%] text-[#1E1E1E] max-[600px]:h-[26px] max-[600px]:px-[10px] max-[600px]:py-[5px]">
-												Photoshop
-											</span>
-											<span className="rounded-[9px]  bg-[#CECECE] px-[20px] py-[15px] text-[1.6rem] font-500 leading-[130%] text-[#1E1E1E] max-[600px]:h-[26px] max-[600px]:px-[10px] max-[600px]:py-[5px]">
-												Photoshop
-											</span>
+											{data?.tags.map((item, index) => <span key={index} className="rounded-[9px]  bg-[#CECECE] px-[20px] py-[15px] text-[1.6rem] font-500 leading-[130%] text-[#1E1E1E] max-[600px]:h-[26px] max-[600px]:px-[10px] max-[600px]:py-[5px]">
+												{item}
+											</span>)}
+
 										</div>
-										<Button
+										{/* <Button
 											classes="text-[#FFFFFF] max-[600px]:mt-[4rem] text-[1.8rem] font-500 leading-[80%] bg-[black] px-[3rem] py-[2rem] tracking-[0.02rem] border-[#5B5E71] ml-auto max-[600px]:mx-auto rounded-[11px]"
 											title="Appy Now!"
-										/>
+										/> */}
 									</div>
 								</div>
 							</div>

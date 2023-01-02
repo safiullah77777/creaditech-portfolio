@@ -9,7 +9,7 @@ const Card5 = ({item}) => {
         <Image unoptimized     loader={({ src }) => {
                 return src;
               }} alt="coma" width={30} height={27} src={coma} />
-        <p className="clash text-[22px] h-[250px] overflow-hidden font-400 leading-[100%]">
+        <p className="clash text-[22px] h-[230px] overflow-hidden font-400 leading-[100%]">
           {item?.review}
         </p>
         <div className="mt-auto flex flex-col items-end">
@@ -30,12 +30,15 @@ const Card5 = ({item}) => {
                 return src;
               }} alt="star4" width={18} height={18} src={star} />
           </div>
-          <p className="clash flex items-center pl-[30px] text-[20px] font-600 text-[#1E1E1E] before:h-[3px] before:w-[26px] before:rounded-5 before:bg-[#9747FF] ">
+          <p className="clash flex items-center  text-[20px] before:mr-[.4rem] font-600 text-[#1E1E1E] before:h-[3px] before:w-[26px] before:rounded-5 before:bg-[#9747FF] ">
             {item?.name}
           </p>
           {/* <h2 className="clash flex items-center text-[15px] gap-[1rem] font-300 text-[#C6CED3]">
             CEO,  <span className="font-500"> Avantis Solutions</span>
           </h2> */}
+          <p className="clash flex items-center text-[18px] gap-[1rem] font-700 text-[#C6CED3]">
+            {item?.company +" "}(CEO)
+          </p>
         </div>
       </div>
     </div>

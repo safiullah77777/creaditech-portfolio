@@ -439,7 +439,7 @@ const OurClients = () => {
             Content Writing
           </button>
         </div>
-        <div className="flex flex-wrap justify-center gap-[1rem]">
+        <div className="flex flex-wrap justify-center gap-[1rem] px-[3rem]">
           {cat == "all" ? (
             <>
               {portfolioCards.map((item, index) => {

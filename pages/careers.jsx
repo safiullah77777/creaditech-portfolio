@@ -10,43 +10,68 @@ import Slider from "../components/slider/Slider";
 
 const Careers = () => {
   const [showModal, setShowModal] = useState(false);
-
+  const [modalData, setModalData] = useState(-1);
   const jobs = [
     {
       title: "Design Lead",
       job: "Karachi Office / Full Time",
-      experience: "4-6 Years",
-      salary: "Market Compatitive",
+      experience: "3-6 Years",
+      salary: "Market Competitive",
       keySkills: "UI/UX, Branding Kit",
+      tags: ["Adobe", "Premier", "Illustrator",],
+      description:
+      "Together as a team, we create experiences used and by millions of people every day. For over 20 years, we have worked with ambitious global organizations to launch world-leading digital products and services. Come and join us.",
+    line:"The ideal candidate will be responsible for:",
+      responsibilities: [
+      "You’ll lead the design and provide strategic guidance throughout the duration of projects.",
+      "You’ll execute against the principles that create great, human-centered products.",
+      "As a hands-on designer with a meticulous eye for detail, you’ll help oversee the work to ensure it is realized with incredible creativity and expert craftsmanship.",
+      "You’ll help construct design systems that combine delight and systematic thinking to deliver incredible experiences for global audiences.",
+      "You’ll work with other disciplines to establish unified strategic and experiential approaches.",
+    ],
+     
     },
     {
-      title: "Upwork Bidder",
+      title: "Bidder",
       job: "Karachi Office / Full Time",
-      experience: "4-6 Years",
-      salary: "Market Compatitive",
-      keySkills: "UI/UX, Branding Kit",
+      experience: "1-3 Years",
+      salary: "Market Competitive",
+      keySkills: "Good Bidding Skills, Strong Communication Skills",
+      tags: ["Upwork", "Freelancer", "Fiver"],
+      description:
+      "We are looking for a Business Development Intern who can get business from online portals. This will be a two months Internship and based on the performance the ideal candidate will be hired for a permanent role.",
+    line:"The ideal candidate will be responsible for:",
+      responsibilities: [
+      "Acquiring business through different channels (Fiverr, Upwork, Freelance, Guru, People PerHour, Craiglist, etc.) for web design, SEO, Social Media, Development, App Development, Graphic Design projects E.t.c",
+      "Quality project selection and bidding.",
+      "Writing proposals and customizing each proposal based on the nature of the project.",
+      "Project price estimation, quote, proposal creation, talking with client and closure.",
+      "Gather client requirements, communicate the requirements with the team and deliver the project to the client. Talking on phone, chatting applications and Skype depending on the requirement from the client",
+      "Maintain very high rating on all platforms",
+      "Maintain a healthy relationship with the client(s)",
+    ],
     },
-    {
-      title: "Web Developer",
-      job: "Karachi Office / Full Time",
-      experience: "4-6 Years",
-      salary: "Market Compatitive",
-      keySkills: "UI/UX, Branding Kit",
-    },
-    {
-      title: "Animator",
-      job: "Karachi Office / Full Time",
-      experience: "4-6 Years",
-      salary: "Market Compatitive",
-      keySkills: "UI/UX, Branding Kit",
-    },
+    // {
+    //   title: "Web Developer",
+    //   job: "Karachi Office / Full Time",
+    //   experience: "4-6 Years",
+    //   salary: "Market Compatitive",
+    //   keySkills: "UI/UX, Branding Kit",
+    // },
+    // {
+    //   title: "Animator",
+    //   job: "Karachi Office / Full Time",
+    //   experience: "4-6 Years",
+    //   salary: "Market Compatitive",
+    //   keySkills: "UI/UX, Branding Kit",
+    // },
   ];
   return (
     <>
       <MetaHead
         title={"Careers - Creaditech"}
         description="View our job openings"
-		link="careers"
+        link="careers"
       />
       {/* <Head>
         <meta
@@ -76,17 +101,11 @@ const Careers = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-[2rem] px-[4rem] py-[8rem]">
-        {jobs.map(({ title, job, salary, experience, keySkills }) => (
-          <Card9
-            key={title}
-            setShowModal={setShowModal}
-            title={title}
-            job={job}
-            salary={salary}
-            experience={experience}
-            keySkills={keySkills}
-          />
+      <div className="flex flex-wrap items-stretch h-[100%] justify-center gap-[2rem] px-[4rem] py-[8rem]">
+        {jobs.map((data, index) => (
+          // <div className="h-[100%]" onClick={() => setModalData(index)}>
+            <Card9 onPress={setModalData} index={index} key={index} setShowModal={setShowModal} data={data} />
+          // </div>
         ))}
       </div>
       <div className="max-[600] flex flex-col bg-[#C6CED3] py-[8rem] px-[4rem] max-[600px]:py-[4rem] max-[600px]:px-[2rem] ">
@@ -125,7 +144,11 @@ const Careers = () => {
           Careers@creaditech.com
         </h2>
       </div>
-      <Modal setShowModal={setShowModal} showModal={showModal} />
+      <Modal
+        data={jobs[modalData]}
+        setShowModal={setShowModal}
+        showModal={showModal}
+      />
       <Slider />
       <BottomNav index={5} />
 

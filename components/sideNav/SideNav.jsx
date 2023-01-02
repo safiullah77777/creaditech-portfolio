@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import facebook from "../../public/assets/images/icons/facebook-rounded.svg";
 import insta from "../../public/assets/images/icons/insta-rounded.svg";
 import twitter from "../../public/assets/images/icons/twitter-rounded.svg";
@@ -10,7 +10,7 @@ import logo2 from "../../public/assets/images/icons/call-icon.svg";
 import Tag from "../tag/Tag";
 import { List } from "../../utils/consts";
 import Link from "next/link";
-const SideNav = ({ classes }) => {
+const SideNav = ({ classes,setOpenDrawer }) => {
   return (
     <div
       className={` fixed flex-col  overflow-y-scroll top-0 left-0 items-center pb-[8rem]  z-[102323] h-[100vh] w-[300px] bg-[#1E1E1E] px-[4rem]   shadow-megaMenu duration-500 ease-linear ${classes}`}
@@ -25,7 +25,7 @@ const SideNav = ({ classes }) => {
               <ul className="flex flex-col ">
                 {item.children.map((item) => {
                   return (
-                    <Link href={item.link} key={item.title}>
+                    <Link onClick={()=>setOpenDrawer(false)} href={item.link} key={item.title}>
                       <li className="cursor-pointer Montserrat text-[1.6rem] font-400 text-[#ffffff]">
                         {item.title}
                       </li>

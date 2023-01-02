@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import robot from "../../public/assets/images/card8.png";
 
-const Card8 = ({ title, img, alt }) => {
+const Card8 = ({ title, img, alt,description }) => {
   return (
     <div className="group  relative z-10 flex h-[388px]  min-[501px]:max-w-[423px] rounded-[10px] border-2  border-b-[6px] border-solid border-[#5B5E71] bg-[#F3F3F3] max-[500px]:h-[50rem]  max-[500px]:max-w-[40rem] ">
       <div className="z-50  flex max-[500px]:w-full h-full flex-col gap-[1rem] p-[20px] max-[500px]:p-[10px]">
@@ -24,8 +24,7 @@ const Card8 = ({ title, img, alt }) => {
           {title}
         </p>
         <p className="Montserrat mb-[4rem] min-[501px]:hidden text-[15px] font-[300] leading-[100%] text-[#1E1E1E]  group-hover:flex">
-          At this point, you might be considering why shall I choose Creaditech
-          to get my software/ app developed or ask them to promote my business.
+          {description}
         </p>
       </div>
     </div>

@@ -21,7 +21,7 @@ const CreativeBlogs = () => {
         description={
           "Read some of the best and informative blogs from expert writers."
         }
-        link="/blog"
+        link="blog"
       />
 
       <Header />
@@ -33,6 +33,7 @@ const CreativeBlogs = () => {
               title={item?.h1}
               alt={item?.h1.toLowerCase()}
               img={item?.featuredImage?.img}
+              description={item?.meta?.description}
             />
           </Link>
         ))}

@@ -79,7 +79,7 @@ export const Content = [
         <>
           <p>
             “If you have a website, it makes your small business look big” (
-            <Link href={"www.facebook.com"} className="anchor">
+            <Link href={"https://www.quotery.com/authors/natalie-sequera"} className="anchor" rel="nofollow" target="_blank">
               Natalie Sequera
             </Link>{" "}
             ). This quote signifies the importance of a website for any
@@ -761,7 +761,7 @@ export const Content = [
             best CMS development company in USA whose experts can provide custom
             CMS solutions for any industry. Whether you are looking for
             <Link
-              href={"https://creaditech.com/services/cms-development"}
+              href={"https://creaditech.com/services/wordpress-development"}
               className="anchor"
             >
               {" "}
@@ -931,7 +931,7 @@ export const Content = [
           "Unique Home page Design",
           "Mobile-friendly (Responsive)",
           "50% advance 50% delivery",
-          "Contact-Us sepecial page design",
+          "Contact-Us special page design",
           "Daily Website Backups & SSL Certificate",
           "Homepage Slider",
         ],
@@ -956,7 +956,7 @@ export const Content = [
           "5 page revision",
           "Mobile-friendly (Responsive) with extra screens ",
           "50% advance 50% delivery",
-          "Contact-Us sepecial page design with map integration",
+          "Contact-Us special page design with map integration",
           "Daily Website Backups & SSL Certificate",
         ],
         adons: [
@@ -970,7 +970,7 @@ export const Content = [
       },
       {
         features: [
-          "Upto 10 pages with beatifill animation design",
+          "Upto 10 pages with beautiful animation design",
           "Parent+ child theme installation",
           "Upto 5 pages design",
           "Caching plugin",
@@ -979,12 +979,12 @@ export const Content = [
           "Security plugin",
           "5 page revision",
           "Mobile-friendly (Responsive) with extra screens ",
-          "GT matrix repotes ",
+          "GT matrix reportes ",
           "Embed video integration",
           "50% advance 50% delivery",
           "page revision",
           "Can add more pages ",
-          "Contact-Us sepecial page design with map integration",
+          "Contact-Us special page design with map integration",
           "Daily Website Backups & SSL Certificate",
           "Website Hosting Options (Fast, Secure, Reliable)",
           "Lead Capture Contact Forms",
