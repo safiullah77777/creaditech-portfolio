@@ -215,6 +215,9 @@ export const BottomList = (active) => [
         />
       </svg>
     ),
-    link: "careers",
+    // Old Link "/services/careers"
+    // link: "careers",
+    link: "",
+   
   },
 ];

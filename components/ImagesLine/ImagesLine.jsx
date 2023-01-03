@@ -2,8 +2,9 @@ import Image from "next/image";
 import React from "react";
 import Image1 from "../../public/assets/images/creaditech-trustpilot.png";
 import Image2 from "../../public/assets/images/creaditech-clutch.png";
-import Image3 from "../../public/assets/images/creaditech-top-design-firms.png";
+import Image3 from "../../public/assets/images/design-rush.png";
 import Image4 from "../../public/assets/images/creaditech-business-reviews.png";
+import Link from "next/link";
 const ImagesLine = () => {
   // jjafafafafafaf
   return (
@@ -19,9 +20,12 @@ const ImagesLine = () => {
           alt="trustpilot"
           width={146}
           height={62}
+        
         />
       </div>
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]">
+        <Link href="https://clutch.co/profile/creaditech" rel="nofollow" target="_blank">
+        
         <Image unoptimized 
           
           loader={({ src }) => {
@@ -33,8 +37,11 @@ const ImagesLine = () => {
           width={146}
           height={62}
         />
+        </Link>
       </div>
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]">
+        <Link href="https://www.designrush.com/agency/ecommerce/woocommerce" target="_blank">
+        
         <Image unoptimized 
           
           loader={({ src }) => {
@@ -46,8 +53,11 @@ const ImagesLine = () => {
           width={146}
           height={62}
         />
+        </Link>
       </div>
       <div className="max-[400px]:w-[159px] max-[400px]:h-[90px]">
+        <Link href="https://goo.gl/maps/Wj4DAF7VyhHjVDKbA" rel="nofollow" target="_blank">
+        
         <Image unoptimized 
           
           loader={({ src }) => {
@@ -59,6 +69,7 @@ const ImagesLine = () => {
           width={146}
           height={62}
         />
+        </Link>
       </div>
     </div>
   );

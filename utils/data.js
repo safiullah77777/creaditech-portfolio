@@ -95,7 +95,7 @@ export const data = [
       title: "PHP Web Development Services - Creaditech",
       description:
         "We suggest and develop powerful PHP solutions that will help your business grow.",
-      link: "services/php-development",
+      link: "services/php-web-development",
     },
     h1: {
       pre: "PHP ",
