@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Button from "../components/button/Button";
 import Header from "../components/header/Header";
 import Input from "../components/input/Input";
@@ -15,8 +15,11 @@ import MetaHead from "../components/metaHead/MetaHead";
 import { toast } from "react-toastify";
 import contactForm from "../services/fromService";
 import Link from "next/link";
+import { siteKey } from "../utils/keys";
+import Recaptcha from 'react-google-invisible-recaptcha';
 
 const ContactUs = () => {
+  const refCaptcha = useRef(null)
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -43,24 +46,31 @@ const ContactUs = () => {
       formData?.description?.length <= 0
     ) {
       toast.error("please fill the form.");
+      refCaptcha?.current?.reset();
       return;
     } else if (!nameregex.test(formData.name)) {
       toast.error(
         `invalid name you can not use special characters in your name.`
       );
+      refCaptcha?.current?.reset();
       return;
     } else if (!emailregex.test(formData.email)) {
       toast.error("invalid email address");
+      refCaptcha?.current?.reset();
       return;
     } else if (
       formData.companyName.length > 0 &&
       companynameregex.test(formData.companyName) == false
     ) {
       toast.error("invalid compnay Name");
+      refCaptcha?.current?.reset();
       return;
     }
     setLoading(true);
     contactForm({ ...formData, type: "contact-us" }, setLoading);
+    refCaptcha?.current?.execute();
+    refCaptcha?.current?.reset();
+
     setFormData({
       name: "",
       email: "",
@@ -70,6 +80,9 @@ const ContactUs = () => {
       description: "",
     });
   };
+  const onResolved=()=> {
+    // alert( 'Recaptcha resolved with response: ' + refCaptcha?.current?.getResponse() );
+  }
   return (
     <>
       <MetaHead title={"Contact Us - Creaditech"} description="Send us your queries now" link={"contact-us"} />
@@ -178,6 +191,11 @@ const ContactUs = () => {
               classes="!rounded-[10px] !text-[2.5rem] !font-500"
             />
           )}
+           <Recaptcha
+            ref={refCaptcha}
+            sitekey={siteKey}
+            size="invisible"
+            onResolved={onResolved} />
         </div>
       </div>
       <div className="flex flex-col p-[4rem] max-[500px]:px-[1rem] gap-[5rem] items-center">

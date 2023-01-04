@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Button from "../../components/button/Button";
 import Button2 from "../../components/button2/Button2";
 import Header from "../../components/header/Header";
@@ -26,28 +26,68 @@ import MetaHead from "../../components/metaHead/MetaHead";
 import { serviceCards } from "../../utils/card";
 import Card from "../../components/card/Card";
 import Link from "next/link";
+import Recaptcha from 'react-google-invisible-recaptcha';
+import { toast } from "react-toastify";
+import { siteKey } from "../../utils/keys";
+import contactForm from "../../services/fromService";
 
 const LogoService = () => {
-  const [data, setData] = useState({});
-  const [isHover, setHover] = useState(false);
+  const refCaptcha = useRef(null)
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNo: "",
+    url: "",
+    description: "",
+  });
   const onChange = (e) => {
-    setData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
+    setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
   const onSubmit = (e) => {
+    e.preventDefault();
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
+    const nameregex = new RegExp(/^[a-zA-Z][a-zA-Z ]*$/);
     const urlregex = new RegExp(
       /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi
     );
-    e.preventDefault();
-    if (!emailregex.test(data.email)) {
-      alert("invalid email address");
-    } else if (!data.name) alert("invalid name");
-    else if (!data.description) alert("invalid description");
-    else if (!urlregex.test(data.url)) alert("invalid url");
-  };
+    if (loading) return;
+    else if (
+      formData?.name?.length <= 0 ||
+      formData?.phoneNo?.length <= 0 ||
+      formData?.description?.length <= 0
+    ) {
+      toast.error("please fill the form.");
+      refCaptcha?.current?.reset();
+      return;
+    }
 
+    if (!nameregex.test(formData.name)) {
+      toast.error(
+        "invalid name.you can not use special characters in your name."
+      );
+      refCaptcha?.current?.reset();
+      return;
+    } else if (!emailregex.test(formData.email)) {
+      toast.error("invalid email address");
+      refCaptcha?.current?.reset();
+      return;
+    } else if (!urlregex.test(formData.url)) {
+      toast.error("invalid url");
+      refCaptcha?.current?.reset();
+      return;
+    }
+    refCaptcha?.current?.execute();
+    refCaptcha?.current?.reset();
+    setLoading(true);
+    contactForm({ ...formData, type: "service" }, setLoading);
+    setFormData(prev => ({ ...prev, name: "", email: "", phoneNo: "", url: "", description: "" }));
+  };
+  const onResolved = () => {
+    // alert( 'Recaptcha resolved with response: ' + refCaptcha?.current?.getResponse() );
+  }
   return (
     <>
       <MetaHead
@@ -80,7 +120,7 @@ const LogoService = () => {
             </div>
           </div>
         </div>
-        <form className="flex h-full flex-col justify-center gap-[2rem]">
+        {/* <form className="flex h-full flex-col justify-center gap-[2rem]">
           <div className="flex gap-[2rem]">
             <div className="flex-1">
               <Input
@@ -128,6 +168,79 @@ const LogoService = () => {
             title="Send Now"
             classes="!rounded-[10px] !text-[2.5rem] !font-500"
           />
+          <Recaptcha
+            ref={refCaptcha}
+            sitekey={siteKey}
+            size="invisible"
+            onResolved={onResolved} />
+        </form> */}
+        <form
+
+          className="flex h-full flex-col justify-center gap-[2rem]"
+        >
+          <div className="flex gap-[2rem]">
+            <div className="flex-1">
+              <Input
+                onChange={onChange}
+                name="name"
+                placeholder="Your Name"
+                classes="w-full"
+                type="text"
+                value={formData.name}
+              />
+            </div>
+            <div className="flex-1">
+              <Input
+                onChange={onChange}
+                name="phoneNo"
+                placeholder="Phone*"
+                classes="w-full"
+                type="number"
+                value={formData.phoneNo}
+              />
+            </div>
+          </div>
+          <Input
+            onChange={onChange}
+            placeholder="Email Address*"
+            name={"email"}
+            classes="w-full"
+            type="email"
+            value={formData.email}
+          />
+          <Input
+            onChange={onChange}
+            placeholder="Website URL"
+            name="url"
+            classes="w-full"
+            type="text"
+            value={formData.url}
+          />
+          <textarea
+            onChange={onChange}
+            value={formData.description}
+            name="description"
+            placeholder="Write your Requirements here..."
+            className="w-full h-[106px] rounded-[5px] border-none bg-[#515151] p-[2rem] text-[1.6rem] font-300 text-[#FFFFFF]/[0.5] outline-none"
+            id=""
+          ></textarea>
+
+          {loading ? (
+            <div className="loader"></div>
+          ) : (
+            <Button
+              onClick={onSubmit}
+              type="submit"
+              title="Send Now"
+              classes="!rounded-[10px] !text-[2.5rem] !font-500"
+              loading
+            />
+          )}
+          <Recaptcha
+            ref={refCaptcha}
+            sitekey={siteKey}
+            size="invisible"
+            onResolved={onResolved} />
         </form>
       </div>
       <section className="flex justify-center px-8 py-32  ">
