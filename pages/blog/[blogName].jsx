@@ -40,7 +40,7 @@ const BlogPost = ({ blogInfo }) => {
       <MetaHead
         title={blogContent?.meta?.title}
         description={blogContent?.meta?.description}
-        link={`/blog/${blogContent.title}`}
+        link={`blog/${blogContent.title}`}
       />
       <Header />
       <div className="flex flex-col relative min-h-[60rem]  ">

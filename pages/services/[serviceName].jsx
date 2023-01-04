@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import { List } from "../../utils/consts";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Button from "../../components/button/Button";
 import Button2 from "../../components/button2/Button2";
 import Header from "../../components/header/Header";
@@ -33,6 +33,8 @@ import { Content } from "../../utils/content";
 import contactForm from "../../services/fromService";
 import { toast } from "react-toastify";
 import { shuffle } from "../../utils/functions";
+import Recaptcha from 'react-google-invisible-recaptcha';
+import { siteKey } from "../../utils/keys";
 
 const Services = ({ datas }) => {
   const countings = [
@@ -45,6 +47,7 @@ const Services = ({ datas }) => {
   ];
   const [hydrated, setHydrated] = useState(false);
   const [loading, setLoading] = useState(false);
+  const refCaptcha = useRef(null)
   React.useEffect(() => {
     setHydrated(true);
   }, []);
@@ -87,6 +90,7 @@ const Services = ({ datas }) => {
       formData?.description?.length <= 0
     ) {
       toast.error("please fill the form.");
+      refCaptcha?.current?.reset();
       return;
     }
 
@@ -94,18 +98,26 @@ const Services = ({ datas }) => {
       toast.error(
         "invalid name.you can not use special characters in your name."
       );
+      refCaptcha?.current?.reset();
       return;
     } else if (!emailregex.test(formData.email)) {
       toast.error("invalid email address");
+      refCaptcha?.current?.reset();
       return;
     } else if (!urlregex.test(formData.url)) {
       toast.error("invalid url");
+      refCaptcha?.current?.reset();
       return;
     }
+    refCaptcha?.current?.execute();
+    refCaptcha?.current?.reset();
     setLoading(true);
     contactForm({ ...formData, type: "service" }, setLoading);
-    setFormData(prev => ({ ...prev,name: "", email: "", phoneNo: "", url: "", description: "" }));
+    setFormData(prev => ({ ...prev, name: "", email: "", phoneNo: "", url: "", description: "" }));
   };
+  const onResolved=()=> {
+    // alert( 'Recaptcha resolved with response: ' + refCaptcha?.current?.getResponse() );
+  }
   if (!datas[0].page) return <Error404 />;
   return (
     <>
@@ -209,6 +221,7 @@ const Services = ({ datas }) => {
             className="w-full h-[106px] rounded-[5px] border-none bg-[#515151] p-[2rem] text-[1.6rem] font-300 text-[#FFFFFF]/[0.5] outline-none"
             id=""
           ></textarea>
+
           {loading ? (
             <div className="loader"></div>
           ) : (
@@ -220,6 +233,11 @@ const Services = ({ datas }) => {
               loading
             />
           )}
+          <Recaptcha
+            ref={refCaptcha}
+            sitekey={siteKey}
+            size="invisible"
+            onResolved={onResolved} />
         </form>
       </div>
       <ImagesLine />

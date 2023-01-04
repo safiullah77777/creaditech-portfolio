@@ -17,6 +17,7 @@ const contactForm = async (params, setLoading) => {
       if (response.status == 200) toast.success("email sent successfully");
     })
     .then((err) => {
+      toast.error(err)
       setLoading(false);
     });
 };

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import BottomNav from "../components/bottomNav/BottomNav";
 import Card9 from "../components/card9/Card9";
 import Footer from "../components/footer/Footer";
@@ -7,10 +7,53 @@ import Header from "../components/header/Header";
 import MetaHead from "../components/metaHead/MetaHead";
 import Modal from "../components/modal/Modal";
 import Slider from "../components/slider/Slider";
+import { toast } from "react-toastify";
+import { uploadcv } from "../services/cvService";
 
 const Careers = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState(-1);
+  const [loading, setLoading]= useState(false);
+  const fileInputRef = useRef(null);
+
+  const onDragOver = (e) => {
+    // alert("onDragover")
+    e.preventDefault();
+  };
+
+  const onDrop = (e) => {
+    e.preventDefault();
+    const files = e.dataTransfer.files;
+    console.log("files",files)
+    // if (files.type !== 'application/pdf') {
+    //   // The file is a PDF
+    //   toast.error('please select pdf file only.')
+    //   return
+    // } 
+    if (files.length > 0) {
+      // do something with the files
+      uploadcv(files[0],setLoading)
+    }
+  };
+
+  const openFileDialog = () => {
+    fileInputRef.current.click();
+    console.log("fileinput ref",fileInputRef)
+  };
+
+  const onFileChange = (e) => {
+    const files = e.target.files;
+    console.log("on file changes",files)
+    // if (files.type !== 'application/pdf') {
+    //   // The file is a PDF
+    //   toast.error('please select pdf file only.')
+    //   return
+    // } 
+    if (files.length > 0) {
+      // do something with the files
+      uploadcv(files[0],setLoading)
+    }
+  };
   const jobs = [
     {
       title: "Design Lead",
@@ -20,16 +63,16 @@ const Careers = () => {
       keySkills: "UI/UX, Branding Kit",
       tags: ["Adobe", "Premier", "Illustrator",],
       description:
-      "Together as a team, we create experiences used and by millions of people every day. For over 20 years, we have worked with ambitious global organizations to launch world-leading digital products and services. Come and join us.",
-    line:"The ideal candidate will be responsible for:",
+        "Together as a team, we create experiences used and by millions of people every day. For over 20 years, we have worked with ambitious global organizations to launch world-leading digital products and services. Come and join us.",
+      line: "The ideal candidate will be responsible for:",
       responsibilities: [
-      "You’ll lead the design and provide strategic guidance throughout the duration of projects.",
-      "You’ll execute against the principles that create great, human-centered products.",
-      "As a hands-on designer with a meticulous eye for detail, you’ll help oversee the work to ensure it is realized with incredible creativity and expert craftsmanship.",
-      "You’ll help construct design systems that combine delight and systematic thinking to deliver incredible experiences for global audiences.",
-      "You’ll work with other disciplines to establish unified strategic and experiential approaches.",
-    ],
-     
+        "You’ll lead the design and provide strategic guidance throughout the duration of projects.",
+        "You’ll execute against the principles that create great, human-centered products.",
+        "As a hands-on designer with a meticulous eye for detail, you’ll help oversee the work to ensure it is realized with incredible creativity and expert craftsmanship.",
+        "You’ll help construct design systems that combine delight and systematic thinking to deliver incredible experiences for global audiences.",
+        "You’ll work with other disciplines to establish unified strategic and experiential approaches.",
+      ],
+
     },
     {
       title: "Bidder",
@@ -39,17 +82,17 @@ const Careers = () => {
       keySkills: "Good Bidding Skills, Strong Communication Skills",
       tags: ["Upwork", "Freelancer", "Fiver"],
       description:
-      "We are looking for a Business Development Intern who can get business from online portals. This will be a two months Internship and based on the performance the ideal candidate will be hired for a permanent role.",
-    line:"The ideal candidate will be responsible for:",
+        "We are looking for a Business Development Intern who can get business from online portals. This will be a two months Internship and based on the performance the ideal candidate will be hired for a permanent role.",
+      line: "The ideal candidate will be responsible for:",
       responsibilities: [
-      "Acquiring business through different channels (Fiverr, Upwork, Freelance, Guru, People PerHour, Craiglist, etc.) for web design, SEO, Social Media, Development, App Development, Graphic Design projects E.t.c",
-      "Quality project selection and bidding.",
-      "Writing proposals and customizing each proposal based on the nature of the project.",
-      "Project price estimation, quote, proposal creation, talking with client and closure.",
-      "Gather client requirements, communicate the requirements with the team and deliver the project to the client. Talking on phone, chatting applications and Skype depending on the requirement from the client",
-      "Maintain very high rating on all platforms",
-      "Maintain a healthy relationship with the client(s)",
-    ],
+        "Acquiring business through different channels (Fiverr, Upwork, Freelance, Guru, People PerHour, Craiglist, etc.) for web design, SEO, Social Media, Development, App Development, Graphic Design projects E.t.c",
+        "Quality project selection and bidding.",
+        "Writing proposals and customizing each proposal based on the nature of the project.",
+        "Project price estimation, quote, proposal creation, talking with client and closure.",
+        "Gather client requirements, communicate the requirements with the team and deliver the project to the client. Talking on phone, chatting applications and Skype depending on the requirement from the client",
+        "Maintain very high rating on all platforms",
+        "Maintain a healthy relationship with the client(s)",
+      ],
     },
     // {
     //   title: "Web Developer",
@@ -104,7 +147,7 @@ const Careers = () => {
       <div className="flex flex-wrap items-stretch h-[100%] justify-center gap-[2rem] px-[4rem] py-[8rem]">
         {jobs.map((data, index) => (
           // <div className="h-[100%]" onClick={() => setModalData(index)}>
-            <Card9 onPress={setModalData} index={index} key={index} setShowModal={setShowModal} data={data} />
+          <Card9 onPress={setModalData} index={index} key={index} setShowModal={setShowModal} data={data} />
           // </div>
         ))}
       </div>
@@ -123,7 +166,9 @@ const Careers = () => {
           productive in both cases.
         </p>
 
-        <div className="mx-auto my-[3rem] flex max-w-[43rem] flex-col   items-center gap-[1rem] rounded-[4rem] border-[2px] border-dashed border-[#5B5E71] p-[2rem] max-[600px]:mb-[6rem]">
+        <div onDragOver={onDragOver}
+          onDrop={onDrop}
+          onClick={openFileDialog} className="cursor-pointer mx-auto my-[3rem] flex max-w-[43rem] flex-col   items-center gap-[1rem] rounded-[4rem] border-[2px] border-dashed border-[#5B5E71] p-[2rem] max-[600px]:mb-[6rem]">
           <h2 className="robot-condensed text-[3rem] font-300 leading-[100%] text-[#5B5E71]">
             {" "}
             Drop your Resume here
@@ -134,6 +179,11 @@ const Careers = () => {
           <p className="robot-condensed cursor-pointer text-[3rem] font-300 leading-[100%] text-[#0377BC] underline">
             Select File
           </p>
+          <input ref={fileInputRef}
+        type="file"
+        multiple
+        accept="application/pdf"
+        onChange={onFileChange} style={{ display: 'none' }} name="" id="" />
         </div>
         <h2 className="robot-condensed mx-auto text-[2.5rem] font-300 leading-[100%] text-[#5B5E71]">
           {" "}
