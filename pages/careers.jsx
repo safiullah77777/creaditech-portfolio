@@ -7,6 +7,7 @@ import Header from "../components/header/Header";
 import MetaHead from "../components/metaHead/MetaHead";
 import Modal from "../components/modal/Modal";
 import Slider from "../components/slider/Slider";
+import { toast } from "react-toastify";
 import { uploadcv } from "../services/cvService";
 
 const Careers = () => {
@@ -21,10 +22,14 @@ const Careers = () => {
   };
 
   const onDrop = (e) => {
-    alert("onDrop")
     e.preventDefault();
     const files = e.dataTransfer.files;
     console.log("files",files)
+    // if (files.type !== 'application/pdf') {
+    //   // The file is a PDF
+    //   toast.error('please select pdf file only.')
+    //   return
+    // } 
     if (files.length > 0) {
       // do something with the files
       uploadcv(files[0],setLoading)
@@ -39,6 +44,11 @@ const Careers = () => {
   const onFileChange = (e) => {
     const files = e.target.files;
     console.log("on file changes",files)
+    // if (files.type !== 'application/pdf') {
+    //   // The file is a PDF
+    //   toast.error('please select pdf file only.')
+    //   return
+    // } 
     if (files.length > 0) {
       // do something with the files
       uploadcv(files[0],setLoading)
@@ -172,6 +182,7 @@ const Careers = () => {
           <input ref={fileInputRef}
         type="file"
         multiple
+        accept="application/pdf"
         onChange={onFileChange} style={{ display: 'none' }} name="" id="" />
         </div>
         <h2 className="robot-condensed mx-auto text-[2.5rem] font-300 leading-[100%] text-[#5B5E71]">

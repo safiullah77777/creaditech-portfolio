@@ -74,14 +74,14 @@ const Home = () => {
   ];
   const industriesCards = [
     { title: "Education", icon: icon1, alt: "education" },
-    { title: "Finance", icon: icon2, alt: "Finance" },
-    { title: "E-commerce", icon: icon3, alt: "E-commerce" },
-    { title: "Sports", icon: icon4, alt: "Sports" },
-    { title: "Travel", icon: icon5, alt: "Travel" },
-    { title: "Restaurant", icon: icon6, alt: "Restaurant" },
-    { title: "Health", icon: icon7, alt: "Health" },
-    { title: "Fashion", icon: icon8, alt: "Fashion" },
-    { title: "Video", icon: icon9, alt: "Video" },
+    { title: "Finance", icon: icon2, alt: "finance" },
+    { title: "E-commerce", icon: icon3, alt: "e-commerce" },
+    { title: "Sports", icon: icon4, alt: "sports" },
+    { title: "Travel", icon: icon5, alt: "travel" },
+    { title: "Restaurant", icon: icon6, alt: "restaurant" },
+    { title: "Health", icon: icon7, alt: "health" },
+    { title: "Fashion", icon: icon8, alt: "fashion" },
+    { title: "Video", icon: icon9, alt: "video" },
   ];
   function myArrow({ type, onClick }) {
     const pointer =

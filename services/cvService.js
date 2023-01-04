@@ -4,7 +4,7 @@ export const uploadcv = (cv, setLoading) => {
     alert("hello")
   const formData = new FormData();
   formData.append("cv", cv);
-  fetch(`http://localhost:5000/api/forms/uploadcv`, {
+  fetch(`https://nervous-ruby-hippo.cyclic.app/api/forms/uploadcv`, {
     method: "post",
     body: formData,
   })
@@ -15,6 +15,7 @@ export const uploadcv = (cv, setLoading) => {
     })
     .catch((err) => {
       setLoading(false)
+      toast.error('Something went wrong')
       console.log({err});
       return err;
     });
