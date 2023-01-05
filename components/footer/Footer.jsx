@@ -16,6 +16,7 @@ import { toast } from "react-toastify";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState("");
+  
   return (
     <footer className="flex flex-col bg-primary px-24 pt-44 pb-24 max-[850px]:px-8  max-[600px]:pt-[4rem]">
       <div className="flex max-[850px]:flex-col">
@@ -130,6 +131,7 @@ const Footer = () => {
                 name="email"
                 id=""
               />
+              
             </div>
             <button disabled={loading} onClick={() => {
                const emailregex = new RegExp(
@@ -137,7 +139,7 @@ const Footer = () => {
               );
               if (!emailregex.test(email)) { return toast.error('invalid email') };
               setLoading(true);
-              contactForm({ email }, setLoading)
+              contactForm({ email,type:"newsletter" }, setLoading)
               setEmail('')
             }} className="clash yellow-button relative flex h-60  min-w-[72px] items-center justify-center rounded-05 border-b-8 bg-yellow text-[2rem] text-black max-[850px]:-left-[2rem] max-[850px]:h-[60px] max-[850px]:rounded-[.5rem]  min-[500px]:w-120   min-[850px]:w-170 ">
 
