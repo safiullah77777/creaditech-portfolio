@@ -13,7 +13,7 @@ import { uploadcv } from "../services/cvService";
 const Careers = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState(-1);
-  const [loading, setLoading]= useState(false);
+  const [loading, setLoading] = useState(false);
   const fileInputRef = useRef(null);
 
   const onDragOver = (e) => {
@@ -23,35 +23,36 @@ const Careers = () => {
 
   const onDrop = (e) => {
     e.preventDefault();
+    setLoading(true)
     const files = e.dataTransfer.files;
-    console.log("files",files)
-    // if (files.type !== 'application/pdf') {
-    //   // The file is a PDF
-    //   toast.error('please select pdf file only.')
-    //   return
-    // } 
+    if (files[0].type !== 'application/pdf') {
+      // The file is a PDF
+      toast.error('please select pdf file only.')
+      setLoading(false)
+      return
+    }
     if (files.length > 0) {
       // do something with the files
-      uploadcv(files[0],setLoading)
+      uploadcv(files[0], setLoading)
     }
   };
 
   const openFileDialog = () => {
     fileInputRef.current.click();
-    console.log("fileinput ref",fileInputRef)
   };
 
   const onFileChange = (e) => {
     const files = e.target.files;
-    console.log("on file changes",files)
-    // if (files.type !== 'application/pdf') {
-    //   // The file is a PDF
-    //   toast.error('please select pdf file only.')
-    //   return
-    // } 
+    setLoading(true)
+    if (files[0].type !== 'application/pdf') {
+      // The file is a PDF
+      toast.error('please select pdf file only.')
+      setLoading(false)
+      return
+    }
     if (files.length > 0) {
       // do something with the files
-      uploadcv(files[0],setLoading)
+      uploadcv(files[0], setLoading)
     }
   };
   const jobs = [
@@ -166,7 +167,7 @@ const Careers = () => {
           productive in both cases.
         </p>
 
-        <div onDragOver={onDragOver}
+        {!loading ? <div onDragOver={onDragOver}
           onDrop={onDrop}
           onClick={openFileDialog} className="cursor-pointer mx-auto my-[3rem] flex max-w-[43rem] flex-col   items-center gap-[1rem] rounded-[4rem] border-[2px] border-dashed border-[#5B5E71] p-[2rem] max-[600px]:mb-[6rem]">
           <h2 className="robot-condensed text-[3rem] font-300 leading-[100%] text-[#5B5E71]">
@@ -180,11 +181,17 @@ const Careers = () => {
             Select File
           </p>
           <input ref={fileInputRef}
-        type="file"
-        multiple
-        accept="application/pdf"
-        onChange={onFileChange} style={{ display: 'none' }} name="" id="" />
-        </div>
+            type="file"
+            multiple
+            accept="application/pdf"
+            onChange={onFileChange} style={{ display: 'none' }} name="" id="" />
+        </div> : <>
+          <div className="p-[4rem] cursor-pointer mx-auto my-[3rem] flex max-w-[43rem] flex-col   items-center gap-[1rem] rounded-[4rem] border-[2px] border-dashed border-[#5B5E71]  max-[600px]:mb-[6rem]">
+            <p className="robot-condensed text-[3rem] font-600 leading-[100%] text-[green]">
+              Uploading ...
+            </p>
+          </div>
+        </>}
         <h2 className="robot-condensed mx-auto text-[2.5rem] font-300 leading-[100%] text-[#5B5E71]">
           {" "}
           Or send your resume at

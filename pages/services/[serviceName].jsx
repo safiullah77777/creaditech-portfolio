@@ -76,6 +76,7 @@ const Services = ({ datas }) => {
   };
   const onSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
@@ -110,7 +111,6 @@ const Services = ({ datas }) => {
       return;
     }
     const token = await refCaptcha?.current?.executeAsync();
-    console.log({ token })
     const response = await fetch('/api/verify', {
       method: 'POST',
       headers: {
@@ -125,7 +125,6 @@ const Services = ({ datas }) => {
       return;
     }
     refCaptcha?.current?.reset();
-    setLoading(true);
     contactForm({ ...formData, type: "service" }, setLoading);
     setFormData(prev => ({ ...prev, name: "", email: "", phoneNo: "", url: "", description: "" }));
   };
@@ -138,9 +137,7 @@ const Services = ({ datas }) => {
         description={datas[0]?.meta?.description}
         link={datas[0]?.meta?.link}
       />
-
       <Header />
-
       <div
         className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.webp')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] gap-[5rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
     			min-[500px]:px-28 "
