@@ -198,6 +198,7 @@ const BlogPost = ({ blogInfo }) => {
                     className="clash text-[#000000] leading-[100%] clash font-600 text-[3.5rem]"
                   >
                     {temp.h2}
+                    
                   </h2>
                   {temp.paras.map((para, key) => {
                     return (
@@ -427,7 +428,7 @@ const BlogPost = ({ blogInfo }) => {
                   return toast.error("invalid email");
                 }
                 setLoading(true);
-                contactForm({ email }, setLoading);
+                contactForm({ email,type:"newsletter" }, setLoading);
                 setEmail("");
               }}
               className="clash h-60 max-[600px]:w-full  w-[25rem] rounded-b-[0.5rem] active:scale-y-[1.02]   bg-[#ffe100] border-solid border-b-[5px] border-[#000000]/[0.3]  px-8 text-[1.6rem] font-500 text-[#000000]  outline-none  max-[850px]:h-[60px] max-[850px]:text-[16px]  "
