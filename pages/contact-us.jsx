@@ -48,16 +48,19 @@ const ContactUs = () => {
     ) {
       toast.error("please fill the form.");
       refCaptcha?.current?.reset();
+      setLoading(false);
       return;
     } else if (!nameregex.test(formData.name)) {
       toast.error(
         `invalid name you can not use special characters in your name.`
       );
       refCaptcha?.current?.reset();
+      setLoading(false)
       return;
     } else if (!emailregex.test(formData.email)) {
       toast.error("invalid email address");
       refCaptcha?.current?.reset();
+      setLoading(false)
       return;
     } else if (
       formData.companyName.length > 0 &&
@@ -65,6 +68,7 @@ const ContactUs = () => {
     ) {
       toast.error("invalid compnay Name");
       refCaptcha?.current?.reset();
+      setLoading(false)
       return;
     }
     const token = await refCaptcha?.current?.executeAsync();

@@ -62,6 +62,7 @@ const LogoService = () => {
     ) {
       toast.error("please fill the form.");
       refCaptcha?.current?.reset();
+      setLoading(false)
       return;
     }
 
@@ -70,14 +71,17 @@ const LogoService = () => {
         "invalid name.you can not use special characters in your name."
       );
       refCaptcha?.current?.reset();
+      setLoading(false)
       return;
     } else if (!emailregex.test(formData.email)) {
       toast.error("invalid email address");
       refCaptcha?.current?.reset();
+      setLoading(false)
       return;
     } else if (!urlregex.test(formData.url)) {
       toast.error("invalid url");
       refCaptcha?.current?.reset();
+      setLoading(false)
       return;
     }
     const token = await refCaptcha?.current?.executeAsync();
