@@ -26,7 +26,7 @@ import MetaHead from "../../components/metaHead/MetaHead";
 import { serviceCards } from "../../utils/card";
 import Card from "../../components/card/Card";
 import Link from "next/link";
-import Recaptcha from 'react-google-invisible-recaptcha';
+import ReCAPTCHA from "react-google-recaptcha";
 import { toast } from "react-toastify";
 import { siteKey } from "../../utils/keys";
 import contactForm from "../../services/fromService";
@@ -44,8 +44,9 @@ const LogoService = () => {
   const onChange = (e) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
@@ -79,9 +80,21 @@ const LogoService = () => {
       refCaptcha?.current?.reset();
       return;
     }
-    refCaptcha?.current?.execute();
+    const token = await refCaptcha?.current?.executeAsync();
+    const response = await fetch('/api/verify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token })
+    })
+    const check =await response.json();
+    if(!check?.success){
+      toast.error(check?.message);
+      refCaptcha?.current?.reset();
+      return;
+    }
     refCaptcha?.current?.reset();
-    setLoading(true);
     contactForm({ ...formData, type: "service" }, setLoading);
     setFormData(prev => ({ ...prev, name: "", email: "", phoneNo: "", url: "", description: "" }));
   };
@@ -236,11 +249,11 @@ const LogoService = () => {
               loading
             />
           )}
-          <Recaptcha
+          <ReCAPTCHA
             ref={refCaptcha}
             sitekey={siteKey}
             size="invisible"
-            onResolved={onResolved} />
+            />
         </form>
       </div>
       <section className="flex justify-center px-8 py-32  ">

@@ -13,6 +13,7 @@ import Slider from "../components/slider/Slider";
 import Footer from "../components/footer/Footer";
 import BottomNav from "../components/bottomNav/BottomNav";
 import MetaHead from "../components/metaHead/MetaHead";
+import Link from "next/link";
 const AboutUs = () => {
   return (
     <>
@@ -43,8 +44,10 @@ const AboutUs = () => {
             experts now and make your business reach your targeted audience.
           </p>
           <div className="my-8 flex flex-wrap justify-center gap-8 max-[850px]:mx-auto  max-[400px]:flex-col">
-            <Button title={"Meet our Team"} classes={""} />
-            <Button2 title={"Download Company Profile"} />
+            {/* <Button title={"Meet our Team"} classes={""} /> */}
+            <Link  href={'/assets/pdf/CreaditechProfile.pdf'} download="profile">
+              <Button2 title={"Download Company Profile"} />
+            </Link>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ import { toast } from "react-toastify";
 import contactForm from "../services/fromService";
 import Link from "next/link";
 import { siteKey } from "../utils/keys";
-import Recaptcha from 'react-google-invisible-recaptcha';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUs = () => {
   const refCaptcha = useRef(null)
@@ -32,8 +32,9 @@ const ContactUs = () => {
   const onChange = (e) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
-  const onSubmit = (e) => {
+  const onSubmit =async (e) => {
     e.preventDefault();
+    setLoading(true);
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
@@ -60,17 +61,28 @@ const ContactUs = () => {
       return;
     } else if (
       formData.companyName.length > 0 &&
-      companynameregex.test(formData.companyName) == false
+      companynameregex.test(formData?.companyName) == false
     ) {
       toast.error("invalid compnay Name");
       refCaptcha?.current?.reset();
       return;
     }
-    setLoading(true);
-    contactForm({ ...formData, type: "contact-us" }, setLoading);
-    refCaptcha?.current?.execute();
+    const token = await refCaptcha?.current?.executeAsync();
+    const response = await fetch('/api/verify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token })
+    })
+    const check =await response.json();
+    if(!check?.success){
+      toast.error(check?.message);
+      refCaptcha?.current?.reset();
+      return;
+    }
     refCaptcha?.current?.reset();
-
+    contactForm({ ...formData, type: "contact-us" }, setLoading);
     setFormData({
       name: "",
       email: "",
@@ -191,11 +203,11 @@ const ContactUs = () => {
               classes="!rounded-[10px] !text-[2.5rem] !font-500"
             />
           )}
-           <Recaptcha
+           <ReCAPTCHA
             ref={refCaptcha}
             sitekey={siteKey}
             size="invisible"
-            onResolved={onResolved} />
+             />
         </div>
       </div>
       <div className="flex flex-col p-[4rem] max-[500px]:px-[1rem] gap-[5rem] items-center">

@@ -32,8 +32,8 @@ import Link from "next/link";
 import { Content } from "../../utils/content";
 import contactForm from "../../services/fromService";
 import { toast } from "react-toastify";
-import { shuffle } from "../../utils/functions";
-import Recaptcha from 'react-google-invisible-recaptcha';
+import { shuffle, ValidateHuman } from "../../utils/functions";
+import ReCAPTCHA from "react-google-recaptcha";
 import { siteKey } from "../../utils/keys";
 
 const Services = ({ datas }) => {
@@ -74,8 +74,9 @@ const Services = ({ datas }) => {
   const onChange = (e) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const emailregex = new RegExp(
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     );
@@ -109,15 +110,25 @@ const Services = ({ datas }) => {
       refCaptcha?.current?.reset();
       return;
     }
-    refCaptcha?.current?.execute();
+    const token = await refCaptcha?.current?.executeAsync();
+    const response = await fetch('/api/verify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token })
+    })
+    const check =await response.json();
+    if(!check?.success){
+      toast.error(check?.message);
+      refCaptcha?.current?.reset();
+      return;
+    }
     refCaptcha?.current?.reset();
-    setLoading(true);
     contactForm({ ...formData, type: "service" }, setLoading);
     setFormData(prev => ({ ...prev, name: "", email: "", phoneNo: "", url: "", description: "" }));
   };
-  const onResolved=()=> {
-    // alert( 'Recaptcha resolved with response: ' + refCaptcha?.current?.getResponse() );
-  }
+
   if (!datas[0].page) return <Error404 />;
   return (
     <>
@@ -126,9 +137,7 @@ const Services = ({ datas }) => {
         description={datas[0]?.meta?.description}
         link={datas[0]?.meta?.link}
       />
-
       <Header />
-
       <div
         className=" bg-banner-grey  flex min-h-[70rem] w-full  justify-evenly bg-[url('/assets/images/backgrounds/about-bg.webp')]  bg-cover  bg-center bg-no-repeat px-[2rem] pt-[20rem] bg-blend-overlay max-[950px]:gap-[3rem] gap-[5rem] max-[950px]:pb-[5rem]  max-[850px]:flex-col 
     			min-[500px]:px-28 "
@@ -233,11 +242,11 @@ const Services = ({ datas }) => {
               loading
             />
           )}
-          <Recaptcha
+          <ReCAPTCHA
             ref={refCaptcha}
             sitekey={siteKey}
             size="invisible"
-            onResolved={onResolved} />
+          />
         </form>
       </div>
       <ImagesLine />
