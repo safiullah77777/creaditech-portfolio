@@ -84,6 +84,7 @@ const LogoService = () => {
       setLoading(false)
       return;
     }
+    //sdsdsd
     const token = await refCaptcha?.current?.executeAsync();
     const response = await fetch('/api/verify', {
       method: 'POST',
