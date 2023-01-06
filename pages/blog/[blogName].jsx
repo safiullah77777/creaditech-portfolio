@@ -58,7 +58,7 @@ const BlogPost = ({ blogInfo }) => {
           />
         </div>
         <div className=" flex flex-col gap-[1rem] w-full items-center bg-[#1E1E1E] p-[3rem] ">
-          <h1 className="robot-condensed max-w-[104rem] text-center leading-[100%] font-600 text-[6.5rem] text-[#ffffff] uppercase">
+          <h1  className="robot-condensed max-w-[104rem] text-center leading-[100%] font-600 text-[6.5rem] text-[#ffffff] uppercase">
             {blogContent?.h1}
           </h1>
           <p className="bg-[#2B2B2B] rounded-[2rem] flex gap-[.5rem] px-[1rem] py-[.1rem] mx-auto">
@@ -202,7 +202,7 @@ const BlogPost = ({ blogInfo }) => {
                   </h2>
                   {temp.paras.map((para, key) => {
                     return (
-                      <p key={key} className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
+                      <p  key={key} className="robot-condensed text-[#303030] text-[2rem] leading-[100%]">
                         {para}
                       </p>
                     );
