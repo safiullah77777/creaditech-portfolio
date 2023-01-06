@@ -28,7 +28,7 @@ const Banner = () => {
           <Link href={"/contact-us"}>
             <Button classes="" title={"Get a Quote"} />
           </Link>
-          <Link href={"/portfolio"}>
+          <Link href={"/our-clients"}>
             <Button2 title={"View Our Work"} />
           </Link>{" "}
         </div>

@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 export const uploadcv = (cv, setLoading) => {
   const formData = new FormData();
   formData.append("cv", cv);
-  fetch(`https://nervous-ruby-hippo.cyclic.app/api/forms/uploadcv`, {
+  fetch(`https://nervous-ruby-hippo.cyclic.app/api/forms/uploadcv`, {//https://nervous-ruby-hippo.cyclic.app/
     method: "post",
     body: formData,
   })
