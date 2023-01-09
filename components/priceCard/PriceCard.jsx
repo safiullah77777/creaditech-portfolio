@@ -4,7 +4,7 @@ import Button from "../button/Button";
 
 const PriceCard = ({ item, no }) => {
   return (
-    <div className=" card-price flex w-[40rem] max-[1080px]:w-[38rem] rounded-[10px] border-[2px] border-solid ">
+    <div className=" card-price flex  rounded-[10px] border-[2px] border-solid ">
       <div className="flex w-full flex-col items-center justify-center  px-[5rem] py-[3rem]">
         {/* <h2 className="text-[16px] max-[500px]:text-[12px] font-300 leading-[100%] text-[#000000] ">
           WORDMARK / LETTERMARK
